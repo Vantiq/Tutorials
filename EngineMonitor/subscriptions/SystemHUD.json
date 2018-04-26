@@ -1,0 +1,17 @@
+{
+    "name": "SystemHUD",
+    "properties": [
+        {
+            "selected": true,
+            "name": "alertMsg",
+            "type": "String"
+        },
+        {
+            "selected": true,
+            "name": "systemId",
+            "type": "String"
+        }
+    ],
+    "type": "SystemHUD",
+    "operation": "update"
+}

@@ -1,0 +1,77 @@
+{
+    "name": "EngineMonitor",
+    "assembly": {
+        "TempReading": {
+            "pattern": "EventStream",
+            "configuration": {
+                "childStreams": [
+                    "UpdateSystemStatus"
+                ],
+                "inboundResource": "types",
+                "inboundResourceId": "EngineTemp",
+                "op": null,
+                "outboundResource": "topics",
+                "outboundResourceId": null,
+                "upsert": false
+            },
+            "description": null
+        },
+        "SpeedReading": {
+            "pattern": "EventStream",
+            "configuration": {
+                "childStreams": [
+                    "UpdateSystemStatus"
+                ],
+                "inboundResource": "types",
+                "inboundResourceId": "EngineSpeed",
+                "op": null,
+                "outboundResource": "topics",
+                "outboundResourceId": null,
+                "upsert": false
+            },
+            "description": null
+        },
+        "UpdateSystemStatus": {
+            "pattern": "Merge",
+            "configuration": {
+                "childStreams": [
+                    "UpdateSystemHUD"
+                ],
+                "outboundResource": "types",
+                "outboundResourceId": "SystemStatus",
+                "upsert": true
+            },
+            "description": null
+        },
+        "UpdateSystemHUD": {
+            "pattern": "Transformation",
+            "configuration": {
+                "childStreams": null,
+                "outboundResource": "types",
+                "outboundResourceId": "SystemHUD",
+                "transformation": {
+                    "alertMsg": {
+                        "type": "expression",
+                        "expression": "((event.temperature >= 210) && (event.speed >= 45)) ?\n    \"Your engine is overheating, please reduce your speed.\" :\n    (((event.temperature >= 210) && (event.speed < 45)) ?\n    \"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\" : \"\")"
+                    },
+                    "systemId": {
+                        "type": "expression",
+                        "expression": "event.systemId"
+                    }
+                },
+                "upsert": true
+            },
+            "description": null
+        }
+    },
+    "collaboratorRoles": [],
+    "entityRoles": [],
+    "keyTypes": [
+        "system.collaborations"
+    ],
+    "active": true,
+    "appType": true,
+    "currentState": {
+        "code": "success"
+    }
+}

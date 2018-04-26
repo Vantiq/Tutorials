@@ -1,0 +1,52 @@
+{
+    "name": "SystemStatus",
+    "role": "standard",
+    "adminAccessLevel": "ars_readWrite",
+    "userAccessLevel": "ars_readOnly",
+    "volatile": false,
+    "naturalKey": [
+        "systemId"
+    ],
+    "expiresAfter": null,
+    "foreignKeys": null,
+    "audited": false,
+    "groupEnabled": false,
+    "groupRequired": false,
+    "encapsulated": false,
+    "metadata": false,
+    "indexes": [
+        {
+            "keys": [
+                "systemId"
+            ],
+            "options": {
+                "unique": true
+            }
+        }
+    ],
+    "maxStorage": 0,
+    "maxObjects": 0,
+    "properties": {
+        "speed": {
+            "type": "Integer",
+            "unique": false,
+            "required": false,
+            "multi": false,
+            "encrypted": false
+        },
+        "systemId": {
+            "type": "String",
+            "unique": false,
+            "required": true,
+            "multi": false,
+            "encrypted": false
+        },
+        "temperature": {
+            "type": "Integer",
+            "unique": false,
+            "required": false,
+            "multi": false,
+            "encrypted": false
+        }
+    }
+}

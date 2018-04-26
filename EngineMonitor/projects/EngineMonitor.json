@@ -1,0 +1,230 @@
+{
+    "name": "EngineMonitor",
+    "options": {
+        "v": 2,
+        "filterMask": 4294967295,
+        "showGrid": true,
+        "isModeloProject": true
+    },
+    "type": "dev",
+    "resources": [
+        {
+            "name": "EngineMonitor",
+            "type": 12,
+            "label": "EngineMonitor",
+            "timestamp": "2018-04-26T22:14:53.551Z",
+            "inventory": {
+                "types": [
+                    "EngineTemp",
+                    "EngineSpeed",
+                    "SystemStatus",
+                    "SystemHUD"
+                ],
+                "typeHash": [
+                    "out",
+                    "out",
+                    "out",
+                    "out"
+                ],
+                "sources": [],
+                "sourceHash": [],
+                "topics": [],
+                "topicHash": [],
+                "procedures": [],
+                "procedureHash": [],
+                "collaborations": [],
+                "collaborationHash": []
+            },
+            "node": {
+                "x": 302.9121276726471,
+                "y": 45.17216250605196
+            },
+            "$$hashKey": "object:228"
+        },
+        {
+            "name": "EngineSimulation",
+            "type": 15,
+            "label": "EngineSimulation",
+            "timestamp": "2018-04-26T23:08:13.294Z",
+            "node": {
+                "x": 543.0011367557815,
+                "y": 56.80947886436911
+            },
+            "$$hashKey": "object:232"
+        },
+        {
+            "name": "EngineSpeed",
+            "type": 1,
+            "label": "EngineSpeed",
+            "timestamp": "2018-04-26T22:06:36.949Z",
+            "node": {
+                "x": 412.9790290378037,
+                "y": -88.35219112416178
+            },
+            "$$hashKey": "object:244"
+        },
+        {
+            "name": "EngineTemp",
+            "type": 1,
+            "label": "EngineTemp",
+            "timestamp": "2018-04-26T22:06:00.319Z",
+            "node": {
+                "x": 188.66125348250307,
+                "y": -84.49727716372306
+            },
+            "$$hashKey": "object:245"
+        },
+        {
+            "name": "SystemHUD",
+            "type": 1,
+            "label": "SystemHUD",
+            "timestamp": "2018-04-26T22:08:27.208Z",
+            "node": {
+                "x": 408.1376056238077,
+                "y": 168.16570367198096
+            },
+            "$$hashKey": "object:246"
+        },
+        {
+            "name": "SystemHUD",
+            "type": 9,
+            "label": "SystemHUD",
+            "timestamp": "2018-04-26T22:15:37.838Z",
+            "inventory": {
+                "types": [
+                    "SystemHUD"
+                ],
+                "typeHash": [
+                    "in"
+                ],
+                "sources": [],
+                "sourceHash": [],
+                "topics": [],
+                "topicHash": [],
+                "procedures": [],
+                "procedureHash": [],
+                "collaborations": [],
+                "collaborationHash": []
+            },
+            "node": {
+                "x": 408.01435867121677,
+                "y": 318.2212060783854
+            },
+            "$$hashKey": "object:240"
+        },
+        {
+            "name": "SystemStatus",
+            "type": 1,
+            "label": "SystemStatus",
+            "timestamp": "2018-04-26T22:07:42.011Z",
+            "node": {
+                "x": 217.11444017599882,
+                "y": 167.48239623143868
+            },
+            "$$hashKey": "object:247"
+        }
+    ],
+    "links": [
+        {
+            "source": "app/EngineMonitor",
+            "target": "type/EngineTemp"
+        },
+        {
+            "source": "app/EngineMonitor",
+            "target": "type/EngineSpeed"
+        },
+        {
+            "source": "app/EngineMonitor",
+            "target": "type/SystemStatus"
+        },
+        {
+            "source": "app/EngineMonitor",
+            "target": "type/SystemHUD"
+        },
+        {
+            "source": "type/SystemHUD",
+            "target": "subscription/SystemHUD"
+        }
+    ],
+    "tools": [
+        {
+            "name": "Data Generators",
+            "type": 47,
+            "pane": {
+                "x": 640,
+                "y": 20,
+                "h": 400,
+                "w": 600
+            }
+        },
+        {
+            "name": "EngineMonitor",
+            "type": 15,
+            "resourceKey": "app/EngineMonitor",
+            "pane": {
+                "x": 1160,
+                "y": 440,
+                "h": 510,
+                "w": 800
+            }
+        },
+        {
+            "name": "EngineSimulation",
+            "type": 63,
+            "toolOptions": {
+                "isRunning": true
+            },
+            "resourceKey": "client/EngineSimulation",
+            "pane": {
+                "x": 20,
+                "y": 440,
+                "h": 1100,
+                "w": 1120
+            }
+        },
+        {
+            "name": "SystemHUD",
+            "type": 7,
+            "resourceKey": "subscription/SystemHUD",
+            "pane": {
+                "x": 1260,
+                "y": 20,
+                "h": 400,
+                "w": 600
+            }
+        },
+        {
+            "name": "Project Resource Graph",
+            "type": 1,
+            "toolOptions": {
+                "scaleAndTranslationState": {
+                    "scale": 0.6953631995816502,
+                    "translate": [
+                        112.19269304196104,
+                        106.12938695007465
+                    ],
+                    "lastZoomRequest": 0
+                }
+            },
+            "pane": {
+                "x": 0,
+                "y": 0,
+                "h": 400,
+                "w": 600
+            }
+        }
+    ],
+    "views": [
+        {
+            "name": "Main",
+            "projectToolKeys": [
+                "datagenerators/Data Generators",
+                "app/EngineMonitor",
+                "client/EngineSimulation",
+                "subsubscribeeditor/SystemHUD",
+                "graph/Project Resource Graph"
+            ]
+        }
+    ],
+    "$$hashKey": "object:236"
+}
