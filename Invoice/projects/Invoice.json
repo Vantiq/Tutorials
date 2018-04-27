@@ -1,0 +1,79 @@
+{
+    "name": "Invoice",
+    "options": {
+        "v": 2,
+        "filterMask": 4294967295,
+        "showGrid": true,
+        "isModeloProject": true
+    },
+    "type": "dev",
+    "resources": [
+        {
+            "name": "Invoice",
+            "type": 15,
+            "timestamp": "2018-04-27T22:15:48.663Z",
+            "node": {
+                "x": 328.4250776140694,
+                "y": 260.7558160259176
+            },
+            "$$hashKey": "object:1478"
+        },
+        {
+            "name": "Invoice",
+            "type": 1,
+            "timestamp": "2018-04-27T21:42:23.617Z",
+            "node": {
+                "x": 296.88713047830953,
+                "y": 181.81846077950118
+            },
+            "$$hashKey": "object:1486"
+        }
+    ],
+    "links": [],
+    "tools": [
+        {
+            "name": "Project Resource Graph",
+            "type": 1,
+            "toolOptions": {
+                "scaleAndTranslationState": {
+                    "scale": 0.9889702469452182,
+                    "translate": [
+                        0.22071739212390895,
+                        2.884387463475207
+                    ],
+                    "lastZoomRequest": 0
+                }
+            },
+            "pane": {
+                "x": 1310,
+                "y": 20,
+                "h": 400,
+                "w": 600
+            }
+        },
+        {
+            "name": "Invoice",
+            "type": 63,
+            "toolOptions": {
+                "isRunning": true
+            },
+            "resourceKey": "client/Invoice",
+            "pane": {
+                "x": 30,
+                "y": 20,
+                "h": 700,
+                "w": 1260
+            }
+        }
+    ],
+    "views": [
+        {
+            "name": "Main",
+            "projectToolKeys": [
+                "graph/Project Resource Graph",
+                "client/Invoice"
+            ]
+        }
+    ],
+    "$$hashKey": "object:1482"
+}
