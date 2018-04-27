@@ -1,0 +1,83 @@
+RULE RateCollaboration_NotifyPatient_NotificationResponse HIDDEN WITH ars_dependentResource="/collaborationtypes/RateCollaboration"
+WHEN PUBLISH OCCURS ON "/notifications/RateCollaboration/NotifyPatient" as event
+
+log.debug("collaboration.RateCollaboration.NotifyPatient.response: received notification response: {}", [event.toString()])
+
+// Re-establish collaboration context by parsing the name of the chatroom in the event
+// TODO: Rename field in ArsPayloadMessage to be collaborationId
+var collaborationId = event.newValue.state.collaborationId
+if (!collaborationId) {
+    exception("io.vantiq.collaboration.RateCollaboration.NotifyPatient.response.error",
+    "Could not find an associated collaboration instance for response to notification activity: {0}", ["NotifyPatient"])
+}
+
+// Get this collaboration instance based on the id in the published payload
+var collaboration = SELECT EXACTLY ONE FROM collaborations WHERE id == collaborationId
+
+// Publish events to update badging in UI
+PUBLISH {collaboration: collaboration.id, task: "NotifyPatient", event: "response"} TO TOPIC "/collaborationtypes/RateCollaboration/debug"
+
+// update the collaboration instance results to indicate a user has arrived
+if (!collaboration.results.NotifyPatient) {
+    collaboration.results.NotifyPatient = { "responses": []}
+} else if (!collaboration.results.NotifyPatient.responses) {
+    collaboration.results.NotifyPatient.responses = []
+}
+
+// construct an object with the arrived user's name and the time they arrived
+var response = {
+    "username": event.newValue.username,
+    "responseTime": now(),
+    "response": event.newValue.values,
+    "deviceId": event.newValue.deviceId,
+    "deviceName": event.newValue.deviceName,
+    "submitValue": event.newValue.submitValue
+}
+collaboration.results.NotifyPatient.responses.push(response)
+
+log.debug("collaboration.RateCollaboration.NotifyPatient.response: Saving response: {} for collaboration id: {}", [response, collaboration.id])
+
+// Save the change to results
+ALTER collaboration ({results: collaboration.results, id: collaboration.id})
+
+// do prep work for executing any [first]ResponseBehaviors
+SELECT EXACTLY ONE FROM collaborationtypes as ct WHERE name == collaboration.collaborationType
+
+var activityType = ct.assembly["NotifyPatient"]
+
+var context = CollaborationGeneration.establishCollaborationContext(collaboration, activityType.instanceParameters)
+context.event = event.newValue
+context.response = response
+
+if (false) {
+    // execute firstResponseBehaviors only if this was the first response we saved to results
+    if (collaboration.results.NotifyPatient.responses.size() == 1) {
+        // Publish extra first response event to update badging in UI
+        PUBLISH {collaboration: collaboration.id, task: "NotifyPatient", event: "firstResponse"} TO TOPIC "/collaborationtypes/RateCollaboration/debug"
+        log.debug("collaboration.RateCollaboration.NotifyPatient.firstResponse: Preparing to execute first response behaviors for response: {} in collaboration id: {}", [response, collaboration.id])
+        
+        log.debug("collaboration.RateCollaboration.NotifyPatient.firstResponse: Successfully executed first response behaviors for collaboration id: {}", [collaboration.id])
+    }
+}
+
+if (true) {
+    log.debug("collaboration.RateCollaboration.NotifyPatient.response: Preparing to execute response behaviors for response: {} in collaboration id: {}", [response, collaboration.id])
+    IF (context.event.submitValue == 0
+        ) {
+
+context = CollaborationGeneration.reEstablishCollaborationContext(context)
+CollaborationUtils.closeCollaboration(context.collaboration.id)
+
+}
+IF (context.event.submitValue == 1
+        ) {
+
+context = CollaborationGeneration.reEstablishCollaborationContext(context)
+CollaborationUtils.triggerEscalation(context.collaboration.id, "EscalatePatient")
+
+}
+
+    log.debug("collaboration.RateCollaboration.NotifyPatient.response: Successfully executed response behaviors for collaboration id: {}", [collaboration.id])
+}
+
+log.debug("collaboration.RateCollaboration.NotifyPatient.response: Successfully processed response: {} to notification for collaboration id: {}", [response, collaboration.id])

@@ -1,0 +1,96 @@
+{
+    "name": "Debugging",
+    "options": {
+        "v": 2,
+        "filterMask": 4294967295,
+        "showGrid": true
+    },
+    "type": "dev",
+    "resources": [
+        {
+            "name": "TutorialExampleRule",
+            "type": 2,
+            "label": "TutorialExampleRule",
+            "timestamp": "2018-01-02T17:51:21.823Z",
+            "inventory": {
+                "types": [
+                    "TutorialExampleType"
+                ],
+                "typeHash": [
+                    "in"
+                ],
+                "sources": [],
+                "sourceHash": [],
+                "topics": [],
+                "topicHash": [],
+                "procedures": [],
+                "procedureHash": [],
+                "collaborations": [],
+                "collaborationHash": []
+            },
+            "node": {
+                "x": 298.8935993749057,
+                "y": 316.4379229128056
+            },
+            "$$hashKey": "object:642"
+        },
+        {
+            "name": "TutorialExampleType",
+            "type": 1,
+            "label": "TutorialExampleType",
+            "timestamp": "2017-12-30T01:47:01.957Z",
+            "node": {
+                "x": 297.88915322002055,
+                "y": 182.4321156464881
+            },
+            "$$hashKey": "object:646"
+        }
+    ],
+    "links": [
+        {
+            "source": "type/TutorialExampleType",
+            "target": "rule/TutorialExampleRule"
+        }
+    ],
+    "tools": [
+        {
+            "name": "Project Resource Graph",
+            "type": 1,
+            "toolOptions": {
+                "scaleAndTranslationState": {
+                    "scale": 1,
+                    "translate": [
+                        0.11083984375,
+                        -66.93502044677734
+                    ]
+                }
+            },
+            "pane": {
+                "x": 20,
+                "y": 20,
+                "h": 400,
+                "w": 600
+            }
+        },
+        {
+            "name": "Data Generators",
+            "type": 47,
+            "pane": {
+                "x": 640,
+                "y": 20,
+                "h": 400,
+                "w": 600
+            }
+        }
+    ],
+    "views": [
+        {
+            "name": "Main",
+            "projectToolKeys": [
+                "graph/Project Resource Graph",
+                "datagenerators/Data Generators"
+            ]
+        }
+    ],
+    "$$hashKey": "object:638"
+}

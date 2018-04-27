@@ -1,0 +1,14 @@
+{
+  "activationConstraint" : "",
+  "active" : false,
+  "config" : {
+    "pollingInterval" : 30,
+    "query" : {
+      "contentType" : "application/json"
+    },
+    "uri" : "http://api.openweathermap.org/data/2.5/weather?zip=94549,us&APPID=<CHANGE ME TO YOUR APP ID>"
+  },
+  "direction" : "BOTH",
+  "name" : "weather",
+  "type" : "REMOTE"
+}

@@ -1,0 +1,171 @@
+{
+  "active" : true,
+  "appType" : false,
+  "ars_properties" : {
+    "ars_regenerate" : false
+  },
+  "assembly" : {
+    "EscalatePatient" : {
+      "additionalBehaviors" : [ ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "escalationBehaviors" : [ {
+          "behaviors" : [ {
+            "name" : "FirstResponderEscalate",
+            "parameters" : [ {
+              "name" : "collaboration",
+              "type" : "reference",
+              "value" : "collaboration"
+            }, {
+              "multi" : true,
+              "name" : "users",
+              "type" : "mixed",
+              "value" : [ {
+                "type" : "expression",
+                "value" : "ratepatient.patientId"
+              } ]
+            }, {
+              "name" : "payloadOverride",
+              "type" : "Object",
+              "value" : null
+            } ],
+            "type" : "activity"
+          } ],
+          "condition" : "true",
+          "name" : "escalate"
+        } ],
+        "escalationTime" : 90
+      },
+      "continuationCondition" : [ ],
+      "instanceParameters" : [ "ratepatient" ],
+      "pattern" : "Escalation"
+    },
+    "FirstResponderEscalate" : {
+      "additionalBehaviors" : [ ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "body" : "Please refer to the patient HUD for '${ratepatient.patientId}'!",
+        "clientName" : "FirstResponderResponse",
+        "firstResponseBehaviors" : [ ],
+        "pushSourceName" : null,
+        "responseBehaviors" : [ {
+          "behaviors" : [ {
+            "name" : "CollaborationUtils.closeCollaboration",
+            "parameters" : [ {
+              "name" : "collaborationId",
+              "type" : "expression",
+              "value" : "collaboration.id"
+            } ],
+            "type" : "service"
+          } ],
+          "condition" : "true",
+          "name" : "response"
+        } ],
+        "title" : "${ratepatient.patientId} Heart Rate Alert (${ratepatient.heartRate})"
+      },
+      "continuationCondition" : [ ],
+      "instanceParameters" : [ "ratepatient" ],
+      "pattern" : "Notification"
+    },
+    "NotifyPatient" : {
+      "additionalBehaviors" : [ ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "body" : "An unusual heart rate (${ratepatient.heartRate}) has been detected",
+        "clientName" : "PatientResponse",
+        "firstResponseBehaviors" : [ ],
+        "pushSourceName" : null,
+        "responseBehaviors" : [ {
+          "behaviors" : [ {
+            "name" : "CollaborationUtils.closeCollaboration",
+            "parameters" : [ {
+              "name" : "collaborationId",
+              "type" : "expression",
+              "value" : "collaboration.id"
+            } ],
+            "type" : "service"
+          } ],
+          "condition" : "event.submitValue == 0",
+          "name" : "response"
+        }, {
+          "behaviors" : [ {
+            "name" : "CollaborationUtils.triggerEscalation",
+            "parameters" : [ {
+              "name" : "collaborationId",
+              "type" : "expression",
+              "value" : "collaboration.id"
+            }, {
+              "name" : "activityTypeName",
+              "type" : "String",
+              "value" : "EscalatePatient"
+            } ],
+            "type" : "service"
+          } ],
+          "condition" : "event.submitValue == 1",
+          "name" : "response"
+        } ],
+        "title" : "Heart Rate Alert"
+      },
+      "continuationCondition" : [ ],
+      "instanceParameters" : [ "ratepatient" ],
+      "pattern" : "Notification"
+    },
+    "UnusualRate" : {
+      "additionalBehaviors" : [ {
+        "behaviors" : [ {
+          "name" : "NotifyPatient",
+          "parameters" : [ {
+            "name" : "collaboration",
+            "type" : "reference",
+            "value" : "collaboration"
+          }, {
+            "multi" : true,
+            "name" : "users",
+            "type" : "mixed",
+            "value" : [ {
+              "type" : "expression",
+              "value" : "ratepatient.patientId ratepatient.patientId"
+            } ]
+          }, {
+            "name" : "payloadOverride",
+            "type" : "Object",
+            "value" : null
+          } ],
+          "type" : "activity"
+        }, {
+          "name" : "EscalatePatient",
+          "parameters" : [ {
+            "name" : "collaboration",
+            "type" : "reference",
+            "value" : "collaboration"
+          } ],
+          "type" : "activity"
+        } ],
+        "condition" : "true",
+        "name" : null
+      } ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "entityRole" : "ratepatient",
+        "initialTrigger" : "WHEN UPDATE OCCURS ON Patient WHERE Patient.heartRate < 40 OR Patient.heartRate > 150"
+      },
+      "continuationCondition" : [ ],
+      "instanceParameters" : [ "ratepatient" ],
+      "pattern" : "InitiateCollaboration"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "currentState" : {
+    "code" : "success"
+  },
+  "entityRoles" : [ {
+    "name" : "ratepatient",
+    "type" : "Patient"
+  } ],
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "RateCollaboration"
+}

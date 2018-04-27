@@ -1,0 +1,58 @@
+{
+  "links" : [ ],
+  "name" : "FloorPlan",
+  "options" : {
+    "filterMask" : 4294967295,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "Resident",
+    "name" : "Resident",
+    "node" : {
+      "x" : 381.1374452244486,
+      "y" : 193.34761858096815
+    },
+    "timestamp" : "2018-01-03T16:57:32.805Z",
+    "type" : 15
+  }, {
+    "label" : "Resident",
+    "name" : "Resident",
+    "node" : {
+      "x" : 235.97724774519838,
+      "y" : 135.48607549740976
+    },
+    "timestamp" : "2018-01-02T19:32:39.756Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 290,
+      "w" : 490,
+      "x" : 20,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "scale" : 1,
+        "translate" : [ -43.33860778808594, -5.416847229003906 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "name" : "Data Generators",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 430
+    },
+    "type" : 47
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "datagenerators/Data Generators" ]
+  } ]
+}

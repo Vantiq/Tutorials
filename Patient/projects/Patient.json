@@ -1,0 +1,198 @@
+{
+  "links" : [ {
+    "source" : "procedure/UpdatePatient",
+    "target" : "type/Patient"
+  }, {
+    "source" : "type/Patient",
+    "target" : "collaborationtype/RateCollaboration"
+  }, {
+    "source" : "topic//notifications/RateCollaboration/NotifyPatient",
+    "target" : "rule/RateCollaboration_NotifyPatient_NotificationResponse"
+  }, {
+    "source" : "rule/RateCollaboration_NotifyPatient_NotificationResponse",
+    "target" : "topic//collaborationtypes/RateCollaboration/debug"
+  } ],
+  "name" : "Patient",
+  "options" : {
+    "filterMask" : -1,
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/collaborationtypes/RateCollaboration/debug",
+    "name" : "/collaborationtypes/RateCollaboration/debug",
+    "node" : {
+      "x" : 220.53185271850668,
+      "y" : 336.9474603196962
+    },
+    "type" : 10
+  }, {
+    "label" : "/notifications/RateCollaboration/NotifyPatient",
+    "name" : "/notifications/RateCollaboration/NotifyPatient",
+    "node" : {
+      "x" : 103.77319494101053,
+      "y" : 68.424977949291
+    },
+    "type" : 10
+  }, {
+    "label" : "FirstResponderResponse",
+    "name" : "FirstResponderResponse",
+    "node" : {
+      "x" : 447.4759457323447,
+      "y" : 178.09508772415498
+    },
+    "timestamp" : "2018-03-09T18:47:38.424Z",
+    "type" : 15
+  }, {
+    "label" : "Patient",
+    "name" : "Patient",
+    "node" : {
+      "x" : 297.97726300398745,
+      "y" : 182.48607549740976
+    },
+    "timestamp" : "2017-12-26T18:32:42.463Z",
+    "type" : 1
+  }, {
+    "label" : "PatientResponse",
+    "name" : "PatientResponse",
+    "node" : {
+      "x" : 403.66242504664365,
+      "y" : 84.80580983252882
+    },
+    "timestamp" : "2018-03-08T23:58:05.872Z",
+    "type" : 15
+  }, {
+    "inventory" : {
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Patient" ]
+    },
+    "label" : "RateCollaboration",
+    "name" : "RateCollaboration",
+    "node" : {
+      "x" : 336.3602278429748,
+      "y" : 276.9523397695955
+    },
+    "timestamp" : "2018-03-14T00:18:06.810Z",
+    "type" : 11
+  }, {
+    "inventory" : {
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "procedureHash" : [ "out", "out", "out", "out", "out", "out", "out" ],
+      "procedures" : [ "exception", "collaboration.results.NotifyPatient.responses.push", "CollaborationGeneration.establishCollaborationContext", "collaboration.results.NotifyPatient.responses.size", "CollaborationGeneration.reEstablishCollaborationContext", "CollaborationUtils.closeCollaboration", "CollaborationUtils.triggerEscalation" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "in", "out" ],
+      "topics" : [ "/notifications/RateCollaboration/NotifyPatient", "/collaborationtypes/RateCollaboration/debug" ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "collaborations", "collaborationtypes" ]
+    },
+    "label" : "RateCollaboration_NotifyPatient_NotificationResponse",
+    "name" : "RateCollaboration_NotifyPatient_NotificationResponse",
+    "node" : {
+      "x" : 131.57071705719676,
+      "y" : 214.71441997937748
+    },
+    "timestamp" : "2018-03-13T23:41:17.902Z",
+    "type" : 2
+  }, {
+    "inventory" : {
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "Patient" ]
+    },
+    "label" : "UpdatePatient",
+    "name" : "UpdatePatient",
+    "node" : {
+      "x" : 298.18416981628314,
+      "y" : 48.46238649188426
+    },
+    "timestamp" : "2017-12-26T18:40:02.789Z",
+    "type" : 3
+  }, {
+    "label" : "VantiqPushNotification",
+    "name" : "VantiqPushNotification",
+    "node" : {
+      "x" : 199.37237317456,
+      "y" : -5.601704168946151
+    },
+    "timestamp" : "2017-12-26T19:15:20.184Z",
+    "type" : 4
+  } ],
+  "tools" : [ {
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 310,
+      "w" : 600,
+      "x" : 20,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.6346354430099026,
+        "translate" : [ 153.45675658672945, 38.7403021840256 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "name" : "UpdatePatient",
+    "pane" : {
+      "h" : 310,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
+    },
+    "resourceKey" : "procedure/UpdatePatient",
+    "type" : 24
+  }, {
+    "name" : "RateCollaboration",
+    "pane" : {
+      "h" : 370,
+      "w" : 1110,
+      "x" : 20,
+      "y" : 340
+    },
+    "resourceKey" : "collaborationtype/RateCollaboration",
+    "toolOptions" : {
+      "propertyPaneWidth" : 250,
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.5656572314229498,
+        "translate" : [ 449.5662317923288, 58.84490059450498 ]
+      }
+    },
+    "type" : 14
+  }, {
+    "name" : "FirstResponderResponse",
+    "pane" : {
+      "h" : 700,
+      "w" : 1350,
+      "x" : 20,
+      "y" : 720
+    },
+    "resourceKey" : "client/FirstResponderResponse",
+    "type" : 63
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/UpdatePatient", "collaborationgraph/RateCollaboration", "client/FirstResponderResponse" ]
+  } ]
+}

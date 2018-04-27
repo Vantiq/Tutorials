@@ -1,0 +1,87 @@
+{
+  "links" : [ {
+    "source" : "rule/weatherReading",
+    "target" : "type/weatherReading"
+  }, {
+    "source" : "source/weather",
+    "target" : "rule/weatherReading"
+  } ],
+  "name" : "WeatherSource",
+  "options" : {
+    "filterMask" : -1,
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "weather",
+    "name" : "weather",
+    "node" : {
+      "x" : 187.13102582137026,
+      "y" : 185.47916326596444
+    },
+    "timestamp" : "2018-01-04T17:07:47.401Z",
+    "type" : 4
+  }, {
+    "inventory" : {
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "weather" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "weatherReading" ]
+    },
+    "label" : "weatherReading",
+    "name" : "weatherReading",
+    "node" : {
+      "x" : 280.76247665003746,
+      "y" : 309.79696215135294
+    },
+    "timestamp" : "2017-12-29T23:00:11.995Z",
+    "type" : 2
+  }, {
+    "label" : "weatherReading",
+    "name" : "weatherReading",
+    "node" : {
+      "x" : 404.3452163672068,
+      "y" : 189.64570083954237
+    },
+    "timestamp" : "2017-12-29T22:43:08.020Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "scale" : 0.9944701686732144,
+        "translate" : [ -33.916719578152936, -62.60806681026111 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "name" : "weather",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
+    },
+    "resourceKey" : "source/weather",
+    "type" : 5
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "subsourceeditor/weather" ]
+  } ]
+}

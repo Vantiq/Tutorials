@@ -1,0 +1,10 @@
+{
+  "active" : true,
+  "config" : {
+    "targetVantiqApp" : true,
+    "useAPNSDevelopmentServer" : false
+  },
+  "direction" : "SINK",
+  "name" : "VantiqPushNotification",
+  "type" : "PUSH_NOTIF"
+}
