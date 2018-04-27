@@ -1,0 +1,722 @@
+{
+  "frequency" : 1000,
+  "name" : "streamEngineTemp",
+  "numOfInserts" : 100,
+  "properties" : [ {
+    "multi" : false,
+    "name" : "systemId",
+    "required" : true,
+    "type" : "String",
+    "value" : "Auto0123456789",
+    "variation" : "None"
+  }, {
+    "multi" : false,
+    "name" : "temperature",
+    "required" : true,
+    "type" : "Integer",
+    "value" : "%R200:215:1%",
+    "variation" : "Step"
+  } ],
+  "script" : [ {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 0
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 1000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 2000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 3000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 204
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 4000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 205
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 5000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 206
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 6000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 207
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 7000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 208
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 8000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 209
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 9000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 210
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 10000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 211
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 11000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 212
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 12000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 213
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 13000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 214
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 14000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 215
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 15000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 16000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 17000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 18000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 19000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 204
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 20000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 205
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 21000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 206
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 22000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 207
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 23000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 208
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 24000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 209
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 25000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 210
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 26000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 211
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 27000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 212
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 28000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 213
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 29000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 214
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 30000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 215
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 31000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 32000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 33000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 34000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 35000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 204
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 36000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 205
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 37000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 206
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 38000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 207
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 39000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 208
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 40000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 209
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 41000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 210
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 42000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 211
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 43000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 212
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 44000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 213
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 45000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 214
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 46000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 215
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 47000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 48000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 49000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 50000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 51000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 204
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 52000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 205
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 53000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 206
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 54000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 207
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 55000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 208
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 56000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 209
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 57000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 210
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 58000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 211
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 59000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 212
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 60000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 213
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 61000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 214
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 62000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 215
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 63000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 64000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 65000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 66000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 67000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 204
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 68000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 205
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 69000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 206
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 70000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 207
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 71000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 208
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 72000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 209
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 73000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 210
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 74000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 211
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 75000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 212
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 76000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 213
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 77000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 214
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 78000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 215
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 79000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 80000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 81000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 82000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 83000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 204
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 84000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 205
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 85000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 206
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 86000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 207
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 87000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 208
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 88000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 209
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 89000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 210
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 90000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 211
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 91000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 212
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 92000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 213
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 93000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 214
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 94000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 215
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 95000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 200
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 96000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 201
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 97000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 202
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 98000
+  }, {
+    "object" : {
+      "systemId" : "Auto0123456789",
+      "temperature" : 203
+    },
+    "resourceName" : "EngineTemp",
+    "sendOffset" : 99000
+  } ],
+  "type" : "EngineTemp"
+}
