@@ -6,7 +6,7 @@
     "query" : {
       "contentType" : "application/json"
     },
-    "uri" : "http://api.openweathermap.org/data/2.5/weather?zip=94549,us&APPID=<CHANGE ME TO YOUR APP ID>"
+    "uri" : "http://api.openweathermap.org/data/2.5/weather?zip=94549,us&APPID=CHANGEMETOYOURAPPID"
   },
   "direction" : "BOTH",
   "name" : "weather",
