@@ -10,7 +10,7 @@ VAR simLocation = {
 }
 
 // use a fixed patient ID value to refer to a single patient
-VAR simPId = "mary"
+VAR simPId = Context.username()
 
 // if the patient already exists, just update the heart rate, otherwise create a new patient record
 UPSERT Patient(name:"Mary Ono", patientId:simPId, location:simLocation, heartRate:simHeartRate)
