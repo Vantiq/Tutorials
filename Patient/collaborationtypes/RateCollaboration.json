@@ -39,6 +39,7 @@
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
+      "name" : "EscalatePatient",
       "pattern" : "Escalation"
     },
     "FirstResponderEscalate" : {
@@ -67,6 +68,7 @@
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
+      "name" : "FirstResponderEscalate",
       "pattern" : "Notification"
     },
     "NotifyPatient" : {
@@ -111,6 +113,7 @@
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
+      "name" : "NotifyPatient",
       "pattern" : "Notification"
     },
     "UnusualRate" : {
@@ -155,6 +158,7 @@
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
+      "name" : "UnusualRate",
       "pattern" : "InitiateCollaboration"
     }
   },
@@ -162,6 +166,7 @@
   "currentState" : {
     "code" : "success"
   },
+  "description" : false,
   "entityRoles" : [ {
     "name" : "ratepatient",
     "type" : "Patient"

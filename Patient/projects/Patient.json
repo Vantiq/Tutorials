@@ -5,69 +5,84 @@
   }, {
     "source" : "type/Patient",
     "target" : "collaborationtype/RateCollaboration"
-  }, {
-    "source" : "topic//notifications/RateCollaboration/NotifyPatient",
-    "target" : "rule/RateCollaboration_NotifyPatient_NotificationResponse"
-  }, {
-    "source" : "rule/RateCollaboration_NotifyPatient_NotificationResponse",
-    "target" : "topic//collaborationtypes/RateCollaboration/debug"
   } ],
   "name" : "Patient",
   "options" : {
-    "filterMask" : -1,
+    "description" : "This project contains the RateCollaboration, which detects when a patient's heartrate is too high and attempts to verify they are ok, or dispatch help if they are not. Before you can test this collaboration you must first download the VANTIQ mobile app and log in once (or else you won't receive the mobile notifications).\n\nThe UpdatePatient procedure included in this project can be used to create and update the heartrate for your user. Before testing the collaboration create a patient record for yourself by executing UpdateProcedure from the pane (below and to the right) with a heartrate between 50 and 140 beats per minute.\n\nOnce you have a patient record, execute UpdatePatient again, but this time specify an unhealthy heartrate, like 10 or 200 beats per minute. This should trigger the start of the collaboration and you should receive a notification on your mobile device.",
+    "filterBitArray" : "000000ffffffffffffffffff00ffffff",
     "isModeloProject" : true,
     "showGrid" : true,
     "v" : 2
   },
   "resources" : [ {
-    "label" : "/collaborationtypes/RateCollaboration/debug",
-    "name" : "/collaborationtypes/RateCollaboration/debug",
-    "node" : {
-      "x" : 220.53185271850668,
-      "y" : 336.9474603196962
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
     },
-    "type" : 10
-  }, {
-    "label" : "/notifications/RateCollaboration/NotifyPatient",
-    "name" : "/notifications/RateCollaboration/NotifyPatient",
-    "node" : {
-      "x" : 103.77319494101053,
-      "y" : 68.424977949291
-    },
-    "type" : 10
-  }, {
     "label" : "FirstResponderResponse",
     "name" : "FirstResponderResponse",
     "node" : {
-      "x" : 447.4759457323447,
-      "y" : 178.09508772415498
+      "x" : 45.26886937567963,
+      "y" : 329.5248657175903
     },
-    "timestamp" : "2018-03-09T18:47:38.424Z",
+    "timestamp" : "2018-07-17T22:08:25.308Z",
     "type" : 15
   }, {
     "label" : "Patient",
     "name" : "Patient",
     "node" : {
-      "x" : 297.97726300398745,
-      "y" : 182.48607549740976
+      "x" : 235.6194714220477,
+      "y" : 116.85746878351986
     },
-    "timestamp" : "2017-12-26T18:32:42.463Z",
+    "timestamp" : "2018-07-17T22:08:24.958Z",
     "type" : 1
   }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
     "label" : "PatientResponse",
     "name" : "PatientResponse",
     "node" : {
-      "x" : 403.66242504664365,
-      "y" : 84.80580983252882
+      "x" : 436.4254186303975,
+      "y" : 326.27671792879875
     },
-    "timestamp" : "2018-03-08T23:58:05.872Z",
+    "timestamp" : "2018-07-17T22:08:25.281Z",
     "type" : 15
   }, {
     "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out", "out" ],
+      "procedures" : [ "CollaborationUtils.closeCollaboration", "CollaborationUtils.triggerEscalation" ],
       "sourceHash" : [ ],
       "sources" : [ ],
       "topicHash" : [ ],
@@ -78,38 +93,21 @@
     "label" : "RateCollaboration",
     "name" : "RateCollaboration",
     "node" : {
-      "x" : 336.3602278429748,
-      "y" : 276.9523397695955
+      "x" : 235.9466567787394,
+      "y" : 242.88600797577692
     },
-    "timestamp" : "2018-03-14T00:18:06.810Z",
+    "timestamp" : "2018-07-17T22:08:25.285Z",
     "type" : 11
   }, {
     "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "procedureHash" : [ "out", "out", "out", "out", "out", "out", "out" ],
-      "procedures" : [ "exception", "collaboration.results.NotifyPatient.responses.push", "CollaborationGeneration.establishCollaborationContext", "collaboration.results.NotifyPatient.responses.size", "CollaborationGeneration.reEstablishCollaborationContext", "CollaborationUtils.closeCollaboration", "CollaborationUtils.triggerEscalation" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ "in", "out" ],
-      "topics" : [ "/notifications/RateCollaboration/NotifyPatient", "/collaborationtypes/RateCollaboration/debug" ],
-      "typeHash" : [ "in", "in" ],
-      "types" : [ "collaborations", "collaborationtypes" ]
-    },
-    "label" : "RateCollaboration_NotifyPatient_NotificationResponse",
-    "name" : "RateCollaboration_NotifyPatient_NotificationResponse",
-    "node" : {
-      "x" : 131.57071705719676,
-      "y" : 214.71441997937748
-    },
-    "timestamp" : "2018-03-13T23:41:17.902Z",
-    "type" : 2
-  }, {
-    "inventory" : {
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "Context.username" ],
       "sourceHash" : [ ],
       "sources" : [ ],
       "topicHash" : [ ],
@@ -120,62 +118,53 @@
     "label" : "UpdatePatient",
     "name" : "UpdatePatient",
     "node" : {
-      "x" : 298.18416981628314,
-      "y" : 48.46238649188426
+      "x" : 233.33099237629693,
+      "y" : -5.61953885755554
     },
-    "timestamp" : "2017-12-26T18:40:02.789Z",
+    "timestamp" : "2018-07-17T22:41:47.612Z",
     "type" : 3
-  }, {
-    "label" : "VantiqPushNotification",
-    "name" : "VantiqPushNotification",
-    "node" : {
-      "x" : 199.37237317456,
-      "y" : -5.601704168946151
-    },
-    "timestamp" : "2017-12-26T19:15:20.184Z",
-    "type" : 4
   } ],
   "tools" : [ {
     "name" : "Project Resource Graph",
     "pane" : {
-      "h" : 310,
-      "w" : 600,
+      "h" : 380,
+      "w" : 660,
       "x" : 20,
-      "y" : 20
+      "y" : 440
     },
     "toolOptions" : {
       "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.6346354430099026,
-        "translate" : [ 153.45675658672945, 38.7403021840256 ]
+        "lastZoomRequest" : 3,
+        "scale" : 0.8012017004954994,
+        "translate" : [ 172.79273084949298, 31.74324222865266 ]
       }
     },
     "type" : 1
   }, {
     "name" : "UpdatePatient",
     "pane" : {
-      "h" : 310,
-      "w" : 600,
-      "x" : 640,
-      "y" : 20
+      "h" : 380,
+      "w" : 900,
+      "x" : 700,
+      "y" : 440
     },
     "resourceKey" : "procedure/UpdatePatient",
     "type" : 24
   }, {
     "name" : "RateCollaboration",
     "pane" : {
-      "h" : 370,
-      "w" : 1110,
-      "x" : 20,
-      "y" : 340
+      "h" : 410,
+      "w" : 900,
+      "x" : 700,
+      "y" : 10
     },
     "resourceKey" : "collaborationtype/RateCollaboration",
     "toolOptions" : {
       "propertyPaneWidth" : 250,
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
-        "scale" : 0.5656572314229498,
-        "translate" : [ 449.5662317923288, 58.84490059450498 ]
+        "scale" : 0.5697412975596359,
+        "translate" : [ 361.0581374297225, 65.93682412364397 ]
       }
     },
     "type" : 14
@@ -183,16 +172,35 @@
     "name" : "FirstResponderResponse",
     "pane" : {
       "h" : 700,
-      "w" : 1350,
+      "w" : 1090,
       "x" : 20,
-      "y" : 720
+      "y" : 840
     },
     "resourceKey" : "client/FirstResponderResponse",
+    "type" : 63
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 410,
+      "w" : 660,
+      "x" : 20,
+      "y" : 10
+    },
+    "type" : 82
+  }, {
+    "name" : "PatientResponse",
+    "pane" : {
+      "h" : 700,
+      "w" : 1090,
+      "x" : 20,
+      "y" : 1560
+    },
+    "resourceKey" : "client/PatientResponse",
     "type" : 63
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/UpdatePatient", "collaborationgraph/RateCollaboration", "client/FirstResponderResponse" ]
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/UpdatePatient", "collaborationgraph/RateCollaboration", "client/FirstResponderResponse", "projectdescription/Project Description", "client/PatientResponse" ]
   } ]
 }
