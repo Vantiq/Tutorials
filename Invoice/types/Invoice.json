@@ -1,69 +1,64 @@
 {
-    "name": "Invoice",
-    "role": "standard",
-    "adminAccessLevel": "ars_readWrite",
-    "userAccessLevel": "ars_readOnly",
-    "volatile": false,
-    "naturalKey": [],
-    "expiresAfter": null,
-    "foreignKeys": null,
-    "audited": false,
-    "groupEnabled": false,
-    "groupRequired": false,
-    "encapsulated": false,
-    "metadata": false,
-    "indexes": [
-        {
-            "keys": [
-                "-timestamp"
-            ],
-            "options": {}
-        }
-    ],
-    "maxStorage": 0,
-    "maxObjects": 0,
-    "properties": {
-        "amount": {
-            "type": "Real",
-            "unique": false,
-            "required": true,
-            "multi": false,
-            "encrypted": false
-        },
-        "description": {
-            "type": "String",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        },
-        "firstName": {
-            "type": "String",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        },
-        "ID": {
-            "type": "String",
-            "unique": false,
-            "required": true,
-            "multi": false,
-            "encrypted": false
-        },
-        "lastName": {
-            "type": "String",
-            "unique": false,
-            "required": true,
-            "multi": false,
-            "encrypted": false
-        },
-        "timestamp": {
-            "type": "DateTime",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        }
+  "adminAccessLevel" : "ars_readWrite",
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "-timestamp" ],
+    "options" : { }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "Invoice",
+  "naturalKey" : [ ],
+  "properties" : {
+    "ID" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "amount" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Real",
+      "unique" : false
+    },
+    "description" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "firstName" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "lastName" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "timestamp" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "DateTime",
+      "unique" : false
     }
+  },
+  "role" : "standard",
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
 }
