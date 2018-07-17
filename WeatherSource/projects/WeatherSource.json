@@ -8,7 +8,8 @@
   } ],
   "name" : "WeatherSource",
   "options" : {
-    "filterMask" : -1,
+    "description" : "To enable the weather source, you will need to register for an API key from http://api.openweathermap.org\n\nOnce you have registered for the API key, copy the value and replace \"CHANGEMETOYOURAPPID\" at the end of Server URI field in the source definition below.\n\nCheck the active checkbox in the titlebar (empty square with rounded corners) and save the source. The Current State should flip from a red down arrow to a green up arrow. \n\nOnce the source is active, click the play button on the source title bar to view the raw weather readings received from the source, or go to show -> find records -> select the weatherReading type, and query for all of the recorded values.\n",
+    "filterBitArray" : "000000ffffffffffffffffff00ffffff",
     "isModeloProject" : true,
     "showGrid" : true,
     "v" : 2
@@ -20,12 +21,16 @@
       "x" : 187.13102582137026,
       "y" : 185.47916326596444
     },
-    "timestamp" : "2018-01-04T17:07:47.401Z",
+    "timestamp" : "2018-07-17T21:58:13.585Z",
     "type" : 4
   }, {
     "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ "in" ],
@@ -41,7 +46,7 @@
       "x" : 280.76247665003746,
       "y" : 309.79696215135294
     },
-    "timestamp" : "2017-12-29T23:00:11.995Z",
+    "timestamp" : "2018-07-17T21:58:12.714Z",
     "type" : 2
   }, {
     "label" : "weatherReading",
@@ -50,7 +55,7 @@
       "x" : 404.3452163672068,
       "y" : 189.64570083954237
     },
-    "timestamp" : "2017-12-29T22:43:08.020Z",
+    "timestamp" : "2018-07-17T21:58:12.739Z",
     "type" : 1
   } ],
   "tools" : [ {
@@ -63,8 +68,9 @@
     },
     "toolOptions" : {
       "scaleAndTranslationState" : {
-        "scale" : 0.9944701686732144,
-        "translate" : [ -33.916719578152936, -62.60806681026111 ]
+        "lastZoomRequest" : 0,
+        "scale" : 1.0817445582694492,
+        "translate" : [ -36.74068332839454, -107.19522011496353 ]
       }
     },
     "type" : 1
@@ -74,14 +80,33 @@
       "h" : 400,
       "w" : 600,
       "x" : 640,
-      "y" : 20
+      "y" : 440
     },
     "resourceKey" : "source/weather",
     "type" : 5
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
+    },
+    "type" : 82
+  }, {
+    "name" : "weatherReading",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 440
+    },
+    "resourceKey" : "rule/weatherReading",
+    "type" : 3
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "subsourceeditor/weather" ]
+    "projectToolKeys" : [ "graph/Project Resource Graph", "subsourceeditor/weather", "projectdescription/Project Description", "cmeditorrule/weatherReading" ]
   } ]
 }
