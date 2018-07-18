@@ -1,230 +1,216 @@
 {
-    "name": "EngineMonitor",
-    "options": {
-        "v": 2,
-        "filterMask": 4294967295,
-        "showGrid": true,
-        "isModeloProject": true
+  "links" : [ {
+    "source" : "type/SystemHUD",
+    "target" : "subscription/SystemHUD"
+  }, {
+    "source" : "type/EngineTemp",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/EngineSpeed",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/SystemStatus",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/SystemHUD",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/SystemStatus",
+    "target" : "client/EngineSimulation"
+  }, {
+    "source" : "type/SystemHUD",
+    "target" : "client/EngineSimulation"
+  } ],
+  "name" : "EngineMonitor",
+  "options" : {
+    "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start both of the data generators by checking both checkboxes next to the 2 rows and clicking play in the title bar. When the data generators start you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the data generators, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation. ",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in", "in", "in", "in" ],
+      "types" : [ "EngineTemp", "EngineSpeed", "SystemStatus", "SystemHUD" ]
     },
-    "type": "dev",
-    "resources": [
-        {
-            "name": "EngineMonitor",
-            "type": 12,
-            "label": "EngineMonitor",
-            "timestamp": "2018-04-28T00:04:45.436Z",
-            "inventory": {
-                "types": [
-                    "SystemStatus",
-                    "EngineTemp",
-                    "EngineSpeed",
-                    "SystemHUD"
-                ],
-                "typeHash": [
-                    "out",
-                    "out",
-                    "out",
-                    "out"
-                ],
-                "sources": [],
-                "sourceHash": [],
-                "topics": [],
-                "topicHash": [],
-                "procedures": [],
-                "procedureHash": [],
-                "collaborations": [],
-                "collaborationHash": []
-            },
-            "node": {
-                "x": 302.9121276726471,
-                "y": 45.17216250605196
-            },
-            "$$hashKey": "object:92"
-        },
-        {
-            "name": "EngineSimulation",
-            "type": 15,
-            "label": "EngineSimulation",
-            "timestamp": "2018-04-28T00:04:45.418Z",
-            "node": {
-                "x": 543.0011367557815,
-                "y": 56.80947886436911
-            },
-            "$$hashKey": "object:96"
-        },
-        {
-            "name": "EngineSpeed",
-            "type": 1,
-            "label": "EngineSpeed",
-            "timestamp": "2018-04-28T00:04:45.295Z",
-            "node": {
-                "x": 412.9790290378037,
-                "y": -88.35219112416178
-            },
-            "$$hashKey": "object:108"
-        },
-        {
-            "name": "EngineTemp",
-            "type": 1,
-            "label": "EngineTemp",
-            "timestamp": "2018-04-28T00:04:45.304Z",
-            "node": {
-                "x": 188.66125348250307,
-                "y": -84.49727716372306
-            },
-            "$$hashKey": "object:109"
-        },
-        {
-            "name": "SystemHUD",
-            "type": 1,
-            "label": "SystemHUD",
-            "timestamp": "2018-04-28T00:04:45.310Z",
-            "node": {
-                "x": 408.1376056238077,
-                "y": 168.16570367198096
-            },
-            "$$hashKey": "object:110"
-        },
-        {
-            "name": "SystemHUD",
-            "type": 9,
-            "label": "SystemHUD",
-            "timestamp": "2018-04-28T00:04:45.355Z",
-            "inventory": {
-                "types": [
-                    "SystemHUD"
-                ],
-                "typeHash": [
-                    "in"
-                ],
-                "sources": [],
-                "sourceHash": [],
-                "topics": [],
-                "topicHash": [],
-                "procedures": [],
-                "procedureHash": [],
-                "collaborations": [],
-                "collaborationHash": []
-            },
-            "node": {
-                "x": 408.01435867121677,
-                "y": 318.2212060783854
-            },
-            "$$hashKey": "object:104"
-        },
-        {
-            "name": "SystemStatus",
-            "type": 1,
-            "label": "SystemStatus",
-            "timestamp": "2018-04-28T00:04:45.305Z",
-            "node": {
-                "x": 217.11444017599882,
-                "y": 167.48239623143868
-            },
-            "$$hashKey": "object:111"
-        }
-    ],
-    "links": [
-        {
-            "source": "app/EngineMonitor",
-            "target": "type/EngineTemp"
-        },
-        {
-            "source": "app/EngineMonitor",
-            "target": "type/EngineSpeed"
-        },
-        {
-            "source": "app/EngineMonitor",
-            "target": "type/SystemStatus"
-        },
-        {
-            "source": "app/EngineMonitor",
-            "target": "type/SystemHUD"
-        },
-        {
-            "source": "type/SystemHUD",
-            "target": "subscription/SystemHUD"
-        }
-    ],
-    "tools": [
-        {
-            "name": "Data Generators",
-            "type": 47,
-            "pane": {
-                "x": 640,
-                "y": 20,
-                "h": 400,
-                "w": 600
-            }
-        },
-        {
-            "name": "EngineMonitor",
-            "type": 15,
-            "resourceKey": "app/EngineMonitor",
-            "pane": {
-                "x": 1160,
-                "y": 440,
-                "h": 510,
-                "w": 800
-            }
-        },
-        {
-            "name": "EngineSimulation",
-            "type": 63,
-            "toolOptions": {
-                "isRunning": true
-            },
-            "resourceKey": "client/EngineSimulation",
-            "pane": {
-                "x": 20,
-                "y": 440,
-                "h": 1100,
-                "w": 1120
-            }
-        },
-        {
-            "name": "SystemHUD",
-            "type": 7,
-            "resourceKey": "subscription/SystemHUD",
-            "pane": {
-                "x": 1260,
-                "y": 20,
-                "h": 400,
-                "w": 600
-            }
-        },
-        {
-            "name": "Project Resource Graph",
-            "type": 1,
-            "toolOptions": {
-                "scaleAndTranslationState": {
-                    "scale": 0.6953631995816502,
-                    "translate": [
-                        112.19269304196104,
-                        106.12938695007465
-                    ],
-                    "lastZoomRequest": 0
-                }
-            },
-            "pane": {
-                "x": 20,
-                "y": 20,
-                "h": 400,
-                "w": 600
-            }
-        }
-    ],
-    "views": [
-        {
-            "name": "Main",
-            "projectToolKeys": [
-                "datagenerators/Data Generators",
-                "app/EngineMonitor",
-                "client/EngineSimulation",
-                "subsubscribeeditor/SystemHUD",
-                "graph/Project Resource Graph"
-            ]
-        }
-    ],
-    "$$hashKey": "object:100"
+    "label" : "EngineMonitor",
+    "name" : "EngineMonitor",
+    "node" : {
+      "x" : 302.96435531971724,
+      "y" : 59.994041683287506
+    },
+    "timestamp" : "2018-07-18T21:16:20.805Z",
+    "type" : 12
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "SystemStatus", "SystemHUD" ]
+    },
+    "name" : "EngineSimulation",
+    "node" : {
+      "x" : 291.6590600185485,
+      "y" : 240.76354691155944
+    },
+    "timestamp" : "2018-07-18T17:44:16.158Z",
+    "type" : 15
+  }, {
+    "label" : "EngineSpeed",
+    "name" : "EngineSpeed",
+    "node" : {
+      "x" : 418.4598639987412,
+      "y" : -7.510056171616611
+    },
+    "timestamp" : "2018-07-18T00:12:33.265Z",
+    "type" : 1
+  }, {
+    "label" : "EngineTemp",
+    "name" : "EngineTemp",
+    "node" : {
+      "x" : 196.88249066512026,
+      "y" : -7.765757464626375
+    },
+    "timestamp" : "2018-07-18T00:12:33.161Z",
+    "type" : 1
+  }, {
+    "label" : "SystemHUD",
+    "name" : "SystemHUD",
+    "node" : {
+      "x" : 408.1376056238077,
+      "y" : 168.16570367198096
+    },
+    "timestamp" : "2018-07-18T00:12:33.161Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "SystemHUD" ]
+    },
+    "label" : "SystemHUD",
+    "name" : "SystemHUD",
+    "node" : {
+      "x" : 572.8218843059824,
+      "y" : 292.2964013908854
+    },
+    "timestamp" : "2018-07-18T17:44:16.608Z",
+    "type" : 9
+  }, {
+    "label" : "SystemStatus",
+    "name" : "SystemStatus",
+    "node" : {
+      "x" : 217.11444017599882,
+      "y" : 167.48239623143868
+    },
+    "timestamp" : "2018-07-18T00:12:33.162Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "name" : "Data Generators",
+    "pane" : {
+      "h" : 180,
+      "w" : 600,
+      "x" : 800,
+      "y" : 410
+    },
+    "type" : 47
+  }, {
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 360,
+      "w" : 600,
+      "x" : 800,
+      "y" : 30
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7418516099124758,
+        "translate" : [ 31.210342453467376, 83.84381531897938 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "name" : "EngineMonitor",
+    "pane" : {
+      "h" : 500,
+      "w" : 760,
+      "x" : 20,
+      "y" : 610
+    },
+    "resourceKey" : "app/EngineMonitor",
+    "type" : 15
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 570,
+      "w" : 760,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  }, {
+    "name" : "EngineSimulation",
+    "pane" : {
+      "h" : 860,
+      "w" : 1270,
+      "x" : 20,
+      "y" : 1130
+    },
+    "resourceKey" : "client/EngineSimulation",
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "name" : "SystemHUD",
+    "pane" : {
+      "h" : 500,
+      "w" : 600,
+      "x" : 800,
+      "y" : 610
+    },
+    "resourceKey" : "subscription/SystemHUD",
+    "type" : 7
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "datagenerators/Data Generators", "graph/Project Resource Graph", "app/EngineMonitor", "projectdescription/Project Description", "client/EngineSimulation", "subsubscribeeditor/SystemHUD" ]
+  } ]
 }

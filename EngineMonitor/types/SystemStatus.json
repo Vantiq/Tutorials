@@ -1,52 +1,45 @@
 {
-    "name": "SystemStatus",
-    "role": "standard",
-    "adminAccessLevel": "ars_readWrite",
-    "userAccessLevel": "ars_readOnly",
-    "volatile": false,
-    "naturalKey": [
-        "systemId"
-    ],
-    "expiresAfter": null,
-    "foreignKeys": null,
-    "audited": false,
-    "groupEnabled": false,
-    "groupRequired": false,
-    "encapsulated": false,
-    "metadata": false,
-    "indexes": [
-        {
-            "keys": [
-                "systemId"
-            ],
-            "options": {
-                "unique": true
-            }
-        }
-    ],
-    "maxStorage": 0,
-    "maxObjects": 0,
-    "properties": {
-        "speed": {
-            "type": "Integer",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        },
-        "systemId": {
-            "type": "String",
-            "unique": false,
-            "required": true,
-            "multi": false,
-            "encrypted": false
-        },
-        "temperature": {
-            "type": "Integer",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        }
+  "adminAccessLevel" : "ars_readWrite",
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "systemId" ],
+    "options" : {
+      "unique" : true
     }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "SystemStatus",
+  "naturalKey" : [ "systemId" ],
+  "properties" : {
+    "speed" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "systemId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "temperature" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
 }
