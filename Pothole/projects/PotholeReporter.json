@@ -33,16 +33,16 @@
     "label" : "/my/response/topic",
     "name" : "/my/response/topic",
     "node" : {
-      "x" : 97.62138694939736,
-      "y" : 164.695242420184
+      "x" : 29.31543964562539,
+      "y" : 141.14147044752775
     },
     "type" : 10
   }, {
     "label" : "/vantiq/appmodel/PotholeReporter/submitTopic",
     "name" : "/vantiq/appmodel/PotholeReporter/submitTopic",
     "node" : {
-      "x" : 332.86067522813084,
-      "y" : 111.39631991999723
+      "x" : 348.90059222031834,
+      "y" : 103.27290683405973
     },
     "type" : 10
   }, {
@@ -68,7 +68,7 @@
       "x" : 94.52381793164223,
       "y" : 16.649532942695323
     },
-    "timestamp" : "2018-07-05T22:58:13.560Z",
+    "timestamp" : "2018-08-02T00:31:33.352Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -90,10 +90,10 @@
     "label" : "NotifyReporter",
     "name" : "NotifyReporter",
     "node" : {
-      "x" : 444.212923868366,
-      "y" : 227.78003796483804
+      "x" : 481.89892850703785,
+      "y" : 332.5943232431583
     },
-    "timestamp" : "2018-08-01T22:23:07.931Z",
+    "timestamp" : "2018-08-02T00:31:33.376Z",
     "type" : 11
   }, {
     "inventory" : {
@@ -115,26 +115,26 @@
     "label" : "NotifyTeam",
     "name" : "NotifyTeam",
     "node" : {
-      "x" : 311.9721915959906,
-      "y" : 311.6252438625116
+      "x" : 162.40572431083433,
+      "y" : 335.17904635274596
     },
-    "timestamp" : "2018-08-01T22:24:18.383Z",
+    "timestamp" : "2018-08-02T00:31:33.374Z",
     "type" : 11
   }, {
     "label" : "Pothole",
     "name" : "Pothole",
     "node" : {
-      "x" : 172.0464916293634,
-      "y" : 238.8693038169455
+      "x" : 342.6044292514337,
+      "y" : 261.18519126811736
     },
-    "timestamp" : "2018-07-05T21:42:17.186Z",
+    "timestamp" : "2018-08-02T00:31:32.871Z",
     "type" : 1
   }, {
     "inventory" : {
       "appmodelHash" : [ ],
       "appmodels" : [ ],
       "collaborationHash" : [ "out", "out" ],
-      "collaborations" : [ "StartNotifyTeam", "StartNotifyReporter" ],
+      "collaborations" : [ "StartNotifyReporter", "StartNotifyTeam" ],
       "pagesetHash" : [ ],
       "pagesets" : [ ],
       "procedureHash" : [ ],
@@ -149,10 +149,10 @@
     "label" : "PotholeReporter",
     "name" : "PotholeReporter",
     "node" : {
-      "x" : 310.85156348574264,
-      "y" : 178.55136870870007
+      "x" : 345.85485938418014,
+      "y" : 182.32523345479382
     },
-    "timestamp" : "2018-08-01T22:12:45.345Z",
+    "timestamp" : "2018-08-02T00:31:33.376Z",
     "type" : 12
   }, {
     "inventory" : {
@@ -174,10 +174,10 @@
     "label" : "PotholeReporter",
     "name" : "PotholeReporter",
     "node" : {
-      "x" : 347.6644510391226,
-      "y" : 45.86149106779145
+      "x" : 352.6837381484976,
+      "y" : 5.6996716097836355
     },
-    "timestamp" : "2018-08-01T21:58:06.188Z",
+    "timestamp" : "2018-08-02T00:31:33.350Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -202,31 +202,31 @@
       "x" : -30.74687470693152,
       "y" : 245.87294223983685
     },
-    "timestamp" : "2018-07-05T22:57:37.009Z",
+    "timestamp" : "2018-08-02T00:31:33.350Z",
     "type" : 15
   } ],
   "tools" : [ {
     "name" : "Project Resource Graph",
     "pane" : {
       "h" : 400,
-      "w" : 670,
+      "w" : 680,
       "x" : 20,
-      "y" : 20
+      "y" : 520
     },
     "toolOptions" : {
       "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.8077607776096083,
-        "translate" : [ 136.72772230651134, 65.80666388455609 ]
+        "lastZoomRequest" : 3,
+        "scale" : 0.807826105243293,
+        "translate" : [ 163.522285430603, 44.81463821293832 ]
       }
     },
     "type" : 1
   }, {
     "name" : "PotholeReporter",
     "pane" : {
-      "h" : 500,
-      "w" : 970,
-      "x" : 730,
+      "h" : 480,
+      "w" : 940,
+      "x" : 720,
       "y" : 20
     },
     "resourceKey" : "app/PotholeReporter",
@@ -235,17 +235,17 @@
     "name" : "NotifyTeam",
     "pane" : {
       "h" : 500,
-      "w" : 900,
-      "x" : 800,
-      "y" : 530
+      "w" : 690,
+      "x" : 720,
+      "y" : 520
     },
     "resourceKey" : "collaborationtype/NotifyTeam",
     "toolOptions" : {
       "propertyPaneWidth" : 250,
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
-        "scale" : 1.263586956521739,
-        "translate" : [ 272.46681810461956, 42.961956521739154 ]
+        "scale" : 1.7306573497519468,
+        "translate" : [ 238.33912831679731, -111.93063930290052 ]
       }
     },
     "type" : 14
@@ -253,26 +253,26 @@
     "name" : "NotifyReporter",
     "pane" : {
       "h" : 500,
-      "w" : 750,
+      "w" : 680,
       "x" : 20,
-      "y" : 530
+      "y" : 940
     },
     "resourceKey" : "collaborationtype/NotifyReporter",
     "toolOptions" : {
       "propertyPaneWidth" : 250,
       "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 2.13302752293578,
-        "translate" : [ 283, 72.52293577981652 ]
+        "lastZoomRequest" : 3,
+        "scale" : 2.024131627056673,
+        "translate" : [ 223, 80.69012797074953 ]
       }
     },
     "type" : 14
   }, {
     "name" : "Project Description",
     "pane" : {
-      "h" : 400,
-      "w" : 650,
-      "x" : 1720,
+      "h" : 480,
+      "w" : 680,
+      "x" : 20,
       "y" : 20
     },
     "type" : 82

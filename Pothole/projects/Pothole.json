@@ -8,7 +8,7 @@
   } ],
   "name" : "Pothole",
   "options" : {
-    "description" : "This project was demonstrates the 'Pothole' project found in the 'App Modeler Tutorial'. It shows a complete example of using the VANTIQ App Modeler to build the 'Pothole' model.",
+    "description" : "This project was demonstrates the 'Pothole' project found in the 'App Modeler Tutorial'. It shows a complete example of using the VANTIQ App Modeler to build the 'Pothole' model.\n\nApp Models can generate the skeleton for a working application. In this case, the Pothole App Model was used to generate the basis for the PotholeReporter project, which was then fleshed out in the App Modeler Tutorial. Go to the Projects dropdown above and select PotholeReported to see the final results of the tutorial.",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "showGrid" : true,
@@ -29,7 +29,7 @@
       "x" : 676.4744645501389,
       "y" : 89.53363196464251
     },
-    "timestamp" : "2018-07-05T21:42:17.186Z",
+    "timestamp" : "2018-08-02T00:31:32.871Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -54,7 +54,7 @@
       "x" : 677.0842881504718,
       "y" : 194.73058233334726
     },
-    "timestamp" : "2018-07-31T21:38:37.185Z",
+    "timestamp" : "2018-08-02T00:31:33.374Z",
     "type" : 45
   }, {
     "inventory" : {
@@ -79,32 +79,16 @@
       "x" : 420.5262420385036,
       "y" : 90.05107457381138
     },
-    "timestamp" : "2018-08-01T21:58:06.188Z",
+    "timestamp" : "2018-08-02T00:31:33.350Z",
     "type" : 15
   } ],
   "tools" : [ {
-    "name" : "Project Resource Graph",
-    "pane" : {
-      "h" : 410,
-      "w" : 700,
-      "x" : 20,
-      "y" : 20
-    },
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.8411324801623531,
-        "translate" : [ -87.84020968917332, 48.40972099463258 ]
-      }
-    },
-    "type" : 1
-  }, {
     "name" : "Pothole",
     "pane" : {
       "h" : 622.5,
       "w" : 695.5,
-      "x" : 740,
-      "y" : 20
+      "x" : 640,
+      "y" : 10
     },
     "resourceKey" : "appmodel/Pothole",
     "type" : 71
@@ -112,8 +96,8 @@
     "name" : "Project Description",
     "pane" : {
       "h" : 400,
-      "w" : 650,
-      "x" : 1460,
+      "w" : 580,
+      "x" : 20,
       "y" : 20
     },
     "type" : 82
@@ -121,6 +105,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "appmodel/Pothole", "projectdescription/Project Description" ]
+    "projectToolKeys" : [ "appmodel/Pothole", "projectdescription/Project Description" ]
   } ]
 }
