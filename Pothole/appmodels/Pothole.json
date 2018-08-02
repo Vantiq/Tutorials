@@ -1,0 +1,119 @@
+{
+  "contents" : {
+    "groups" : [ {
+      "members" : [ "3ac76596-e2c3-4179-85d9-dbf39b6b371e", "ae498085-18e2-48cc-91f9-156b1c101d74", "3a2c2bfc-a0c8-46e5-84cf-0548f1f10fee", "242cbac1-84fa-454b-a8d2-26314b087bd2", "1160c34b-7869-411e-86ec-b75a3e9df64d", "01a6cf5c-2bf9-4b3e-bbad-154ceea367f4", "65f4ca68-fd7c-41fa-8dcb-315dfd3d786c", "ec88116d-0c7b-48b9-874a-305781d36c81" ],
+      "name" : "Pothole Reporter",
+      "selected" : true
+    } ],
+    "links" : [ {
+      "from" : "3ac76596-e2c3-4179-85d9-dbf39b6b371e",
+      "to" : "ae498085-18e2-48cc-91f9-156b1c101d74"
+    }, {
+      "from" : "242cbac1-84fa-454b-a8d2-26314b087bd2",
+      "to" : "3a2c2bfc-a0c8-46e5-84cf-0548f1f10fee"
+    }, {
+      "from" : "1160c34b-7869-411e-86ec-b75a3e9df64d",
+      "to" : "242cbac1-84fa-454b-a8d2-26314b087bd2"
+    }, {
+      "from" : "01a6cf5c-2bf9-4b3e-bbad-154ceea367f4",
+      "to" : "1160c34b-7869-411e-86ec-b75a3e9df64d"
+    }, {
+      "from" : "65f4ca68-fd7c-41fa-8dcb-315dfd3d786c",
+      "to" : "ec88116d-0c7b-48b9-874a-305781d36c81"
+    }, {
+      "from" : "ae498085-18e2-48cc-91f9-156b1c101d74",
+      "to" : "01a6cf5c-2bf9-4b3e-bbad-154ceea367f4"
+    } ],
+    "objects" : [ {
+      "clientName" : "PotholeReporter",
+      "h" : 100,
+      "label" : "PotholeReporter",
+      "resourceType" : "PotholeReport",
+      "type" : 26,
+      "uuid" : "3ac76596-e2c3-4179-85d9-dbf39b6b371e",
+      "w" : 120.52786254882812,
+      "x" : -9885.736068725586,
+      "y" : -9843.5
+    }, {
+      "h" : 100,
+      "label" : "Report Received",
+      "type" : 24,
+      "uuid" : "ae498085-18e2-48cc-91f9-156b1c101d74",
+      "w" : 100,
+      "x" : -9734,
+      "y" : -9843.5
+    }, {
+      "h" : 100,
+      "label" : "Update Status",
+      "reactionTask" : "Collaboration.SaveToType",
+      "reactionType" : 2,
+      "type" : 25,
+      "uuid" : "3a2c2bfc-a0c8-46e5-84cf-0548f1f10fee",
+      "w" : 100,
+      "x" : -9898,
+      "y" : -9639.5
+    }, {
+      "h" : 100,
+      "label" : "Notify Team",
+      "reactionTask" : "Notification",
+      "reactionType" : 2,
+      "type" : 25,
+      "uuid" : "242cbac1-84fa-454b-a8d2-26314b087bd2",
+      "w" : 100,
+      "x" : -9723.82390874971,
+      "y" : -9639.5
+    }, {
+      "eventType" : "types",
+      "h" : 100,
+      "label" : "Fix Order Issued",
+      "resourceType" : "Pothole",
+      "type" : 24,
+      "uuid" : "1160c34b-7869-411e-86ec-b75a3e9df64d",
+      "w" : 100,
+      "x" : -9554,
+      "y" : -9639.5
+    }, {
+      "h" : 100,
+      "label" : "Store Report",
+      "reactionTask" : "SaveToType",
+      "reactionType" : 1,
+      "type" : 25,
+      "uuid" : "01a6cf5c-2bf9-4b3e-bbad-154ceea367f4",
+      "w" : 100,
+      "x" : -9554,
+      "y" : -9843.5
+    }, {
+      "eventType" : "types",
+      "h" : 100,
+      "label" : "Status Updated",
+      "resourceType" : "Pothole",
+      "type" : 24,
+      "uuid" : "65f4ca68-fd7c-41fa-8dcb-315dfd3d786c",
+      "w" : 100,
+      "x" : -9332,
+      "y" : -9843.5
+    }, {
+      "h" : 100,
+      "label" : "Notify Reporter",
+      "reactionTask" : "Notification",
+      "reactionType" : 2,
+      "type" : 25,
+      "uuid" : "ec88116d-0c7b-48b9-874a-305781d36c81",
+      "w" : 100,
+      "x" : -9332,
+      "y" : -9639.5
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.6408239620800963,
+        "translate" : [ 6402.482899636555, 6464.822296543362 ]
+      },
+      "showGroups" : true
+    },
+    "timestamp" : "2018-07-31T21:38:36.885Z"
+  },
+  "description" : "No description given",
+  "journals" : [ ],
+  "name" : "Pothole"
+}

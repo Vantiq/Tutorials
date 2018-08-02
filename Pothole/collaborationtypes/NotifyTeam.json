@@ -1,0 +1,100 @@
+{
+  "active" : true,
+  "appType" : false,
+  "assembly" : {
+    "Initiate" : {
+      "additionalBehaviors" : [ {
+        "behaviors" : [ {
+          "description" : null,
+          "name" : "NotifyTeam",
+          "parameters" : [ {
+            "name" : "collaboration",
+            "type" : "reference",
+            "value" : "collaboration"
+          }, {
+            "multi" : true,
+            "name" : "users",
+            "type" : "mixed",
+            "value" : [ {
+              "type" : "String",
+              "value" : "a4a4703b-69f0-4896-bcee-86b022d4d0e2"
+            } ]
+          } ],
+          "type" : "activity"
+        } ],
+        "condition" : "true",
+        "description" : null,
+        "name" : null
+      } ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "entityRole" : "report",
+        "initialTrigger" : "WHEN INSERT OCCURS ON ArsSituation AS situation WHERE situation.name == \"NotifyTeam\""
+      },
+      "continuationCondition" : [ ],
+      "description" : null,
+      "instanceParameters" : [ "report" ],
+      "pattern" : "InitiateCollaboration"
+    },
+    "NotifyTeam" : {
+      "additionalBehaviors" : [ ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "body" : "A new pothole with description '${report.description}' has been created.",
+        "clientName" : "UpdatePothole",
+        "firstResponseBehaviors" : [ ],
+        "pushSourceName" : null,
+        "responseBehaviors" : [ {
+          "behaviors" : [ {
+            "description" : null,
+            "name" : "UpdateStatus",
+            "parameters" : [ {
+              "name" : "collaboration",
+              "type" : "reference",
+              "value" : "collaboration"
+            }, {
+              "name" : "instance",
+              "type" : "expression",
+              "value" : "{\"potholeID\":report.potholeID,\"status\":event.values.newStatus}"
+            } ],
+            "type" : "activity"
+          } ],
+          "condition" : "true",
+          "description" : null,
+          "name" : "response"
+        } ],
+        "title" : "New Pothole Report"
+      },
+      "continuationCondition" : [ ],
+      "description" : null,
+      "instanceParameters" : [ "report" ],
+      "pattern" : "Notification"
+    },
+    "UpdateStatus" : {
+      "additionalBehaviors" : [ ],
+      "cancellationCondition" : [ ],
+      "completionCondition" : [ ],
+      "configuration" : {
+        "type" : "Pothole",
+        "upsert" : true
+      },
+      "continuationCondition" : [ ],
+      "description" : null,
+      "instanceParameters" : [ "report" ],
+      "pattern" : "Collaboration.SaveToType"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "",
+  "entityRoles" : [ {
+    "name" : "report",
+    "type" : "Pothole"
+  } ],
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "NotifyTeam"
+}
