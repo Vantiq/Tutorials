@@ -3,4 +3,4 @@ The Engine Monitor tutorial walks through developing VANTIQ Apps and Clients to 
 An app is used to process the stream of sensor readings and detect anomolous conditions in the engine, and a client is used
 to visualize the data and display any alerts as they occur.
 
-For more information on the Engine Monitor Tutorial, check out the documentation [here](/docs/system/tutorials/tutorial/index.html)
+For more information on the Engine Monitor Tutorial, check out the documentation [here](/docs/system/tutorials/tutorial/index.html).

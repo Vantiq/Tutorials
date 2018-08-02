@@ -3,4 +3,4 @@ The App Modeler Tutorial contains two projects: Pothole, which contains the App 
 and PotholeReporter, which contains a finished application generated from the App Model in Pothole and modified
 based on the instructions in the Tutorial.
 
-For more information on the App Modeler Tutorial, check out the documentation [here](/docs/system/tutorials/appmod/index.html)
+For more information on the App Modeler Tutorial, check out the documentation [here](/docs/system/tutorials/appmod/index.html).
