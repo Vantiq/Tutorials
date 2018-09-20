@@ -1,0 +1,185 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "controllers" : {
+    "client" : { },
+    "dataStream" : { },
+    "page" : {
+      "Start" : {
+        "widgets" : { }
+      }
+    }
+  },
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "PotholeReporter",
+  "options" : {
+    "badgeCount" : 0,
+    "description" : "",
+    "showGridWhileEditing" : true,
+    "theme" : {
+      "accentColor1" : "#040fdb",
+      "backgroundColor" : "#f0f2f5",
+      "borderColor" : "#000000",
+      "foregroundColor" : "#000000",
+      "label" : "Light",
+      "name" : "light",
+      "v" : 2
+    },
+    "v" : 3
+  },
+  "targetDevice" : "mobile",
+  "userList" : [ ],
+  "views" : {
+    "Start" : {
+      "bodyChildren" : [ {
+        "CSSClass" : "vantiqGridLayout",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderWidth" : 2,
+        "columns" : 2,
+        "h" : 138,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "horzMargin" : 10,
+        "innerMargin" : 20,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "kids" : [ {
+          "CSSClass" : "vantiqStaticText",
+          "actionMenuLabel" : null,
+          "actionMenuTopic" : null,
+          "borderColor" : "Default",
+          "borderWidth" : 0,
+          "column" : 0,
+          "fontFace" : "inherit",
+          "fontSize" : 20,
+          "fontStyle" : "normal",
+          "fontWeight" : "normal",
+          "h" : 25,
+          "heightPolicy" : 0,
+          "horzGravity" : 0,
+          "isDraggable" : true,
+          "isSelectable" : true,
+          "name" : "StaticText2",
+          "row" : 0,
+          "text" : "description",
+          "type" : "TextLabel",
+          "v" : 14,
+          "vertGravity" : 4,
+          "w" : 95,
+          "widthPolicy" : 0,
+          "x" : 10,
+          "y" : 24.5
+        }, {
+          "CSSClass" : "vantiqInputString",
+          "actionMenuLabel" : null,
+          "actionMenuTopic" : null,
+          "binding" : "page.data.PotholeReport.description",
+          "borderColor" : "Default",
+          "borderWidth" : 0,
+          "column" : 1,
+          "default" : "",
+          "h" : 54,
+          "heightPolicy" : 0,
+          "horzGravity" : 0,
+          "horzMargin" : 10,
+          "innerMargin" : 0,
+          "isDraggable" : true,
+          "isPassword" : false,
+          "isSelectable" : true,
+          "label" : "",
+          "labelAlign" : "center",
+          "labelColor" : "#000000",
+          "labelFontSize" : 14,
+          "labelStyle" : "plain",
+          "name" : "InputString1",
+          "optional" : true,
+          "placeholder" : "",
+          "row" : 0,
+          "type" : "PIInputString",
+          "v" : 14,
+          "vertGravity" : 4,
+          "vertMargin" : 10,
+          "w" : 120,
+          "widthPolicy" : 2,
+          "x" : 125,
+          "y" : 10
+        } ],
+        "name" : "GridLayout1",
+        "rows" : 2,
+        "type" : "GridContainer",
+        "v" : 14,
+        "vertGravity" : 4,
+        "vertMargin" : 10,
+        "w" : 259,
+        "widthPolicy" : 0,
+        "x" : 59.5,
+        "y" : 5
+      } ],
+      "data" : {
+        "properties" : {
+          "PotholeReport" : {
+            "defaultLabel" : "PotholeReport",
+            "type" : "TypedObject",
+            "typedObject" : {
+              "properties" : {
+                "description" : {
+                  "defaultLabel" : "description",
+                  "type" : "String"
+                }
+              },
+              "type" : "PotholeReport"
+            }
+          }
+        }
+      },
+      "fields" : [ ],
+      "footerChildren" : [ {
+        "CSSClass" : "vantiqFooterButton",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderWidth" : 0,
+        "buttonLabel" : "Submit",
+        "h" : 50,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "horzMargin" : 10,
+        "innerMargin" : 0,
+        "isArtificial" : false,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "label" : "",
+        "labelAlign" : "center",
+        "labelColor" : "#000000",
+        "labelFontSize" : 14,
+        "labelStyle" : "plain",
+        "name" : "FooterButton1",
+        "type" : "PIFooterButton",
+        "v" : 14,
+        "value" : 100,
+        "vertGravity" : 4,
+        "vertMargin" : 10,
+        "w" : 91,
+        "widthPolicy" : 0,
+        "x" : 153.5,
+        "y" : 5
+      } ],
+      "layoutType" : "mobile",
+      "responseTopic" : "/vantiq/appmodel/PotholeReporter/submitTopic"
+    }
+  }
+}

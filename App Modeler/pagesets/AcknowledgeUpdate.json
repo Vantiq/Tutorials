@@ -1,0 +1,82 @@
+{
+  "controllers" : {
+    "client" : { },
+    "dataStream" : { },
+    "page" : {
+      "Start" : {
+        "widgets" : { }
+      }
+    }
+  },
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ ]
+  },
+  "name" : "AcknowledgeUpdate",
+  "options" : {
+    "badgeCount" : 0,
+    "description" : "",
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "accentColor1" : "#040fdb",
+      "backgroundColor" : "#f0f2f5",
+      "borderColor" : "#000000",
+      "foregroundColor" : "#000000",
+      "label" : "Light",
+      "name" : "light",
+      "v" : 2
+    },
+    "v" : 3
+  },
+  "targetDevice" : "mobile",
+  "views" : {
+    "Start" : {
+      "bodyChildren" : [ ],
+      "data" : {
+        "properties" : { }
+      },
+      "fields" : [ ],
+      "footerChildren" : [ {
+        "CSSClass" : "vantiqFooterButton",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderWidth" : 0,
+        "buttonLabel" : "Thanks for the Update",
+        "h" : 50,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "horzMargin" : 10,
+        "innerMargin" : 0,
+        "isArtificial" : false,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "label" : "",
+        "labelAlign" : "center",
+        "labelColor" : "#000000",
+        "labelFontSize" : 14,
+        "labelStyle" : "plain",
+        "name" : "FooterButton4",
+        "type" : "PIFooterButton",
+        "v" : 13,
+        "value" : 100,
+        "vertGravity" : 4,
+        "vertMargin" : 10,
+        "w" : 203,
+        "widthPolicy" : 0,
+        "x" : 98.5,
+        "y" : 5
+      } ],
+      "layoutType" : "mobile",
+      "responseTopic" : "/my/response/topic"
+    }
+  }
+}

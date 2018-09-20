@@ -1,0 +1,285 @@
+{
+  "links" : [ {
+    "source" : "client/PotholeReporter",
+    "target" : "topic//vantiq/appmodel/PotholeReporter/submitTopic"
+  }, {
+    "source" : "type/Pothole",
+    "target" : "app/PotholeReporter"
+  }, {
+    "source" : "topic//vantiq/appmodel/PotholeReporter/submitTopic",
+    "target" : "app/PotholeReporter"
+  }, {
+    "source" : "client/UpdatePothole",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "client/AcknowledgeUpdate",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "type/Pothole",
+    "target" : "collaborationtype/NotifyTeam"
+  }, {
+    "source" : "type/Pothole",
+    "target" : "collaborationtype/NotifyReporter"
+  } ],
+  "name" : "PotholeReporter",
+  "options" : {
+    "description" : "This project was generated automatically from the 'Pothole' project and its 'Pothole' App Modeler model. It was modified by following the lessons contained in the 'App Modeler Tutorial'.\n\nTo be runable in your VANTIQ namespace, only one parameter needs to be changed:\n(1) click the 'NotifyTeam' task in the 'NotifyTeam' Collaboration Type;\n(2) click the 'Runtime Params' link;\n(3) for the 'users' property, use the Value link to add a single user: use your own user ID, which can be found clicking the User menu in Modelo Navigation Bar. The user ID is the second line in the resulting display, with the label ID.",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 29.31543964562539,
+      "y" : 141.14147044752775
+    },
+    "type" : 10
+  }, {
+    "label" : "/vantiq/appmodel/PotholeReporter/submitTopic",
+    "name" : "/vantiq/appmodel/PotholeReporter/submitTopic",
+    "node" : {
+      "x" : 348.90059222031834,
+      "y" : 103.27290683405973
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "AcknowledgeUpdate",
+    "name" : "AcknowledgeUpdate",
+    "node" : {
+      "x" : 94.52381793164223,
+      "y" : 16.649532942695323
+    },
+    "timestamp" : "2018-08-02T00:31:33.352Z",
+    "type" : 15
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Pothole" ]
+    },
+    "label" : "NotifyReporter",
+    "name" : "NotifyReporter",
+    "node" : {
+      "x" : 481.89892850703785,
+      "y" : 332.5943232431583
+    },
+    "timestamp" : "2018-08-02T00:31:33.376Z",
+    "type" : 11
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "Pothole", "Pothole" ]
+    },
+    "label" : "NotifyTeam",
+    "name" : "NotifyTeam",
+    "node" : {
+      "x" : 162.40572431083433,
+      "y" : 335.17904635274596
+    },
+    "timestamp" : "2018-08-02T00:31:33.374Z",
+    "type" : 11
+  }, {
+    "label" : "Pothole",
+    "name" : "Pothole",
+    "node" : {
+      "x" : 342.6044292514337,
+      "y" : 261.18519126811736
+    },
+    "timestamp" : "2018-08-02T00:31:32.871Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ "out", "out" ],
+      "collaborations" : [ "StartNotifyReporter", "StartNotifyTeam" ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "in" ],
+      "topics" : [ "/vantiq/appmodel/PotholeReporter/submitTopic" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Pothole" ]
+    },
+    "label" : "PotholeReporter",
+    "name" : "PotholeReporter",
+    "node" : {
+      "x" : 345.85485938418014,
+      "y" : 182.32523345479382
+    },
+    "timestamp" : "2018-08-02T00:31:33.376Z",
+    "type" : 12
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/vantiq/appmodel/PotholeReporter/submitTopic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "PotholeReporter",
+    "name" : "PotholeReporter",
+    "node" : {
+      "x" : 352.6837381484976,
+      "y" : 5.6996716097836355
+    },
+    "timestamp" : "2018-08-02T00:31:33.350Z",
+    "type" : 15
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "UpdatePothole",
+    "name" : "UpdatePothole",
+    "node" : {
+      "x" : -30.74687470693152,
+      "y" : 245.87294223983685
+    },
+    "timestamp" : "2018-08-02T00:31:33.350Z",
+    "type" : 15
+  } ],
+  "tools" : [ {
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 400,
+      "w" : 680,
+      "x" : 20,
+      "y" : 520
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 3,
+        "scale" : 0.807826105243293,
+        "translate" : [ 163.522285430603, 44.81463821293832 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "name" : "PotholeReporter",
+    "pane" : {
+      "h" : 480,
+      "w" : 940,
+      "x" : 720,
+      "y" : 20
+    },
+    "resourceKey" : "app/PotholeReporter",
+    "type" : 15
+  }, {
+    "name" : "NotifyTeam",
+    "pane" : {
+      "h" : 500,
+      "w" : 690,
+      "x" : 720,
+      "y" : 520
+    },
+    "resourceKey" : "collaborationtype/NotifyTeam",
+    "toolOptions" : {
+      "propertyPaneWidth" : 250,
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1.7306573497519468,
+        "translate" : [ 238.33912831679731, -111.93063930290052 ]
+      }
+    },
+    "type" : 14
+  }, {
+    "name" : "NotifyReporter",
+    "pane" : {
+      "h" : 500,
+      "w" : 680,
+      "x" : 20,
+      "y" : 940
+    },
+    "resourceKey" : "collaborationtype/NotifyReporter",
+    "toolOptions" : {
+      "propertyPaneWidth" : 250,
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 3,
+        "scale" : 2.024131627056673,
+        "translate" : [ 223, 80.69012797074953 ]
+      }
+    },
+    "type" : 14
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 480,
+      "w" : 680,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "app/PotholeReporter", "collaborationgraph/NotifyTeam", "collaborationgraph/NotifyReporter", "projectdescription/Project Description" ]
+  } ]
+}
