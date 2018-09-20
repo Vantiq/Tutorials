@@ -3,3 +3,12 @@
 .DS_Store
 .DS_Store?
 .idea
+# Misc stuff
+*.tmp
+*.bak
+*.swp
+*~
+# p4merge/mergetool
+*.orig
+*.~*
+

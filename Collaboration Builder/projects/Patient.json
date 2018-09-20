@@ -5,16 +5,70 @@
   }, {
     "source" : "type/Patient",
     "target" : "collaborationtype/RateCollaboration"
+  }, {
+    "source" : "client/FirstResponderResponse",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "client/PatientResponse",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "procedure/CollaborationUtils.triggerEscalation",
+    "target" : "type/ArsEscalationDeadline"
+  }, {
+    "source" : "collaborationtype/RateCollaboration",
+    "target" : "procedure/CollaborationUtils.triggerEscalation"
   } ],
   "name" : "Patient",
   "options" : {
-    "description" : "This project contains the RateCollaboration, which detects when a patient's heartrate is too high and attempts to verify they are ok, or dispatch help if they are not. Before you can test this collaboration you must first download the VANTIQ mobile app and log in once (or else you won't receive the mobile notifications).\n\nThe UpdatePatient procedure included in this project can be used to create and update the heartrate for your user. Before testing the collaboration create a patient record for yourself by executing UpdateProcedure from the pane (below and to the right) with a heartrate between 50 and 140 beats per minute.\n\nOnce you have a patient record, execute UpdatePatient again, but this time specify an unhealthy heartrate, like 10 or 200 beats per minute. This should trigger the start of the collaboration and you should receive a notification on your mobile device.",
+    "description" : "",
     "filterBitArray" : "000000ffffffffffffffffff00ffffff",
     "isModeloProject" : true,
     "showGrid" : true,
     "v" : 2
   },
   "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 499.6924038610856,
+      "y" : 218.9740310133328
+    },
+    "type" : 10
+  }, {
+    "label" : "ArsEscalationDeadline",
+    "name" : "ArsEscalationDeadline",
+    "node" : {
+      "x" : 166.33356900496096,
+      "y" : 312.2133825698792
+    },
+    "timestamp" : "2017-06-29T18:04:12.927Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "both" ],
+      "types" : [ "ArsEscalationDeadline" ]
+    },
+    "label" : "CollaborationUtils.triggerEscalation",
+    "name" : "CollaborationUtils.triggerEscalation",
+    "node" : {
+      "x" : 167.93898797346952,
+      "y" : 241.71026250138777
+    },
+    "timestamp" : "2018-01-10T00:17:38.248Z",
+    "type" : 3
+  }, {
     "inventory" : {
       "appmodelHash" : [ ],
       "appmodels" : [ ],
@@ -34,19 +88,19 @@
     "label" : "FirstResponderResponse",
     "name" : "FirstResponderResponse",
     "node" : {
-      "x" : 45.26886937567963,
-      "y" : 329.5248657175903
+      "x" : 450.6273129198447,
+      "y" : 100.88537092727998
     },
-    "timestamp" : "2018-07-17T22:08:25.308Z",
+    "timestamp" : "2018-09-19T23:57:52.240Z",
     "type" : 15
   }, {
     "label" : "Patient",
     "name" : "Patient",
     "node" : {
-      "x" : 235.6194714220477,
-      "y" : 116.85746878351986
+      "x" : 167.1935105625812,
+      "y" : 84.79219732358163
     },
-    "timestamp" : "2018-07-17T22:08:24.958Z",
+    "timestamp" : "2018-09-19T23:57:51.808Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -68,10 +122,10 @@
     "label" : "PatientResponse",
     "name" : "PatientResponse",
     "node" : {
-      "x" : 436.4254186303975,
-      "y" : 326.27671792879875
+      "x" : 594.3229780251593,
+      "y" : 139.9555290708101
     },
-    "timestamp" : "2018-07-17T22:08:25.281Z",
+    "timestamp" : "2018-09-19T23:57:52.241Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -93,10 +147,10 @@
     "label" : "RateCollaboration",
     "name" : "RateCollaboration",
     "node" : {
-      "x" : 235.9466567787394,
-      "y" : 242.88600797577692
+      "x" : 166.18377520625603,
+      "y" : 160.34998381256423
     },
-    "timestamp" : "2018-07-17T22:08:25.285Z",
+    "timestamp" : "2018-09-19T23:57:52.242Z",
     "type" : 11
   }, {
     "inventory" : {
@@ -118,89 +172,116 @@
     "label" : "UpdatePatient",
     "name" : "UpdatePatient",
     "node" : {
-      "x" : 233.33099237629693,
-      "y" : -5.61953885755554
+      "x" : 167.4004173748769,
+      "y" : -9.838822004209476
     },
-    "timestamp" : "2018-07-17T22:41:47.612Z",
+    "timestamp" : "2018-09-19T23:57:51.812Z",
     "type" : 3
+  }, {
+    "label" : "VantiqPushNotification",
+    "name" : "VantiqPushNotification",
+    "node" : {
+      "x" : 525.5439429987788,
+      "y" : 40.093821954100726
+    },
+    "timestamp" : "2018-09-19T23:55:48.853Z",
+    "type" : 4
   } ],
   "tools" : [ {
+    "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
-      "h" : 380,
-      "w" : 660,
+      "h" : 310,
+      "w" : 600,
       "x" : 20,
-      "y" : 440
+      "y" : 20
     },
     "toolOptions" : {
       "scaleAndTranslationState" : {
-        "lastZoomRequest" : 3,
-        "scale" : 0.8012017004954994,
-        "translate" : [ 172.79273084949298, 31.74324222865266 ]
+        "lastZoomRequest" : 0,
+        "scale" : 0.6346354430099026,
+        "translate" : [ 152.45675658672945, 39.7403021840256 ]
       }
     },
     "type" : 1
   }, {
+    "isPinned" : false,
     "name" : "UpdatePatient",
     "pane" : {
-      "h" : 380,
-      "w" : 900,
-      "x" : 700,
-      "y" : 440
+      "h" : 310,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
     },
     "resourceKey" : "procedure/UpdatePatient",
     "type" : 24
   }, {
+    "isPinned" : false,
     "name" : "RateCollaboration",
     "pane" : {
-      "h" : 410,
-      "w" : 900,
-      "x" : 700,
-      "y" : 10
+      "h" : 370,
+      "w" : 1110,
+      "x" : 20,
+      "y" : 340
     },
     "resourceKey" : "collaborationtype/RateCollaboration",
     "toolOptions" : {
       "propertyPaneWidth" : 250,
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
-        "scale" : 0.5697412975596359,
-        "translate" : [ 361.0581374297225, 65.93682412364397 ]
+        "scale" : 0.5656572314229498,
+        "translate" : [ 449.5662317923288, 58.84490059450498 ]
       }
     },
     "type" : 14
   }, {
+    "isPinned" : false,
     "name" : "FirstResponderResponse",
     "pane" : {
       "h" : 700,
-      "w" : 1090,
+      "w" : 1350,
       "x" : 20,
-      "y" : 840
+      "y" : 720
     },
     "resourceKey" : "client/FirstResponderResponse",
     "type" : 63
   }, {
-    "name" : "Project Description",
+    "isPinned" : false,
+    "name" : "Patient",
     "pane" : {
-      "h" : 410,
-      "w" : 660,
-      "x" : 20,
-      "y" : 10
+      "h" : 400,
+      "w" : 600,
+      "x" : 1390,
+      "y" : 720
     },
-    "type" : 82
+    "resourceKey" : "type/Patient",
+    "type" : 6
   }, {
+    "isPinned" : false,
     "name" : "PatientResponse",
     "pane" : {
       "h" : 700,
-      "w" : 1090,
+      "w" : 1130,
       "x" : 20,
-      "y" : 1560
+      "y" : 1440
     },
     "resourceKey" : "client/PatientResponse",
     "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "VantiqPushNotification",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 2160
+    },
+    "resourceKey" : "source/VantiqPushNotification",
+    "type" : 5
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/UpdatePatient", "collaborationgraph/RateCollaboration", "client/FirstResponderResponse", "projectdescription/Project Description", "client/PatientResponse" ]
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/UpdatePatient", "collaborationgraph/RateCollaboration", "client/FirstResponderResponse", "subtypeeditor/Patient", "client/PatientResponse", "subsourceeditor/VantiqPushNotification", "errorqueryresults/Unseen Errors @ 2:07:24 PM" ]
   } ]
 }

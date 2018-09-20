@@ -12,12 +12,9 @@
             "type" : "reference",
             "value" : "collaboration"
           }, {
-            "multi" : true,
             "name" : "users",
-            "type" : "mixed",
-            "value" : [ {
-              "type" : "String",
-              "value" : "a4a4703b-69f0-4896-bcee-86b022d4d0e2"
+            "type" : "expression",
+            "value" : "[Context.username()]"
             } ]
           } ],
           "type" : "activity"
