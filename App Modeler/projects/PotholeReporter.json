@@ -23,7 +23,7 @@
   } ],
   "name" : "PotholeReporter",
   "options" : {
-    "description" : "This project was generated automatically from the 'Pothole' project and its 'Pothole' App Modeler model. It was modified by following the lessons contained in the 'App Modeler Tutorial'.\n\nTo be runable in your VANTIQ namespace, only one parameter needs to be changed:\n(1) click the 'NotifyTeam' task in the 'NotifyTeam' Collaboration Type;\n(2) click the 'Runtime Params' link;\n(3) for the 'users' property, use the Value link to add a single user: use your own user ID, which can be found clicking the User menu in Modelo Navigation Bar. The user ID is the second line in the resulting display, with the label ID.",
+    "description" : "This project was generated automatically from the 'Pothole' project and its 'Pothole' App Modeler model. It was modified by following the lessons contained in the 'App Modeler Tutorial'.\n\nNote that it uses the built-in procedure 'Context.username()' in the 'NotifyTeam' task Runtime Params in the 'NotifyTeam' Collaboration Type.  This procedure returns your user ID; you can also find your user ID by clicking the User menu in Modelo Navigation Bar. The user ID is the second line in the resulting display, with the label ID.",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "showGrid" : true,
