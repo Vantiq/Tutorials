@@ -1,0 +1,41 @@
+{
+  "active" : true,
+  "appType" : true,
+  "assembly" : {
+    "DistrubutionReceived" : {
+      "configuration" : {
+        "childStreams" : [ "shipToStore" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/NewOrder",
+        "op" : "INSERT",
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "description" : null,
+      "name" : "DistrubutionReceived",
+      "pattern" : "EventStream"
+    },
+    "shipToStore" : {
+      "configuration" : {
+        "childStreams" : null,
+        "parentStreams" : [ "DistrubutionReceived" ],
+        "procedure" : "shipToStore",
+        "schema" : null
+      },
+      "description" : null,
+      "name" : "shipToStore",
+      "pattern" : "Procedure"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "",
+  "entityRoles" : [ ],
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "distributeProductApp"
+}

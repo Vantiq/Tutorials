@@ -1,0 +1,222 @@
+{
+  "links" : [ {
+    "source" : "type/Store",
+    "target" : "rule/checkInventory"
+  }, {
+    "source" : "type/Store",
+    "target" : "client/DeploymentClient"
+  }, {
+    "source" : "app/distributeProductApp",
+    "target" : "procedure/shipToStore"
+  }, {
+    "source" : "procedure/pickupProducts",
+    "target" : "type/Store"
+  }, {
+    "source" : "procedure/shipToStore",
+    "target" : "procedure/pickupProducts"
+  }, {
+    "source" : "rule/checkInventory",
+    "target" : "topic//NewOrder"
+  }, {
+    "source" : "topic//NewOrder",
+    "target" : "app/distributeProductApp"
+  } ],
+  "name" : "DeploymentTutorial",
+  "options" : {
+    "description" : "",
+    "dockCollapsed" : false,
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/NewOrder",
+    "name" : "/NewOrder",
+    "node" : {
+      "x" : 342.65618161330764,
+      "y" : 64.31935818191565
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Store" ]
+    },
+    "label" : "DeploymentClient",
+    "name" : "DeploymentClient",
+    "node" : {
+      "x" : 259.627047287483,
+      "y" : 367.33887961507844
+    },
+    "timestamp" : "2018-10-15T19:52:00.866Z",
+    "type" : 15
+  }, {
+    "label" : "Store",
+    "name" : "Store",
+    "node" : {
+      "x" : 277.0810505539729,
+      "y" : 322.4489655238254
+    },
+    "timestamp" : "2018-10-15T19:51:59.987Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/NewOrder" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Store" ]
+    },
+    "label" : "checkInventory",
+    "name" : "checkInventory",
+    "node" : {
+      "x" : 178.9833845464134,
+      "y" : 276.60692626459957
+    },
+    "timestamp" : "2018-10-15T21:48:42.582Z",
+    "type" : 2
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "shipToStore" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "in" ],
+      "topics" : [ "/NewOrder" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "distributeProductApp",
+    "name" : "distributeProductApp",
+    "node" : {
+      "x" : 452.6525866959203,
+      "y" : 108.87484839799562
+    },
+    "timestamp" : "2018-10-15T19:52:00.862Z",
+    "type" : 12
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "both" ],
+      "types" : [ "Store" ]
+    },
+    "label" : "pickupProducts",
+    "name" : "pickupProducts",
+    "node" : {
+      "x" : 416.0302473161228,
+      "y" : 280.53908114286145
+    },
+    "timestamp" : "2018-10-15T19:51:59.980Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "pickupProducts" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "shipToStore",
+    "name" : "shipToStore",
+    "node" : {
+      "x" : 510.4728400628053,
+      "y" : 162.26639420367485
+    },
+    "timestamp" : "2018-10-15T21:48:48.176Z",
+    "type" : 3
+  } ],
+  "tools" : [ {
+    "isPinned" : true,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : 0,
+      "lastUsed" : 1539640078394,
+      "r" : 0
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1,
+        "translate" : [ -51, -22 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "testDeploy",
+    "pane" : {
+      "h" : 600,
+      "w" : 950,
+      "x" : 20,
+      "y" : 440
+    },
+    "type" : 86
+  }, {
+    "isPinned" : false,
+    "name" : "Store",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1539640132683,
+      "r" : 0
+    },
+    "resourceKey" : "type/Store",
+    "type" : 6
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "deployment/testDeploy", "subtypeeditor/Store", "findrecordresults/All Objects of type Store" ]
+  } ]
+}

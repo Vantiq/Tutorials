@@ -1,0 +1,6 @@
+PROCEDURE pickupProducts(event)
+SELECT ONE * FROM Store as t
+if (event.storeId == t.storeId) {
+    //these product is for my store
+    UPDATE Store({"productCount":100}) WHERE storeId == t.storeId
+}
