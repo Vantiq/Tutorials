@@ -6,6 +6,9 @@
     "source" : "type/Store",
     "target" : "client/DeploymentClient"
   }, {
+    "source" : "client/DeploymentClient",
+    "target" : "topic//my/response/topic"
+  }, {
     "source" : "app/distributeProductApp",
     "target" : "procedure/shipToStore"
   }, {
@@ -23,7 +26,7 @@
   } ],
   "name" : "DeploymentTutorial",
   "options" : {
-    "description" : "",
+    "description" : "This project is used by the Deployment Tutorial to demo the capability of Deployment Tool.\n\nThis sample application simulates inventory checking on a store and asks the factory for more products when inventory is low. The factory will also notify the store when more products are shipped.",
     "dockCollapsed" : false,
     "dockSort" : 1,
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
@@ -35,11 +38,18 @@
     "v" : 2
   },
   "resources" : [ {
-    "label" : "/NewOrder",
     "name" : "/NewOrder",
     "node" : {
-      "x" : 342.65618161330764,
-      "y" : 64.31935818191565
+      "x" : 487.72927121291696,
+      "y" : 80.2486184358219
+    },
+    "type" : 10
+  }, {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 114.36833098354597,
+      "y" : 356.4558786668963
     },
     "type" : 10
   }, {
@@ -62,19 +72,19 @@
     "label" : "DeploymentClient",
     "name" : "DeploymentClient",
     "node" : {
-      "x" : 259.627047287483,
-      "y" : 367.33887961507844
+      "x" : 109.01150773670173,
+      "y" : 296.63602927328157
     },
-    "timestamp" : "2018-10-15T19:52:00.866Z",
+    "timestamp" : "2018-10-17T19:47:09.468Z",
     "type" : 15
   }, {
     "label" : "Store",
     "name" : "Store",
     "node" : {
-      "x" : 277.0810505539729,
-      "y" : 322.4489655238254
+      "x" : 96.4348637253596,
+      "y" : 223.88527533827852
     },
-    "timestamp" : "2018-10-15T19:51:59.987Z",
+    "timestamp" : "2018-10-01T22:11:02.449Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -96,10 +106,10 @@
     "label" : "checkInventory",
     "name" : "checkInventory",
     "node" : {
-      "x" : 178.9833845464134,
-      "y" : 276.60692626459957
+      "x" : 93.74286788381573,
+      "y" : 144.2319110058105
     },
-    "timestamp" : "2018-10-15T21:48:42.582Z",
+    "timestamp" : "2018-10-24T18:59:09.523Z",
     "type" : 2
   }, {
     "inventory" : {
@@ -121,10 +131,10 @@
     "label" : "distributeProductApp",
     "name" : "distributeProductApp",
     "node" : {
-      "x" : 452.6525866959203,
-      "y" : 108.87484839799562
+      "x" : 506.1974170181859,
+      "y" : 132.5092707002417
     },
-    "timestamp" : "2018-10-15T19:52:00.862Z",
+    "timestamp" : "2018-10-11T22:26:27.805Z",
     "type" : 12
   }, {
     "inventory" : {
@@ -146,10 +156,10 @@
     "label" : "pickupProducts",
     "name" : "pickupProducts",
     "node" : {
-      "x" : 416.0302473161228,
-      "y" : 280.53908114286145
+      "x" : 294.9193769547947,
+      "y" : 259.09332613797864
     },
-    "timestamp" : "2018-10-15T19:51:59.980Z",
+    "timestamp" : "2018-10-11T22:18:03.688Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -171,25 +181,25 @@
     "label" : "shipToStore",
     "name" : "shipToStore",
     "node" : {
-      "x" : 510.4728400628053,
-      "y" : 162.26639420367485
+      "x" : 508.5719611565553,
+      "y" : 183.30647904254204
     },
-    "timestamp" : "2018-10-15T21:48:48.176Z",
+    "timestamp" : "2018-10-24T18:56:55.901Z",
     "type" : 3
   } ],
   "tools" : [ {
-    "isPinned" : true,
+    "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
       "c" : 0,
-      "lastUsed" : 1539640078394,
+      "lastUsed" : 1540407604361,
       "r" : 0
     },
     "toolOptions" : {
       "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 1,
-        "translate" : [ -51, -22 ]
+        "lastZoomRequest" : 3,
+        "scale" : 0.8470638231549134,
+        "translate" : [ 60.81272273574251, -2.4582844930839087 ]
       }
     },
     "type" : 1
@@ -205,18 +215,17 @@
     "type" : 86
   }, {
     "isPinned" : false,
-    "name" : "Store",
+    "name" : "Project Description",
     "pane" : {
       "c" : 1,
-      "lastUsed" : 1539640132683,
+      "lastUsed" : 1540407606530,
       "r" : 0
     },
-    "resourceKey" : "type/Store",
-    "type" : 6
+    "type" : 82
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "deployment/testDeploy", "subtypeeditor/Store", "findrecordresults/All Objects of type Store" ]
+    "projectToolKeys" : [ "graph/Project Resource Graph", "projectdescription/Project Description" ]
   } ]
 }
