@@ -1,0 +1,2 @@
+PROCEDURE shipToStore(event)
+EXECUTE pickupProducts(event) //PROCESSED BY {"ars_properties.type":"store"}
