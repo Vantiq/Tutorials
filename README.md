@@ -18,3 +18,6 @@ The floor plan tutorial shows how to visualize a persons movements throughout a 
 
 ## Debugging Tutorial
 The debugging tutorial creates a rule and a type to demonstrate how to debug a rule with tracing.
+
+## Deployment Tutorial
+The deployment tutorial shows how to deploy a distributed application into 2 nodes using the deployment tool.

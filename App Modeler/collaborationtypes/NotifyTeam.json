@@ -15,7 +15,6 @@
             "name" : "users",
             "type" : "expression",
             "value" : "[Context.username()]"
-            } ]
           } ],
           "type" : "activity"
         } ],
