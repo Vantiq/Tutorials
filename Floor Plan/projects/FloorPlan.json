@@ -1,8 +1,13 @@
 {
-  "links" : [ ],
+  "links" : [ {
+    "source" : "type/Resident",
+    "target" : "client/Resident"
+  } ],
   "name" : "FloorPlan",
   "options" : {
-    "filterMask" : 4294967295,
+    "description" : "The FloorPlan tutorial demonstrates how to drop pins in coordinates on a 2D map or image. \n\nTo generated test data to power the client, click the play button next to the Resident Data Generator below and to the right.\n\nWith the client and data generator both running, you should see pins show up on both the first and second floor.\n\nTo see how the client was implemented, pause the client using the rounded square button on the Invoice Client title bar and click around on the vairous widgets. Also take a look at the Resident Data Stream to see how data makes it's way into the Client.",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
     "showGrid" : true,
     "v" : 2
   },
@@ -10,49 +15,88 @@
     "label" : "Resident",
     "name" : "Resident",
     "node" : {
-      "x" : 381.1374452244486,
-      "y" : 193.34761858096815
+      "x" : 322.97726300398745,
+      "y" : 60.48608312680429
     },
-    "timestamp" : "2018-01-03T16:57:32.805Z",
-    "type" : 15
+    "timestamp" : "2018-07-17T23:06:05.083Z",
+    "type" : 1
   }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Resident" ]
+    },
     "label" : "Resident",
     "name" : "Resident",
     "node" : {
-      "x" : 235.97724774519838,
-      "y" : 135.48607549740976
+      "x" : 322.57110000960483,
+      "y" : 199.34761858096815
     },
-    "timestamp" : "2018-01-02T19:32:39.756Z",
-    "type" : 1
+    "timestamp" : "2018-07-17T23:06:05.481Z",
+    "type" : 15
   } ],
   "tools" : [ {
     "name" : "Project Resource Graph",
     "pane" : {
       "h" : 290,
-      "w" : 490,
-      "x" : 20,
+      "w" : 520,
+      "x" : 690,
       "y" : 20
     },
     "toolOptions" : {
       "scaleAndTranslationState" : {
-        "scale" : 1,
-        "translate" : [ -43.33860778808594, -5.416847229003906 ]
+        "lastZoomRequest" : 3,
+        "scale" : 1.2327085926420522,
+        "translate" : [ -111.63618688609574, -32.64962331297809 ]
       }
     },
     "type" : 1
   }, {
     "name" : "Data Generators",
     "pane" : {
-      "h" : 400,
-      "w" : 600,
-      "x" : 20,
-      "y" : 430
+      "h" : 150,
+      "w" : 520,
+      "x" : 690,
+      "y" : 330
     },
     "type" : 47
+  }, {
+    "name" : "Resident",
+    "pane" : {
+      "h" : 700,
+      "w" : 1190,
+      "x" : 20,
+      "y" : 500
+    },
+    "resourceKey" : "client/Resident",
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 460,
+      "w" : 650,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "datagenerators/Data Generators" ]
+    "projectToolKeys" : [ "graph/Project Resource Graph", "datagenerators/Data Generators", "client/Resident", "projectdescription/Project Description" ]
   } ]
 }

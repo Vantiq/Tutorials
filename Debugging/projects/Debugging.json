@@ -1,96 +1,100 @@
 {
-    "name": "Debugging",
-    "options": {
-        "v": 2,
-        "filterMask": 4294967295,
-        "showGrid": true
+  "links" : [ {
+    "source" : "type/TutorialExampleType",
+    "target" : "rule/TutorialExampleRule"
+  } ],
+  "name" : "Debugging",
+  "options" : {
+    "description" : "The Debugging Tutorial demonstrates how to use rule tracing to step through the execution of a rule. To enable tracing for this rule, click the pencil icon on the rule pane below to enter full screen edit mode, click the tracing enable toggle, and click save.\n\nNow, whenever the TutorialExampleRule executes, an autopsy record will be written that details the execution flow of the rule.\n\nTo trigger the rule, insert an instance of the TutorialExampleType by clicking the \"Add New Record\" button on the type pane below, specifying an age and weight in the newly created Add Record Pane, and click \"Add New Record\".\n\nTo view the autopsy, first query for all autopsies by clicking the debug button above and selecting autopsies from the dropdown. The new pane should have a \"Run Query\" button, click it and a new list should appear with the autopsy from the recent execution of TutorialExampleRule. Click on the entry in the list and you can step through the execution of TutorialExampleRule and inspect the state of variables at each step along the way.",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "TutorialExampleType" ]
     },
-    "type": "dev",
-    "resources": [
-        {
-            "name": "TutorialExampleRule",
-            "type": 2,
-            "label": "TutorialExampleRule",
-            "timestamp": "2018-01-02T17:51:21.823Z",
-            "inventory": {
-                "types": [
-                    "TutorialExampleType"
-                ],
-                "typeHash": [
-                    "in"
-                ],
-                "sources": [],
-                "sourceHash": [],
-                "topics": [],
-                "topicHash": [],
-                "procedures": [],
-                "procedureHash": [],
-                "collaborations": [],
-                "collaborationHash": []
-            },
-            "node": {
-                "x": 298.8935993749057,
-                "y": 316.4379229128056
-            },
-            "$$hashKey": "object:642"
-        },
-        {
-            "name": "TutorialExampleType",
-            "type": 1,
-            "label": "TutorialExampleType",
-            "timestamp": "2017-12-30T01:47:01.957Z",
-            "node": {
-                "x": 297.88915322002055,
-                "y": 182.4321156464881
-            },
-            "$$hashKey": "object:646"
-        }
-    ],
-    "links": [
-        {
-            "source": "type/TutorialExampleType",
-            "target": "rule/TutorialExampleRule"
-        }
-    ],
-    "tools": [
-        {
-            "name": "Project Resource Graph",
-            "type": 1,
-            "toolOptions": {
-                "scaleAndTranslationState": {
-                    "scale": 1,
-                    "translate": [
-                        0.11083984375,
-                        -66.93502044677734
-                    ]
-                }
-            },
-            "pane": {
-                "x": 20,
-                "y": 20,
-                "h": 400,
-                "w": 600
-            }
-        },
-        {
-            "name": "Data Generators",
-            "type": 47,
-            "pane": {
-                "x": 640,
-                "y": 20,
-                "h": 400,
-                "w": 600
-            }
-        }
-    ],
-    "views": [
-        {
-            "name": "Main",
-            "projectToolKeys": [
-                "graph/Project Resource Graph",
-                "datagenerators/Data Generators"
-            ]
-        }
-    ],
-    "$$hashKey": "object:638"
+    "label" : "TutorialExampleRule",
+    "name" : "TutorialExampleRule",
+    "node" : {
+      "x" : 283.0182331639682,
+      "y" : 301.25280328389937
+    },
+    "timestamp" : "2018-07-18T00:38:15.236Z",
+    "type" : 2
+  }, {
+    "label" : "TutorialExampleType",
+    "name" : "TutorialExampleType",
+    "node" : {
+      "x" : 282.7040335911143,
+      "y" : 194.16606340039436
+    },
+    "timestamp" : "2018-07-18T00:35:14.633Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 450,
+      "w" : 430,
+      "x" : 820,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1.4487877288471054,
+        "translate" : [ -203.5781448115104, -151.37838903669672 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "name" : "TutorialExampleRule",
+    "pane" : {
+      "h" : 400,
+      "w" : 630,
+      "x" : 20,
+      "y" : 490
+    },
+    "resourceKey" : "rule/TutorialExampleRule",
+    "type" : 3
+  }, {
+    "name" : "TutorialExampleType",
+    "pane" : {
+      "h" : 400,
+      "w" : 580,
+      "x" : 670,
+      "y" : 490
+    },
+    "resourceKey" : "type/TutorialExampleType",
+    "type" : 6
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 450,
+      "w" : 780,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorrule/TutorialExampleRule", "subtypeeditor/TutorialExampleType", "projectdescription/Project Description" ]
+  } ]
 }

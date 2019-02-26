@@ -1,77 +1,92 @@
 {
-    "name": "EngineMonitor",
-    "assembly": {
-        "TempReading": {
-            "pattern": "EventStream",
-            "configuration": {
-                "childStreams": [
-                    "UpdateSystemStatus"
-                ],
-                "inboundResource": "types",
-                "inboundResourceId": "EngineTemp",
-                "op": null,
-                "outboundResource": "topics",
-                "outboundResourceId": null,
-                "upsert": false
-            },
-            "description": null
-        },
-        "SpeedReading": {
-            "pattern": "EventStream",
-            "configuration": {
-                "childStreams": [
-                    "UpdateSystemStatus"
-                ],
-                "inboundResource": "types",
-                "inboundResourceId": "EngineSpeed",
-                "op": null,
-                "outboundResource": "topics",
-                "outboundResourceId": null,
-                "upsert": false
-            },
-            "description": null
-        },
-        "UpdateSystemStatus": {
-            "pattern": "Merge",
-            "configuration": {
-                "childStreams": [
-                    "UpdateSystemHUD"
-                ],
-                "outboundResource": "types",
-                "outboundResourceId": "SystemStatus",
-                "upsert": true
-            },
-            "description": null
-        },
-        "UpdateSystemHUD": {
-            "pattern": "Transformation",
-            "configuration": {
-                "childStreams": null,
-                "outboundResource": "types",
-                "outboundResourceId": "SystemHUD",
-                "transformation": {
-                    "alertMsg": {
-                        "type": "expression",
-                        "expression": "((event.temperature >= 210) && (event.speed >= 45)) ?\n    \"Your engine is overheating, please reduce your speed.\" :\n    (((event.temperature >= 210) && (event.speed < 45)) ?\n    \"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\" : \"\")"
-                    },
-                    "systemId": {
-                        "type": "expression",
-                        "expression": "event.systemId"
-                    }
-                },
-                "upsert": true
-            },
-            "description": null
-        }
+  "active" : true,
+  "appType" : true,
+  "assembly" : {
+    "MergeStreams" : {
+      "configuration" : {
+        "childStreams" : [ "UpdateSystemStatus" ],
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "upsert" : null
+      },
+      "description" : null,
+      "pattern" : "Merge"
     },
-    "collaboratorRoles": [],
-    "entityRoles": [],
-    "keyTypes": [
-        "system.collaborations"
-    ],
-    "active": true,
-    "appType": true,
-    "currentState": {
-        "code": "success"
+    "SpeedReading" : {
+      "configuration" : {
+        "childStreams" : [ "MergeStreams" ],
+        "inboundResource" : "types",
+        "inboundResourceId" : "EngineSpeed",
+        "op" : "INSERT",
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "schema" : "EngineSpeed",
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "EventStream"
+    },
+    "TempReading" : {
+      "configuration" : {
+        "childStreams" : [ "MergeStreams" ],
+        "inboundResource" : "types",
+        "inboundResourceId" : "EngineTemp",
+        "op" : "INSERT",
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "schema" : "EngineTemp",
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "EventStream"
+    },
+    "TransformHUD" : {
+      "configuration" : {
+        "childStreams" : [ "UpdateHUD" ],
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "schema" : null,
+        "transformation" : {
+          "alertMsg" : {
+            "expression" : "((event.temperature >= 210) && (event.speed >= 45)) ? \t\"Your engine is overheating, please reduce your speed.\" : \t(((event.temperature >= 210) && (event.speed < 45)) ? \t\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\" : \"\")",
+            "type" : "expression"
+          },
+          "systemId" : {
+            "expression" : "event.systemId",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "Transformation"
+    },
+    "UpdateHUD" : {
+      "configuration" : {
+        "childStreams" : null,
+        "type" : "SystemHUD",
+        "upsert" : true
+      },
+      "description" : null,
+      "pattern" : "SaveToType"
+    },
+    "UpdateSystemStatus" : {
+      "configuration" : {
+        "childStreams" : [ "TransformHUD" ],
+        "type" : "SystemStatus",
+        "upsert" : true
+      },
+      "description" : null,
+      "pattern" : "SaveToType"
     }
+  },
+  "collaboratorRoles" : [ ],
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "",
+  "entityRoles" : [ ],
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "EngineMonitor"
 }

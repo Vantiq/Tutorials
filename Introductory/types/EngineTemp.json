@@ -1,34 +1,33 @@
 {
-    "name": "EngineTemp",
-    "role": "standard",
-    "adminAccessLevel": "ars_readWrite",
-    "userAccessLevel": "ars_readOnly",
-    "volatile": false,
-    "naturalKey": [],
-    "expiresAfter": null,
-    "foreignKeys": null,
-    "audited": false,
-    "groupEnabled": false,
-    "groupRequired": false,
-    "encapsulated": false,
-    "metadata": false,
-    "indexes": [],
-    "maxStorage": 0,
-    "maxObjects": 0,
-    "properties": {
-        "systemId": {
-            "type": "String",
-            "unique": false,
-            "required": true,
-            "multi": false,
-            "encrypted": false
-        },
-        "temperature": {
-            "type": "Integer",
-            "unique": false,
-            "required": true,
-            "multi": false,
-            "encrypted": false
-        }
+  "adminAccessLevel" : "ars_readWrite",
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "EngineTemp",
+  "naturalKey" : [ ],
+  "properties" : {
+    "systemId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "temperature" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
     }
+  },
+  "role" : "standard",
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
 }

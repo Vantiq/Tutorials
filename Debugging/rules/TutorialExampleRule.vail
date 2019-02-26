@@ -1,6 +1,6 @@
 RULE TutorialExampleRule
-WHERE (t.age > 5)
 WHEN INSERT OCCURS ON TutorialExampleType AS t
+WHERE (t.age > 5)
 
 var ageStatus = "Unknown"
 

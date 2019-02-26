@@ -12,22 +12,6 @@
   "name" : "Resident",
   "naturalKey" : [ ],
   "properties" : {
-    "ars_group" : {
-      "multi" : false,
-      "required" : false,
-      "scale" : null,
-      "system" : true,
-      "type" : "String",
-      "unique" : false
-    },
-    "ars_properties" : {
-      "multi" : false,
-      "required" : false,
-      "scale" : null,
-      "system" : true,
-      "type" : "Object",
-      "unique" : false
-    },
     "floor" : {
       "encrypted" : false,
       "multi" : false,

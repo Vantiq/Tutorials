@@ -1,34 +1,33 @@
 {
-    "name": "TutorialExampleType",
-    "role": "standard",
-    "adminAccessLevel": "ars_readWrite",
-    "userAccessLevel": "ars_readOnly",
-    "volatile": false,
-    "naturalKey": [],
-    "expiresAfter": null,
-    "foreignKeys": null,
-    "audited": false,
-    "groupEnabled": false,
-    "groupRequired": false,
-    "encapsulated": false,
-    "metadata": false,
-    "indexes": [],
-    "maxStorage": 0,
-    "maxObjects": 0,
-    "properties": {
-        "age": {
-            "type": "Integer",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        },
-        "weight": {
-            "type": "Integer",
-            "unique": false,
-            "required": false,
-            "multi": false,
-            "encrypted": false
-        }
+  "adminAccessLevel" : "ars_readWrite",
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "TutorialExampleType",
+  "naturalKey" : [ ],
+  "properties" : {
+    "age" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "weight" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
     }
+  },
+  "role" : "standard",
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
 }

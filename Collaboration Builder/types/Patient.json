@@ -17,22 +17,6 @@
   "name" : "Patient",
   "naturalKey" : [ "patientId" ],
   "properties" : {
-    "ars_group" : {
-      "multi" : false,
-      "required" : false,
-      "scale" : null,
-      "system" : true,
-      "type" : "String",
-      "unique" : false
-    },
-    "ars_properties" : {
-      "multi" : false,
-      "required" : false,
-      "scale" : null,
-      "system" : true,
-      "type" : "Object",
-      "unique" : false
-    },
     "heartRate" : {
       "encrypted" : false,
       "multi" : false,
