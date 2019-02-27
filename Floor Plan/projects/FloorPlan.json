@@ -2,23 +2,34 @@
   "links" : [ {
     "source" : "type/Resident",
     "target" : "client/Resident"
+  }, {
+    "source" : "client/Resident",
+    "target" : "topic//my/response/topic"
   } ],
   "name" : "FloorPlan",
   "options" : {
     "description" : "The FloorPlan tutorial demonstrates how to drop pins in coordinates on a 2D map or image. \n\nTo generated test data to power the client, click the play button next to the Resident Data Generator below and to the right.\n\nWith the client and data generator both running, you should see pins show up on both the first and second floor.\n\nTo see how the client was implemented, pause the client using the rounded square button on the Invoice Client title bar and click around on the vairous widgets. Also take a look at the Resident Data Stream to see how data makes it's way into the Client.",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
+    "layoutStyle" : "custom",
     "showGrid" : true,
     "v" : 2
   },
   "resources" : [ {
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : -38.586309575807064,
+      "y" : 97.01399318140523
+    },
+    "type" : 10
+  }, {
     "label" : "Resident",
     "name" : "Resident",
     "node" : {
-      "x" : 322.97726300398745,
-      "y" : 60.48608312680429
+      "x" : 156.6263099082824,
+      "y" : 20.84368270925838
     },
-    "timestamp" : "2018-07-17T23:06:05.083Z",
+    "timestamp" : "2019-02-27T22:08:39.412Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -40,16 +51,17 @@
     "label" : "Resident",
     "name" : "Resident",
     "node" : {
-      "x" : 322.57110000960483,
-      "y" : 199.34761858096815
+      "x" : 145.60176501288777,
+      "y" : 168.20241597004048
     },
-    "timestamp" : "2018-07-17T23:06:05.481Z",
+    "timestamp" : "2019-02-27T22:08:39.655Z",
     "type" : 15
   } ],
   "tools" : [ {
+    "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
-      "h" : 290,
+      "h" : 220,
       "w" : 520,
       "x" : 690,
       "y" : 20
@@ -57,21 +69,23 @@
     "toolOptions" : {
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 3,
-        "scale" : 1.2327085926420522,
-        "translate" : [ -111.63618688609574, -32.64962331297809 ]
+        "scale" : 0.8497449432117286,
+        "translate" : [ 163.58185629253268, 16.17951362477318 ]
       }
     },
     "type" : 1
   }, {
+    "isPinned" : false,
     "name" : "Data Generators",
     "pane" : {
-      "h" : 150,
+      "h" : 250,
       "w" : 520,
       "x" : 690,
-      "y" : 330
+      "y" : 240
     },
     "type" : 47
   }, {
+    "isPinned" : false,
     "name" : "Resident",
     "pane" : {
       "h" : 700,
@@ -85,6 +99,7 @@
     },
     "type" : 63
   }, {
+    "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
       "h" : 460,
