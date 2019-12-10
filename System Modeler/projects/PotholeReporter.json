@@ -23,7 +23,7 @@
   } ],
   "name" : "PotholeReporter",
   "options" : {
-    "description" : "This project was generated automatically from the 'Pothole' project and its 'Pothole' App Modeler model. It was modified by following the lessons contained in the 'App Modeler Tutorial'.\n\nNote that it uses the built-in procedure 'Context.username()' in the 'NotifyTeam' task Runtime Params in the 'NotifyTeam' Collaboration Type.  This procedure returns your user ID; you can also find your user ID by clicking the User menu in Modelo Navigation Bar. The user ID is the second line in the resulting display, with the label ID.",
+    "description" : "This project was generated automatically from the 'Pothole' project and its 'Pothole' System Modeler model. It was modified by following the lessons contained in the 'System Modeler Tutorial'.\n\nNote that it uses the built-in procedure 'Context.username()' in the 'NotifyTeam' task Runtime Params in the 'NotifyTeam' Collaboration Type.  This procedure returns your user ID; you can also find your user ID by clicking the User menu in Modelo Navigation Bar. The user ID is the second line in the resulting display, with the label ID.",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "showGrid" : true,

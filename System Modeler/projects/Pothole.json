@@ -8,7 +8,7 @@
   } ],
   "name" : "Pothole",
   "options" : {
-    "description" : "This project was demonstrates the 'Pothole' project found in the 'App Modeler Tutorial'. It shows a complete example of using the VANTIQ App Modeler to build the 'Pothole' model.\n\nApp Models can generate the skeleton for a working application. In this case, the Pothole App Model was used to generate the basis for the PotholeReporter project, which was then fleshed out in the App Modeler Tutorial. Go to the Projects dropdown above and select PotholeReporter to see the final results of the tutorial.",
+    "description" : "This project was demonstrates the 'Pothole' project found in the 'System Modeler Tutorial'. It shows a complete example of using the VANTIQ System Modeler to build the 'Pothole' model.\n\nSystem Models can generate the skeleton for a working application. In this case, the Pothole System Model was used to generate the basis for the PotholeReporter project, which was then fleshed out in the System Modeler Tutorial. Go to the Projects dropdown above and select PotholeReporter to see the final results of the tutorial.",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "showGrid" : true,
