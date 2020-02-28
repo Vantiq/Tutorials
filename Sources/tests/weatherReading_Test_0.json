@@ -1,0 +1,85 @@
+{
+  "cleanup" : "deleteWeatherData",
+  "description" : "Test for rules weatherReading ",
+  "inputs" : [ {
+    "eventObj" : {
+      "base" : "stations",
+      "clouds" : {
+        "all" : 1
+      },
+      "cod" : 200,
+      "coord" : {
+        "lat" : 37.89,
+        "lon" : -122.12
+      },
+      "dt" : 1582680753,
+      "id" : 5364226,
+      "main" : {
+        "feels_like" : 290.57,
+        "humidity" : 23,
+        "pressure" : 1023,
+        "temp" : 294.78,
+        "temp_max" : 297.15,
+        "temp_min" : 292.59
+      },
+      "name" : "My Address",
+      "sys" : {
+        "country" : "US",
+        "id" : 3581,
+        "sunrise" : 1582641979,
+        "sunset" : 1582682233,
+        "type" : 1
+      },
+      "timezone" : -28800,
+      "visibility" : 16093,
+      "weather" : [ {
+        "description" : "clear sky",
+        "icon" : "01d",
+        "id" : 800,
+        "main" : "Clear"
+      } ],
+      "wind" : {
+        "deg" : 80,
+        "speed" : 3.1
+      }
+    },
+    "inputNum" : 0,
+    "resource" : "sources",
+    "resourceId" : "weather"
+  } ],
+  "name" : "weatherReading_Test_0",
+  "outputs" : [ {
+    "eventObj" : {
+      "location" : "My Address",
+      "tempK" : 294.78,
+      "zipCode" : "94609"
+    },
+    "op" : "UPDATE",
+    "outputNum" : 0,
+    "prereqEvent" : { },
+    "repeat" : { },
+    "resource" : "types",
+    "resourceId" : "weatherReading",
+    "validationMethod" : "Event Object"
+  }, {
+    "eventObj" : {
+      "location" : "Walnut Creek",
+      "tempK" : 75,
+      "zipCode" : "94609"
+    },
+    "op" : "INSERT",
+    "outputNum" : 1,
+    "prereqEvent" : { },
+    "repeat" : { },
+    "resource" : "types",
+    "resourceId" : "weatherReading",
+    "validationMethod" : "Event Object"
+  } ],
+  "resource" : "/rules/weatherReading",
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "saveNamespace" : true,
+  "setup" : "createWeatherData",
+  "timeout" : "1 minute"
+}
