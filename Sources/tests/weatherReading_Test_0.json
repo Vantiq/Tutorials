@@ -46,6 +46,15 @@
     "inputNum" : 0,
     "resource" : "sources",
     "resourceId" : "weather"
+  }, {
+    "eventObj" : { },
+    "inputNum" : 1,
+    "op" : null,
+    "periodInterval" : null,
+    "qual" : null,
+    "rawPeriodInterval" : null,
+    "resource" : "procedures",
+    "resourceId" : "querySourceAndInsert"
   } ],
   "name" : "weatherReading_Test_0",
   "outputs" : [ {
