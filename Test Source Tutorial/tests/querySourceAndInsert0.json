@@ -1,0 +1,41 @@
+{
+  "cleanup" : "deleteWeatherData",
+  "description" : "Test for Procedure querySourceAndInsert ",
+  "inputs" : [ {
+    "eventObj" : { },
+    "inputNum" : 0,
+    "op" : null,
+    "periodInterval" : null,
+    "qual" : null,
+    "rawPeriodInterval" : null,
+    "resource" : "procedures",
+    "resourceId" : "querySourceAndInsert",
+    "returnValue" : { }
+  } ],
+  "name" : "querySourceAndInsert0",
+  "outputs" : [ {
+    "eventObj" : {
+      "location" : "Walnut Creek",
+      "tempK" : 75,
+      "zipCode" : "94609"
+    },
+    "missing" : false,
+    "op" : "INSERT",
+    "outputNum" : 0,
+    "prereqEvent" : { },
+    "repeat" : { },
+    "resource" : "types",
+    "resourceId" : "weatherReading",
+    "validationMethod" : "Event Object"
+  } ],
+  "resource" : {
+    "resource" : "procedures",
+    "resourceId" : "querySourceAndInsert"
+  },
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "saveNamespace" : true,
+  "setup" : "createWeatherData",
+  "timeout" : "30 seconds"
+}

@@ -1,0 +1,330 @@
+{
+  "links" : [ {
+    "source" : "type/SystemHUD",
+    "target" : "subscription/SystemHUD"
+  }, {
+    "source" : "type/EngineTemp",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/EngineSpeed",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/SystemStatus",
+    "target" : "client/EngineSimulation"
+  }, {
+    "source" : "type/SystemHUD",
+    "target" : "client/EngineSimulation"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "type/SystemHUD"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "type/SystemStatus"
+  }, {
+    "source" : "client/EngineSimulation",
+    "target" : "topic//my/response/topic"
+  } ],
+  "name" : "EngineMonitor",
+  "options" : {
+    "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start both of the data generators by checking both checkboxes next to the 2 rows and clicking play in the title bar. When the data generators start you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the data generators, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation. ",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0
+    },
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "custom",
+    "listFlavor" : "tree",
+    "openResourceFolders" : { },
+    "showGrid" : true,
+    "type" : "dev",
+    "v" : 3
+  },
+  "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 157.9,
+      "y" : 305.1
+    },
+    "resourceReference" : "/topics//my/response/topic",
+    "type" : 10
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in", "in", "out", "out" ],
+      "types" : [ "EngineSpeed", "EngineTemp", "SystemHUD", "SystemStatus" ]
+    },
+    "label" : "EngineMonitor",
+    "name" : "EngineMonitor",
+    "node" : {
+      "x" : 303,
+      "y" : 60
+    },
+    "resourceReference" : "/collaborationtypes/EngineMonitor",
+    "timestamp" : "2020-04-14T18:14:40.772Z",
+    "type" : 12
+  }, {
+    "name" : "EngineMonitorTest",
+    "resourceReference" : "/system.tests/EngineMonitorTest",
+    "timestamp" : "2020-04-14T18:19:44.981Z",
+    "type" : 56
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "SystemStatus", "SystemHUD" ]
+    },
+    "label" : "EngineSimulation",
+    "name" : "EngineSimulation",
+    "node" : {
+      "x" : 291.7,
+      "y" : 240.8
+    },
+    "resourceReference" : "/system.clients/EngineSimulation",
+    "timestamp" : "2020-04-14T18:14:32.531Z",
+    "type" : 15
+  }, {
+    "label" : "EngineSpeed",
+    "name" : "EngineSpeed",
+    "node" : {
+      "x" : 418.5,
+      "y" : -7.5
+    },
+    "resourceReference" : "/types/EngineSpeed",
+    "timestamp" : "2020-04-14T18:14:32.076Z",
+    "type" : 1
+  }, {
+    "label" : "EngineTemp",
+    "name" : "EngineTemp",
+    "node" : {
+      "x" : 196.9,
+      "y" : -7.8
+    },
+    "resourceReference" : "/types/EngineTemp",
+    "timestamp" : "2020-04-14T18:14:32.076Z",
+    "type" : 1
+  }, {
+    "label" : "SystemHUD",
+    "name" : "SystemHUD",
+    "node" : {
+      "x" : 408.1,
+      "y" : 168.2
+    },
+    "resourceReference" : "/types/SystemHUD",
+    "timestamp" : "2020-04-14T18:14:32.169Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "SystemHUD" ]
+    },
+    "label" : "SystemHUD",
+    "name" : "SystemHUD",
+    "node" : {
+      "x" : 572.8,
+      "y" : 292.3
+    },
+    "resourceReference" : "/ArsSubscribe/SystemHUD",
+    "timestamp" : "2020-04-14T18:14:32.533Z",
+    "type" : 9
+  }, {
+    "label" : "SystemStatus",
+    "name" : "SystemStatus",
+    "node" : {
+      "x" : 217.1,
+      "y" : 167.5
+    },
+    "resourceReference" : "/types/SystemStatus",
+    "timestamp" : "2020-04-14T18:14:32.169Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Data Generators",
+    "pane" : {
+      "h" : 240,
+      "w" : 600,
+      "x" : 800,
+      "y" : 400
+    },
+    "type" : 47
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 360,
+      "w" : 600,
+      "x" : 800,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7418516099124758,
+        "translate" : [ 31.210342453467376, 83.84381531897938 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "EngineMonitor",
+    "pane" : {
+      "h" : 500,
+      "w" : 760,
+      "x" : 20,
+      "y" : 610
+    },
+    "resourceKey" : "app/EngineMonitor",
+    "toolOptions" : {
+      "propertyPaneWidth" : 250,
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1.172633281935303,
+        "translate" : [ 155.8735368569495, 39.878692783315444 ]
+      }
+    },
+    "type" : 15
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 570,
+      "w" : 760,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "EngineSimulation",
+    "pane" : {
+      "h" : 860,
+      "w" : 1270,
+      "x" : 20,
+      "y" : 1130
+    },
+    "resourceKey" : "client/EngineSimulation",
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "SystemHUD",
+    "pane" : {
+      "h" : 450,
+      "w" : 600,
+      "x" : 800,
+      "y" : 660
+    },
+    "resourceKey" : "subscription/SystemHUD",
+    "type" : 7
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "pane" : {
+      "h" : 10,
+      "w" : 10,
+      "x" : -6000,
+      "y" : -6000
+    },
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "pane" : {
+      "h" : 675.7272787094116,
+      "w" : 210,
+      "x" : 0,
+      "y" : 0
+    },
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "pane" : {
+      "h" : 200,
+      "w" : 1609,
+      "x" : 10,
+      "y" : 10
+    },
+    "type" : 13
+  }, {
+    "isPinned" : false,
+    "name" : "Tests",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 2000
+    },
+    "type" : 101
+  }, {
+    "isPinned" : false,
+    "name" : "EngineMonitorTest",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 2410
+    },
+    "resourceKey" : "test/EngineMonitorTest",
+    "type" : 102
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "datagenerators/Data Generators", "graph/Project Resource Graph", "app/EngineMonitor", "projectdescription/Project Description", "client/EngineSimulation", "subsubscribeeditor/SystemHUD", "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "tests/Tests", "test/EngineMonitorTest" ]
+  } ]
+}
