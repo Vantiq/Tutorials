@@ -1,0 +1,9 @@
+{
+  "description" : "All unit tests for resource querySourceAndInsert",
+  "name" : "querySourceAndInsert_UnitTestSuite",
+  "resource" : "/procedures/querySourceAndInsert",
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "tests" : [ ]
+}

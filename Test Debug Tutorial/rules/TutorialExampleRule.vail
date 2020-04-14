@@ -1,0 +1,23 @@
+RULE TutorialExampleRule
+WHERE (t.age > 5)
+WHEN INSERT OCCURS ON TutorialExampleType AS t
+
+var ageStatus = "Unknown"
+
+if (t.age >= 21) {
+   ageStatus = "Adult"
+} else {
+   ageStatus = "Child"
+}
+
+SELECT TutorialExampleType AS allPeople
+
+var total = 0
+
+for (person IN allPeople) {
+   total = total + person.weight
+}
+
+var averageWeight = total / allPeople.size()
+
+PUBLISH {ageStatus: ageStatus, averageWeight: averageWeight} TO TOPIC "/people/results"

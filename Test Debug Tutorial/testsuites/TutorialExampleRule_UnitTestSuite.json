@@ -1,0 +1,11 @@
+{
+  "description" : "All unit tests for resource TutorialExampleRule",
+  "name" : "TutorialExampleRule_UnitTestSuite",
+  "resource" : "/rules/TutorialExampleRule",
+  "resourceId" : "TutorialExampleRule",
+  "resourceName" : "rules",
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "tests" : [ ]
+}

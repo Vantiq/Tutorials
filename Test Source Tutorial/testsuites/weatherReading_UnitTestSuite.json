@@ -1,0 +1,9 @@
+{
+  "description" : "All unit tests for resource weatherReading",
+  "name" : "weatherReading_UnitTestSuite",
+  "resource" : "/rules/weatherReading",
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "tests" : [ ]
+}

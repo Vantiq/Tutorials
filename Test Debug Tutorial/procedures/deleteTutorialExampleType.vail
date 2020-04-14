@@ -1,0 +1,2 @@
+PROCEDURE deleteTutorialExampleType()
+DELETE TutorialExampleType WHERE weight < 300

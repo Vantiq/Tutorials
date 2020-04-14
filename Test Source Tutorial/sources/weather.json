@@ -1,0 +1,19 @@
+{
+  "activationConstraint" : "",
+  "active" : true,
+  "config" : {
+    "pollingInterval" : 30,
+    "query" : {
+      "contentType" : "application/json"
+    },
+    "requestDefaults" : { },
+    "uri" : "http://api.openweathermap.org/data/2.5/weather?id=5364226&APPID=34461d7c16116d23cace405507146ebe"
+  },
+  "direction" : "BOTH",
+  "mockMode" : false,
+  "mockProcedures" : {
+    "query" : "queryProcedureOverride"
+  },
+  "name" : "weather",
+  "type" : "REMOTE"
+}
