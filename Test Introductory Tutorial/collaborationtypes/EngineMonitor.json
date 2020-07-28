@@ -1,0 +1,111 @@
+{
+  "active" : true,
+  "appType" : true,
+  "assembly" : {
+    "MergeStreams" : {
+      "configuration" : {
+        "childStreams" : [ "UpdateSystemStatus" ],
+        "enableBadging" : true,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "SpeedReading", "TempReading" ],
+        "upsert" : null
+      },
+      "description" : null,
+      "name" : "MergeStreams",
+      "pattern" : "Merge"
+    },
+    "SpeedReading" : {
+      "configuration" : {
+        "childStreams" : [ "MergeStreams" ],
+        "enableBadging" : true,
+        "inboundResource" : "types",
+        "inboundResourceId" : "EngineSpeed",
+        "op" : "INSERT",
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : "EngineSpeed",
+        "upsert" : false
+      },
+      "description" : null,
+      "name" : "SpeedReading",
+      "pattern" : "EventStream"
+    },
+    "TempReading" : {
+      "configuration" : {
+        "childStreams" : [ "MergeStreams" ],
+        "enableBadging" : true,
+        "inboundResource" : "types",
+        "inboundResourceId" : "EngineTemp",
+        "op" : "INSERT",
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : "EngineTemp",
+        "upsert" : false
+      },
+      "description" : null,
+      "name" : "TempReading",
+      "pattern" : "EventStream"
+    },
+    "TransformHUD" : {
+      "configuration" : {
+        "childStreams" : [ "UpdateHUD" ],
+        "enableBadging" : true,
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "UpdateSystemStatus" ],
+        "schema" : null,
+        "transformation" : {
+          "alertMsg" : {
+            "expression" : "((event.temperature >= 210) && (event.speed >= 45)) ? \t\"Your engine is overheating, please reduce your speed.\" : \t(((event.temperature >= 210) && (event.speed < 45)) ? \t\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\" : \"\")",
+            "type" : "expression"
+          },
+          "systemId" : {
+            "expression" : "event.systemId",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "description" : null,
+      "name" : "TransformHUD",
+      "pattern" : "Transformation"
+    },
+    "UpdateHUD" : {
+      "configuration" : {
+        "childStreams" : null,
+        "enableBadging" : true,
+        "parentStreams" : [ "TransformHUD" ],
+        "type" : "SystemHUD",
+        "upsert" : true
+      },
+      "description" : null,
+      "name" : "UpdateHUD",
+      "pattern" : "SaveToType"
+    },
+    "UpdateSystemStatus" : {
+      "configuration" : {
+        "childStreams" : [ "TransformHUD" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "MergeStreams" ],
+        "type" : "SystemStatus",
+        "upsert" : true
+      },
+      "description" : null,
+      "name" : "UpdateSystemStatus",
+      "pattern" : "SaveToType"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "",
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "EngineMonitor"
+}

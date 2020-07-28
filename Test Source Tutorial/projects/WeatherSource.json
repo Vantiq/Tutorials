@@ -1,0 +1,432 @@
+{
+  "links" : [ {
+    "source" : "rule/weatherReading",
+    "target" : "type/weatherReading"
+  }, {
+    "source" : "source/weather",
+    "target" : "rule/weatherReading"
+  }, {
+    "source" : "procedure/createWeatherData",
+    "target" : "type/weatherReading"
+  }, {
+    "source" : "procedure/createWeatherData",
+    "target" : "procedure/Test.startSourceMocking"
+  }, {
+    "source" : "procedure/deleteWeatherData",
+    "target" : "type/weatherReading"
+  }, {
+    "source" : "procedure/querySourceAndInsert",
+    "target" : "type/weatherReading"
+  }, {
+    "source" : "source/weather",
+    "target" : "procedure/querySourceAndInsert"
+  } ],
+  "name" : "WeatherSource",
+  "options" : {
+    "description" : "To enable the weather source, you will need to register for an API key from http://api.openweathermap.org\n\nOnce you have registered for the API key, copy the value and replace \"CHANGEMETOYOURAPPID\" at the end of Server URI field in the source definition below.\n\nCheck the active checkbox in the titlebar (empty square with rounded corners) and save the source. The Current State should flip from a red down arrow to a green up arrow. \n\nOnce the source is active, click the play button on the source title bar to view the raw weather readings received from the source, or go to show -> find records -> select the weatherReading type, and query for all of the recorded values.\n",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 150,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0
+    },
+    "filterBitArray" : "000000ffffffffffffffffff00ffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "custom",
+    "listFlavor" : "tree",
+    "openResourceFolders" : {
+      "Test" : true
+    },
+    "showGrid" : true,
+    "type" : "dev",
+    "v" : 3
+  },
+  "resources" : [ {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "both" ],
+      "types" : [ "sources" ]
+    },
+    "label" : "Test.startSourceMocking",
+    "name" : "Test.startSourceMocking",
+    "node" : {
+      "x" : 402.6,
+      "y" : 51.3
+    },
+    "resourceReference" : "/procedures/Test.startSourceMocking",
+    "timestamp" : "2020-03-31T18:04:17.008Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "Test.startSourceMocking" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "weatherReading" ]
+    },
+    "label" : "createWeatherData",
+    "name" : "createWeatherData",
+    "node" : {
+      "x" : 269.9,
+      "y" : 112.4
+    },
+    "resourceReference" : "/procedures/createWeatherData",
+    "timestamp" : "2020-04-14T18:25:46.350Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "Test.stopSourceMocking" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "weatherReading" ]
+    },
+    "label" : "deleteWeatherData",
+    "name" : "deleteWeatherData",
+    "node" : {
+      "x" : 316.9,
+      "y" : 57.6
+    },
+    "resourceReference" : "/procedures/deleteWeatherData",
+    "timestamp" : "2020-04-14T18:23:47.180Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "queryProcedureOverride",
+    "name" : "queryProcedureOverride",
+    "node" : {
+      "x" : 499.2,
+      "y" : 262.7
+    },
+    "resourceReference" : "/procedures/queryProcedureOverride",
+    "timestamp" : "2020-04-14T18:25:35.116Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "weather" ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "weatherReading" ]
+    },
+    "label" : "querySourceAndInsert",
+    "name" : "querySourceAndInsert",
+    "node" : {
+      "x" : 316.2,
+      "y" : 289.8
+    },
+    "resourceReference" : "/procedures/querySourceAndInsert",
+    "timestamp" : "2020-04-14T18:25:23.469Z",
+    "type" : 3
+  }, {
+    "label" : "querySourceAndInsert0",
+    "name" : "querySourceAndInsert0",
+    "resourceReference" : "/system.tests/querySourceAndInsert0",
+    "timestamp" : "2020-04-14T19:07:05.616Z",
+    "type" : 56
+  }, {
+    "name" : "querySourceAndInsert_UnitTestSuite",
+    "resourceReference" : "/system.testsuites/querySourceAndInsert_UnitTestSuite",
+    "timestamp" : "2020-04-14T18:32:46.731Z",
+    "type" : 60
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "weather",
+    "name" : "weather",
+    "node" : {
+      "x" : 187.1,
+      "y" : 185.5
+    },
+    "resourceReference" : "/sources/weather",
+    "timestamp" : "2020-04-14T18:33:21.359Z",
+    "type" : 4
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "weather" ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "weatherReading" ]
+    },
+    "label" : "weatherReading",
+    "name" : "weatherReading",
+    "node" : {
+      "x" : 280.8,
+      "y" : 309.8
+    },
+    "resourceReference" : "/rules/weatherReading",
+    "timestamp" : "2020-04-14T18:21:23.325Z",
+    "type" : 2
+  }, {
+    "label" : "weatherReading",
+    "name" : "weatherReading",
+    "node" : {
+      "x" : 404.3,
+      "y" : 189.6
+    },
+    "resourceReference" : "/types/weatherReading",
+    "timestamp" : "2020-04-14T18:21:23.120Z",
+    "type" : 1
+  }, {
+    "label" : "weatherReading0",
+    "name" : "weatherReading0",
+    "resourceReference" : "/system.tests/weatherReading0",
+    "timestamp" : "2020-04-14T18:33:17.475Z",
+    "type" : 56
+  }, {
+    "name" : "weatherReading_UnitTestSuite",
+    "resourceReference" : "/system.testsuites/weatherReading_UnitTestSuite",
+    "timestamp" : "2020-04-14T18:22:44.799Z",
+    "type" : 60
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.6827171334509179,
+        "translate" : [ -22.078233477162133, 30.906919201768588 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
+    },
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "weatherReading",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 440
+    },
+    "resourceKey" : "rule/weatherReading",
+    "type" : 3
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "pane" : {
+      "h" : 10,
+      "w" : 10,
+      "x" : -6000,
+      "y" : -6000
+    },
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "pane" : {
+      "h" : 631.7272787094116,
+      "w" : 210,
+      "x" : 0,
+      "y" : 0
+    },
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "pane" : {
+      "h" : 200,
+      "w" : 3580,
+      "x" : 10,
+      "y" : 10
+    },
+    "type" : 13
+  }, {
+    "isPinned" : false,
+    "name" : "weatherReading0",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 850
+    },
+    "resourceKey" : "test/weatherReading0",
+    "type" : 102
+  }, {
+    "isPinned" : false,
+    "name" : "createWeatherData",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 1260
+    },
+    "resourceKey" : "procedure/createWeatherData",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "deleteWeatherData",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 1670
+    },
+    "resourceKey" : "procedure/deleteWeatherData",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "querySourceAndInsert",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 659.9999847412109,
+      "y" : 1269.9999389648438
+    },
+    "resourceKey" : "procedure/querySourceAndInsert",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "queryProcedureOverride",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 659.9999847412109,
+      "y" : 1679.9999542236328
+    },
+    "resourceKey" : "procedure/queryProcedureOverride",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "weather",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 640,
+      "y" : 430
+    },
+    "resourceKey" : "source/weather",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "querySourceAndInsert0",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 729.9999694824219,
+      "y" : 849.9999542236328
+    },
+    "resourceKey" : "test/querySourceAndInsert0",
+    "type" : 102
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "projectdescription/Project Description", "cmeditorrule/weatherReading", "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "test/weatherReading0", "cmeditorprocedure/createWeatherData", "cmeditorprocedure/deleteWeatherData", "cmeditorprocedure/querySourceAndInsert", "cmeditorprocedure/queryProcedureOverride", "subsourceeditor/weather", "test/querySourceAndInsert0" ]
+  } ]
+}

@@ -1,0 +1,3 @@
+PROCEDURE deleteWeatherData()
+DELETE weatherReading WHERE zipCode == "94609"
+Test.stopSourceMocking("weather")

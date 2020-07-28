@@ -1,0 +1,319 @@
+{
+  "links" : [ {
+    "source" : "type/TutorialExampleType",
+    "target" : "rule/TutorialExampleRule"
+  }, {
+    "source" : "rule/TutorialExampleRule",
+    "target" : "topic//people/results"
+  }, {
+    "source" : "procedure/insertTutorialExampleType",
+    "target" : "type/TutorialExampleType"
+  }, {
+    "source" : "procedure/deleteTutorialExampleType",
+    "target" : "type/TutorialExampleType"
+  } ],
+  "name" : "Debugging",
+  "options" : {
+    "description" : "The Debugging Tutorial demonstrates how to use rule tracing to step through the execution of a rule. To enable tracing for this rule, click the pencil icon on the rule pane below to enter full screen edit mode, click the tracing enable toggle, and click save.\n\nNow, whenever the TutorialExampleRule executes, an autopsy record will be written that details the execution flow of the rule.\n\nTo trigger the rule, insert an instance of the TutorialExampleType by clicking the \"Add New Record\" button on the type pane below, specifying an age and weight in the newly created Add Record Pane, and click \"Add New Record\".\n\nTo view the autopsy, first query for all autopsies by clicking the debug button above and selecting autopsies from the dropdown. The new pane should have a \"Run Query\" button, click it and a new list should appear with the autopsy from the recent execution of TutorialExampleRule. Click on the entry in the list and you can step through the execution of TutorialExampleRule and inspect the state of variables at each step along the way.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 150,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0
+    },
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "custom",
+    "listFlavor" : "tree",
+    "openResourceFolders" : { },
+    "showGrid" : true,
+    "type" : "dev",
+    "v" : 3
+  },
+  "resources" : [ {
+    "name" : "/people/results",
+    "node" : {
+      "x" : 156.1,
+      "y" : 209.2
+    },
+    "resourceReference" : "/topics//people/results",
+    "type" : 10
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/people/results" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "TutorialExampleType" ]
+    },
+    "label" : "TutorialExampleRule",
+    "name" : "TutorialExampleRule",
+    "node" : {
+      "x" : 283,
+      "y" : 301.3
+    },
+    "resourceReference" : "/rules/TutorialExampleRule",
+    "timestamp" : "2020-04-14T18:41:01.203Z",
+    "type" : 2
+  }, {
+    "name" : "TutorialExampleRule0",
+    "resourceReference" : "/system.tests/TutorialExampleRule0",
+    "timestamp" : "2020-04-14T18:54:46.511Z",
+    "type" : 56
+  }, {
+    "name" : "TutorialExampleRule1",
+    "resourceReference" : "/system.tests/TutorialExampleRule1",
+    "timestamp" : "2020-04-14T18:54:39.931Z",
+    "type" : 56
+  }, {
+    "name" : "TutorialExampleRule_UnitTestSuite",
+    "resourceReference" : "/system.testsuites/TutorialExampleRule_UnitTestSuite",
+    "timestamp" : "2020-04-14T18:40:48.924Z",
+    "type" : 60
+  }, {
+    "label" : "TutorialExampleType",
+    "name" : "TutorialExampleType",
+    "node" : {
+      "x" : 282.7,
+      "y" : 194.2
+    },
+    "resourceReference" : "/types/TutorialExampleType",
+    "timestamp" : "2020-04-14T18:34:38.372Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "TutorialExampleType" ]
+    },
+    "label" : "deleteTutorialExampleType",
+    "name" : "deleteTutorialExampleType",
+    "node" : {
+      "x" : 308.7,
+      "y" : 52
+    },
+    "resourceReference" : "/procedures/deleteTutorialExampleType",
+    "timestamp" : "2020-04-14T18:54:18.054Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "TutorialExampleType" ]
+    },
+    "label" : "insertTutorialExampleType",
+    "name" : "insertTutorialExampleType",
+    "node" : {
+      "x" : 184.6,
+      "y" : 81.3
+    },
+    "resourceReference" : "/procedures/insertTutorialExampleType",
+    "timestamp" : "2020-04-14T18:54:23.473Z",
+    "type" : 3
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 450,
+      "w" : 430,
+      "x" : 820,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1.4487877288471054,
+        "translate" : [ -203.5781448115104, -151.37838903669672 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "TutorialExampleRule",
+    "pane" : {
+      "h" : 400,
+      "w" : 630,
+      "x" : 20,
+      "y" : 490
+    },
+    "resourceKey" : "rule/TutorialExampleRule",
+    "type" : 3
+  }, {
+    "isPinned" : false,
+    "name" : "TutorialExampleType",
+    "pane" : {
+      "h" : 400,
+      "w" : 580,
+      "x" : 670,
+      "y" : 490
+    },
+    "resourceKey" : "type/TutorialExampleType",
+    "type" : 6
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 450,
+      "w" : 780,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "pane" : {
+      "h" : 10,
+      "w" : 10,
+      "x" : -6000,
+      "y" : -6000
+    },
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "pane" : {
+      "h" : 631.7272787094116,
+      "w" : 210,
+      "x" : 0,
+      "y" : 0
+    },
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "pane" : {
+      "h" : 200,
+      "w" : 1609,
+      "x" : 10,
+      "y" : 10
+    },
+    "type" : 13
+  }, {
+    "isPinned" : false,
+    "name" : "TutorialExampleRule0",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 909.9999847412109
+    },
+    "resourceKey" : "test/TutorialExampleRule0",
+    "type" : 102
+  }, {
+    "isPinned" : false,
+    "name" : "insertTutorialExampleType",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 649.9999847412109,
+      "y" : 1319.9999542236328
+    },
+    "resourceKey" : "procedure/insertTutorialExampleType",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "deleteTutorialExampleType",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 1320
+    },
+    "resourceKey" : "procedure/deleteTutorialExampleType",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "Tests",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 1730
+    },
+    "type" : 101
+  }, {
+    "isPinned" : false,
+    "name" : "TutorialExampleRule1",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 739.9999847412109,
+      "y" : 909.9999542236328
+    },
+    "resourceKey" : "test/TutorialExampleRule1",
+    "type" : 102
+  }, {
+    "isPinned" : false,
+    "name" : "Test Suites",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 2140
+    },
+    "type" : 105
+  }, {
+    "isPinned" : false,
+    "name" : "TutorialExampleRule_UnitTestSuite",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 749.9999694824219,
+      "y" : 2139.999984741211
+    },
+    "resourceKey" : "testsuite/TutorialExampleRule_UnitTestSuite",
+    "type" : 106
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorrule/TutorialExampleRule", "subtypeeditor/TutorialExampleType", "projectdescription/Project Description", "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "test/TutorialExampleRule0", "cmeditorprocedure/insertTutorialExampleType", "cmeditorprocedure/deleteTutorialExampleType", "tests/Tests", "test/TutorialExampleRule1", "testsuites/Test Suites", "testsuite/TutorialExampleRule_UnitTestSuite" ]
+  } ]
+}

@@ -1,0 +1,35 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
+  "audited" : false,
+  "encapsulated" : false,
+  "expiresAfter" : null,
+  "foreignKeys" : null,
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "TutorialExampleType",
+  "naturalKey" : [ ],
+  "properties" : {
+    "age" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "weight" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

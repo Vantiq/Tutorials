@@ -1,0 +1,4 @@
+PROCEDURE querySourceAndInsert()
+var weatherReading = SELECT FROM SOURCE weather 
+weatherReading = weatherReading[0]
+INSERT weatherReading(tempK:weatherReading.main.temp, location: weatherReading.name, zipCode = "94609")
