@@ -8,9 +8,11 @@
         "outboundResource" : null,
         "outboundResourceConfig" : null,
         "outboundResourceId" : null,
+        "parentStreams" : [ "SpeedReading", "TempReading" ],
         "upsert" : null
       },
       "description" : null,
+      "name" : "MergeStreams",
       "pattern" : "Merge"
     },
     "SpeedReading" : {
@@ -21,10 +23,12 @@
         "op" : "INSERT",
         "outboundResource" : null,
         "outboundResourceId" : null,
+        "parentStreams" : [ ],
         "schema" : "EngineSpeed",
         "upsert" : false
       },
       "description" : null,
+      "name" : "SpeedReading",
       "pattern" : "EventStream"
     },
     "TempReading" : {
@@ -35,10 +39,12 @@
         "op" : "INSERT",
         "outboundResource" : null,
         "outboundResourceId" : null,
+        "parentStreams" : [ ],
         "schema" : "EngineTemp",
         "upsert" : false
       },
       "description" : null,
+      "name" : "TempReading",
       "pattern" : "EventStream"
     },
     "TransformHUD" : {
@@ -46,6 +52,7 @@
         "childStreams" : [ "UpdateHUD" ],
         "outboundResource" : null,
         "outboundResourceId" : null,
+        "parentStreams" : [ "UpdateSystemStatus" ],
         "schema" : null,
         "transformation" : {
           "alertMsg" : {
@@ -60,24 +67,29 @@
         "upsert" : false
       },
       "description" : null,
+      "name" : "TransformHUD",
       "pattern" : "Transformation"
     },
     "UpdateHUD" : {
       "configuration" : {
         "childStreams" : null,
+        "parentStreams" : [ "TransformHUD" ],
         "type" : "SystemHUD",
         "upsert" : true
       },
       "description" : null,
+      "name" : "UpdateHUD",
       "pattern" : "SaveToType"
     },
     "UpdateSystemStatus" : {
       "configuration" : {
         "childStreams" : [ "TransformHUD" ],
+        "parentStreams" : [ "MergeStreams" ],
         "type" : "SystemStatus",
         "upsert" : true
       },
       "description" : null,
+      "name" : "UpdateSystemStatus",
       "pattern" : "SaveToType"
     }
   },
@@ -86,6 +98,7 @@
     "code" : "success"
   },
   "description" : "",
+  "disableBadging" : false,
   "entityRoles" : [ ],
   "keyTypes" : [ "system.collaborations" ],
   "name" : "EngineMonitor"

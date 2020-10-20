@@ -1,0 +1,30 @@
+{
+  "events" : [ {
+    "delay" : 0,
+    "duration" : null,
+    "interval" : 1000,
+    "iterations" : 20,
+    "op" : "INSERT",
+    "resource" : "/types/Resident",
+    "ruleList" : [ {
+      "name" : "floor",
+      "rule" : {
+        "randomSet" : [ "one", "two" ]
+      }
+    }, {
+      "name" : "location",
+      "rule" : {
+        "value" : {
+          "coordinates" : [ 10, 10 ],
+          "type" : "Point"
+        }
+      }
+    }, {
+      "name" : "name",
+      "rule" : {
+        "step" : [ "alice", "bob", "carol" ]
+      }
+    } ]
+  } ],
+  "name" : "ResidentGenerator"
+}
