@@ -26,215 +26,268 @@
   } ],
   "name" : "EngineMonitor",
   "options" : {
-    "v" : 2,
-    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
-    "showGrid" : true,
-    "isModeloProject" : true,
     "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start both of the data generators by checking both checkboxes next to the 2 rows and clicking play in the title bar. When the data generators start you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the data generators, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation. ",
-    "layoutStyle" : "custom"
+    "dockCollapsed" : {
+      "bottom" : false,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "custom",
+    "rootViewFlavor" : 1,
+    "showGrid" : true,
+    "type" : "dev",
+    "v" : 3,
+    "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
+    "label" : "/my/response/topic",
     "name" : "/my/response/topic",
-    "type" : 10,
     "node" : {
-      "x" : 157.8799310536808,
-      "y" : 305.0735988913136
-    }
+      "x" : 157.9,
+      "y" : 305.1
+    },
+    "resourceReference" : "/topics//my/response/topic",
+    "type" : 10
   }, {
-    "name" : "EngineMonitor",
-    "type" : 12,
-    "label" : "EngineMonitor",
-    "timestamp" : "2019-02-26T22:30:00.324Z",
     "inventory" : {
-      "types" : [ "EngineSpeed", "EngineTemp", "SystemHUD", "SystemStatus" ],
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
       "typeHash" : [ "in", "in", "out", "out" ],
-      "sources" : [ ],
-      "sourceHash" : [ ],
-      "topics" : [ ],
-      "topicHash" : [ ],
-      "procedures" : [ ],
-      "procedureHash" : [ ],
-      "collaborations" : [ ],
-      "collaborationHash" : [ ],
-      "pagesets" : [ ],
-      "pagesetHash" : [ ],
-      "appmodels" : [ ],
-      "appmodelHash" : [ ],
-      "eventstreams" : [ ],
-      "eventstreamHash" : [ ]
+      "types" : [ "EngineSpeed", "EngineTemp", "SystemHUD", "SystemStatus" ]
     },
+    "label" : "EngineMonitor",
+    "name" : "EngineMonitor",
     "node" : {
-      "x" : 302.96435531971724,
-      "y" : 59.994041683287506
-    }
+      "x" : 303,
+      "y" : 60
+    },
+    "resourceReference" : "/collaborationtypes/EngineMonitor",
+    "timestamp" : "2020-10-19T22:15:08.728Z",
+    "type" : 12
   }, {
-    "name" : "EngineSimulation",
-    "type" : 15,
-    "label" : "EngineSimulation",
-    "timestamp" : "2019-02-26T22:29:57.781Z",
     "inventory" : {
-      "types" : [ "SystemStatus", "SystemHUD" ],
-      "typeHash" : [ "in", "in" ],
-      "sources" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
       "sourceHash" : [ ],
-      "topics" : [ "/my/response/topic" ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ "out" ],
-      "procedures" : [ ],
-      "procedureHash" : [ ],
-      "collaborations" : [ ],
-      "collaborationHash" : [ ],
-      "pagesets" : [ ],
-      "pagesetHash" : [ ],
-      "appmodels" : [ ],
-      "appmodelHash" : [ ],
-      "eventstreams" : [ ],
-      "eventstreamHash" : [ ]
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "SystemStatus", "SystemHUD" ]
     },
+    "label" : "EngineSimulation",
+    "name" : "EngineSimulation",
     "node" : {
-      "x" : 291.6590600185485,
-      "y" : 240.76354691155944
-    }
+      "x" : 291.7,
+      "y" : 240.8
+    },
+    "resourceReference" : "/system.clients/EngineSimulation",
+    "timestamp" : "2020-10-19T22:15:00.456Z",
+    "type" : 15
   }, {
-    "name" : "EngineSpeed",
-    "type" : 1,
     "label" : "EngineSpeed",
-    "timestamp" : "2019-02-26T22:14:05.605Z",
+    "name" : "EngineSpeed",
     "node" : {
-      "x" : 418.4598639987412,
-      "y" : -7.510056171616611
-    }
-  }, {
-    "name" : "EngineTemp",
-    "type" : 1,
-    "label" : "EngineTemp",
-    "timestamp" : "2019-02-26T22:14:05.605Z",
-    "node" : {
-      "x" : 196.88249066512026,
-      "y" : -7.765757464626375
-    }
-  }, {
-    "name" : "SystemHUD",
-    "type" : 1,
-    "label" : "SystemHUD",
-    "timestamp" : "2019-02-26T22:14:05.670Z",
-    "node" : {
-      "x" : 408.1376056238077,
-      "y" : 168.16570367198096
-    }
-  }, {
-    "name" : "SystemHUD",
-    "type" : 9,
-    "label" : "SystemHUD",
-    "timestamp" : "2019-02-26T22:29:58.818Z",
-    "inventory" : {
-      "types" : [ "SystemHUD" ],
-      "typeHash" : [ "in" ],
-      "sources" : [ ],
-      "sourceHash" : [ ],
-      "topics" : [ ],
-      "topicHash" : [ ],
-      "procedures" : [ ],
-      "procedureHash" : [ ],
-      "collaborations" : [ ],
-      "collaborationHash" : [ ],
-      "pagesets" : [ ],
-      "pagesetHash" : [ ],
-      "appmodels" : [ ],
-      "appmodelHash" : [ ],
-      "eventstreams" : [ ],
-      "eventstreamHash" : [ ]
+      "x" : 418.5,
+      "y" : -7.5
     },
-    "node" : {
-      "x" : 572.8218843059824,
-      "y" : 292.2964013908854
-    }
+    "resourceReference" : "/types/EngineSpeed",
+    "timestamp" : "2020-10-19T22:14:59.641Z",
+    "type" : 1
   }, {
-    "name" : "SystemStatus",
-    "type" : 1,
-    "label" : "SystemStatus",
-    "timestamp" : "2019-02-26T22:14:05.669Z",
+    "label" : "EngineTemp",
+    "name" : "EngineTemp",
     "node" : {
-      "x" : 217.11444017599882,
-      "y" : 167.48239623143868
-    }
+      "x" : 196.9,
+      "y" : -7.8
+    },
+    "resourceReference" : "/types/EngineTemp",
+    "timestamp" : "2020-10-19T22:14:59.619Z",
+    "type" : 1
+  }, {
+    "name" : "SteamEngineTempAndSpeed",
+    "resourceReference" : "/system.eventgenerators/SteamEngineTempAndSpeed",
+    "timestamp" : "2020-10-19T22:25:25.931Z",
+    "type" : 65
+  }, {
+    "label" : "SystemHUD",
+    "name" : "SystemHUD",
+    "node" : {
+      "x" : 408.1,
+      "y" : 168.2
+    },
+    "resourceReference" : "/types/SystemHUD",
+    "timestamp" : "2020-10-19T22:14:59.734Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "SystemHUD" ]
+    },
+    "label" : "SystemHUD",
+    "name" : "SystemHUD",
+    "node" : {
+      "x" : 572.8,
+      "y" : 292.3
+    },
+    "resourceReference" : "/ArsSubscribe/SystemHUD",
+    "timestamp" : "2020-10-19T22:15:01.461Z",
+    "type" : 9
+  }, {
+    "label" : "SystemStatus",
+    "name" : "SystemStatus",
+    "node" : {
+      "x" : 217.1,
+      "y" : 167.5
+    },
+    "resourceReference" : "/types/SystemStatus",
+    "timestamp" : "2020-10-19T22:14:59.734Z",
+    "type" : 1
   } ],
   "tools" : [ {
-    "name" : "Data Generators",
-    "type" : 47,
     "isPinned" : false,
-    "pane" : {
-      "x" : 800,
-      "y" : 400,
-      "h" : 240,
-      "w" : 600
-    }
-  }, {
-    "name" : "Project Resource Graph",
-    "type" : 1,
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "scale" : 0.7418516099124758,
-        "translate" : [ 31.210342453467376, 83.84381531897938 ],
-        "lastZoomRequest" : 0
-      }
-    },
-    "isPinned" : false,
-    "pane" : {
-      "x" : 800,
-      "y" : 20,
-      "h" : 360,
-      "w" : 600
-    }
-  }, {
     "name" : "EngineMonitor",
-    "type" : 15,
-    "isPinned" : false,
-    "resourceKey" : "app/EngineMonitor",
     "pane" : {
-      "x" : 20,
-      "y" : 610,
       "h" : 500,
-      "w" : 760
-    }
-  }, {
-    "name" : "Project Description",
-    "type" : 82,
-    "isPinned" : false,
-    "pane" : {
+      "w" : 760,
       "x" : 20,
-      "y" : 20,
-      "h" : 570,
-      "w" : 760
-    }
+      "y" : 610
+    },
+    "resourceKey" : "app/EngineMonitor",
+    "state" : 3,
+    "toolOptions" : { },
+    "type" : 15
   }, {
+    "isPinned" : false,
     "name" : "EngineSimulation",
-    "type" : 63,
+    "pane" : {
+      "h" : 860,
+      "w" : 1270,
+      "x" : 20,
+      "y" : 1130
+    },
+    "resourceKey" : "client/EngineSimulation",
+    "state" : 3,
     "toolOptions" : {
       "isRunning" : true
     },
-    "isPinned" : false,
-    "resourceKey" : "client/EngineSimulation",
-    "pane" : {
-      "x" : 20,
-      "y" : 1130,
-      "h" : 860,
-      "w" : 1270
-    }
+    "type" : 63
   }, {
-    "name" : "SystemHUD",
-    "type" : 7,
     "isPinned" : false,
-    "resourceKey" : "subscription/SystemHUD",
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
     "pane" : {
+      "h" : 570,
+      "w" : 760,
+      "x" : 20,
+      "y" : 20
+    },
+    "state" : 3,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 360,
+      "w" : 600,
       "x" : 800,
-      "y" : 660,
+      "y" : 20
+    },
+    "state" : 3,
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7863276787944835,
+        "translate" : [ 24.485523984042203, 42.730566441671925 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "SteamEngineTempAndSpeed",
+    "pane" : {
+      "h" : 260,
+      "w" : 600,
+      "x" : 800,
+      "y" : 390
+    },
+    "resourceKey" : "eventgenerator/SteamEngineTempAndSpeed",
+    "state" : 3,
+    "type" : 111
+  }, {
+    "isPinned" : false,
+    "name" : "SystemHUD",
+    "pane" : {
       "h" : 450,
-      "w" : 600
-    }
+      "w" : 600,
+      "x" : 800,
+      "y" : 660
+    },
+    "resourceKey" : "subscription/SystemHUD",
+    "state" : 3,
+    "type" : 7
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "datagenerators/Data Generators", "graph/Project Resource Graph", "app/EngineMonitor", "projectdescription/Project Description", "client/EngineSimulation", "subsubscribeeditor/SystemHUD" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "app/EngineMonitor", "client/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "eventgenerator/SteamEngineTempAndSpeed", "subsubscribeeditor/SystemHUD" ]
   } ]
 }

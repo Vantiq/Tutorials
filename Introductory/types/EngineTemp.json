@@ -1,7 +1,9 @@
 {
   "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
   "audited" : false,
   "encapsulated" : false,
+  "expiresAfter" : null,
   "foreignKeys" : null,
   "groupEnabled" : false,
   "groupRequired" : false,
@@ -28,6 +30,7 @@
     }
   },
   "role" : "standard",
+  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }
