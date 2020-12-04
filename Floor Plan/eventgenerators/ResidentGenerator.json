@@ -1,6 +1,6 @@
 {
   "events" : [ {
-    "delay" : 0,
+    "startAfter" : 0,
     "duration" : null,
     "interval" : 1000,
     "iterations" : 20,

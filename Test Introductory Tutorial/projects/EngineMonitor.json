@@ -43,11 +43,11 @@
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "custom",
-    "listFlavor" : "tree",
-    "openResourceFolders" : { },
+    "rootViewFlavor" : 1,
     "showGrid" : true,
     "type" : "dev",
-    "v" : 3
+    "v" : 3,
+    "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
     "label" : "/my/response/topic",
@@ -84,12 +84,13 @@
       "y" : 60
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2020-04-14T18:14:40.772Z",
+    "timestamp" : "2020-12-04T00:18:14.377Z",
     "type" : 12
   }, {
+    "label" : "EngineMonitorTest",
     "name" : "EngineMonitorTest",
     "resourceReference" : "/system.tests/EngineMonitorTest",
-    "timestamp" : "2020-04-14T18:19:44.981Z",
+    "timestamp" : "2020-12-04T00:18:09.592Z",
     "type" : 56
   }, {
     "inventory" : {
@@ -117,8 +118,13 @@
       "y" : 240.8
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2020-04-14T18:14:32.531Z",
+    "timestamp" : "2020-12-04T00:18:08.584Z",
     "type" : 15
+  }, {
+    "name" : "EngineSimulation",
+    "resourceReference" : "/system.eventgenerators/EngineSimulation",
+    "timestamp" : "2020-12-04T00:18:14.389Z",
+    "type" : 65
   }, {
     "label" : "EngineSpeed",
     "name" : "EngineSpeed",
@@ -127,7 +133,7 @@
       "y" : -7.5
     },
     "resourceReference" : "/types/EngineSpeed",
-    "timestamp" : "2020-04-14T18:14:32.076Z",
+    "timestamp" : "2020-12-04T00:18:08.399Z",
     "type" : 1
   }, {
     "label" : "EngineTemp",
@@ -137,7 +143,7 @@
       "y" : -7.8
     },
     "resourceReference" : "/types/EngineTemp",
-    "timestamp" : "2020-04-14T18:14:32.076Z",
+    "timestamp" : "2020-12-04T00:18:08.399Z",
     "type" : 1
   }, {
     "label" : "SystemHUD",
@@ -147,7 +153,7 @@
       "y" : 168.2
     },
     "resourceReference" : "/types/SystemHUD",
-    "timestamp" : "2020-04-14T18:14:32.169Z",
+    "timestamp" : "2020-12-04T00:18:08.480Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -175,7 +181,7 @@
       "y" : 292.3
     },
     "resourceReference" : "/ArsSubscribe/SystemHUD",
-    "timestamp" : "2020-04-14T18:14:32.533Z",
+    "timestamp" : "2020-12-04T00:18:10.090Z",
     "type" : 9
   }, {
     "label" : "SystemStatus",
@@ -185,37 +191,10 @@
       "y" : 167.5
     },
     "resourceReference" : "/types/SystemStatus",
-    "timestamp" : "2020-04-14T18:14:32.169Z",
+    "timestamp" : "2020-12-04T00:18:08.480Z",
     "type" : 1
   } ],
   "tools" : [ {
-    "isPinned" : false,
-    "name" : "Data Generators",
-    "pane" : {
-      "h" : 240,
-      "w" : 600,
-      "x" : 800,
-      "y" : 400
-    },
-    "type" : 47
-  }, {
-    "isPinned" : false,
-    "name" : "Project Resource Graph",
-    "pane" : {
-      "h" : 360,
-      "w" : 600,
-      "x" : 800,
-      "y" : 20
-    },
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.7418516099124758,
-        "translate" : [ 31.210342453467376, 83.84381531897938 ]
-      }
-    },
-    "type" : 1
-  }, {
     "isPinned" : false,
     "name" : "EngineMonitor",
     "pane" : {
@@ -225,91 +204,9 @@
       "y" : 610
     },
     "resourceKey" : "app/EngineMonitor",
-    "toolOptions" : {
-      "propertyPaneWidth" : 250,
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 1.172633281935303,
-        "translate" : [ 155.8735368569495, 39.878692783315444 ]
-      }
-    },
+    "state" : 3,
+    "toolOptions" : { },
     "type" : 15
-  }, {
-    "isPinned" : false,
-    "name" : "Project Description",
-    "pane" : {
-      "h" : 570,
-      "w" : 760,
-      "x" : 20,
-      "y" : 20
-    },
-    "type" : 82
-  }, {
-    "isPinned" : false,
-    "name" : "EngineSimulation",
-    "pane" : {
-      "h" : 860,
-      "w" : 1270,
-      "x" : 20,
-      "y" : 1130
-    },
-    "resourceKey" : "client/EngineSimulation",
-    "toolOptions" : {
-      "isRunning" : true
-    },
-    "type" : 63
-  }, {
-    "isPinned" : false,
-    "name" : "SystemHUD",
-    "pane" : {
-      "h" : 450,
-      "w" : 600,
-      "x" : 800,
-      "y" : 660
-    },
-    "resourceKey" : "subscription/SystemHUD",
-    "type" : 7
-  }, {
-    "dockLocation" : "top",
-    "isPinned" : false,
-    "name" : "Inactive Panes",
-    "pane" : {
-      "h" : 10,
-      "w" : 10,
-      "x" : -6000,
-      "y" : -6000
-    },
-    "type" : 99
-  }, {
-    "isPinned" : false,
-    "name" : "Project Contents",
-    "pane" : {
-      "h" : 675.7272787094116,
-      "w" : 210,
-      "x" : 0,
-      "y" : 0
-    },
-    "type" : 2
-  }, {
-    "isPinned" : false,
-    "name" : "Errors",
-    "pane" : {
-      "h" : 200,
-      "w" : 1609,
-      "x" : 10,
-      "y" : 10
-    },
-    "type" : 13
-  }, {
-    "isPinned" : false,
-    "name" : "Tests",
-    "pane" : {
-      "h" : 400,
-      "w" : 700,
-      "x" : 20,
-      "y" : 2000
-    },
-    "type" : 101
   }, {
     "isPinned" : false,
     "name" : "EngineMonitorTest",
@@ -320,11 +217,104 @@
       "y" : 2410
     },
     "resourceKey" : "test/EngineMonitorTest",
+    "state" : 3,
     "type" : 102
+  }, {
+    "isPinned" : false,
+    "name" : "EngineSimulation",
+    "pane" : {
+      "h" : 860,
+      "w" : 1270,
+      "x" : 20,
+      "y" : 1130
+    },
+    "resourceKey" : "client/EngineSimulation",
+    "state" : 3,
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "EngineSimulation",
+    "pane" : {
+      "h" : 260,
+      "w" : 600,
+      "x" : 800,
+      "y" : 390
+    },
+    "resourceKey" : "eventgenerator/EngineSimulation",
+    "state" : 3,
+    "type" : 111
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 570,
+      "w" : 760,
+      "x" : 20,
+      "y" : 20
+    },
+    "state" : 3,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 360,
+      "w" : 600,
+      "x" : 800,
+      "y" : 20
+    },
+    "state" : 3,
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7418516099124758,
+        "translate" : [ 31.210342453467376, 83.84381531897938 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "SystemHUD",
+    "pane" : {
+      "h" : 450,
+      "w" : 600,
+      "x" : 800,
+      "y" : 660
+    },
+    "resourceKey" : "subscription/SystemHUD",
+    "state" : 3,
+    "type" : 7
+  }, {
+    "isPinned" : false,
+    "name" : "Tests",
+    "pane" : {
+      "h" : 400,
+      "w" : 700,
+      "x" : 20,
+      "y" : 2000
+    },
+    "state" : 3,
+    "type" : 101
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "datagenerators/Data Generators", "graph/Project Resource Graph", "app/EngineMonitor", "projectdescription/Project Description", "client/EngineSimulation", "subsubscribeeditor/SystemHUD", "tiledock/Inactive Panes", "list/Project Contents", "errorviewer/Errors", "tests/Tests", "test/EngineMonitorTest" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "app/EngineMonitor", "test/EngineMonitorTest", "client/EngineSimulation", "eventgenerator/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "subsubscribeeditor/SystemHUD", "undefined/Tests" ]
   } ]
 }

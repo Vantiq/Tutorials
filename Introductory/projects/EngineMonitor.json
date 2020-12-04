@@ -26,7 +26,8 @@
   } ],
   "name" : "EngineMonitor",
   "options" : {
-    "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start both of the data generators by checking both checkboxes next to the 2 rows and clicking play in the title bar. When the data generators start you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the data generators, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation. ",
+    "blacklist" : [ "eventgenerator/SteamEngineTempAndSpeed", "test/EngineMonitorTest" ],
+    "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start the event generator. When the event generator starts, you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the event generator, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation. ",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
@@ -45,6 +46,7 @@
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "custom",
+    "openFolders" : [ "test" ],
     "rootViewFlavor" : 1,
     "showGrid" : true,
     "type" : "dev",
@@ -86,7 +88,7 @@
       "y" : 60
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2020-10-19T22:15:08.728Z",
+    "timestamp" : "2020-12-03T22:33:07.566Z",
     "type" : 12
   }, {
     "inventory" : {
@@ -114,8 +116,14 @@
       "y" : 240.8
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2020-10-19T22:15:00.456Z",
+    "timestamp" : "2020-12-03T22:32:56.889Z",
     "type" : 15
+  }, {
+    "label" : "EngineSimulation",
+    "name" : "EngineSimulation",
+    "resourceReference" : "/system.eventgenerators/EngineSimulation",
+    "timestamp" : "2020-12-03T22:33:07.615Z",
+    "type" : 65
   }, {
     "label" : "EngineSpeed",
     "name" : "EngineSpeed",
@@ -124,7 +132,7 @@
       "y" : -7.5
     },
     "resourceReference" : "/types/EngineSpeed",
-    "timestamp" : "2020-10-19T22:14:59.641Z",
+    "timestamp" : "2020-12-03T22:32:56.846Z",
     "type" : 1
   }, {
     "label" : "EngineTemp",
@@ -134,13 +142,8 @@
       "y" : -7.8
     },
     "resourceReference" : "/types/EngineTemp",
-    "timestamp" : "2020-10-19T22:14:59.619Z",
+    "timestamp" : "2020-12-03T22:32:56.846Z",
     "type" : 1
-  }, {
-    "name" : "SteamEngineTempAndSpeed",
-    "resourceReference" : "/system.eventgenerators/SteamEngineTempAndSpeed",
-    "timestamp" : "2020-10-19T22:25:25.931Z",
-    "type" : 65
   }, {
     "label" : "SystemHUD",
     "name" : "SystemHUD",
@@ -149,7 +152,7 @@
       "y" : 168.2
     },
     "resourceReference" : "/types/SystemHUD",
-    "timestamp" : "2020-10-19T22:14:59.734Z",
+    "timestamp" : "2020-12-03T22:32:56.845Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -177,7 +180,7 @@
       "y" : 292.3
     },
     "resourceReference" : "/ArsSubscribe/SystemHUD",
-    "timestamp" : "2020-10-19T22:15:01.461Z",
+    "timestamp" : "2020-12-03T22:32:57.895Z",
     "type" : 9
   }, {
     "label" : "SystemStatus",
@@ -187,7 +190,7 @@
       "y" : 167.5
     },
     "resourceReference" : "/types/SystemStatus",
-    "timestamp" : "2020-10-19T22:14:59.734Z",
+    "timestamp" : "2020-12-03T22:32:56.845Z",
     "type" : 1
   } ],
   "tools" : [ {
@@ -220,6 +223,18 @@
     "type" : 63
   }, {
     "isPinned" : false,
+    "name" : "EngineSimulation",
+    "pane" : {
+      "h" : 270,
+      "w" : 600,
+      "x" : 800,
+      "y" : 370
+    },
+    "resourceKey" : "eventgenerator/EngineSimulation",
+    "state" : 3,
+    "type" : 111
+  }, {
+    "isPinned" : false,
     "name" : "Errors",
     "type" : 13
   }, {
@@ -246,7 +261,7 @@
     "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
-      "h" : 360,
+      "h" : 330,
       "w" : 600,
       "x" : 800,
       "y" : 20
@@ -255,23 +270,11 @@
     "toolOptions" : {
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
-        "scale" : 0.7863276787944835,
-        "translate" : [ 24.485523984042203, 42.730566441671925 ]
+        "scale" : 0.7065222966800032,
+        "translate" : [ 90.29519784870621, 45.56218739355269 ]
       }
     },
     "type" : 1
-  }, {
-    "isPinned" : false,
-    "name" : "SteamEngineTempAndSpeed",
-    "pane" : {
-      "h" : 260,
-      "w" : 600,
-      "x" : 800,
-      "y" : 390
-    },
-    "resourceKey" : "eventgenerator/SteamEngineTempAndSpeed",
-    "state" : 3,
-    "type" : 111
   }, {
     "isPinned" : false,
     "name" : "SystemHUD",
@@ -288,6 +291,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "app/EngineMonitor", "client/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "eventgenerator/SteamEngineTempAndSpeed", "subsubscribeeditor/SystemHUD" ]
+    "projectToolKeys" : [ "app/EngineMonitor", "client/EngineSimulation", "eventgenerator/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "subsubscribeeditor/SystemHUD" ]
   } ]
 }
