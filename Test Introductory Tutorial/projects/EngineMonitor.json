@@ -84,13 +84,13 @@
       "y" : 60
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2020-12-03T22:59:36.690Z",
+    "timestamp" : "2020-12-04T00:18:14.377Z",
     "type" : 12
   }, {
     "label" : "EngineMonitorTest",
     "name" : "EngineMonitorTest",
     "resourceReference" : "/system.tests/EngineMonitorTest",
-    "timestamp" : "2020-12-03T22:59:32.935Z",
+    "timestamp" : "2020-12-04T00:18:09.592Z",
     "type" : 56
   }, {
     "inventory" : {
@@ -118,8 +118,13 @@
       "y" : 240.8
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2020-12-03T22:59:31.928Z",
+    "timestamp" : "2020-12-04T00:18:08.584Z",
     "type" : 15
+  }, {
+    "name" : "EngineSimulation",
+    "resourceReference" : "/system.eventgenerators/EngineSimulation",
+    "timestamp" : "2020-12-04T00:18:14.389Z",
+    "type" : 65
   }, {
     "label" : "EngineSpeed",
     "name" : "EngineSpeed",
@@ -128,7 +133,7 @@
       "y" : -7.5
     },
     "resourceReference" : "/types/EngineSpeed",
-    "timestamp" : "2020-12-03T22:32:56.846Z",
+    "timestamp" : "2020-12-04T00:18:08.399Z",
     "type" : 1
   }, {
     "label" : "EngineTemp",
@@ -138,7 +143,7 @@
       "y" : -7.8
     },
     "resourceReference" : "/types/EngineTemp",
-    "timestamp" : "2020-12-03T22:32:56.846Z",
+    "timestamp" : "2020-12-04T00:18:08.399Z",
     "type" : 1
   }, {
     "label" : "SystemHUD",
@@ -148,7 +153,7 @@
       "y" : 168.2
     },
     "resourceReference" : "/types/SystemHUD",
-    "timestamp" : "2020-12-03T22:32:56.845Z",
+    "timestamp" : "2020-12-04T00:18:08.480Z",
     "type" : 1
   }, {
     "inventory" : {
@@ -176,7 +181,7 @@
       "y" : 292.3
     },
     "resourceReference" : "/ArsSubscribe/SystemHUD",
-    "timestamp" : "2020-12-03T22:59:33.433Z",
+    "timestamp" : "2020-12-04T00:18:10.090Z",
     "type" : 9
   }, {
     "label" : "SystemStatus",
@@ -186,21 +191,10 @@
       "y" : 167.5
     },
     "resourceReference" : "/types/SystemStatus",
-    "timestamp" : "2020-12-03T22:32:56.845Z",
+    "timestamp" : "2020-12-04T00:18:08.480Z",
     "type" : 1
   } ],
   "tools" : [ {
-    "isPinned" : false,
-    "name" : "Data Generators",
-    "pane" : {
-      "h" : 240,
-      "w" : 600,
-      "x" : 800,
-      "y" : 400
-    },
-    "state" : 3,
-    "type" : 47
-  }, {
     "isPinned" : false,
     "name" : "EngineMonitor",
     "pane" : {
@@ -240,6 +234,18 @@
       "isRunning" : true
     },
     "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "EngineSimulation",
+    "pane" : {
+      "h" : 260,
+      "w" : 600,
+      "x" : 800,
+      "y" : 390
+    },
+    "resourceKey" : "eventgenerator/EngineSimulation",
+    "state" : 3,
+    "type" : 111
   }, {
     "isPinned" : false,
     "name" : "Errors",
@@ -309,6 +315,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "datagenerators/Data Generators", "app/EngineMonitor", "test/EngineMonitorTest", "client/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "subsubscribeeditor/SystemHUD", "undefined/Tests" ]
+    "projectToolKeys" : [ "app/EngineMonitor", "test/EngineMonitorTest", "client/EngineSimulation", "eventgenerator/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "subsubscribeeditor/SystemHUD", "undefined/Tests" ]
   } ]
 }

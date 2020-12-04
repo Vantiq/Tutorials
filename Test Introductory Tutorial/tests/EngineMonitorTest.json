@@ -136,11 +136,9 @@
     "validationMethod" : "Event Object",
     "validationProcedure" : null
   } ],
-  "resource" : {
-    "resource" : "projects",
-    "resourceId" : "EngineMonitor"
-  },
+  "resource" : "/projects/EngineMonitor",
   "runPolicies" : [ {
+    "id" : "5d29e51e-28e8-4783-ae84-6e9c8744655f",
     "type" : "manual"
   } ],
   "saveNamespace" : true,
