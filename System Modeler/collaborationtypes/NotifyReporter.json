@@ -12,9 +12,13 @@
             "type" : "reference",
             "value" : "collaboration"
           }, {
+            "multi" : true,
             "name" : "users",
-            "type" : "expression",
-            "value" : "report.reporter"
+            "type" : "mixed",
+            "value" : [ {
+              "type" : "expression",
+              "value" : "report.reporter"
+            } ]
           } ],
           "type" : "activity"
         } ],
