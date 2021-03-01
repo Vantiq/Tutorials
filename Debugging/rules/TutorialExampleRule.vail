@@ -1,5 +1,6 @@
 RULE TutorialExampleRule
-WHEN EVENT OCCURS ON "/types/TutorialExampleType/insert" AS t WHERE (t.value.age > 5)
+WHERE (t.value.age > 5)
+WHEN EVENT OCCURS ON "/types/TutorialExampleType/insert" AS t
 
 var ageStatus = "Unknown"
 
@@ -18,3 +19,4 @@ for (person IN allPeople) {
 }
 
 var averageWeight = total / allPeople.size()
+
