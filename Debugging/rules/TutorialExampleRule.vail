@@ -1,10 +1,9 @@
 RULE TutorialExampleRule
-WHEN INSERT OCCURS ON TutorialExampleType AS t
-WHERE (t.age > 5)
+WHEN EVENT OCCURS ON "/types/TutorialExampleType/insert" AS t WHERE (t.value.age > 5)
 
 var ageStatus = "Unknown"
 
-if (t.age >= 21) {
+if (t.value.age >= 21) {
    ageStatus = "Adult"
 } else {
    ageStatus = "Child"
