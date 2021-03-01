@@ -1,4 +1,4 @@
 RULE weatherReading
 
-WHEN MESSAGE ARRIVES FROM weather
-UPDATE weatherReading(tempK:weather.main.temp) WHERE location == weather.name
+WHEN EVENT OCCURS ON "/sources/weather" AS weather
+UPDATE weatherReading(tempK:weather.value.main.temp) WHERE location == weather.value.name
