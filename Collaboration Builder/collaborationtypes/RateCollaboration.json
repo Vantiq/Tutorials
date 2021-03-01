@@ -154,7 +154,7 @@
       "completionCondition" : [ ],
       "configuration" : {
         "entityRole" : "ratepatient",
-        "initialTrigger" : "WHEN UPDATE OCCURS ON Patient WHERE Patient.heartRate < 40 OR Patient.heartRate > 150"
+        "initialTrigger" : "WHEN EVENT OCCURS ON "/types/Patient/update" AS Patient WHERE Patient.value.heartRate < 40 OR Patient.value.heartRate > 150"
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
