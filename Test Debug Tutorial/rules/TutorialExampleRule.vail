@@ -1,10 +1,10 @@
 RULE TutorialExampleRule
-WHEN INSERT OCCURS ON TutorialExampleType AS t
-WHERE (t.age > 5)
+WHERE (t.value.age > 5)
+WHEN EVENT OCCURS ON "/types/TutorialExampleType/insert" AS t
 
 var ageStatus = "Unknown"
 
-if (t.age >= 21) {
+if (t.value.age >= 21) {
    ageStatus = "Adult"
 } else {
    ageStatus = "Child"
@@ -19,5 +19,4 @@ for (person IN allPeople) {
 }
 
 var averageWeight = total / allPeople.size()
-
 PUBLISH {ageStatus: ageStatus, averageWeight: averageWeight} TO TOPIC "/people/results"
