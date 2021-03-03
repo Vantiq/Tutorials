@@ -1,0 +1,38 @@
+{
+  "events" : [ {
+    "duration" : null,
+    "interval" : 1000,
+    "iterations" : 100,
+    "op" : "INSERT",
+    "resource" : "/types/EngineTemp",
+    "ruleList" : [ {
+      "name" : "systemId",
+      "rule" : {
+        "value" : "Auto0123456789"
+      }
+    }, {
+      "name" : "temperature",
+      "rule" : {
+        "range" : [ 200, 215, 1 ]
+      }
+    } ]
+  }, {
+    "duration" : null,
+    "interval" : 1000,
+    "iterations" : 100,
+    "op" : "INSERT",
+    "resource" : "/types/EngineSpeed",
+    "ruleList" : [ {
+      "name" : "speed",
+      "rule" : {
+        "range" : [ 35, 55, 5 ]
+      }
+    }, {
+      "name" : "systemId",
+      "rule" : {
+        "value" : "0123456789"
+      }
+    } ]
+  } ],
+  "name" : "EngineSimulation"
+}

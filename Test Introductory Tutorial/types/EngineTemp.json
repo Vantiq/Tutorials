@@ -30,7 +30,6 @@
     }
   },
   "role" : "standard",
-  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }

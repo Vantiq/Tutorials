@@ -2,7 +2,22 @@
   "active" : true,
   "appType" : false,
   "ars_properties" : {
-    "ars_regenerate" : false
+    "ars_regenerate" : false,
+    "dataVersion" : 1,
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170
   },
   "assembly" : {
     "EscalatePatient" : {
@@ -166,7 +181,8 @@
   "currentState" : {
     "code" : "success"
   },
-  "description" : false,
+  "description" : "false",
+  "disableBadging" : false,
   "entityRoles" : [ {
     "name" : "ratepatient",
     "type" : "Patient"

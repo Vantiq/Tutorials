@@ -1,0 +1,5 @@
+PROCEDURE insertTutorialExampleType()
+DELETE TutorialExampleType WHERE weight < 300
+INSERT TutorialExampleType(age: 10, weight: 60)
+INSERT TutorialExampleType(age: 20, weight: 120)
+INSERT TutorialExampleType(age: 30, weight: 150)

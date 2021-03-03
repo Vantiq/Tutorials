@@ -1,0 +1,3 @@
+PROCEDURE createWeatherData()
+Test.startSourceMocking("weather", "queryProcedureOverride", null)
+INSERT weatherReading(location:"My Address", zipCode:"94609")

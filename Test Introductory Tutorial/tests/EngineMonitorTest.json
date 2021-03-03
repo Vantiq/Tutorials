@@ -1,0 +1,147 @@
+{
+  "cleanup" : null,
+  "description" : "Tests the Engine Monitor Tutorial",
+  "inputs" : [ {
+    "delay" : "1 Second",
+    "eventObj" : {
+      "speed" : 20,
+      "systemId" : "123"
+    },
+    "inputNum" : 0,
+    "op" : "INSERT",
+    "periodInterval" : null,
+    "qual" : null,
+    "rawDelayInterval" : 1000,
+    "rawPeriodInterval" : null,
+    "resource" : "types",
+    "resourceId" : "EngineSpeed"
+  }, {
+    "delay" : "1 Second",
+    "eventObj" : {
+      "systemId" : "123",
+      "temperature" : 200
+    },
+    "inputNum" : 1,
+    "op" : "INSERT",
+    "periodInterval" : null,
+    "qual" : null,
+    "rawDelayInterval" : 1000,
+    "rawPeriodInterval" : null,
+    "resource" : "types",
+    "resourceId" : "EngineTemp"
+  }, {
+    "delay" : "1 Second",
+    "eventObj" : {
+      "speed" : 60,
+      "systemId" : "456"
+    },
+    "inputNum" : 2,
+    "op" : "INSERT",
+    "periodInterval" : null,
+    "qual" : null,
+    "rawDelayInterval" : 1000,
+    "rawPeriodInterval" : null,
+    "resource" : "types",
+    "resourceId" : "EngineSpeed"
+  }, {
+    "delay" : "1 Second",
+    "eventObj" : {
+      "systemId" : "456",
+      "temperature" : 240
+    },
+    "inputNum" : 3,
+    "op" : "INSERT",
+    "periodInterval" : null,
+    "qual" : null,
+    "rawDelayInterval" : 1000,
+    "rawPeriodInterval" : null,
+    "resource" : "types",
+    "resourceId" : "EngineTemp"
+  }, {
+    "delay" : "1 Second",
+    "eventObj" : {
+      "speed" : 30,
+      "systemId" : "789"
+    },
+    "inputNum" : 4,
+    "op" : "INSERT",
+    "periodInterval" : null,
+    "qual" : null,
+    "rawDelayInterval" : 1000,
+    "rawPeriodInterval" : null,
+    "resource" : "types",
+    "resourceId" : "EngineSpeed"
+  }, {
+    "delay" : "1 Second",
+    "eventObj" : {
+      "systemId" : "789",
+      "temperature" : 240
+    },
+    "inputNum" : 5,
+    "op" : "INSERT",
+    "periodInterval" : null,
+    "qual" : null,
+    "rawDelayInterval" : 1000,
+    "rawPeriodInterval" : null,
+    "resource" : "types",
+    "resourceId" : "EngineTemp"
+  } ],
+  "name" : "EngineMonitorTest",
+  "outputs" : [ {
+    "eventObj" : {
+      "alertMsg" : "",
+      "systemId" : "123"
+    },
+    "missing" : false,
+    "op" : "UPDATE",
+    "outputNum" : 0,
+    "prereqEvent" : {
+      "event" : 1,
+      "num" : 1
+    },
+    "repeat" : { },
+    "resource" : "types",
+    "resourceId" : "SystemHUD",
+    "validationMethod" : "Event Object"
+  }, {
+    "eventObj" : {
+      "alertMsg" : "Your engine is overheating, please reduce your speed.",
+      "systemId" : "456"
+    },
+    "op" : "UPDATE",
+    "outputNum" : 1,
+    "prereqEvent" : {
+      "event" : 3,
+      "num" : 1
+    },
+    "repeat" : { },
+    "resource" : "types",
+    "resourceId" : "SystemHUD",
+    "validationMethod" : "Event Object",
+    "validationProcedure" : null
+  }, {
+    "eventObj" : {
+      "alertMsg" : "Your engine is overheating: check for a malfunctioning fan or a coolant leak.",
+      "systemId" : "789"
+    },
+    "op" : "UPDATE",
+    "outputNum" : 2,
+    "prereqEvent" : {
+      "event" : 5,
+      "num" : 1
+    },
+    "repeat" : { },
+    "resource" : "types",
+    "resourceId" : "SystemHUD",
+    "validationMethod" : "Event Object",
+    "validationProcedure" : null
+  } ],
+  "resource" : "/projects/EngineMonitor",
+  "runPolicies" : [ {
+    "id" : "5d29e51e-28e8-4783-ae84-6e9c8744655f",
+    "type" : "manual"
+  } ],
+  "saveNamespace" : true,
+  "setup" : null,
+  "timeout" : "2 Minutes"
+}

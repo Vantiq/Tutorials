@@ -11,26 +11,46 @@
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "EngineTemp",
+  "name" : "weatherReading",
   "naturalKey" : [ ],
   "properties" : {
-    "systemId" : {
+    "location" : {
       "encrypted" : false,
       "multi" : false,
       "required" : true,
       "type" : "String",
       "unique" : false
     },
-    "temperature" : {
+    "tempF" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Real",
+      "unique" : false
+    },
+    "tempK" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Real",
+      "unique" : false
+    },
+    "windSpeed" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Real",
+      "unique" : false
+    },
+    "zipCode" : {
       "encrypted" : false,
       "multi" : false,
       "required" : true,
-      "type" : "Integer",
+      "type" : "String",
       "unique" : false
     }
   },
   "role" : "standard",
-  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }

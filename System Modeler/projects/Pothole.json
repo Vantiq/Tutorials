@@ -1,0 +1,110 @@
+{
+  "links" : [ {
+    "source" : "client/PotholeReporter",
+    "target" : "topic//vantiq/appmodel/PotholeReporter/submitTopic"
+  }, {
+    "source" : "type/Pothole",
+    "target" : "appmodel/Pothole"
+  } ],
+  "name" : "Pothole",
+  "options" : {
+    "description" : "This project was demonstrates the 'Pothole' project found in the 'System Modeler Tutorial'. It shows a complete example of using the VANTIQ System Modeler to build the 'Pothole' model.\n\nSystem Models can generate the skeleton for a working application. In this case, the Pothole System Model was used to generate the basis for the PotholeReporter project, which was then fleshed out in the System Modeler Tutorial. Go to the Projects dropdown above and select PotholeReporter to see the final results of the tutorial.",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/vantiq/appmodel/PotholeReporter/submitTopic",
+    "name" : "/vantiq/appmodel/PotholeReporter/submitTopic",
+    "node" : {
+      "x" : 351.29545686495516,
+      "y" : 192.85080786886846
+    },
+    "type" : 10
+  }, {
+    "label" : "Pothole",
+    "name" : "Pothole",
+    "node" : {
+      "x" : 676.4744645501389,
+      "y" : 89.53363196464251
+    },
+    "timestamp" : "2018-08-02T00:31:32.871Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ "in" ],
+      "pagesets" : [ "PotholeReporter" ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Pothole" ]
+    },
+    "label" : "Pothole",
+    "name" : "Pothole",
+    "node" : {
+      "x" : 677.0842881504718,
+      "y" : 194.73058233334726
+    },
+    "timestamp" : "2018-08-02T00:31:33.374Z",
+    "type" : 45
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/vantiq/appmodel/PotholeReporter/submitTopic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "PotholeReporter",
+    "name" : "PotholeReporter",
+    "node" : {
+      "x" : 420.5262420385036,
+      "y" : 90.05107457381138
+    },
+    "timestamp" : "2018-08-02T00:31:33.350Z",
+    "type" : 15
+  } ],
+  "tools" : [ {
+    "name" : "Pothole",
+    "pane" : {
+      "h" : 622.5,
+      "w" : 695.5,
+      "x" : 640,
+      "y" : 10
+    },
+    "resourceKey" : "appmodel/Pothole",
+    "type" : 71
+  }, {
+    "name" : "Project Description",
+    "pane" : {
+      "h" : 400,
+      "w" : 580,
+      "x" : 20,
+      "y" : 20
+    },
+    "type" : 82
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "appmodel/Pothole", "projectdescription/Project Description" ]
+  } ]
+}

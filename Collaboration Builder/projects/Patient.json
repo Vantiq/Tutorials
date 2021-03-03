@@ -11,75 +11,59 @@
   }, {
     "source" : "client/PatientResponse",
     "target" : "topic//my/response/topic"
-  }, {
-    "source" : "procedure/CollaborationUtils.triggerEscalation",
-    "target" : "type/ArsEscalationDeadline"
-  }, {
-    "source" : "collaborationtype/RateCollaboration",
-    "target" : "procedure/CollaborationUtils.triggerEscalation"
   } ],
   "name" : "Patient",
   "options" : {
+    "blacklist" : [ "services/CollaborationUtils", "source/VantiqPushNotification" ],
     "description" : "",
+    "dockCollapsed" : {
+      "bottom" : false,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
     "filterBitArray" : "000000ffffffffffffffffff00ffffff",
     "isModeloProject" : true,
+    "layoutStyle" : "custom",
+    "openFolders" : [ "services" ],
+    "rootViewFlavor" : 1,
     "showGrid" : true,
-    "v" : 2
+    "type" : "dev",
+    "v" : 3,
+    "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
     "label" : "/my/response/topic",
     "name" : "/my/response/topic",
     "node" : {
-      "x" : 499.6924038610856,
-      "y" : 218.9740310133328
+      "x" : 531.7,
+      "y" : 143
     },
+    "resourceReference" : "/topics//my/response/topic",
     "type" : 10
   }, {
-    "label" : "ArsEscalationDeadline",
-    "name" : "ArsEscalationDeadline",
-    "node" : {
-      "x" : 166.33356900496096,
-      "y" : 312.2133825698792
-    },
-    "timestamp" : "2017-06-29T18:04:12.927Z",
-    "type" : 1
-  }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ ],
       "sources" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ "both" ],
-      "types" : [ "ArsEscalationDeadline" ]
-    },
-    "label" : "CollaborationUtils.triggerEscalation",
-    "name" : "CollaborationUtils.triggerEscalation",
-    "node" : {
-      "x" : 167.93898797346952,
-      "y" : 241.71026250138777
-    },
-    "timestamp" : "2018-01-10T00:17:38.248Z",
-    "type" : 3
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ "out" ],
       "topics" : [ "/my/response/topic" ],
       "typeHash" : [ ],
@@ -88,32 +72,36 @@
     "label" : "FirstResponderResponse",
     "name" : "FirstResponderResponse",
     "node" : {
-      "x" : 450.6273129198447,
-      "y" : 100.88537092727998
+      "x" : 418.6,
+      "y" : -7.1
     },
-    "timestamp" : "2018-09-19T23:57:52.240Z",
+    "resourceReference" : "/system.clients/FirstResponderResponse",
+    "timestamp" : "2020-12-04T15:41:45.352Z",
     "type" : 15
   }, {
     "label" : "Patient",
     "name" : "Patient",
     "node" : {
-      "x" : 167.1935105625812,
-      "y" : 84.79219732358163
+      "x" : 167.2,
+      "y" : 84.8
     },
-    "timestamp" : "2018-09-19T23:57:51.808Z",
+    "resourceReference" : "/types/Patient",
+    "timestamp" : "2020-12-04T15:41:44.630Z",
     "type" : 1
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ "out" ],
       "topics" : [ "/my/response/topic" ],
       "typeHash" : [ ],
@@ -122,23 +110,26 @@
     "label" : "PatientResponse",
     "name" : "PatientResponse",
     "node" : {
-      "x" : 594.3229780251593,
-      "y" : 139.9555290708101
+      "x" : 650.1,
+      "y" : -6
     },
-    "timestamp" : "2018-09-19T23:57:52.241Z",
+    "resourceReference" : "/system.clients/PatientResponse",
+    "timestamp" : "2020-12-04T15:41:45.352Z",
     "type" : 15
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ "out", "out" ],
       "procedures" : [ "CollaborationUtils.closeCollaboration", "CollaborationUtils.triggerEscalation" ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ ],
       "topics" : [ ],
       "typeHash" : [ "in" ],
@@ -147,23 +138,26 @@
     "label" : "RateCollaboration",
     "name" : "RateCollaboration",
     "node" : {
-      "x" : 166.18377520625603,
-      "y" : 160.34998381256423
+      "x" : 166.2,
+      "y" : 160.3
     },
-    "timestamp" : "2018-09-19T23:57:52.242Z",
+    "resourceReference" : "/collaborationtypes/RateCollaboration",
+    "timestamp" : "2020-12-04T15:41:55.959Z",
     "type" : 11
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ "out" ],
       "procedures" : [ "Context.username" ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ ],
       "topics" : [ ],
       "typeHash" : [ "out" ],
@@ -172,68 +166,17 @@
     "label" : "UpdatePatient",
     "name" : "UpdatePatient",
     "node" : {
-      "x" : 167.4004173748769,
-      "y" : -9.838822004209476
+      "x" : 167.4,
+      "y" : -9.8
     },
-    "timestamp" : "2018-09-19T23:57:51.812Z",
+    "resourceReference" : "/procedures/UpdatePatient",
+    "timestamp" : "2020-12-04T15:41:47.115Z",
     "type" : 3
-  }, {
-    "label" : "VantiqPushNotification",
-    "name" : "VantiqPushNotification",
-    "node" : {
-      "x" : 525.5439429987788,
-      "y" : 40.093821954100726
-    },
-    "timestamp" : "2018-09-19T23:55:48.853Z",
-    "type" : 4
   } ],
   "tools" : [ {
     "isPinned" : false,
-    "name" : "Project Resource Graph",
-    "pane" : {
-      "h" : 310,
-      "w" : 600,
-      "x" : 20,
-      "y" : 20
-    },
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.6346354430099026,
-        "translate" : [ 152.45675658672945, 39.7403021840256 ]
-      }
-    },
-    "type" : 1
-  }, {
-    "isPinned" : false,
-    "name" : "UpdatePatient",
-    "pane" : {
-      "h" : 310,
-      "w" : 600,
-      "x" : 640,
-      "y" : 20
-    },
-    "resourceKey" : "procedure/UpdatePatient",
-    "type" : 24
-  }, {
-    "isPinned" : false,
-    "name" : "RateCollaboration",
-    "pane" : {
-      "h" : 370,
-      "w" : 1110,
-      "x" : 20,
-      "y" : 340
-    },
-    "resourceKey" : "collaborationtype/RateCollaboration",
-    "toolOptions" : {
-      "propertyPaneWidth" : 250,
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.5656572314229498,
-        "translate" : [ 449.5662317923288, 58.84490059450498 ]
-      }
-    },
-    "type" : 14
+    "name" : "Errors",
+    "type" : 13
   }, {
     "isPinned" : false,
     "name" : "FirstResponderResponse",
@@ -244,7 +187,13 @@
       "y" : 720
     },
     "resourceKey" : "client/FirstResponderResponse",
+    "state" : 3,
     "type" : 63
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
   }, {
     "isPinned" : false,
     "name" : "Patient",
@@ -255,6 +204,7 @@
       "y" : 720
     },
     "resourceKey" : "type/Patient",
+    "state" : 3,
     "type" : 6
   }, {
     "isPinned" : false,
@@ -266,22 +216,59 @@
       "y" : 1440
     },
     "resourceKey" : "client/PatientResponse",
+    "state" : 3,
     "type" : 63
   }, {
     "isPinned" : false,
-    "name" : "VantiqPushNotification",
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
     "pane" : {
-      "h" : 400,
+      "h" : 310,
       "w" : 600,
       "x" : 20,
-      "y" : 2160
+      "y" : 20
     },
-    "resourceKey" : "source/VantiqPushNotification",
-    "type" : 5
+    "state" : 3,
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7099221806346526,
+        "translate" : [ 41.4027658552676, 87.62756473644492 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "RateCollaboration",
+    "pane" : {
+      "h" : 370,
+      "w" : 1110,
+      "x" : 20,
+      "y" : 340
+    },
+    "resourceKey" : "collaborationtype/RateCollaboration",
+    "state" : 3,
+    "toolOptions" : { },
+    "type" : 14
+  }, {
+    "isPinned" : false,
+    "name" : "UpdatePatient",
+    "pane" : {
+      "h" : 310,
+      "w" : 600,
+      "x" : 640,
+      "y" : 20
+    },
+    "resourceKey" : "procedure/UpdatePatient",
+    "state" : 3,
+    "type" : 24
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/UpdatePatient", "collaborationgraph/RateCollaboration", "client/FirstResponderResponse", "subtypeeditor/Patient", "client/PatientResponse", "subsourceeditor/VantiqPushNotification", "errorqueryresults/Unseen Errors @ 2:07:24 PM" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "client/FirstResponderResponse", "tiledock/Inactive Panes", "subtypeeditor/Patient", "client/PatientResponse", "list/Project Contents", "graph/Project Resource Graph", "collaborationgraph/RateCollaboration", "cmeditorprocedure/UpdatePatient" ]
   } ]
 }

@@ -7,13 +7,25 @@
   "foreignKeys" : null,
   "groupEnabled" : false,
   "groupRequired" : false,
-  "indexes" : [ ],
+  "indexes" : [ {
+    "keys" : [ "systemId" ],
+    "options" : {
+      "unique" : true
+    }
+  } ],
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "EngineTemp",
-  "naturalKey" : [ ],
+  "name" : "SystemStatus",
+  "naturalKey" : [ "systemId" ],
   "properties" : {
+    "speed" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
     "systemId" : {
       "encrypted" : false,
       "multi" : false,
@@ -24,13 +36,12 @@
     "temperature" : {
       "encrypted" : false,
       "multi" : false,
-      "required" : true,
+      "required" : false,
       "type" : "Integer",
       "unique" : false
     }
   },
   "role" : "standard",
-  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }

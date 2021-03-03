@@ -11,26 +11,25 @@
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "EngineTemp",
+  "name" : "TutorialExampleType",
   "naturalKey" : [ ],
   "properties" : {
-    "systemId" : {
+    "age" : {
       "encrypted" : false,
       "multi" : false,
-      "required" : true,
-      "type" : "String",
+      "required" : false,
+      "type" : "Integer",
       "unique" : false
     },
-    "temperature" : {
+    "weight" : {
       "encrypted" : false,
       "multi" : false,
-      "required" : true,
+      "required" : false,
       "type" : "Integer",
       "unique" : false
     }
   },
   "role" : "standard",
-  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }

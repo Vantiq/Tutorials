@@ -1,0 +1,41 @@
+{
+  "cleanup" : "deleteTutorialExampleType",
+  "description" : "Test for TutorialExampleRule",
+  "inputs" : [ {
+    "eventObj" : {
+      "age" : 35,
+      "weight" : 175
+    },
+    "inputNum" : 0,
+    "op" : "INSERT",
+    "qual" : null,
+    "resource" : "types",
+    "resourceId" : "TutorialExampleType"
+  } ],
+  "name" : "TutorialExampleRule0",
+  "outputs" : [ {
+    "eventObj" : {
+      "ageStatus" : "Adult",
+      "averageWeight" : 126.25
+    },
+    "missing" : false,
+    "op" : null,
+    "outputNum" : 0,
+    "prereqEvent" : { },
+    "repeat" : { },
+    "resource" : "topics",
+    "resourceId" : "/people/results",
+    "validationMethod" : "Event Object",
+    "validationProcedure" : null
+  } ],
+  "resource" : {
+    "resource" : "rules",
+    "resourceId" : "TutorialExampleRule"
+  },
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "saveNamespace" : true,
+  "setup" : "insertTutorialExampleType",
+  "timeout" : "30 seconds"
+}
