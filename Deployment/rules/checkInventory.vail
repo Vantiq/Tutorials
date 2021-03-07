@@ -1,6 +1,6 @@
-RULE checkInventory 
-WHEN UPDATE OCCURS ON Store AS t
-if (t.productCount < 50) {
-    var requestCount = 100 - t.productCount
-    PUBLISH {"storeId": t.storeId, "productCount":requestCount} TO TOPIC "/NewOrder"  //PROCESSED BY {"ars_properties.type":"factory"}
+RULE checkInventory
+WHEN EVENT OCCURS ON "/types/Store/update" AS t
+if (t.value.productCount < 50) {
+    var requestCount = 100 - t.value.productCount
+    PUBLISH {"storeId": t.value.storeId, "productCount":requestCount} TO TOPIC "/NewOrder"  //PROCESSED BY {"ars_properties.type":"factory"}
 }

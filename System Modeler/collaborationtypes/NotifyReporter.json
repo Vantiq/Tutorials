@@ -30,7 +30,7 @@
       "completionCondition" : [ ],
       "configuration" : {
         "entityRole" : "report",
-        "initialTrigger" : "WHEN INSERT OCCURS ON ArsSituation AS situation WHERE situation.name == \"NotifyReporter\""
+        "initialTrigger" : "WHEN EVENT OCCURS ON \"/types/situations/insert\" AS situation WHERE situation.value.name == \"NotifyReporter\""
       },
       "continuationCondition" : [ ],
       "description" : null,
