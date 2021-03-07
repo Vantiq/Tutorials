@@ -8,7 +8,7 @@
   } ],
   "name" : "FloorPlan",
   "options" : {
-    "description" : "The FloorPlan tutorial demonstrates how to drop pins in coordinates on a 2D map or image. \n\nTo generated test data to power the client, click the play button next to the Resident Data Generator below and to the right.\n\nWith the client and data generator both running, you should see pins show up on both the first and second floor.\n\nTo see how the client was implemented, pause the client using the rounded square button on the Invoice Client title bar and click around on the vairous widgets. Also take a look at the Resident Data Stream to see how data makes it's way into the Client.",
+    "description" : "The FloorPlan tutorial demonstrates how to drop pins in coordinates on a 2D map or image. \n\nTo generated test data to power the client, click the play button next to the Resident Data Generator below and to the right.\n\nWith the client and data generator both running, you should see pins show up on both the first and second floor.\n\nTo see how the client was implemented, pause the client using the rounded square button on the Resident title bar and click around on the various widgets. Also take a look at the Resident Data Stream to see how data makes its way into the Client.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
