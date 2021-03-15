@@ -5,13 +5,8 @@
     "MergeStreams" : {
       "configuration" : {
         "childStreams" : [ "UpdateSystemStatus" ],
-        "outboundResource" : null,
-        "outboundResourceConfig" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "SpeedReading", "TempReading" ],
-        "upsert" : null
+        "parentStreams" : [ "SpeedReading", "TempReading" ]
       },
-      "description" : null,
       "name" : "MergeStreams",
       "pattern" : "Merge"
     },
@@ -21,13 +16,10 @@
         "inboundResource" : "types",
         "inboundResourceId" : "EngineSpeed",
         "op" : "INSERT",
-        "outboundResource" : null,
-        "outboundResourceId" : null,
         "parentStreams" : [ ],
         "schema" : "EngineSpeed",
         "upsert" : false
       },
-      "description" : null,
       "name" : "SpeedReading",
       "pattern" : "EventStream"
     },
@@ -37,47 +29,29 @@
         "inboundResource" : "types",
         "inboundResourceId" : "EngineTemp",
         "op" : "INSERT",
-        "outboundResource" : null,
-        "outboundResourceId" : null,
         "parentStreams" : [ ],
         "schema" : "EngineTemp",
         "upsert" : false
       },
-      "description" : null,
       "name" : "TempReading",
       "pattern" : "EventStream"
     },
     "TransformHUD" : {
       "configuration" : {
+        "VAIL" : "// define the outbound event using the inbound systemId. Assume no alertMsg by default\nvar hudEvent = {\n   systemId: event.value.systemId,\n   alertMsg: \"\"\n}\n\n// chek if the machine is speeding and overheating first\nif (event.value.temperature >= 210 && event.value.speed >= 45) {\n   hudEvent.alertMsg = \"Your engine is overheating, please reduce your speed.\"\n} else if (event.value.temperature >= 210) { // check if the machine is overheating while moving slower\n   hudEvent.alertMsg = \"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\"\n}\n\n// overwrite the outbound event value with the new hudEvent\nevent.value = hudEvent",
         "childStreams" : [ "UpdateHUD" ],
-        "outboundResource" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "UpdateSystemStatus" ],
-        "schema" : null,
-        "transformation" : {
-          "alertMsg" : {
-            "expression" : "((event.temperature >= 210) && (event.speed >= 45)) ? \t\"Your engine is overheating, please reduce your speed.\" : \t(((event.temperature >= 210) && (event.speed < 45)) ? \t\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\" : \"\")",
-            "type" : "expression"
-          },
-          "systemId" : {
-            "expression" : "event.systemId",
-            "type" : "expression"
-          }
-        },
-        "upsert" : false
+        "imports" : [ ],
+        "parentStreams" : [ "UpdateSystemStatus" ]
       },
-      "description" : null,
       "name" : "TransformHUD",
-      "pattern" : "Transformation"
+      "pattern" : "VAIL"
     },
     "UpdateHUD" : {
       "configuration" : {
-        "childStreams" : null,
         "parentStreams" : [ "TransformHUD" ],
         "type" : "SystemHUD",
         "upsert" : true
       },
-      "description" : null,
       "name" : "UpdateHUD",
       "pattern" : "SaveToType"
     },
@@ -88,7 +62,6 @@
         "type" : "SystemStatus",
         "upsert" : true
       },
-      "description" : null,
       "name" : "UpdateSystemStatus",
       "pattern" : "SaveToType"
     }
@@ -100,6 +73,7 @@
   "description" : "",
   "disableBadging" : false,
   "entityRoles" : [ ],
+  "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
   "name" : "EngineMonitor"
 }
