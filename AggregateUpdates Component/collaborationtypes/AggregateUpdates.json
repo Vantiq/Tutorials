@@ -1,0 +1,139 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.6279524367777591,
+      "translate" : [ 64.22285429576286, 84.78281280976545 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "component" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 475.996
+  },
+  "assembly" : {
+    "AccumulateState" : {
+      "configuration" : {
+        "childStreams" : [ "Limit" ],
+        "outboundBehavior" : "Replace outbound event with state value",
+        "parentStreams" : [ ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\n\nif (!state) {\n    state = {}\n}\n\nlog.error(\"{}\", [event.typeDef.properties])\n\nfor (prop in event.typeDef.properties) {\n    var propName = prop.getKey()\n    if (event[propName]) {\n        state[propName] = event[propName]\n    }\n}"
+        }
+      },
+      "pattern" : "AccumulateState"
+    },
+    "GetType" : {
+      "configuration" : {
+        "childStreams" : [ "SplitByGroup" ],
+        "imports" : [ {
+          "type" : "Import",
+          "value" : "service Utils"
+        } ],
+        "outboundBehavior" : "Attach state value to outboundProperty",
+        "outboundProperty" : "typeDef",
+        "parentStreams" : [ ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\n\nif (!state) {\n    state = Utils.getType(\"${typeName}\")\n}\n\nevent.typeDef = state"
+        }
+      },
+      "isRoot" : true,
+      "pattern" : "AccumulateState"
+    },
+    "Limit" : {
+      "configuration" : {
+        "childStreams" : [ "SaveToType" ],
+        "interval" : "${interval}",
+        "maxCount" : "${maxUpdates}",
+        "parentStreams" : [ ]
+      },
+      "pattern" : "Limit"
+    },
+    "SaveToType" : {
+      "configuration" : {
+        "parentStreams" : [ ],
+        "type" : "${typeName}",
+        "upsert" : true
+      },
+      "pattern" : "SaveToType"
+    },
+    "SplitByGroup" : {
+      "configuration" : {
+        "childStreams" : [ "AccumulateState" ],
+        "groupBy" : "${groupByClause}",
+        "parentStreams" : [ ]
+      },
+      "pattern" : "SplitByGroup"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "componentInterface" : {
+    "appOnly" : true,
+    "ars_properties" : {
+      "description" : "Description of a component that limits the writes to database for a type given an interval and maxCount"
+    },
+    "ars_version" : 1,
+    "configurationProperties" : {
+      "interval" : {
+        "default" : "5 seconds",
+        "description" : "The length of time to apply the maxUpdates limit. Must be a valid interval string like '1 second' or '3 minutes'. Default is 5 seconds",
+        "multi" : false,
+        "order" : 1,
+        "required" : false,
+        "type" : "String"
+      },
+      "maxUpdates" : {
+        "default" : "1",
+        "description" : "How many events per the specified interval should be allowed per interval. Default is 1.",
+        "multi" : false,
+        "order" : 2,
+        "required" : false,
+        "type" : "Integer"
+      },
+      "typeName" : {
+        "default" : null,
+        "description" : "The name of the type which contains the associated data.",
+        "multi" : false,
+        "order" : 0,
+        "required" : true,
+        "type" : "ArsType"
+      }
+    },
+    "events" : {
+      "WriteToDb" : {
+        "configurationProperty" : "childStreams",
+        "name" : "WriteToDb",
+        "schema" : "typeName",
+        "taskName" : "SaveToType"
+      }
+    },
+    "isComponent" : true,
+    "name" : "AggregateUpdates",
+    "results" : { },
+    "runtimeProperties" : [ ],
+    "templates" : [ "AggregateUpdates.generate" ]
+  },
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "Description of a component that limits the writes to database for a type given an interval and maxCount",
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "AggregateUpdates"
+}
