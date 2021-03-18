@@ -30,7 +30,7 @@
     }, {
       "name" : "systemId",
       "rule" : {
-        "value" : "0123456789"
+        "value" : "Auto0123456789"
       }
     } ]
   } ],
