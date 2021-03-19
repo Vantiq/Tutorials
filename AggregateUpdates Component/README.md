@@ -8,4 +8,4 @@ The AggregateUpdates Component is used to replace the UpdateSystemStatus task in
 
 For more information on the Component Tutorial, check out the documentation [here](/docs/system/tutorials/components/index.html).
 
-For more information on Components, check out the documentation [here](/docs/system/collaborations.md/index.html)
+For more information on Components, check out the documentation [here](/docs/system/apps.md/index.html#components)
