@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 0,
-      "scale" : 0.8732815930144711,
-      "translate" : [ 86.25855121111114, 36.71876198128032 ]
+      "scale" : 0.8882969506224966,
+      "translate" : [ 90.09921568668622, 30.202096321164902 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -29,6 +29,7 @@
     "AggregateUpdates" : {
       "configuration" : {
         "WriteToDb" : [ "TransformHUD" ],
+        "interval" : "5 seconds",
         "parentStreams" : [ ],
         "typeName" : "SystemStatus"
       },

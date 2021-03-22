@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 0,
-      "scale" : 0.6279524367777591,
-      "translate" : [ 64.22285429576286, 84.78281280976545 ]
+      "scale" : 0.6558975614875976,
+      "translate" : [ 60.521922646328235, 76.68197769427795 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -89,7 +89,7 @@
     "ars_version" : 1,
     "configurationProperties" : {
       "interval" : {
-        "default" : "5 seconds",
+        "default" : "60 seconds",
         "description" : "The length of time to apply the maxUpdates limit. Must be a valid interval string like '1 second' or '3 minutes'. Default is 5 seconds",
         "multi" : false,
         "order" : 1,
