@@ -10,5 +10,5 @@
     "selected" : true,
     "type" : "String"
   } ],
-  "type" : "SystemHUD"
+  "type" : "com.vantiq.engines.SystemHUD"
 }

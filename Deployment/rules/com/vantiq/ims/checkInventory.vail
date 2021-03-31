@@ -1,3 +1,5 @@
+package com.vantiq.ims
+
 RULE checkInventory
 WHEN EVENT OCCURS ON "/types/Store/update" AS t
 if (t.value.productCount < 50) {

@@ -1,231 +1,261 @@
 {
   "links" : [ {
-    "source" : "type/Store",
-    "target" : "rule/checkInventory"
-  }, {
-    "source" : "type/Store",
-    "target" : "client/DeploymentClient"
-  }, {
     "source" : "client/DeploymentClient",
     "target" : "topic//my/response/topic"
   }, {
-    "source" : "app/distributeProductApp",
-    "target" : "procedure/shipToStore"
+    "source" : "type/com.vantiq.ims.Store",
+    "target" : "client/DeploymentClient"
   }, {
-    "source" : "procedure/pickupProducts",
-    "target" : "type/Store"
+    "source" : "type/com.vantiq.ims.Store",
+    "target" : "rule/com.vantiq.ims.checkInventory"
   }, {
-    "source" : "procedure/shipToStore",
-    "target" : "procedure/pickupProducts"
-  }, {
-    "source" : "rule/checkInventory",
-    "target" : "topic//NewOrder"
-  }, {
-    "source" : "topic//NewOrder",
+    "source" : "topic//com.vantiq.ims/NewOrder",
     "target" : "app/distributeProductApp"
+  }, {
+    "source" : "app/distributeProductApp",
+    "target" : "procedure/com.vantiq.ims.shipToStore"
   } ],
   "name" : "DeploymentTutorial",
   "options" : {
     "description" : "This project is used by the Deployment Tutorial to demo the capability of Deployment Tool.\n\nThis sample application simulates inventory checking on a store and asks the factory for more products when inventory is low. The factory will also notify the store when more products are shipped.",
-    "dockCollapsed" : false,
+    "dockCollapsed" : {
+      "bottom" : false,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
     "dockSort" : 1,
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "tile",
+    "rootViewFlavor" : 1,
     "showGrid" : true,
     "tileColumns" : 2,
     "tileRows" : 2,
-    "v" : 2
+    "type" : "dev",
+    "v" : 4,
+    "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
-    "name" : "/NewOrder",
+    "name" : "/com.vantiq.ims/NewOrder",
     "node" : {
-      "x" : 487.72927121291696,
-      "y" : 80.2486184358219
+      "x" : 390,
+      "y" : 61
     },
+    "resourceReference" : "/topics//com.vantiq.ims/NewOrder",
     "type" : 10
   }, {
     "label" : "/my/response/topic",
     "name" : "/my/response/topic",
     "node" : {
-      "x" : 114.36833098354597,
-      "y" : 356.4558786668963
+      "x" : 114.4,
+      "y" : 356.5
     },
+    "resourceReference" : "/topics//my/response/topic",
     "type" : 10
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ "out" ],
       "topics" : [ "/my/response/topic" ],
       "typeHash" : [ "in" ],
-      "types" : [ "Store" ]
+      "types" : [ "com.vantiq.ims.Store" ]
     },
     "label" : "DeploymentClient",
     "name" : "DeploymentClient",
     "node" : {
-      "x" : 109.01150773670173,
-      "y" : 296.63602927328157
+      "x" : 109,
+      "y" : 296.6
     },
-    "timestamp" : "2018-10-17T19:47:09.468Z",
+    "resourceReference" : "/system.clients/DeploymentClient",
+    "timestamp" : "2021-03-29T22:39:30.108Z",
     "type" : 15
   }, {
-    "label" : "Store",
-    "name" : "Store",
+    "name" : "com.vantiq.ims.Store",
     "node" : {
-      "x" : 96.4348637253596,
-      "y" : 223.88527533827852
+      "x" : 135.7,
+      "y" : 204.7
     },
-    "timestamp" : "2018-10-01T22:11:02.449Z",
+    "resourceReference" : "/types/com.vantiq.ims.Store",
+    "timestamp" : "2021-03-29T22:39:29.976Z",
     "type" : 1
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ "out" ],
       "topics" : [ "/NewOrder" ],
       "typeHash" : [ "in" ],
-      "types" : [ "Store" ]
+      "types" : [ "com.vantiq.ims.Store" ]
     },
-    "label" : "checkInventory",
-    "name" : "checkInventory",
+    "name" : "com.vantiq.ims.checkInventory",
     "node" : {
-      "x" : 93.74286788381573,
-      "y" : 144.2319110058105
+      "x" : 203.5,
+      "y" : 117.2
     },
-    "timestamp" : "2018-10-24T18:59:09.523Z",
+    "resourceReference" : "/rules/com.vantiq.ims.checkInventory",
+    "timestamp" : "2021-03-29T22:39:30.679Z",
     "type" : 2
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ "out" ],
-      "procedures" : [ "shipToStore" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ "in" ],
-      "topics" : [ "/NewOrder" ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "distributeProductApp",
-    "name" : "distributeProductApp",
-    "node" : {
-      "x" : 506.1974170181859,
-      "y" : 132.5092707002417
-    },
-    "timestamp" : "2018-10-11T22:26:27.805Z",
-    "type" : 12
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ ],
       "topics" : [ ],
       "typeHash" : [ "both" ],
       "types" : [ "Store" ]
     },
-    "label" : "pickupProducts",
-    "name" : "pickupProducts",
+    "label" : "com.vantiq.ims.pickupProducts",
+    "name" : "com.vantiq.ims.pickupProducts",
     "node" : {
-      "x" : 294.9193769547947,
-      "y" : 259.09332613797864
+      "x" : 423,
+      "y" : 340.4
     },
-    "timestamp" : "2018-10-11T22:18:03.688Z",
+    "packageName" : "com.vantiq.ims",
+    "procedureName" : "pickupProducts",
+    "resourceReference" : "/procedures/com.vantiq.ims.pickupProducts",
+    "timestamp" : "2021-03-29T22:39:30.674Z",
     "type" : 3
   }, {
     "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
+      "clientHash" : [ ],
+      "clients" : [ ],
       "collaborationHash" : [ ],
       "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ "out" ],
       "procedures" : [ "pickupProducts" ],
       "sourceHash" : [ ],
       "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
       "topicHash" : [ ],
       "topics" : [ ],
       "typeHash" : [ ],
       "types" : [ ]
     },
-    "label" : "shipToStore",
-    "name" : "shipToStore",
+    "label" : "com.vantiq.ims.shipToStore",
+    "name" : "com.vantiq.ims.shipToStore",
     "node" : {
-      "x" : 508.5719611565553,
-      "y" : 183.30647904254204
+      "x" : 407.1,
+      "y" : 254.2
     },
-    "timestamp" : "2018-10-24T18:56:55.901Z",
+    "packageName" : "com.vantiq.ims",
+    "procedureName" : "shipToStore",
+    "resourceReference" : "/procedures/com.vantiq.ims.shipToStore",
+    "timestamp" : "2021-03-29T22:39:30.682Z",
     "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "com.vantiq.ims.shipToStore" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "in" ],
+      "topics" : [ "/com.vantiq.ims/NewOrder" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "name" : "distributeProductApp",
+    "node" : {
+      "x" : 505.3,
+      "y" : 140
+    },
+    "resourceReference" : "/collaborationtypes/distributeProductApp",
+    "timestamp" : "2021-03-29T22:39:31.492Z",
+    "type" : 12
   } ],
   "tools" : [ {
     "isPinned" : false,
-    "name" : "Project Resource Graph",
-    "pane" : {
-      "c" : 0,
-      "lastUsed" : 1540407604361,
-      "r" : 0
-    },
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 3,
-        "scale" : 0.8470638231549134,
-        "translate" : [ 60.81272273574251, -2.4582844930839087 ]
-      }
-    },
-    "type" : 1
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
   }, {
     "isPinned" : false,
-    "name" : "testDeploy",
-    "pane" : {
-      "h" : 600,
-      "w" : 950,
-      "x" : 20,
-      "y" : 440
-    },
-    "type" : 86
+    "name" : "Project Contents",
+    "type" : 2
   }, {
     "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
       "c" : 1,
-      "lastUsed" : 1540407606530,
       "r" : 0
     },
+    "state" : 2,
     "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.820175075127377,
+        "translate" : [ 54.02847616192423, 14.912933910290633 ]
+      }
+    },
+    "type" : 1
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "projectdescription/Project Description" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph" ]
   } ]
 }

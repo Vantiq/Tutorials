@@ -6,7 +6,7 @@
       "configuration" : {
         "childStreams" : [ "shipToStore" ],
         "inboundResource" : "topics",
-        "inboundResourceId" : "/NewOrder",
+        "inboundResourceId" : "/com.vantiq.ims/NewOrder",
         "op" : "INSERT",
         "outboundResource" : null,
         "outboundResourceId" : null,
@@ -22,7 +22,7 @@
       "configuration" : {
         "childStreams" : null,
         "parentStreams" : [ "DistrubutionReceived" ],
-        "procedure" : "shipToStore",
+        "procedure" : "com.vantiq.ims.shipToStore",
         "schema" : null
       },
       "description" : null,

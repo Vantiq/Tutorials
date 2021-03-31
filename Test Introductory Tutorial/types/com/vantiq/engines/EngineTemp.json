@@ -5,13 +5,14 @@
   "encapsulated" : false,
   "expiresAfter" : null,
   "foreignKeys" : null,
+  "groupBy" : "",
   "groupEnabled" : false,
   "groupRequired" : false,
   "indexes" : [ ],
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "EngineTemp",
+  "name" : "com.vantiq.engines.EngineTemp",
   "naturalKey" : [ ],
   "properties" : {
     "systemId" : {
@@ -30,6 +31,7 @@
     }
   },
   "role" : "standard",
+  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }
