@@ -36,14 +36,13 @@
     },
     "dockDimensions" : {
       "bottom" : 200,
-      "debug" : [ 637.5, 837.5 ],
+      "debug" : [ 648.2161016949153, 853.7838983050848 ],
       "left" : 210,
       "right" : 220,
       "top" : 0,
       "viewtabs" : 0
     },
     "dockSort" : 1,
-    "exclusionList" : [],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "tile",
@@ -57,10 +56,11 @@
     "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
+    "label" : "/my/response/topic",
     "name" : "/my/response/topic",
     "node" : {
-      "x" : 234.1,
-      "y" : 360.3
+      "x" : 163.4,
+      "y" : 608.1
     },
     "resourceReference" : "/topics//my/response/topic",
     "type" : 10
@@ -81,25 +81,28 @@
       "topicHash" : [ ],
       "topics" : [ ],
       "typeHash" : [ "in", "in", "out", "out" ],
-      "types" : [ "com.vantiq.engines.EngineTemp", "com.vantiq.engines.EngineSpeed", "com.vantiq.engines.SystemStatus", "com.vantiq.engines.SystemHUD" ]
+      "types" : [ "com.vantiq.engines.EngineSpeed", "com.vantiq.engines.EngineTemp", "com.vantiq.engines.SystemHUD", "com.vantiq.engines.SystemStatus" ]
     },
+    "label" : "EngineMonitor",
     "name" : "EngineMonitor",
     "node" : {
-      "x" : 325.1,
-      "y" : 350.1
+      "x" : 330.2,
+      "y" : 330.5
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2021-03-29T18:21:23.409Z",
+    "timestamp" : "2021-03-31T22:38:14.867Z",
     "type" : 12
   }, {
+    "label" : "EngineMonitorTest",
     "name" : "EngineMonitorTest",
     "resourceReference" : "/system.tests/EngineMonitorTest",
-    "timestamp" : "2021-03-29T19:44:06.723Z",
+    "timestamp" : "2021-03-31T22:38:13.727Z",
     "type" : 56
   }, {
+    "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "resourceReference" : "/system.eventgenerators/EngineSimulation",
-    "timestamp" : "2021-03-29T17:05:46.564Z",
+    "timestamp" : "2021-03-31T22:38:15.424Z",
     "type" : 65
   }, {
     "inventory" : {
@@ -120,13 +123,14 @@
       "typeHash" : [ "in", "in" ],
       "types" : [ "com.vantiq.engines.SystemStatus", "com.vantiq.engines.SystemHUD" ]
     },
+    "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "node" : {
-      "x" : 403.3,
-      "y" : 358
+      "x" : 172.5,
+      "y" : 553
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2021-03-29T20:02:47.807Z",
+    "timestamp" : "2021-03-31T22:38:12.200Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -147,96 +151,57 @@
       "typeHash" : [ "in" ],
       "types" : [ "com.vantiq.engines.SystemHUD" ]
     },
+    "label" : "SystemHUD",
     "name" : "SystemHUD",
     "node" : {
-      "x" : 424.9,
-      "y" : 638.6
+      "x" : 436.8,
+      "y" : 614.8
     },
     "resourceReference" : "/ArsSubscribe/SystemHUD",
-    "timestamp" : "2021-03-29T18:13:42.817Z",
+    "timestamp" : "2021-03-31T22:38:13.209Z",
     "type" : 9
   }, {
+    "label" : "com.vantiq.engines.EngineSpeed",
     "name" : "com.vantiq.engines.EngineSpeed",
     "node" : {
-      "x" : 404.3,
-      "y" : 175.2
+      "x" : 417.9,
+      "y" : 174.3
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineSpeed",
-    "timestamp" : "2021-03-29T16:35:21.973Z",
+    "timestamp" : "2021-03-31T22:38:12.038Z",
     "type" : 1
   }, {
+    "label" : "com.vantiq.engines.EngineTemp",
     "name" : "com.vantiq.engines.EngineTemp",
     "node" : {
-      "x" : 198.9,
-      "y" : 254.1
+      "x" : 195.5,
+      "y" : 232.8
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineTemp",
-    "timestamp" : "2021-03-29T16:26:57.403Z",
+    "timestamp" : "2021-03-31T22:38:12.061Z",
     "type" : 1
   }, {
+    "label" : "com.vantiq.engines.SystemHUD",
     "name" : "com.vantiq.engines.SystemHUD",
     "node" : {
-      "x" : 416,
-      "y" : 515.6
+      "x" : 421.1,
+      "y" : 490.9
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemHUD",
-    "timestamp" : "2021-03-29T16:46:08.509Z",
+    "timestamp" : "2021-03-31T22:38:12.084Z",
     "type" : 1
   }, {
+    "label" : "com.vantiq.engines.SystemStatus",
     "name" : "com.vantiq.engines.SystemStatus",
     "node" : {
-      "x" : 209.7,
-      "y" : 452.4
+      "x" : 196.1,
+      "y" : 406.4
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemStatus",
-    "timestamp" : "2021-03-29T18:00:15.162Z",
+    "timestamp" : "2021-03-31T22:38:12.083Z",
     "type" : 1
   } ],
   "tools" : [ {
-    "isPinned" : false,
-    "name" : "EngineMonitor",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "app/EngineMonitor",
-    "state" : 4,
-    "toolOptions" : { },
-    "type" : 15
-  }, {
-    "isPinned" : false,
-    "name" : "EngineMonitorTest",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "test/EngineMonitorTest",
-    "state" : 4,
-    "type" : 102
-  }, {
-    "isPinned" : false,
-    "name" : "EngineSimulation",
-    "pane" : {
-      "c" : 0,
-      "r" : 0
-    },
-    "resourceKey" : "client/EngineSimulation",
-    "state" : 2,
-    "toolOptions" : {
-      "isRunning" : false
-    },
-    "type" : 63
-  }, {
-    "isPinned" : false,
-    "name" : "EngineSimulation",
-    "pane" : {
-      "c" : 1,
-      "r" : 0
-    },
-    "resourceKey" : "eventgenerator/EngineSimulation",
-    "state" : 2,
-    "type" : 111
-  }, {
     "isPinned" : false,
     "name" : "Errors",
     "type" : 13
@@ -255,73 +220,33 @@
     "type" : 2
   }, {
     "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
-      "c" : -1,
-      "r" : -1
+      "c" : 1,
+      "r" : 0
     },
-    "state" : 4,
+    "state" : 2,
     "toolOptions" : {
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
         "scale" : 1.1743322945355315,
-        "translate" : [ -46.55679409025856, -74.62928707978051 ]
+        "translate" : [ -38.55679409025856, -87.62928707978051 ]
       }
     },
     "type" : 1
-  }, {
-    "isPinned" : false,
-    "name" : "SystemHUD",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "subscription/SystemHUD",
-    "state" : 4,
-    "type" : 7
-  }, {
-    "isPinned" : false,
-    "name" : "Tests",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "state" : 4,
-    "type" : 101
-  }, {
-    "isPinned" : false,
-    "name" : "com.vantiq.engines.EngineSpeed",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "type/com.vantiq.engines.EngineSpeed",
-    "state" : 4,
-    "type" : 6
-  }, {
-    "isPinned" : false,
-    "name" : "com.vantiq.engines.SystemHUD",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "type/com.vantiq.engines.SystemHUD",
-    "state" : 4,
-    "type" : 6
-  }, {
-    "isPinned" : false,
-    "name" : "com.vantiq.engines.SystemStatus",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "type/com.vantiq.engines.SystemStatus",
-    "state" : 4,
-    "type" : 6
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "app/EngineMonitor", "test/EngineMonitorTest", "client/EngineSimulation", "eventgenerator/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "graph/Project Resource Graph", "subsubscribeeditor/SystemHUD", "undefined/Tests", "subtypeeditor/com.vantiq.engines.EngineSpeed", "subtypeeditor/com.vantiq.engines.SystemHUD", "subtypeeditor/com.vantiq.engines.SystemStatus" ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph" ]
   } ]
 }

@@ -26,7 +26,7 @@
   } ],
   "name" : "EngineMonitor",
   "options" : {
-    "description" : "",
+    "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start the event generator. When the event generator starts, you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the event generator, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
@@ -60,8 +60,8 @@
     "label" : "/my/response/topic",
     "name" : "/my/response/topic",
     "node" : {
-      "x" : 234.1,
-      "y" : 360.3
+      "x" : 393.9,
+      "y" : 637.8
     },
     "resourceReference" : "/topics//my/response/topic",
     "type" : 10
@@ -82,22 +82,22 @@
       "topicHash" : [ ],
       "topics" : [ ],
       "typeHash" : [ "in", "in", "out", "out" ],
-      "types" : [ "com.vantiq.engines.EngineTemp", "com.vantiq.engines.EngineSpeed", "com.vantiq.engines.SystemStatus", "com.vantiq.engines.SystemHUD" ]
+      "types" : [ "com.vantiq.engines.EngineSpeed", "com.vantiq.engines.EngineTemp", "com.vantiq.engines.SystemHUD", "com.vantiq.engines.SystemStatus" ]
     },
     "label" : "EngineMonitor",
     "name" : "EngineMonitor",
     "node" : {
-      "x" : 325.1,
-      "y" : 350.1
+      "x" : 302,
+      "y" : 321.3
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2021-03-29T18:21:23.409Z",
+    "timestamp" : "2021-03-31T22:34:23.155Z",
     "type" : 12
   }, {
     "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "resourceReference" : "/system.eventgenerators/EngineSimulation",
-    "timestamp" : "2021-03-29T20:49:38.253Z",
+    "timestamp" : "2021-03-31T22:34:23.652Z",
     "type" : 65
   }, {
     "inventory" : {
@@ -118,13 +118,14 @@
       "typeHash" : [ "in", "in" ],
       "types" : [ "com.vantiq.engines.SystemStatus", "com.vantiq.engines.SystemHUD" ]
     },
+    "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "node" : {
-      "x" : 301.2,
-      "y" : 291.6
+      "x" : 239.9,
+      "y" : 587.9
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2021-03-29T20:02:47.807Z",
+    "timestamp" : "2021-03-31T22:34:22.077Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -145,87 +146,57 @@
       "typeHash" : [ "in" ],
       "types" : [ "com.vantiq.engines.SystemHUD" ]
     },
+    "label" : "SystemHUD",
     "name" : "SystemHUD",
     "node" : {
-      "x" : 368.8,
-      "y" : 309.5
+      "x" : 468,
+      "y" : 368.8
     },
     "resourceReference" : "/ArsSubscribe/SystemHUD",
-    "timestamp" : "2021-03-29T18:13:42.817Z",
+    "timestamp" : "2021-03-31T22:34:23.079Z",
     "type" : 9
   }, {
     "label" : "com.vantiq.engines.EngineSpeed",
     "name" : "com.vantiq.engines.EngineSpeed",
     "node" : {
-      "x" : 404.3,
-      "y" : 175.2
+      "x" : 409.4,
+      "y" : 159.1
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineSpeed",
-    "timestamp" : "2021-03-29T16:35:21.973Z",
+    "timestamp" : "2021-03-31T22:34:21.854Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineTemp",
     "name" : "com.vantiq.engines.EngineTemp",
     "node" : {
-      "x" : 198.9,
-      "y" : 254.1
+      "x" : 207.9,
+      "y" : 208.1
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineTemp",
-    "timestamp" : "2021-03-29T16:26:57.403Z",
+    "timestamp" : "2021-03-31T22:34:21.905Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.SystemHUD",
     "name" : "com.vantiq.engines.SystemHUD",
     "node" : {
-      "x" : 416,
-      "y" : 515.6
+      "x" : 421.5,
+      "y" : 490
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemHUD",
-    "timestamp" : "2021-03-29T16:46:08.509Z",
+    "timestamp" : "2021-03-31T22:34:21.878Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.SystemStatus",
     "name" : "com.vantiq.engines.SystemStatus",
     "node" : {
-      "x" : 209.7,
-      "y" : 452.4
+      "x" : 218.3,
+      "y" : 437.6
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemStatus",
-    "timestamp" : "2021-03-29T18:00:15.162Z",
+    "timestamp" : "2021-03-31T22:34:21.899Z",
     "type" : 1
   } ],
   "tools" : [ {
-    "isPinned" : false,
-    "name" : "EngineMonitor",
-    "pane" : {
-      "c" : 0,
-      "r" : 0
-    },
-    "resourceKey" : "app/EngineMonitor",
-    "state" : 2,
-    "toolOptions" : { },
-    "type" : 15
-  }, {
-    "isPinned" : false,
-    "name" : "EngineSimulation",
-    "pane" : {
-      "c" : 1,
-      "r" : 0
-    },
-    "resourceKey" : "client/EngineSimulation",
-    "state" : 2,
-    "type" : 63
-  }, {
-    "isPinned" : false,
-    "name" : "EngineSimulation",
-    "pane" : {
-      "c" : -1,
-      "r" : -1
-    },
-    "resourceKey" : "eventgenerator/EngineSimulation",
-    "state" : 4,
-    "type" : 111
-  }, {
     "isPinned" : false,
     "name" : "Errors",
     "type" : 13
@@ -244,12 +215,21 @@
     "type" : 2
   }, {
     "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
-      "c" : -1,
-      "r" : -1
+      "c" : 1,
+      "r" : 0
     },
-    "state" : 4,
+    "state" : 2,
     "toolOptions" : {
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
@@ -262,6 +242,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "app/EngineMonitor", "client/EngineSimulation", "eventgenerator/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "graph/Project Resource Graph" ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph" ]
   } ]
 }
