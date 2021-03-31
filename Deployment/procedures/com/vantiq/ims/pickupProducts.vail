@@ -1,3 +1,5 @@
+package com.vantiq.ims
+
 PROCEDURE pickupProducts(event)
 SELECT ONE * FROM Store as t
 if (event.storeId == t.storeId) {

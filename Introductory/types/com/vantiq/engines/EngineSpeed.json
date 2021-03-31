@@ -5,25 +5,21 @@
   "encapsulated" : false,
   "expiresAfter" : null,
   "foreignKeys" : null,
+  "groupBy" : "",
   "groupEnabled" : false,
   "groupRequired" : false,
-  "indexes" : [ {
-    "keys" : [ "systemId" ],
-    "options" : {
-      "unique" : true
-    }
-  } ],
+  "indexes" : [ ],
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "SystemHUD",
-  "naturalKey" : [ "systemId" ],
+  "name" : "com.vantiq.engines.EngineSpeed",
+  "naturalKey" : [ ],
   "properties" : {
-    "alertMsg" : {
+    "speed" : {
       "encrypted" : false,
       "multi" : false,
-      "required" : false,
-      "type" : "String",
+      "required" : true,
+      "type" : "Integer",
       "unique" : false
     },
     "systemId" : {

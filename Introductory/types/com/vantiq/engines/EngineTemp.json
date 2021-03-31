@@ -5,31 +5,33 @@
   "encapsulated" : false,
   "expiresAfter" : null,
   "foreignKeys" : null,
+  "groupBy" : "",
   "groupEnabled" : false,
   "groupRequired" : false,
   "indexes" : [ ],
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "EngineSpeed",
+  "name" : "com.vantiq.engines.EngineTemp",
   "naturalKey" : [ ],
   "properties" : {
-    "speed" : {
-      "encrypted" : false,
-      "multi" : false,
-      "required" : true,
-      "type" : "Integer",
-      "unique" : false
-    },
     "systemId" : {
       "encrypted" : false,
       "multi" : false,
       "required" : true,
       "type" : "String",
       "unique" : false
+    },
+    "temperature" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
     }
   },
   "role" : "standard",
+  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }

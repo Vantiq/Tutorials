@@ -1,12 +1,15 @@
 {
   "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
   "audited" : false,
   "encapsulated" : false,
+  "expiresAfter" : null,
   "foreignKeys" : null,
+  "groupBy" : "",
   "groupEnabled" : false,
   "groupRequired" : false,
   "indexes" : [ {
-    "keys" : [ "storeId" ],
+    "keys" : [ "systemId" ],
     "options" : {
       "unique" : true
     }
@@ -14,17 +17,17 @@
   "maxObjects" : 0,
   "maxStorage" : 0,
   "metadata" : false,
-  "name" : "Store",
-  "naturalKey" : [ "storeId" ],
+  "name" : "com.vantiq.engines.SystemHUD",
+  "naturalKey" : [ "systemId" ],
   "properties" : {
-    "productCount" : {
+    "alertMsg" : {
       "encrypted" : false,
       "multi" : false,
       "required" : false,
-      "type" : "Integer",
+      "type" : "String",
       "unique" : false
     },
-    "storeId" : {
+    "systemId" : {
       "encrypted" : false,
       "multi" : false,
       "required" : true,
@@ -33,6 +36,7 @@
     }
   },
   "role" : "standard",
+  "rulesSuppressed" : false,
   "userAccessLevel" : "ars_readOnly",
   "volatile" : false
 }

@@ -4,7 +4,7 @@
     "interval" : 1000,
     "iterations" : 100,
     "op" : "INSERT",
-    "resource" : "/types/EngineTemp",
+    "resource" : "/types/com.vantiq.engines.EngineTemp",
     "ruleList" : [ {
       "name" : "systemId",
       "rule" : {
@@ -21,7 +21,7 @@
     "interval" : 1000,
     "iterations" : 100,
     "op" : "INSERT",
-    "resource" : "/types/EngineSpeed",
+    "resource" : "/types/com.vantiq.engines.EngineSpeed",
     "ruleList" : [ {
       "name" : "speed",
       "rule" : {

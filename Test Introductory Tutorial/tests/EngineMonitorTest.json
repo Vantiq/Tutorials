@@ -2,7 +2,7 @@
   "cleanup" : null,
   "description" : "Tests the Engine Monitor Tutorial",
   "inputs" : [ {
-    "delay" : "1 Second",
+    "delay" : "1 second",
     "eventObj" : {
       "speed" : 20,
       "systemId" : "123"
@@ -14,9 +14,9 @@
     "rawDelayInterval" : 1000,
     "rawPeriodInterval" : null,
     "resource" : "types",
-    "resourceId" : "EngineSpeed"
+    "resourceId" : "com.vantiq.engines.EngineSpeed"
   }, {
-    "delay" : "1 Second",
+    "delay" : "1 second",
     "eventObj" : {
       "systemId" : "123",
       "temperature" : 200
@@ -28,9 +28,9 @@
     "rawDelayInterval" : 1000,
     "rawPeriodInterval" : null,
     "resource" : "types",
-    "resourceId" : "EngineTemp"
+    "resourceId" : "com.vantiq.engines.EngineTemp"
   }, {
-    "delay" : "1 Second",
+    "delay" : "1 second",
     "eventObj" : {
       "speed" : 60,
       "systemId" : "456"
@@ -42,9 +42,9 @@
     "rawDelayInterval" : 1000,
     "rawPeriodInterval" : null,
     "resource" : "types",
-    "resourceId" : "EngineSpeed"
+    "resourceId" : "com.vantiq.engines.EngineSpeed"
   }, {
-    "delay" : "1 Second",
+    "delay" : "1 second",
     "eventObj" : {
       "systemId" : "456",
       "temperature" : 240
@@ -56,9 +56,9 @@
     "rawDelayInterval" : 1000,
     "rawPeriodInterval" : null,
     "resource" : "types",
-    "resourceId" : "EngineTemp"
+    "resourceId" : "com.vantiq.engines.EngineTemp"
   }, {
-    "delay" : "1 Second",
+    "delay" : "1 second",
     "eventObj" : {
       "speed" : 30,
       "systemId" : "789"
@@ -70,9 +70,9 @@
     "rawDelayInterval" : 1000,
     "rawPeriodInterval" : null,
     "resource" : "types",
-    "resourceId" : "EngineSpeed"
+    "resourceId" : "com.vantiq.engines.EngineSpeed"
   }, {
-    "delay" : "1 Second",
+    "delay" : "1 second",
     "eventObj" : {
       "systemId" : "789",
       "temperature" : 240
@@ -84,7 +84,7 @@
     "rawDelayInterval" : 1000,
     "rawPeriodInterval" : null,
     "resource" : "types",
-    "resourceId" : "EngineTemp"
+    "resourceId" : "com.vantiq.engines.EngineTemp"
   } ],
   "name" : "EngineMonitorTest",
   "outputs" : [ {
@@ -101,7 +101,7 @@
     },
     "repeat" : { },
     "resource" : "types",
-    "resourceId" : "SystemHUD",
+    "resourceId" : "com.vantiq.engines.SystemHUD",
     "validationMethod" : "Event Object"
   }, {
     "eventObj" : {
@@ -116,7 +116,7 @@
     },
     "repeat" : { },
     "resource" : "types",
-    "resourceId" : "SystemHUD",
+    "resourceId" : "com.vantiq.engines.SystemHUD",
     "validationMethod" : "Event Object",
     "validationProcedure" : null
   }, {
@@ -124,6 +124,7 @@
       "alertMsg" : "Your engine is overheating: check for a malfunctioning fan or a coolant leak.",
       "systemId" : "789"
     },
+    "missing" : false,
     "op" : "UPDATE",
     "outputNum" : 2,
     "prereqEvent" : {
@@ -132,16 +133,15 @@
     },
     "repeat" : { },
     "resource" : "types",
-    "resourceId" : "SystemHUD",
-    "validationMethod" : "Event Object",
-    "validationProcedure" : null
+    "resourceId" : "com.vantiq.engines.SystemHUD",
+    "validationMethod" : "Event Object"
   } ],
   "resource" : "/projects/EngineMonitor",
   "runPolicies" : [ {
-    "id" : "5d29e51e-28e8-4783-ae84-6e9c8744655f",
     "type" : "manual"
   } ],
   "saveNamespace" : true,
   "setup" : null,
-  "timeout" : "2 Minutes"
+  "timeout" : "1 minute",
+  "unitLogLevel" : null
 }
