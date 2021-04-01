@@ -1,111 +1,131 @@
 {
   "active" : true,
   "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 1.2494068677791335,
+      "translate" : [ 114.24580516890542, 180.59252189472258 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    }
+  },
   "assembly" : {
     "MergeStreams" : {
       "configuration" : {
         "childStreams" : [ "UpdateSystemStatus" ],
-        "enableBadging" : true,
-        "outboundResource" : null,
-        "outboundResourceConfig" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "SpeedReading", "TempReading" ],
-        "upsert" : null
+        "parentStreams" : [ "TempReading", "SpeedReading" ]
       },
-      "description" : null,
-      "name" : "MergeStreams",
-      "pattern" : "Merge"
+      "pattern" : "Merge",
+      "uuid" : "1247a659-38b6-4b4b-8958-1b51a585bb96"
     },
     "SpeedReading" : {
       "configuration" : {
         "childStreams" : [ "MergeStreams" ],
-        "enableBadging" : true,
+        "condition" : "",
         "inboundResource" : "types",
-        "inboundResourceId" : "EngineSpeed",
+        "inboundResourceId" : "com.vantiq.engines.EngineSpeed",
         "op" : "INSERT",
-        "outboundResource" : null,
-        "outboundResourceId" : null,
         "parentStreams" : [ ],
-        "schema" : "EngineSpeed",
+        "schema" : "com.vantiq.engines.EngineSpeed",
         "upsert" : false
       },
-      "description" : null,
-      "name" : "SpeedReading",
-      "pattern" : "EventStream"
+      "pattern" : "EventStream",
+      "uuid" : "f5aa0625-5d92-4a3d-bc45-cc08494ad5e8"
     },
     "TempReading" : {
       "configuration" : {
         "childStreams" : [ "MergeStreams" ],
-        "enableBadging" : true,
+        "condition" : "",
         "inboundResource" : "types",
-        "inboundResourceId" : "EngineTemp",
+        "inboundResourceId" : "com.vantiq.engines.EngineTemp",
         "op" : "INSERT",
-        "outboundResource" : null,
-        "outboundResourceId" : null,
         "parentStreams" : [ ],
-        "schema" : "EngineTemp",
+        "schema" : "com.vantiq.engines.EngineTemp",
         "upsert" : false
       },
-      "description" : null,
-      "name" : "TempReading",
-      "pattern" : "EventStream"
+      "pattern" : "EventStream",
+      "uuid" : "817f64d8-5e24-4424-85ae-21f582453f36"
     },
     "TransformHUD" : {
       "configuration" : {
+        "VAIL" : "// define the outbound event using the inbound systemId. Assume no alertMsg by default\nvar hudEvent = {\n   systemId: event.value.systemId,\n   alertMsg: \"\"\n}\n\n// check if the machine is speeding and overheating first\nif (event.value.temperature >= 210 && event.value.speed >= 45) {\n   hudEvent.alertMsg = \"Your engine is overheating, please reduce your speed.\"\n} else if (event.value.temperature >= 210) { // check if the machine is overheating while moving slower\n   hudEvent.alertMsg = \"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\"\n}\n\n// overwrite the outbound event value with the new hudEvent\nevent.value = hudEvent",
         "childStreams" : [ "UpdateHUD" ],
-        "enableBadging" : true,
-        "outboundResource" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "UpdateSystemStatus" ],
-        "schema" : null,
-        "transformation" : {
-          "alertMsg" : {
-            "expression" : "((event.temperature >= 210) && (event.speed >= 45)) ? \t\"Your engine is overheating, please reduce your speed.\" : \t(((event.temperature >= 210) && (event.speed < 45)) ? \t\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\" : \"\")",
-            "type" : "expression"
-          },
-          "systemId" : {
-            "expression" : "event.systemId",
-            "type" : "expression"
-          }
-        },
-        "upsert" : false
+        "parentStreams" : [ "UpdateSystemStatus" ]
       },
-      "description" : null,
-      "name" : "TransformHUD",
-      "pattern" : "Transformation"
+      "pattern" : "VAIL",
+      "uuid" : "df0fb570-933d-42ac-9003-e5dc1d168a12"
     },
     "UpdateHUD" : {
       "configuration" : {
-        "childStreams" : null,
-        "enableBadging" : true,
         "parentStreams" : [ "TransformHUD" ],
-        "type" : "SystemHUD",
+        "type" : "com.vantiq.engines.SystemHUD",
         "upsert" : true
       },
-      "description" : null,
-      "name" : "UpdateHUD",
-      "pattern" : "SaveToType"
+      "pattern" : "SaveToType",
+      "uuid" : "f1965cbe-9300-4646-8310-578378149a39"
     },
     "UpdateSystemStatus" : {
       "configuration" : {
         "childStreams" : [ "TransformHUD" ],
-        "enableBadging" : true,
         "parentStreams" : [ "MergeStreams" ],
-        "type" : "SystemStatus",
+        "type" : "com.vantiq.engines.SystemStatus",
         "upsert" : true
       },
-      "description" : null,
-      "name" : "UpdateSystemStatus",
-      "pattern" : "SaveToType"
+      "pattern" : "SaveToType",
+      "uuid" : "e39462aa-b99b-40e9-ba9a-6a670ca12fe4"
     }
   },
   "collaboratorRoles" : [ ],
+  "compilerOCC" : 12,
   "currentState" : {
     "code" : "success"
   },
-  "description" : "",
+  "description" : "false",
   "disableBadging" : false,
   "entityRoles" : [ ],
+  "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "EngineMonitor"
+  "name" : "EngineMonitor",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.UpdateSystemStatus"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.UpdateHUD"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.TempReading"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.SpeedReading"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.MergeStreams"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.TransformHUD"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "apps.EngineMonitor.UpdateSystemStatus"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "apps.EngineMonitor.UpdateHUD"
+    } ]
+  }
 }

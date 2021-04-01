@@ -1,0 +1,38 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "storeId" ],
+    "options" : {
+      "unique" : true
+    }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "com.vantiq.ims.Store",
+  "naturalKey" : [ "storeId" ],
+  "properties" : {
+    "productCount" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "storeId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

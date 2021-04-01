@@ -4,9 +4,6 @@
     "target" : "app/EngineMonitor"
   }, {
     "source" : "app/EngineMonitor",
-    "target" : "type/com.vantiq.engines.SystemStatus"
-  }, {
-    "source" : "app/EngineMonitor",
     "target" : "type/com.vantiq.engines.SystemHUD"
   }, {
     "source" : "type/com.vantiq.engines.EngineTemp",
@@ -23,12 +20,21 @@
   }, {
     "source" : "client/EngineSimulation",
     "target" : "topic//my/response/topic"
+  }, {
+    "source" : "app/AggregateUpdates",
+    "target" : "procedure/AggregateUpdates.generate"
+  }, {
+    "source" : "type/com.vantiq.engines.SystemStatus",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "app/AggregateUpdates"
   } ],
-  "name" : "EngineMonitor",
+  "name" : "AppComponentTutorial",
   "options" : {
-    "description" : "The EngineMonitor (Introductory) Tutorial walks through the creation of a simple app shown below.\n\nTo test the app out, start the event generator. When the event generator starts, you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the SystemHUD subscription to the right of the app. This shows the updates made to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the event generator, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation.",
+    "description" : "The Component Tutorial demonstrates how to create a Component from scratch. The AggregateUpdates Component is a general\nrate limiter. For a given Type, inbound events are split using the Type's natural key. The most recent value for each key\nis cached and then written to the database at a maximum frequency provided by the user.\n\nThe AggregateUpdates Component is used to replace the UpdateSystemStatus task in the EngineMonitor App created in the Introductory Tutorial.\n",
     "dockCollapsed" : {
-      "bottom" : false,
+      "bottom" : true,
       "left" : false,
       "right" : false,
       "top" : false,
@@ -43,15 +49,15 @@
       "viewtabs" : 0
     },
     "dockSort" : 1,
-    "exclusionList" : [ "eventstream/apps.EngineMonitor.TempReading", "rule/apps.EngineMonitor.LogTemp", "test/EngineMonitorTest", "topic//apps.EngineMonitor/debug" ],
+    "exclusionList" : [ "eventstream/apps.EngineMonitor.TempReading", "procedure/AppGeneration.generateComponent", "procedure/AppGeneration.generateHeartbeat", "rule/apps.EngineMonitor.LogTemp", "services/AppGeneration", "test/EngineMonitorTest", "topic//apps.EngineMonitor/debug" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "tile",
-    "openFolders" : [ "type/com.vantiq.engines", "eventstream", "eventstream/apps.EngineMonitor", "rule", "rule/apps.EngineMonitor", "topic", "topic/apps.EngineMonitor", "subscription", "type", "client", "test" ],
+    "openFolders" : [ "type/com.vantiq.engines", "eventstream", "eventstream/apps.EngineMonitor", "rule", "rule/apps.EngineMonitor", "topic", "topic/apps.EngineMonitor", "subscription", "type", "client", "test", "app", "eventgenerator", "services" ],
     "rootViewFlavor" : 1,
     "showGrid" : true,
     "tileColumns" : 2,
-    "tileRows" : 1,
+    "tileRows" : 2,
     "type" : "dev",
     "v" : 4,
     "viewUUID" : "MAINVIEW"
@@ -73,6 +79,59 @@
       "collaborations" : [ ],
       "eventstreamHash" : [ ],
       "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "AggregateUpdates.generate" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "name" : "AggregateUpdates",
+    "resourceReference" : "/collaborationtypes/AggregateUpdates",
+    "timestamp" : "2021-04-01T21:39:32.626Z",
+    "type" : 12
+  }, {
+    "name" : "AggregateUpdates",
+    "resourceReference" : "/system.services/AggregateUpdates",
+    "timestamp" : "2021-04-01T21:39:32.492Z",
+    "type" : 63
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out", "out", "out", "out", "out", "out" ],
+      "procedures" : [ "AppGeneration.getComponent", "AppGeneration.toggleBadging", "Utils.getType", "exception", "AppGeneration.validateComponentConfiguration", "generateResource" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "in" ],
+      "types" : [ "collaborationtypes" ]
+    },
+    "name" : "AggregateUpdates.generate",
+    "procedureName" : "generate",
+    "resourceReference" : "/procedures/AggregateUpdates.generate",
+    "serviceName" : "AggregateUpdates",
+    "timestamp" : "2021-04-01T21:39:32.533Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
       "procedureHash" : [ ],
       "procedures" : [ ],
       "sourceHash" : [ ],
@@ -81,7 +140,7 @@
       "systemmodels" : [ ],
       "topicHash" : [ ],
       "topics" : [ ],
-      "typeHash" : [ "in", "in", "out", "out" ],
+      "typeHash" : [ "in", "in", "out", "in" ],
       "types" : [ "com.vantiq.engines.EngineSpeed", "com.vantiq.engines.EngineTemp", "com.vantiq.engines.SystemHUD", "com.vantiq.engines.SystemStatus" ]
     },
     "label" : "EngineMonitor",
@@ -91,13 +150,13 @@
       "y" : 321.3
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2021-03-31T22:34:23.155Z",
+    "timestamp" : "2021-04-01T21:43:40.189Z",
     "type" : 12
   }, {
     "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "resourceReference" : "/system.eventgenerators/EngineSimulation",
-    "timestamp" : "2021-03-31T22:34:23.652Z",
+    "timestamp" : "2021-04-01T21:40:54.417Z",
     "type" : 65
   }, {
     "inventory" : {
@@ -125,7 +184,7 @@
       "y" : 587.9
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2021-03-31T22:34:22.077Z",
+    "timestamp" : "2021-04-01T21:40:52.060Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -153,7 +212,7 @@
       "y" : 368.8
     },
     "resourceReference" : "/ArsSubscribe/SystemHUD",
-    "timestamp" : "2021-03-31T22:34:23.079Z",
+    "timestamp" : "2021-04-01T21:40:53.067Z",
     "type" : 9
   }, {
     "label" : "com.vantiq.engines.EngineSpeed",
@@ -163,7 +222,7 @@
       "y" : 159.1
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineSpeed",
-    "timestamp" : "2021-03-31T22:34:21.854Z",
+    "timestamp" : "2021-04-01T21:40:51.707Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineTemp",
@@ -173,7 +232,7 @@
       "y" : 208.1
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineTemp",
-    "timestamp" : "2021-03-31T22:34:21.905Z",
+    "timestamp" : "2021-04-01T21:40:51.707Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.SystemHUD",
@@ -183,7 +242,7 @@
       "y" : 490
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemHUD",
-    "timestamp" : "2021-03-31T22:34:21.878Z",
+    "timestamp" : "2021-04-01T21:40:52.005Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.SystemStatus",
@@ -193,10 +252,42 @@
       "y" : 437.6
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemStatus",
-    "timestamp" : "2021-03-31T22:34:21.899Z",
+    "timestamp" : "2021-04-01T21:40:52.007Z",
     "type" : 1
-  } ],
+  }],
   "tools" : [ {
+    "isPinned" : false,
+    "name" : "AggregateUpdates",
+    "pane" : {
+      "c" : 0,
+      "r" : 1
+    },
+    "resourceKey" : "app/AggregateUpdates",
+    "state" : 2,
+    "toolOptions" : { },
+    "type" : 15
+  }, {
+    "isPinned" : false,
+    "name" : "EngineMonitor",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "resourceKey" : "app/EngineMonitor",
+    "state" : 2,
+    "toolOptions" : { },
+    "type" : 15
+  }, {
+    "isPinned" : false,
+    "name" : "EngineSimulation",
+    "pane" : {
+      "c" : 1,
+      "r" : 1
+    },
+    "resourceKey" : "eventgenerator/EngineSimulation",
+    "state" : 2,
+    "type" : 111
+  }, {
     "isPinned" : false,
     "name" : "Errors",
     "type" : 13
@@ -222,26 +313,10 @@
     },
     "state" : 2,
     "type" : 82
-  }, {
-    "isPinned" : false,
-    "name" : "Project Resource Graph",
-    "pane" : {
-      "c" : 1,
-      "r" : 0
-    },
-    "state" : 2,
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 1.1743322945355315,
-        "translate" : [ -46.55679409025856, -74.62928707978051 ]
-      }
-    },
-    "type" : 1
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph" ]
+    "projectToolKeys" : [ "app/AggregateUpdates", "app/EngineMonitor", "eventgenerator/EngineSimulation", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description" ]
   } ]
 }
