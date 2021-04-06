@@ -1,0 +1,219 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.8243167888578906,
+      "translate" : [ 77.7047372996821, 218.87640938385343 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "component" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    }
+  },
+  "assembly" : {
+    "AggregateUpdates" : {
+      "configuration" : {
+        "WriteToDb" : [ "TransformHUD" ],
+        "interval" : "5 seconds",
+        "parentStreams" : [ ],
+        "typeName" : "com.vantiq.engines.SystemStatus"
+      },
+      "downstreamUUIDS" : {
+        "WriteToDb" : "a7e4a8b8-1bef-476b-88c1-489f145dbc4e"
+      },
+      "isComponent" : true,
+      "pattern" : "AggregateUpdates",
+      "rootTask" : "AggregateUpdates_GetType",
+      "uuid" : "24eb5cbc-315f-41f9-8682-4a4c02eba517"
+    },
+    "AggregateUpdates_AccumulateState" : {
+      "componentReference" : "AggregateUpdates",
+      "configuration" : {
+        "childStreams" : [ "AggregateUpdates_Limit" ],
+        "enableBadging" : true,
+        "outboundBehavior" : "Replace outbound event with state value",
+        "parentStreams" : [ "AggregateUpdates_SplitByGroup" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\n\nif (!state) {\n    state = {}\n}\n\nlog.error(\"{}\", [event.typeDef.properties])\n\nfor (prop in event.typeDef.properties) {\n    var propName = prop.getKey()\n    if (event[propName]) {\n        state[propName] = event[propName]\n    }\n}"
+        }
+      },
+      "name" : "AggregateUpdates_AccumulateState",
+      "pattern" : "AccumulateState"
+    },
+    "AggregateUpdates_GetType" : {
+      "componentReference" : "AggregateUpdates",
+      "configuration" : {
+        "childStreams" : [ "AggregateUpdates_SplitByGroup" ],
+        "enableBadging" : true,
+        "imports" : [ {
+          "type" : "Import",
+          "value" : "service Utils"
+        } ],
+        "outboundBehavior" : "Attach state value to outboundProperty",
+        "outboundProperty" : "typeDef",
+        "parentStreams" : [ "MergeStreams" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\n\nif (!state) {\n    state = Utils.getType(\"com.vantiq.engines.SystemStatus\")\n}\n\nevent.typeDef = state"
+        }
+      },
+      "isRoot" : true,
+      "name" : "AggregateUpdates_GetType",
+      "pattern" : "AccumulateState"
+    },
+    "AggregateUpdates_Limit" : {
+      "componentReference" : "AggregateUpdates",
+      "configuration" : {
+        "childStreams" : [ "AggregateUpdates_SaveToType" ],
+        "enableBadging" : true,
+        "interval" : "5 seconds",
+        "maxCount" : "1",
+        "parentStreams" : [ "AggregateUpdates_AccumulateState" ]
+      },
+      "name" : "AggregateUpdates_Limit",
+      "pattern" : "Limit"
+    },
+    "AggregateUpdates_SaveToType" : {
+      "componentReference" : "AggregateUpdates",
+      "configuration" : {
+        "childStreams" : [ "TransformHUD" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "AggregateUpdates_Limit" ],
+        "type" : "com.vantiq.engines.SystemStatus",
+        "upsert" : true
+      },
+      "downstreamReference" : "WriteToDb",
+      "name" : "AggregateUpdates_SaveToType",
+      "pattern" : "SaveToType"
+    },
+    "AggregateUpdates_SplitByGroup" : {
+      "componentReference" : "AggregateUpdates",
+      "configuration" : {
+        "childStreams" : [ "AggregateUpdates_AccumulateState" ],
+        "enableBadging" : true,
+        "groupBy" : "event.systemId",
+        "parentStreams" : [ "AggregateUpdates_GetType" ]
+      },
+      "name" : "AggregateUpdates_SplitByGroup",
+      "pattern" : "SplitByGroup"
+    },
+    "MergeStreams" : {
+      "configuration" : {
+        "childStreams" : [ "AggregateUpdates" ],
+        "parentStreams" : [ "SpeedReading", "TempReading" ]
+      },
+      "pattern" : "Merge",
+      "uuid" : "1247a659-38b6-4b4b-8958-1b51a585bb96"
+    },
+    "SpeedReading" : {
+      "configuration" : {
+        "childStreams" : [ "MergeStreams" ],
+        "condition" : "",
+        "inboundResource" : "types",
+        "inboundResourceId" : "com.vantiq.engines.EngineSpeed",
+        "op" : "INSERT",
+        "parentStreams" : [ ],
+        "schema" : "com.vantiq.engines.EngineSpeed",
+        "upsert" : false
+      },
+      "pattern" : "EventStream",
+      "uuid" : "f5aa0625-5d92-4a3d-bc45-cc08494ad5e8"
+    },
+    "TempReading" : {
+      "configuration" : {
+        "childStreams" : [ "MergeStreams" ],
+        "condition" : "",
+        "inboundResource" : "types",
+        "inboundResourceId" : "com.vantiq.engines.EngineTemp",
+        "op" : "INSERT",
+        "parentStreams" : [ ],
+        "schema" : "com.vantiq.engines.EngineTemp",
+        "upsert" : false
+      },
+      "pattern" : "EventStream",
+      "uuid" : "817f64d8-5e24-4424-85ae-21f582453f36"
+    },
+    "TransformHUD" : {
+      "configuration" : {
+        "VAIL" : "// define the outbound event using the inbound systemId. Assume no alertMsg by default\nvar hudEvent = {\n   systemId: event.value.systemId,\n   alertMsg: \"\"\n}\n\n// check if the machine is speeding and overheating first\nif (event.value.temperature >= 210 && event.value.speed >= 45) {\n   hudEvent.alertMsg = \"Your engine is overheating, please reduce your speed.\"\n} else if (event.value.temperature >= 210) { // check if the machine is overheating while moving slower\n   hudEvent.alertMsg = \"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\"\n}\n\n// overwrite the outbound event value with the new hudEvent\nevent.value = hudEvent",
+        "childStreams" : [ "UpdateHUD" ],
+        "parentStreams" : [ "AggregateUpdates_SaveToType" ]
+      },
+      "pattern" : "VAIL",
+      "uuid" : "df0fb570-933d-42ac-9003-e5dc1d168a12"
+    },
+    "UpdateHUD" : {
+      "configuration" : {
+        "parentStreams" : [ "TransformHUD" ],
+        "type" : "com.vantiq.engines.SystemHUD",
+        "upsert" : true
+      },
+      "pattern" : "SaveToType",
+      "uuid" : "f1965cbe-9300-4646-8310-578378149a39"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "compilerOCC" : 14,
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "false",
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "EngineMonitor",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.AggregateUpdates_SaveToType"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.UpdateHUD"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.TempReading"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.SpeedReading"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.AggregateUpdates_SplitByGroup"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.MergeStreams"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.AggregateUpdates_AccumulateState"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.AggregateUpdates_Limit"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.AggregateUpdates_GetType"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "apps.EngineMonitor.TransformHUD"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "apps.EngineMonitor.UpdateHUD"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "apps.EngineMonitor.AggregateUpdates_SaveToType"
+    } ]
+  }
+}

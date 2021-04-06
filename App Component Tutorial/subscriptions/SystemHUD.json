@@ -1,0 +1,14 @@
+{
+  "name" : "SystemHUD",
+  "operation" : "update",
+  "properties" : [ {
+    "name" : "alertMsg",
+    "selected" : true,
+    "type" : "String"
+  }, {
+    "name" : "systemId",
+    "selected" : true,
+    "type" : "String"
+  } ],
+  "type" : "com.vantiq.engines.SystemHUD"
+}

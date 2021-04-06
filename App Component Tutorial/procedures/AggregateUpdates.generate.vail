@@ -1,0 +1,59 @@
+// Given a component used in a collaboration type, return the assembly entries that should be
+// merged into the containing collaboration type in place of the component.
+PROCEDURE AggregateUpdates.generate(collaborationTypeName String, taskName String) HIDDEN
+
+log.debug("AggregateUpdates.generate: beginning generating for task: {} in {}.", [taskName, collaborationTypeName])
+
+SELECT ONE FROM collaborationtypes AS collaborationType WHERE name == collaborationTypeName AND ars_namespace == Context.namespace()
+var componentInstance = collaborationType.assembly[taskName]
+componentInstance.name = taskName
+// We need to apply enableBadging to all tasks in this component assembly
+componentInstance.configuration.enableBadging = !collaborationType.disableBadging || componentInstance.configuration.enableTaskBadging
+var config = componentInstance.configuration
+
+log.debug("AggregateUpdates.generate: component instance from app {}", [componentInstance.toString()])
+
+// fetch the component definition
+var componentDef = AppGeneration.getComponent(componentInstance.pattern)
+log.debug("AggregateUpdates.generate: found component definition: {}", [ componentDef ])
+
+var assembly = componentDef.assembly
+assembly = AppGeneration.toggleBadging(assembly, componentInstance.configuration.enableBadging)
+
+//
+// BEGIN CUSTOM COMPONENT GENERATION CODE
+// referencable variables:
+//  - componentDef: Original definition of this component (an instance of system.collaborationtypes)
+//  - assembly: The assembly for this component. Changes made to this object will be reflected in generated code
+//  - config: Object defining substitution keys used to generate component assembly
+//  - collaborationType: Definition of the collaboration type undergoing code generation that references this component
+//
+// In general, you should manipulate config to set substitution variables that are not exposed directly to consumers
+// of this component and you should use assembly to alter any relationships between activities within this component.
+//
+
+var typeDef = Utils.getType(config.typeName)
+
+config.groupByClause = "event."
+
+if (typeDef.groupBy) {
+    config.groupByClause += typeDef.groupBy
+} else if (typeDef.naturalKey) {
+    config.groupByClause += typeDef.naturalKey[0]
+} else {
+    exception("AggregateUpdates.invalid.type", "Type {0} does not have a group by or natural key", [config.typeName])
+}
+
+//
+// END CUSTOM COMPONENT GENERATION CODE
+//
+
+// apply defaults and check for required parameters
+config = AppGeneration.validateComponentConfiguration(config, componentDef)
+
+// perform basic variable substitutions from config into assembly
+assembly = generateResource(assembly, config)
+
+log.debug("AggregateUpdates.generate: Final assembly {}", [assembly])
+
+return assembly
