@@ -1,4 +1,4 @@
-### AggregateUpdates Component Tutorial
+### App Component Tutorial
 The Component Tutorial demonstrates how to create a Component from scratch. The AggregateUpdates Component is a general
 rate limiter. For a given Type, inbound events are split using the Type's natural key. The most recent value for each key
 is cached and then written to the database at a maximum frequency provided by the user.
