@@ -158,7 +158,7 @@
             "type" : "mixed",
             "value" : [ {
               "type" : "expression",
-              "value" : "ratepatient.patientId ratepatient.patientId"
+              "value" : "ratepatient.patientId"
             } ]
           }, {
             "name" : "payloadOverride",
