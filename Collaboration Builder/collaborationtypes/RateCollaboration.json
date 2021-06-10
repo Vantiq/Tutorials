@@ -3,7 +3,12 @@
   "appType" : false,
   "ars_properties" : {
     "ars_regenerate" : false,
-    "dataVersion" : 1,
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.6196911196911197,
+      "translate" : [ 520.9166264478764, 21.06949806949808 ]
+    },
     "groupSettings" : {
       "appGroupOpenHash" : {
         "actions" : true,
@@ -17,8 +22,10 @@
       "ctServiceOpen" : false,
       "serviceGroupOpenHash" : { }
     },
-    "paletteWidth" : 170
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
   },
+  "ars_relationships" : [ ],
   "assembly" : {
     "EscalatePatient" : {
       "additionalBehaviors" : [ ],
@@ -45,17 +52,19 @@
               "type" : "Object",
               "value" : null
             } ],
-            "type" : "activity"
+            "type" : "activity",
+            "uuid" : null
           } ],
           "condition" : "true",
-          "name" : "escalate"
+          "name" : "escalate",
+          "uuid" : "4789cd8f-4032-4483-9260-10c527b6028a"
         } ],
         "escalationTime" : 90
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
-      "name" : "EscalatePatient",
-      "pattern" : "Escalation"
+      "pattern" : "Escalation",
+      "uuid" : "8ca2f5b4-3fd6-4d2e-9d8e-296f61081b14"
     },
     "FirstResponderEscalate" : {
       "additionalBehaviors" : [ ],
@@ -65,7 +74,6 @@
         "body" : "Please refer to the patient HUD for '${ratepatient.patientId}'!",
         "clientName" : "FirstResponderResponse",
         "firstResponseBehaviors" : [ ],
-        "pushSourceName" : null,
         "responseBehaviors" : [ {
           "behaviors" : [ {
             "name" : "CollaborationUtils.closeCollaboration",
@@ -74,17 +82,19 @@
               "type" : "expression",
               "value" : "collaboration.id"
             } ],
-            "type" : "service"
+            "type" : "service",
+            "uuid" : "39961ade-f8a1-4b79-8b34-0ae8d38c1dd9"
           } ],
           "condition" : "true",
-          "name" : "response"
+          "name" : "response",
+          "uuid" : "5f2e300e-fe47-4cf4-a0e3-236b84e62bc5"
         } ],
         "title" : "${ratepatient.patientId} Heart Rate Alert (${ratepatient.heartRate})"
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
-      "name" : "FirstResponderEscalate",
-      "pattern" : "Notification"
+      "pattern" : "Notification",
+      "uuid" : "11f65310-cc53-4898-8ae9-eedc1e40b84d"
     },
     "NotifyPatient" : {
       "additionalBehaviors" : [ ],
@@ -94,7 +104,6 @@
         "body" : "An unusual heart rate (${ratepatient.heartRate}) has been detected",
         "clientName" : "PatientResponse",
         "firstResponseBehaviors" : [ ],
-        "pushSourceName" : null,
         "responseBehaviors" : [ {
           "behaviors" : [ {
             "name" : "CollaborationUtils.closeCollaboration",
@@ -103,10 +112,12 @@
               "type" : "expression",
               "value" : "collaboration.id"
             } ],
-            "type" : "service"
+            "type" : "service",
+            "uuid" : "38b19dda-21a9-44bd-8992-099d264b3ee5"
           } ],
           "condition" : "event.submitValue == 0",
-          "name" : "response"
+          "name" : "response",
+          "uuid" : "5805822b-6b7a-4a0a-82ca-40398dc733c5"
         }, {
           "behaviors" : [ {
             "name" : "CollaborationUtils.triggerEscalation",
@@ -119,17 +130,19 @@
               "type" : "String",
               "value" : "EscalatePatient"
             } ],
-            "type" : "service"
+            "type" : "service",
+            "uuid" : "3719afd8-6ba3-424e-92b6-d5b7745c00c6"
           } ],
           "condition" : "event.submitValue == 1",
-          "name" : "response"
+          "name" : "response",
+          "uuid" : "a8a51b65-c6c1-46b7-9542-03863872c463"
         } ],
         "title" : "Heart Rate Alert"
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
-      "name" : "NotifyPatient",
-      "pattern" : "Notification"
+      "pattern" : "Notification",
+      "uuid" : "2ec04333-7bb8-4e99-b0d6-739862569a7b"
     },
     "UnusualRate" : {
       "additionalBehaviors" : [ {
@@ -145,14 +158,15 @@
             "type" : "mixed",
             "value" : [ {
               "type" : "expression",
-              "value" : "ratepatient.patientId ratepatient.patientId"
+              "value" : "ratepatient.patientId"
             } ]
           }, {
             "name" : "payloadOverride",
             "type" : "Object",
             "value" : null
           } ],
-          "type" : "activity"
+          "type" : "activity",
+          "uuid" : null
         }, {
           "name" : "EscalatePatient",
           "parameters" : [ {
@@ -160,24 +174,30 @@
             "type" : "reference",
             "value" : "collaboration"
           } ],
-          "type" : "activity"
+          "type" : "activity",
+          "uuid" : null
         } ],
         "condition" : "true",
-        "name" : null
+        "name" : null,
+        "uuid" : "aac1f5d6-10f5-4af0-8cac-70068638c001"
       } ],
       "cancellationCondition" : [ ],
       "completionCondition" : [ ],
       "configuration" : {
+        "condition" : "event.heartRate < 40 OR event.heartRate > 150",
         "entityRole" : "ratepatient",
-        "initialTrigger" : "WHEN EVENT OCCURS ON \"/types/Patient/update\" AS Patient WHERE Patient.value.heartRate < 40 OR Patient.value.heartRate > 150"
+        "inboundResource" : "types",
+        "inboundResourceId" : "Patient",
+        "op" : "UPDATE"
       },
       "continuationCondition" : [ ],
       "instanceParameters" : [ "ratepatient" ],
-      "name" : "UnusualRate",
-      "pattern" : "InitiateCollaboration"
+      "pattern" : "InitiateCollaboration",
+      "uuid" : "d8ca7282-c94a-42cd-81ab-7ac282282dc8"
     }
   },
   "collaboratorRoles" : [ ],
+  "compilerOCC" : 4,
   "currentState" : {
     "code" : "success"
   },
@@ -187,6 +207,41 @@
     "name" : "ratepatient",
     "type" : "Patient"
   } ],
+  "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "RateCollaboration"
+  "name" : "RateCollaboration",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "procedures",
+      "resourceId" : "collaborations.RateCollaboration.FirstResponderEscalate.start"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "collaborations.RateCollaboration.NotifyPatient.start"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "collaborations.RateCollaboration.EscalatePatient.start"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.EscalatePatient_EscalationTrigger"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.UnusualRate_DetectCondition"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.FirstResponderEscalate_NotificationResponse"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.NotifyPatient_NotificationResponse"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.EscalatePatient_Expiration"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.UnusualRate_NewCollaboration"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.RateCollaboration.UnusualRate_CloseCollaboration"
+    } ]
+  }
 }
