@@ -1,6 +1,30 @@
 {
   "active" : true,
   "appType" : false,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 3,
+      "scale" : 2.024131627056673,
+      "translate" : [ 223, 80.69012797074953 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
   "assembly" : {
     "Initiate" : {
       "additionalBehaviors" : [ {
@@ -20,22 +44,27 @@
               "value" : "report.reporter"
             } ]
           } ],
-          "type" : "activity"
+          "type" : "activity",
+          "uuid" : null
         } ],
         "condition" : "true",
         "description" : null,
-        "name" : null
+        "name" : null,
+        "uuid" : "328973ab-b9fd-489d-bb42-4aa586d2777e"
       } ],
       "cancellationCondition" : [ ],
       "completionCondition" : [ ],
       "configuration" : {
+        "condition" : "event.name == \"NotifyReporter\"",
         "entityRole" : "report",
-        "initialTrigger" : "WHEN EVENT OCCURS ON \"/types/situations/insert\" AS situation WHERE situation.value.name == \"NotifyReporter\""
+        "inboundResource" : "types",
+        "inboundResourceId" : "system.situations",
+        "op" : "INSERT"
       },
       "continuationCondition" : [ ],
-      "description" : null,
       "instanceParameters" : [ "report" ],
-      "pattern" : "InitiateCollaboration"
+      "pattern" : "InitiateCollaboration",
+      "uuid" : "1a3bce49-ac4f-4769-8e17-89ca78fcbd8c"
     },
     "NotifyReporter" : {
       "additionalBehaviors" : [ ],
@@ -45,25 +74,46 @@
         "body" : "Your pothole report has been updated with the following status: '${report.status}'.",
         "clientName" : "AcknowledgeUpdate",
         "firstResponseBehaviors" : [ ],
-        "pushSourceName" : null,
         "responseBehaviors" : [ ],
         "title" : "Pothole Update"
       },
       "continuationCondition" : [ ],
-      "description" : null,
       "instanceParameters" : [ "report" ],
-      "pattern" : "Notification"
+      "pattern" : "Notification",
+      "uuid" : "38011041-8e16-44c1-a6c4-06fad3d654b5"
     }
   },
   "collaboratorRoles" : [ ],
+  "compilerOCC" : 4,
   "currentState" : {
     "code" : "success"
   },
   "description" : "",
+  "disableBadging" : false,
   "entityRoles" : [ {
     "name" : "report",
     "type" : "Pothole"
   } ],
+  "isComponent" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "NotifyReporter"
+  "name" : "NotifyReporter",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "procedures",
+      "resourceId" : "collaborations.NotifyReporter.NotifyReporter.start"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.NotifyReporter.NotifyReporter_NotificationResponse"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.NotifyReporter.Initiate_DetectCondition"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.NotifyReporter.Initiate_NewCollaboration"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "collaborations.NotifyReporter.Initiate_CloseCollaboration"
+    } ]
+  }
 }
