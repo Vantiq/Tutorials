@@ -33,7 +33,7 @@
   } ],
   "name" : "EngineMonitor",
   "options" : {
-    "description" : "The Using App Services Tutorial walks through the creation of a simple app shown below.\n\nThe app starts from the EngineMonitor app built as part of the Introductory Tutorial.  From there we demonstrate how the use of service event types can decouple the Client from the App and then we update the App to the form shown here.\n\nTo test the app out, start the event generator. When the event generator starts, you should see badges appear over each task indicating the execution count for each task.\n\nAs data flows through the app, you'll notice events show up in real time in the EngineStatus subscription to the right of the app. This shows the event data sent to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nBelow the app you should see a client which visualizes different pieces of the simulation. When the event generator, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as gauges showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation.",
+    "description" : "The Using App Services Tutorial walks through the modification of the Engine Monitor App built as part of the Introductory Tutorial.  From there we demononstrate how the use of service event types can decouple the Client from the App and then we update the App to the form provided in this project.\n\nTo test the app out, open both the EngineMonitor App and the EngineSimulation event generator.  Upon running the event generator, you should see badges appear over each task indicating the execution count for each task.\n\nYou can observe the events being produced by the App using the EngineStatus subscription.  This shows the data that will be sent to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nThe EngineSimulation Client can be used to visualize different pieces of the simulation. When the event generator, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
@@ -152,13 +152,13 @@
       "y" : 321.3
     },
     "resourceReference" : "/collaborationtypes/EngineMonitor",
-    "timestamp" : "2021-07-27T20:11:12.674Z",
+    "timestamp" : "2021-07-28T16:19:19.019Z",
     "type" : 12
   }, {
     "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "resourceReference" : "/system.eventgenerators/EngineSimulation",
-    "timestamp" : "2021-07-27T18:41:16.723Z",
+    "timestamp" : "2021-07-28T16:19:20.474Z",
     "type" : 65
   }, {
     "inventory" : {
@@ -186,7 +186,7 @@
       "y" : 595.9
     },
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2021-07-27T18:46:06.106Z",
+    "timestamp" : "2021-07-28T16:19:17.456Z",
     "type" : 15
   }, {
     "inventory" : {
@@ -214,7 +214,7 @@
       "y" : 368.8
     },
     "resourceReference" : "/system.subscriptions/EngineStatus",
-    "timestamp" : "2021-07-27T18:44:35.349Z",
+    "timestamp" : "2021-07-28T16:19:17.966Z",
     "type" : 9
   }, {
     "inventory" : {
@@ -244,7 +244,7 @@
     "packageName" : "apps.EngineMonitor",
     "procedureName" : "TransformEngineData",
     "resourceReference" : "/procedures/apps.EngineMonitor.TransformEngineData",
-    "timestamp" : "2021-07-27T20:11:12.970Z",
+    "timestamp" : "2021-07-28T16:19:19.484Z",
     "type" : 3
   }, {
     "inventory" : {
@@ -272,7 +272,7 @@
       "y" : 537.9
     },
     "resourceReference" : "/system.services/apps.services.EngineMonitor",
-    "timestamp" : "2021-07-27T20:11:12.998Z",
+    "timestamp" : "2021-07-28T16:19:19.394Z",
     "type" : 63
   }, {
     "label" : "com.vantiq.engines.EngineSpeed",
@@ -282,7 +282,7 @@
       "y" : 159.1
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineSpeed",
-    "timestamp" : "2021-07-27T18:41:05.067Z",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineTemp",
@@ -292,7 +292,7 @@
       "y" : 208.1
     },
     "resourceReference" : "/types/com.vantiq.engines.EngineTemp",
-    "timestamp" : "2021-07-27T18:41:05.067Z",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.SystemHUD",
@@ -302,7 +302,7 @@
       "y" : 469
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemHUD",
-    "timestamp" : "2021-07-27T18:41:05.159Z",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.SystemStatus",
@@ -312,7 +312,7 @@
       "y" : 449.6
     },
     "resourceReference" : "/types/com.vantiq.engines.SystemStatus",
-    "timestamp" : "2021-07-27T18:41:05.159Z",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
     "type" : 1
   } ],
   "tools" : [ {
@@ -351,6 +351,7 @@
     "state" : 2,
     "toolOptions" : {
       "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
         "scale" : 1,
         "translate" : [ 0, 0 ]
       }
