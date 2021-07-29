@@ -1,0 +1,35 @@
+{
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "EngineData" : {
+      "direction" : "OUTBOUND",
+      "implementingEventPath" : "/topics//com.vantiq.engines/EngineData"
+    },
+    "EngineStatus" : {
+      "direction" : "OUTBOUND",
+      "implementingEventPath" : "/topics//com.vantiq.engines/EngineStatus"
+    },
+    "SpeedReading" : {
+      "direction" : "INBOUND",
+      "implementingEventPath" : "/types/com.vantiq.engines.EngineSpeed/insert"
+    },
+    "TempReading" : {
+      "direction" : "INBOUND",
+      "implementingEventPath" : "/types/com.vantiq.engines.EngineTemp/insert"
+    }
+  },
+  "globalType" : null,
+  "name" : "apps.services.EngineMonitor",
+  "partitionedType" : null,
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/com.vantiq.engines/EngineData"
+    }, {
+      "resource" : "topics",
+      "resourceId" : "/com.vantiq.engines/EngineStatus"
+    } ]
+  }
+}

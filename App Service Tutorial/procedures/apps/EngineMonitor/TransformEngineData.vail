@@ -1,0 +1,17 @@
+package apps.EngineMonitor
+
+PROCEDURE TransformEngineData(event) HIDDEN WITH ars_dependentResource="/collaborationtypes/EngineMonitor"
+
+var newEvent = {}
+
+try {
+    newEvent.speed = event.SpeedReading.speed
+newEvent.systemId = event.SpeedReading.systemId
+newEvent.temperature = event.TempReading.temperature
+
+} catch (ex) {
+    exception("io.vantiq.app.EngineMonitor.TransformEngineData.TransformEngineData.transformation.failed",
+              "The generated transformation procedure: {0} failed because: {1}", ["TransformEngineData", ex.message])
+}
+
+return newEvent

@@ -1,0 +1,366 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "type/com.vantiq.engines.EngineSpeed",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "type/com.vantiq.engines.EngineTemp",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "services/apps.services.EngineMonitor",
+    "target" : "type/com.vantiq.engines.SystemStatus"
+  }, {
+    "source" : "services/apps.services.EngineMonitor",
+    "target" : "type/com.vantiq.engines.SystemHUD"
+  }, {
+    "source" : "client/EngineSimulation",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "services/apps.services.EngineMonitor"
+  }, {
+    "source" : "services/apps.services.EngineMonitor",
+    "target" : "app/EngineMonitor"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "procedure/apps.EngineMonitor.TransformEngineData"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "topic//com.vantiq.engines/EngineData"
+  }, {
+    "source" : "app/EngineMonitor",
+    "target" : "topic//com.vantiq.engines/EngineStatus"
+  } ],
+  "name" : "EngineMonitor",
+  "options" : {
+    "description" : "The Using App Services Tutorial walks through the modification of the Engine Monitor App built as part of the Introductory Tutorial.  From there we demononstrate how the use of service event types can decouple the Client from the App and then we update the App to the form provided in this project.\n\nTo test the app out, open both the EngineMonitor App and the EngineSimulation event generator.  Upon running the event generator, you should see badges appear over each task indicating the execution count for each task.\n\nYou can observe the events being produced by the App using the EngineStatus subscription.  This shows the data that will be sent to the HUD in real time. To view the raw output of any task in the app, right click on any of the tasks and select \"View Task Events\", which will open a subscription pane that shows each event as it flows out of the task.\n\nThe EngineSimulation Client can be used to visualize different pieces of the simulation. When the event generator, app and client are all running you should see line charts in the client showing the independently changing speed and temperature readings, as well as guages showing the most recent values and a pie chart showing the ratios of the different alert messages.\n\nPause the client using the pause button in the title bar and click on any of the widgets or view the Data Streams to learn more about the client implementation.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 635.7166875762057, 1199.2833124237943 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
+    "exclusionList" : [ "eventstream/apps.EngineMonitor.TempReading", "rule/apps.EngineMonitor.LogTemp", "test/EngineMonitorTest", "topic//apps.EngineMonitor/debug" ],
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "type/com.vantiq.engines", "eventstream", "eventstream/apps.EngineMonitor", "rule", "rule/apps.EngineMonitor", "topic", "topic/apps.EngineMonitor", "subscription", "type", "client", "test", "app", "services", "eventgenerator" ],
+    "rootViewFlavor" : 1,
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 1,
+    "type" : "dev",
+    "v" : 4,
+    "viewUUID" : "MAINVIEW"
+  },
+  "resources" : [ {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "/com.vantiq.engines/EngineData",
+    "name" : "/com.vantiq.engines/EngineData",
+    "node" : {
+      "x" : 610.2,
+      "y" : 308.1
+    },
+    "resourceReference" : "/topics//com.vantiq.engines/EngineData",
+    "type" : 10
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "/com.vantiq.engines/EngineStatus",
+    "name" : "/com.vantiq.engines/EngineStatus",
+    "node" : {
+      "x" : 540.6,
+      "y" : 236.8
+    },
+    "resourceReference" : "/topics//com.vantiq.engines/EngineStatus",
+    "type" : 10
+  }, {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 211.9,
+      "y" : 683.8
+    },
+    "resourceReference" : "/topics//my/response/topic",
+    "type" : 10
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "apps.EngineMonitor.TransformEngineData" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out", "out" ],
+      "topics" : [ "/com.vantiq.engines/EngineStatus", "/com.vantiq.engines/EngineData" ],
+      "typeHash" : [ "in", "in" ],
+      "types" : [ "com.vantiq.engines.EngineSpeed", "com.vantiq.engines.EngineTemp" ]
+    },
+    "label" : "EngineMonitor",
+    "name" : "EngineMonitor",
+    "node" : {
+      "x" : 302,
+      "y" : 321.3
+    },
+    "resourceReference" : "/collaborationtypes/EngineMonitor",
+    "timestamp" : "2021-07-28T16:19:19.019Z",
+    "type" : 12
+  }, {
+    "label" : "EngineSimulation",
+    "name" : "EngineSimulation",
+    "resourceReference" : "/system.eventgenerators/EngineSimulation",
+    "timestamp" : "2021-07-28T16:19:20.474Z",
+    "type" : 65
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "EngineSimulation",
+    "name" : "EngineSimulation",
+    "node" : {
+      "x" : 207.9,
+      "y" : 595.9
+    },
+    "resourceReference" : "/system.clients/EngineSimulation",
+    "timestamp" : "2021-07-28T16:19:17.456Z",
+    "type" : 15
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "EngineStatus",
+    "name" : "EngineStatus",
+    "node" : {
+      "x" : 468,
+      "y" : 368.8
+    },
+    "resourceReference" : "/system.subscriptions/EngineStatus",
+    "timestamp" : "2021-07-28T16:19:17.966Z",
+    "type" : 9
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "apps.EngineMonitor.TransformEngineData",
+    "name" : "apps.EngineMonitor.TransformEngineData",
+    "node" : {
+      "x" : 215.7,
+      "y" : 386.4
+    },
+    "packageName" : "apps.EngineMonitor",
+    "procedureName" : "TransformEngineData",
+    "resourceReference" : "/procedures/apps.EngineMonitor.TransformEngineData",
+    "timestamp" : "2021-07-28T16:19:19.484Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out", "out" ],
+      "types" : [ "com.vantiq.engines.SystemStatus", "com.vantiq.engines.SystemHUD" ]
+    },
+    "label" : "apps.services.EngineMonitor",
+    "name" : "apps.services.EngineMonitor",
+    "node" : {
+      "x" : 330.2,
+      "y" : 537.9
+    },
+    "resourceReference" : "/system.services/apps.services.EngineMonitor",
+    "timestamp" : "2021-07-28T16:19:19.394Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.engines.EngineSpeed",
+    "name" : "com.vantiq.engines.EngineSpeed",
+    "node" : {
+      "x" : 409.4,
+      "y" : 159.1
+    },
+    "resourceReference" : "/types/com.vantiq.engines.EngineSpeed",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.engines.EngineTemp",
+    "name" : "com.vantiq.engines.EngineTemp",
+    "node" : {
+      "x" : 207.9,
+      "y" : 208.1
+    },
+    "resourceReference" : "/types/com.vantiq.engines.EngineTemp",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.engines.SystemHUD",
+    "name" : "com.vantiq.engines.SystemHUD",
+    "node" : {
+      "x" : 599.5,
+      "y" : 469
+    },
+    "resourceReference" : "/types/com.vantiq.engines.SystemHUD",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.engines.SystemStatus",
+    "name" : "com.vantiq.engines.SystemStatus",
+    "node" : {
+      "x" : 159.3,
+      "y" : 449.6
+    },
+    "resourceReference" : "/types/com.vantiq.engines.SystemStatus",
+    "timestamp" : "2021-07-28T16:19:17.355Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Log Messages",
+    "type" : 12
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "state" : 2,
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1,
+        "translate" : [ 0, 0 ]
+      }
+    },
+    "type" : 1
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph" ]
+  } ]
+}

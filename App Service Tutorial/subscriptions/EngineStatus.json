@@ -1,0 +1,10 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "EngineStatus",
+  "operation" : "event",
+  "properties" : [ {
+    "name" : "/services/apps.services.EngineMonitor/EngineStatus",
+    "type" : ""
+  } ],
+  "type" : ""
+}
