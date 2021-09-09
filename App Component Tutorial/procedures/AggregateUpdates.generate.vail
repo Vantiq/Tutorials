@@ -1,10 +1,9 @@
 // Given a component used in a collaboration type, return the assembly entries that should be
 // merged into the containing collaboration type in place of the component.
-PROCEDURE AggregateUpdates.generate(collaborationTypeName String, taskName String) HIDDEN
+PROCEDURE AggregateUpdates.generate(collaborationType ArsCollaborationType, taskName String) HIDDEN
 
-log.debug("AggregateUpdates.generate: beginning generating for task: {} in {}.", [taskName, collaborationTypeName])
+log.debug("AggregateUpdates.generate: beginning generating for task: {} in {}.", [taskName, collaborationType.name])
 
-SELECT ONE FROM collaborationtypes AS collaborationType WHERE name == collaborationTypeName AND ars_namespace == Context.namespace()
 var componentInstance = collaborationType.assembly[taskName]
 componentInstance.name = taskName
 // We need to apply enableBadging to all tasks in this component assembly
