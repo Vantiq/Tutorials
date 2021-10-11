@@ -4,11 +4,13 @@
   "eventTypes" : {
     "EvacuationEvent" : {
       "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
       "implementingEventPath" : "/topics//evacuation/event",
       "isReliable" : false
     },
     "WarningEvent" : {
       "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
       "implementingEventPath" : "/topics//warning/event",
       "isReliable" : false
     },
