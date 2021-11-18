@@ -1,0 +1,11 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "boundEventTypePaths" : { },
+  "compilerOCC" : 2,
+  "name" : "DetectMalfunction",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ ]
+  }
+}

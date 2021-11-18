@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 0,
-      "scale" : 1.8480288751545118,
-      "translate" : [ 442.38793091132953, 70.23953498145858 ]
+      "scale" : 0.7077011109420179,
+      "translate" : [ 146.3402402221884, 24.067366686957854 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -57,10 +57,22 @@
       "rootTask" : "DetectMalfunction_Transformation",
       "uuid" : "3e017767-930f-4781-b046-0ef6af7927b1"
     },
+    "DetectMalfunction_SplitBySystemId" : {
+      "componentReference" : "DetectMalfunction",
+      "configuration" : {
+        "childStreams" : [ "DetectMalfunction_UpdateTempAndSpeed" ],
+        "enableBadging" : true,
+        "groupBy" : "event.systemId",
+        "parentStreams" : [ "DetectMalfunction_Transformation" ]
+      },
+      "name" : "DetectMalfunction_SplitBySystemId",
+      "pattern" : "SplitByGroup",
+      "patternVersion" : 1
+    },
     "DetectMalfunction_Transformation" : {
       "componentReference" : "DetectMalfunction",
       "configuration" : {
-        "childStreams" : [ "OutboundTemp", "DetectMalfunction_generateAlertMessage" ],
+        "childStreams" : [ "OutboundTemp", "DetectMalfunction_SplitBySystemId" ],
         "enableBadging" : true,
         "parentStreams" : [ "EventStream" ],
         "transformInPlace" : false,
@@ -86,6 +98,21 @@
       "pattern" : "Transformation",
       "patternVersion" : 1
     },
+    "DetectMalfunction_UpdateTempAndSpeed" : {
+      "componentReference" : "DetectMalfunction",
+      "configuration" : {
+        "childStreams" : [ "DetectMalfunction_generateAlertMessage" ],
+        "enableBadging" : true,
+        "outboundBehavior" : "Emit original event",
+        "parentStreams" : [ "DetectMalfunction_SplitBySystemId" ],
+        "procedure" : {
+          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a temperature sensor reading, update the stored temperature\nif (event.temperature) {\n    state.temperature = event.temperature\n}\n\n// If this event included a speed sensor reading, update the speed temperature\nif (event.speed) {\n    state.speed = event.speed\n}"
+        }
+      },
+      "name" : "DetectMalfunction_UpdateTempAndSpeed",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 1
+    },
     "DetectMalfunction_generateAlertMessage" : {
       "componentReference" : "DetectMalfunction",
       "configuration" : {
@@ -96,7 +123,7 @@
           "maxTemp" : 100,
           "sensorEvent" : "event"
         },
-        "parentStreams" : [ "DetectMalfunction_Transformation" ],
+        "parentStreams" : [ "DetectMalfunction_UpdateTempAndSpeed" ],
         "procedure" : "com.vantiq.engines.EngineMonitor.generateAlertMessage",
         "returnBehavior" : "Use Return Value as Outbound event"
       },
@@ -150,7 +177,7 @@
   },
   "boundService" : "com.vantiq.engines.EngineMonitor",
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 5,
+  "compilerOCC" : 12,
   "currentState" : {
     "code" : "success"
   },
@@ -164,7 +191,16 @@
     "optionalResources" : [ ],
     "requiredResources" : [ {
       "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation"
+    }, {
+      "resource" : "system.eventstreams",
       "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_SplitBySystemId"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EventStream"
     }, {
       "resource" : "system.eventstreams",
       "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_isMalfunctionDetected"
@@ -173,25 +209,31 @@
       "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
     }, {
       "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_UpdateTempAndSpeed"
+    }, {
+      "resource" : "system.eventstreams",
       "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_generateAlertMessage"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EventStream"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation"
     }, {
       "resource" : "procedures",
       "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation"
     }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateReset"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet"
+    }, {
       "resource" : "rules",
       "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_generateAlertMessage"
     }, {
       "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
     }, {
       "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
     } ]
   }
 }

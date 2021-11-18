@@ -1,0 +1,8 @@
+package com.vantiq.engines
+PROCEDURE EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet(partitionKey String) 
+    WITH ars_dependentResource="/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler", properties = {taskName: "DetectMalfunction_UpdateTempAndSpeed", isGenerated: true}, 
+    updateInterface = true
+
+var result = DetectMalfunction_UpdateTempAndSpeedState.get(partitionKey)
+
+return result

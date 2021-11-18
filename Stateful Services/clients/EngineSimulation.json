@@ -1,0 +1,145 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "AlertMessages" : { },
+      "EngineSpeed" : { },
+      "EngineTemp" : { }
+    },
+    "page" : { }
+  },
+  "isComponent" : false,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "com.vantiq.engines.EngineMonitor_SpeedEvent"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "EngineSpeed",
+      "pauseAtStartup" : false,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "OutboundSpeed",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "4a94144b-352c-4fc9-960a-a09c5e792f07",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "com.vantiq.engines.EngineMonitor_TempEvent"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "EngineTemp",
+      "pauseAtStartup" : false,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "OutboundTemp",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "ba3da713-abfb-49e0-b5fd-539b87123fc1",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "AlertMessages",
+      "pauseAtStartup" : false,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "EngineMalfunction",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "2846e8ef-c8ec-41c7-8c4c-2899c692c6f7",
+      "v" : 1
+    } ]
+  },
+  "name" : "EngineSimulation",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "add",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.8",
+    "showCategoryButtons" : false,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : false,
+    "showCategoryLayout" : false,
+    "showGridWhileEditing" : false,
+    "tabPaneCollapsed" : true,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#8b572a",
+      "cardAccentColor" : "#8b572a",
+      "cardColor" : "#fee3b7",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#8b572a",
+      "label" : "Classic",
+      "name" : "classic",
+      "titleBarColor" : "#fee3b7",
+      "titleForegroundColor" : "#1f1d17",
+      "v" : 3
+    },
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/my/response/topic",
+      "type" : "publishes"
+    }, {
+      "resource" : "services",
+      "resourceId" : "com.vantiq.engines.EngineMonitor",
+      "type" : "subscribes_to"
+    } ]
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}
