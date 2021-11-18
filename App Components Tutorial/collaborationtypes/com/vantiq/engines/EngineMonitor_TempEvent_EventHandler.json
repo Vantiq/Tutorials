@@ -1,0 +1,197 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 1.8480288751545118,
+      "translate" : [ 442.38793091132953, 70.23953498145858 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "component" : true,
+        "serviceevents" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "DetectMalfunction" : {
+      "configuration" : {
+        "MalfunctionDetected" : [ "EngineMalfunction" ],
+        "TransformedEvent" : [ "OutboundTemp" ],
+        "maxSpeed" : 45,
+        "maxTemperature" : 100,
+        "parentStreams" : [ ],
+        "transformation" : {
+          "speed" : {
+            "expression" : "event.speed",
+            "type" : "expression"
+          },
+          "systemId" : {
+            "expression" : "event.systemId",
+            "type" : "expression"
+          },
+          "temperature" : {
+            "expression" : "(event.temperature - 32) * (5/9)",
+            "type" : "expression"
+          }
+        }
+      },
+      "downstreamUUIDS" : {
+        "MalfunctionDetected" : "30f7bae3-d15d-4fea-923d-88275464de31",
+        "TransformedEvent" : "f7a7191d-8ae6-4e33-8a30-3d7b28379785"
+      },
+      "isComponent" : true,
+      "pattern" : "DetectMalfunction",
+      "rootTask" : "DetectMalfunction_Transformation",
+      "uuid" : "3e017767-930f-4781-b046-0ef6af7927b1"
+    },
+    "DetectMalfunction_Transformation" : {
+      "componentReference" : "DetectMalfunction",
+      "configuration" : {
+        "childStreams" : [ "OutboundTemp", "DetectMalfunction_generateAlertMessage" ],
+        "enableBadging" : true,
+        "parentStreams" : [ "EventStream" ],
+        "transformInPlace" : false,
+        "transformation" : {
+          "speed" : {
+            "expression" : "event.speed",
+            "type" : "expression"
+          },
+          "systemId" : {
+            "expression" : "event.systemId",
+            "type" : "expression"
+          },
+          "temperature" : {
+            "expression" : "(event.temperature - 32) * (5/9)",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReference" : "TransformedEvent",
+      "isRoot" : true,
+      "name" : "DetectMalfunction_Transformation",
+      "pattern" : "Transformation",
+      "patternVersion" : 1
+    },
+    "DetectMalfunction_generateAlertMessage" : {
+      "componentReference" : "DetectMalfunction",
+      "configuration" : {
+        "childStreams" : [ "DetectMalfunction_isMalfunctionDetected" ],
+        "enableBadging" : true,
+        "parameters" : {
+          "maxSpeed" : 45,
+          "maxTemp" : 100,
+          "sensorEvent" : "event"
+        },
+        "parentStreams" : [ "DetectMalfunction_Transformation" ],
+        "procedure" : "com.vantiq.engines.EngineMonitor.generateAlertMessage",
+        "returnBehavior" : "Use Return Value as Outbound event"
+      },
+      "name" : "DetectMalfunction_generateAlertMessage",
+      "pattern" : "Procedure",
+      "patternVersion" : 1
+    },
+    "DetectMalfunction_isMalfunctionDetected" : {
+      "componentReference" : "DetectMalfunction",
+      "configuration" : {
+        "childStreams" : [ "EngineMalfunction" ],
+        "condition" : "event.alertMsg != null",
+        "enableBadging" : true,
+        "parentStreams" : [ "DetectMalfunction_generateAlertMessage" ],
+        "upsert" : false
+      },
+      "downstreamReference" : "MalfunctionDetected",
+      "name" : "DetectMalfunction_isMalfunctionDetected",
+      "pattern" : "Filter",
+      "patternVersion" : 1
+    },
+    "EngineMalfunction" : {
+      "configuration" : {
+        "parentStreams" : [ "DetectMalfunction_isMalfunctionDetected" ],
+        "topic" : "/com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound"
+      },
+      "pattern" : "PublishToTopic",
+      "patternVersion" : 1,
+      "uuid" : "f86ea40c-25a9-4bd2-80b7-6826c1f33342"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "DetectMalfunction" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/com.vantiq.engines.EngineMonitor/TempEvent/handler/inbound",
+        "parentStreams" : [ ]
+      },
+      "pattern" : "EventStream",
+      "patternVersion" : 1,
+      "uuid" : "30793167-bcf1-4d14-89c5-644c28873fbf"
+    },
+    "OutboundTemp" : {
+      "configuration" : {
+        "parentStreams" : [ "DetectMalfunction_Transformation" ],
+        "topic" : "/outbound/engine/temp"
+      },
+      "pattern" : "PublishToTopic",
+      "patternVersion" : 1,
+      "uuid" : "748a0fba-f45b-41c4-9286-bcf3e898e9d2"
+    }
+  },
+  "boundService" : "com.vantiq.engines.EngineMonitor",
+  "collaboratorRoles" : [ ],
+  "compilerOCC" : 7,
+  "currentState" : {
+    "code" : "success"
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
+  "resourceBinding" : {
+    "optionalResources" : [ ],
+    "requiredResources" : [ {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_generateAlertMessage"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EventStream"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation"
+    }, {
+      "resource" : "system.eventstreams",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_isMalfunctionDetected"
+    }, {
+      "resource" : "procedures",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_generateAlertMessage"
+    }, {
+      "resource" : "rules",
+      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
+    } ]
+  }
+}
