@@ -180,7 +180,7 @@ com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate
         });
 };
 
-com.vantiq.engines.EngineMonitor.generateAlertMessage = function (sensorEvent, maxSpeed, maxTemp, successCallback, failureCallback) {
+com.vantiq.engines.EngineMonitor.generateAlertMessage = function (systemId, sensorEvent, maxSpeed, maxTemp, successCallback, failureCallback) {
     var procedureName = "com.vantiq.engines.EngineMonitor.generateAlertMessage";
     //
     //  Create an instance of the Http class to execute our server request
@@ -202,7 +202,7 @@ com.vantiq.engines.EngineMonitor.generateAlertMessage = function (sensorEvent, m
     //  parameters are given in the same order as in the Procedure definition (e.g. 'args = [10,20];').
     //  'args' must not be null.
     //
-    var args = {sensorEvent:sensorEvent, maxSpeed:maxSpeed, maxTemp:maxTemp};
+    var args = {systemId:systemId, sensorEvent:sensorEvent, maxSpeed:maxSpeed, maxTemp:maxTemp};
 
     //
     //  Execute the asynchronous server request. This expects 4 parameters:

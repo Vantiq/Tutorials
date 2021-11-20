@@ -1,11 +1,6 @@
 {
   "active" : true,
   "ars_relationships" : [ ],
-  "boundEventTypePaths" : {
-    "SpeedEvent" : "/topics/com.vantiq.engines.EngineMonitor/SpeedEvent/handler/inbound",
-    "TempEvent" : "/topics/com.vantiq.engines.EngineMonitor/TempEvent/handler/inbound"
-  },
-  "compilerOCC" : 82,
   "description" : "Determine if there is an engine malfunction.",
   "eventTypes" : {
     "EngineMalfunction" : {
@@ -41,51 +36,75 @@
     }
   },
   "globalType" : null,
-  "hasExplicitInterface" : true,
+  "interface" : [ {
+    "name" : "DetectMalfunction_UpdateTempAndSpeedStateGet",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "DetectMalfunction_UpdateTempAndSpeedStateReset",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "DetectMalfunction_UpdateTempAndSpeedStateUpdate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "generateAlertMessage",
+    "parameters" : [ {
+      "multi" : false,
+      "name" : "systemId",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "sensorEvent",
+      "required" : false,
+      "type" : "Object"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "maxSpeed",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "maxTemp",
+      "required" : false,
+      "type" : "Integer"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
+    }
+  }, {
+    "name" : "writeEngineStatus",
+    "parameters" : [ ]
+  } ],
   "name" : "com.vantiq.engines.EngineMonitor",
   "partitionedType" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "types",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState"
-    }, {
-      "relationships" : [ "implemented_by" ],
-      "resource" : "topics",
-      "resourceId" : "/outbound/engine/speed"
-    }, {
-      "resource" : "types",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent"
-    }, {
-      "relationships" : [ "implemented_by" ],
-      "resource" : "topics",
-      "resourceId" : "/com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound"
-    }, {
-      "resource" : "types",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
-    }, {
-      "relationships" : [ "implemented_by" ],
-      "resource" : "topics",
-      "resourceId" : "/outbound/engine/temp"
-    }, {
-      "resource" : "types",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent"
-    }, {
-      "relationships" : [ "implemented_by" ],
-      "resource" : "collaborationtypes",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler"
-    }, {
-      "resource" : "topics",
-      "resourceId" : "/com.vantiq.engines.EngineMonitor/TempEvent/handler/inbound"
-    }, {
-      "relationships" : [ "implemented_by" ],
-      "resource" : "collaborationtypes",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler"
-    }, {
-      "resource" : "topics",
-      "resourceId" : "/com.vantiq.engines.EngineMonitor/SpeedEvent/handler/inbound"
-    } ]
-  },
   "scheduledProcedures" : {
     "writeEngineStatus" : {
       "interval" : 60000

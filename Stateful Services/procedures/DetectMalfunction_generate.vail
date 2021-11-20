@@ -44,7 +44,7 @@ if (maxSpeed == null) {
 }
 
 // Set the procedure parameters to be passed into the generateAlertMessageProcedure 
-config.parameters = {sensorEvent: "event", maxSpeed: maxSpeed, maxTemp: maxTemp}
+config.parameters = {systemId: "event.systemId", sensorEvent: "event", maxSpeed: maxSpeed, maxTemp: maxTemp}
 
 //
 // END CUSTOM COMPONENT GENERATION CODE

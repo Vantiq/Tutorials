@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 0,
-      "scale" : 0.4761414653676765,
-      "translate" : [ 291.7652133157614, 16.263206472380816 ]
+      "scale" : 1.2438984771573605,
+      "translate" : [ 279.0559236992386, 42.21480456852794 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -158,14 +158,10 @@
     "runtimeProperties" : [ ],
     "templates" : [ "DetectMalfunction.generate" ]
   },
-  "currentState" : {
-    "code" : "success"
-  },
   "disableBadging" : false,
   "entityRoles" : [ ],
   "isComponent" : true,
   "isEventHandler" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "DetectMalfunction",
-  "resourceBinding" : null
+  "name" : "DetectMalfunction"
 }

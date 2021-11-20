@@ -1,6 +1,6 @@
 package com.vantiq.engines
 //determine if an engine is malfunctioning
-PROCEDURE EngineMonitor.generateAlertMessage(sensorEvent Object, maxSpeed Integer, maxTemp Integer):com.vantiq.engines.EngineMonitor_EngineMalfunction
+PROCEDURE EngineMonitor.generateAlertMessage(systemId String, sensorEvent Object, maxSpeed Integer, maxTemp Integer):com.vantiq.engines.EngineMonitor_EngineMalfunction
 // define the outbound event using the inbound systemId. Assume no alertMsg by default
 var malfunctionEvent = {
    systemId: sensorEvent.systemId,
