@@ -1,0 +1,10 @@
+{
+  "ars_relationships" : [ ],
+  "description" : "All unit tests for resource com_vantiq_engines_EngineMonitor",
+  "name" : "com_vantiq_engines_EngineMonitor_UnitTestSuite",
+  "resource" : "/services/com.vantiq.engines.EngineMonitor",
+  "runPolicies" : [ {
+    "type" : "manual"
+  } ],
+  "tests" : [ ]
+}
