@@ -1,13 +1,16 @@
 {
   "ars_public" : false,
+  "ars_relationships" : [ ],
   "controllers" : {
     "client" : { },
     "dataStream" : {
-      "SystemHUD" : { },
-      "SystemStatus" : { }
+      "AlertMessages" : { },
+      "EngineSpeed" : { },
+      "EngineTemp" : { }
     },
     "page" : { }
   },
+  "isComponent" : false,
   "isLaunchable" : false,
   "models" : {
     "dataObjects" : {
@@ -23,40 +26,63 @@
       "dataObjectName" : null,
       "dataTypeList" : [ {
         "label" : null,
-        "type" : "com.vantiq.engines.SystemStatus"
+        "type" : "com.vantiq.engines.EngineMonitor_SpeedEvent"
       } ],
       "isDeleteOp" : false,
       "isInsertOp" : false,
-      "isUpdateOp" : true,
+      "isUpdateOp" : false,
       "maxRecords" : 0,
-      "name" : "SystemStatus",
+      "name" : "EngineSpeed",
       "pauseAtStartup" : false,
-      "property" : null,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "OutboundSpeed",
       "sortByProperty" : null,
       "sortDescending" : false,
-      "type" : 1,
+      "type" : 8,
       "updateInterval" : 60,
-      "uuid" : "5de62336-afe6-4345-b674-06c14a9e3874",
+      "uuid" : "4a94144b-352c-4fc9-960a-a09c5e792f07",
       "v" : 1
     }, {
       "advancedWhereClause" : null,
       "dataObjectName" : null,
       "dataTypeList" : [ {
         "label" : null,
-        "type" : "com.vantiq.engines.SystemHUD"
+        "type" : "com.vantiq.engines.EngineMonitor_TempEvent"
       } ],
       "isDeleteOp" : false,
       "isInsertOp" : false,
-      "isUpdateOp" : true,
+      "isUpdateOp" : false,
       "maxRecords" : 0,
-      "name" : "SystemHUD",
+      "name" : "EngineTemp",
       "pauseAtStartup" : false,
-      "property" : null,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "OutboundTemp",
       "sortByProperty" : null,
       "sortDescending" : false,
-      "type" : 1,
+      "type" : 8,
       "updateInterval" : 60,
-      "uuid" : "f59d8e3c-8eb0-4800-89a8-e1a720e2a5e9",
+      "uuid" : "ba3da713-abfb-49e0-b5fd-539b87123fc1",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "AlertMessages",
+      "pauseAtStartup" : false,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "EngineMalfunction",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "2846e8ef-c8ec-41c7-8c4c-2899c692c6f7",
       "v" : 1
     } ]
   },
@@ -71,14 +97,18 @@
     } ],
     "activeTab" : "add",
     "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
     "description" : "",
     "docAssets" : [ ],
-    "productV" : "7.6",
+    "productV" : "7.8",
     "showCategoryButtons" : false,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : false,
     "showCategoryLayout" : false,
     "showGridWhileEditing" : false,
+    "tabPaneCollapsed" : true,
     "theme" : {
       "backgroundColor" : "#ffffff",
       "borderColor" : "#8b572a",
@@ -95,6 +125,17 @@
       "v" : 3
     },
     "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/my/response/topic",
+      "type" : "publishes"
+    }, {
+      "resource" : "services",
+      "resourceId" : "com.vantiq.engines.EngineMonitor",
+      "type" : "subscribes_to"
+    } ]
   },
   "targetDevice" : "all",
   "userList" : [ ],

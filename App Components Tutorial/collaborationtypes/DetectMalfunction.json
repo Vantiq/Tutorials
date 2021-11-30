@@ -1,0 +1,150 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.8085840986351414,
+      "translate" : [ 267.8390166588908, 26.961408163783034 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Transformation" : {
+      "configuration" : {
+        "childStreams" : [ "generateAlertMessage" ],
+        "parentStreams" : [ ],
+        "transformInPlace" : false,
+        "transformation" : "${transformation}",
+        "upsert" : false
+      },
+      "isRoot" : true,
+      "pattern" : "Transformation",
+      "patternVersion" : 1
+    },
+    "generateAlertMessage" : {
+      "configuration" : {
+        "childStreams" : [ "isMalfunctionDetected" ],
+        "parameters" : "${parameters}",
+        "parentStreams" : [ ],
+        "procedure" : "com.vantiq.engines.EngineMonitor.generateAlertMessage",
+        "returnBehavior" : "Use Return Value as Outbound event"
+      },
+      "pattern" : "Procedure",
+      "patternVersion" : 1
+    },
+    "isMalfunctionDetected" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "condition" : "event.alertMsg != null",
+        "parentStreams" : [ ],
+        "upsert" : false
+      },
+      "pattern" : "Filter",
+      "patternVersion" : 1
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "componentInterface" : {
+    "appOnly" : true,
+    "ars_properties" : {
+      "category" : "standard",
+      "deprecated" : false,
+      "description" : "",
+      "patternGroup" : "app.component"
+    },
+    "configurationProperties" : {
+      "maxSpeed" : {
+        "default" : "45",
+        "order" : 0,
+        "type" : "Integer"
+      },
+      "maxTemperature" : {
+        "default" : "210",
+        "order" : 1,
+        "type" : "Integer"
+      },
+      "transformation" : {
+        "default" : {
+          "speed" : {
+            "expression" : "event.speed",
+            "type" : "expression"
+          },
+          "systemId" : {
+            "expression" : "event.systemId",
+            "type" : "expression"
+          },
+          "temperature" : {
+            "expression" : "event.temperature",
+            "type" : "expression"
+          }
+        },
+        "description" : "A transformation that will be applied to events streaming from the parent node before producing outbound events for consumption by child nodes.",
+        "multi" : false,
+        "order" : 2,
+        "required" : false,
+        "type" : "Union",
+        "typeChoices" : [ {
+          "description" : "A procedure to invoke that will transform the event data.",
+          "name" : "Transformation Procedure",
+          "parameters" : [ {
+            "multi" : false,
+            "required" : true,
+            "type" : "Object"
+          } ],
+          "type" : "ArsComponent"
+        }, {
+          "description" : "Use visual transformations to map inputs to outputs without writing your own transformation procedure.",
+          "name" : "Visual Transformation",
+          "type" : "ExpressionObject"
+        } ]
+      }
+    },
+    "events" : {
+      "MalfunctionDetected" : {
+        "configurationProperty" : "childStreams",
+        "name" : "MalfunctionDetected",
+        "schema" : "inherit",
+        "taskName" : "isMalfunctionDetected"
+      },
+      "TransformedEvent" : {
+        "configurationProperty" : "childStreams",
+        "name" : "TransformedEvent",
+        "schema" : "inherit",
+        "taskName" : "Transformation"
+      }
+    },
+    "isComponent" : true,
+    "name" : "DetectMalfunction",
+    "results" : { },
+    "runtimeProperties" : [ ],
+    "templates" : [ "DetectMalfunction.generate" ]
+  },
+  "currentState" : {
+    "code" : "success"
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : true,
+  "isEventHandler" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "DetectMalfunction",
+  "resourceBinding" : null
+}

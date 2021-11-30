@@ -1,0 +1,84 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.7129103195777913,
+      "translate" : [ 154.7349570196109, 254.3054029289762 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : { },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EngineMalfunction" : {
+      "configuration" : {
+        "parentStreams" : [ "isMalfunctionDetected" ],
+        "topic" : "/com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound"
+      },
+      "pattern" : "PublishToTopic",
+      "patternVersion" : 1,
+      "uuid" : "168a8b1a-1ac5-4c54-8184-344e6536066c"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "generateAlertMessage", "OutboundSpeed" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/com.vantiq.engines.EngineMonitor/SpeedEvent/handler/inbound",
+        "parentStreams" : [ ]
+      },
+      "pattern" : "EventStream",
+      "patternVersion" : 1,
+      "uuid" : "bf7d9c5e-fcec-4f35-b84d-6111152828e2"
+    },
+    "OutboundSpeed" : {
+      "configuration" : {
+        "parentStreams" : [ "EventStream" ],
+        "topic" : "/outbound/engine/speed"
+      },
+      "pattern" : "PublishToTopic",
+      "patternVersion" : 1,
+      "uuid" : "d8b23334-cf3e-4301-952c-71872f850c7d"
+    },
+    "generateAlertMessage" : {
+      "configuration" : {
+        "childStreams" : [ "isMalfunctionDetected" ],
+        "parentStreams" : [ "EventStream" ],
+        "procedure" : "com.vantiq.engines.EngineMonitor.generateAlertMessage"
+      },
+      "pattern" : "Procedure",
+      "patternVersion" : 1,
+      "uuid" : "71824e9a-daac-44f9-9011-63ee6a0a91b7"
+    },
+    "isMalfunctionDetected" : {
+      "configuration" : {
+        "childStreams" : [ "EngineMalfunction" ],
+        "condition" : "event.alertMsg != null",
+        "parentStreams" : [ "generateAlertMessage" ],
+        "upsert" : false
+      },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "9a2f247a-59eb-4908-8ef6-6e4f733841b1"
+    }
+  },
+  "boundService" : "com.vantiq.engines.EngineMonitor",
+  "collaboratorRoles" : [ ],
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler"
+}

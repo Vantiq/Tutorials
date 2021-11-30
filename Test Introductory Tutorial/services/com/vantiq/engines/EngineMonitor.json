@@ -1,0 +1,58 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "description" : "Determine if there is an engine malfunction",
+  "eventTypes" : {
+    "EngineMalfunction" : {
+      "description" : "alerts produced when an engine is malfunctioning",
+      "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
+      "implementingEventPath" : "/topics//com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound",
+      "isReliable" : false
+    },
+    "OutboundSpeed" : {
+      "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
+      "implementingEventPath" : "/topics//outbound/engine/speed",
+      "isReliable" : false
+    },
+    "OutboundTemp" : {
+      "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
+      "implementingEventPath" : "/topics//outbound/engine/temp",
+      "isReliable" : false
+    },
+    "SpeedEvent" : {
+      "description" : "events produced by the engine speed sensors",
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler"
+    },
+    "TempEvent" : {
+      "description" : "events produced by the engine temperature sensors",
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler"
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "given a temperature or speed event, determine the alert message (if any)",
+    "name" : "generateAlertMessage",
+    "parameters" : [ {
+      "description" : "speed or temperature sensor event",
+      "multi" : false,
+      "name" : "sensorEvent",
+      "required" : false,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "resolvedType" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
+      "type" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
+    }
+  } ],
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "partitionedType" : null,
+  "scheduledProcedures" : { }
+}

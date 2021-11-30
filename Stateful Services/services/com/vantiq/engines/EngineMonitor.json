@@ -1,0 +1,113 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "description" : "Determine if there is an engine malfunction.",
+  "eventTypes" : {
+    "EngineMalfunction" : {
+      "description" : "alerts produced when an engine is malfunctioning",
+      "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
+      "implementingEventPath" : "/topics//com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound",
+      "isReliable" : false
+    },
+    "OutboundSpeed" : {
+      "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
+      "implementingEventPath" : "/topics//outbound/engine/speed",
+      "isReliable" : false
+    },
+    "OutboundTemp" : {
+      "direction" : "OUTBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
+      "implementingEventPath" : "/topics//outbound/engine/temp",
+      "isReliable" : false
+    },
+    "SpeedEvent" : {
+      "description" : "events produced by the engine speed sensors",
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler"
+    },
+    "TempEvent" : {
+      "description" : "events produced by the engine temperature sensors",
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler"
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "DetectMalfunction_UpdateTempAndSpeedStateGet",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "DetectMalfunction_UpdateTempAndSpeedStateReset",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "DetectMalfunction_UpdateTempAndSpeedStateUpdate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "generateAlertMessage",
+    "parameters" : [ {
+      "multi" : false,
+      "name" : "systemId",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "sensorEvent",
+      "required" : false,
+      "type" : "Object"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "maxSpeed",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "maxTemp",
+      "required" : false,
+      "type" : "Integer"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
+    }
+  }, {
+    "name" : "writeEngineStatus",
+    "parameters" : [ ]
+  } ],
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "partitionedType" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
+  "scheduledProcedures" : {
+    "writeEngineStatus" : {
+      "interval" : 60000
+    }
+  }
+}
