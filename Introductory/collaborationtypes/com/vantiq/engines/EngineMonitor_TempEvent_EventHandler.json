@@ -78,42 +78,10 @@
   },
   "boundService" : "com.vantiq.engines.EngineMonitor",
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 4,
-  "currentState" : {
-    "code" : "success"
-  },
   "disableBadging" : false,
   "entityRoles" : [ ],
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.generateAlertMessage"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EventStream"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.isMalfunctionDetected"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.generateAlertMessage"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.OutboundTemp"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.EngineMalfunction"
-    } ]
-  }
+  "name" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler"
 }

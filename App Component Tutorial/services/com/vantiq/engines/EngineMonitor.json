@@ -1,7 +1,7 @@
 {
   "active" : true,
   "ars_relationships" : [ ],
-  "description" : "Determine if there is an engine malfunction",
+  "description" : "Determine if there is an engine malfunction.",
   "eventTypes" : {
     "EngineMalfunction" : {
       "description" : "alerts produced when an engine is malfunctioning",
@@ -44,6 +44,16 @@
       "name" : "sensorEvent",
       "required" : false,
       "type" : "Object"
+    }, {
+      "multi" : false,
+      "name" : "maxSpeed",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "multi" : false,
+      "name" : "maxTemp",
+      "required" : false,
+      "type" : "Integer"
     } ],
     "returnType" : {
       "multi" : false,

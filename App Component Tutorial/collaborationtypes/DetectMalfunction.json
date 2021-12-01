@@ -137,14 +137,10 @@
     "runtimeProperties" : [ ],
     "templates" : [ "DetectMalfunction.generate" ]
   },
-  "currentState" : {
-    "code" : "success"
-  },
   "disableBadging" : false,
   "entityRoles" : [ ],
   "isComponent" : true,
   "isEventHandler" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "DetectMalfunction",
-  "resourceBinding" : null
+  "name" : "DetectMalfunction"
 }
