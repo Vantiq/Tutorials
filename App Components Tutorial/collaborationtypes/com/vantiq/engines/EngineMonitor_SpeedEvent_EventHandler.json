@@ -132,48 +132,10 @@
   },
   "boundService" : "com.vantiq.engines.EngineMonitor",
   "collaboratorRoles" : [ ],
-  "compilerOCC" : 5,
-  "currentState" : {
-    "code" : "success"
-  },
   "disableBadging" : false,
   "entityRoles" : [ ],
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
-  "resourceBinding" : {
-    "optionalResources" : [ ],
-    "requiredResources" : [ {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_generateAlertMessage"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.EngineMalfunction"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.EventStream"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_isMalfunctionDetected"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_Transformation"
-    }, {
-      "resource" : "system.eventstreams",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.OutboundSpeed"
-    }, {
-      "resource" : "procedures",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_Transformation"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.EngineMalfunction"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_generateAlertMessage"
-    }, {
-      "resource" : "rules",
-      "resourceId" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.OutboundSpeed"
-    } ]
-  }
+  "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler"
 }
