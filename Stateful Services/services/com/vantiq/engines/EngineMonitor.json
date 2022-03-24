@@ -37,7 +37,7 @@
   },
   "globalType" : null,
   "interface" : [ {
-    "name" : "DetectMalfunction_UpdateTempAndSpeedStateGet",
+    "name" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
     "parameters" : [ {
       "description" : null,
       "multi" : false,
@@ -46,7 +46,7 @@
       "type" : "String"
     } ]
   }, {
-    "name" : "DetectMalfunction_UpdateTempAndSpeedStateReset",
+    "name" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
     "parameters" : [ {
       "description" : null,
       "multi" : false,
@@ -55,7 +55,40 @@
       "type" : "String"
     } ]
   }, {
-    "name" : "DetectMalfunction_UpdateTempAndSpeedStateUpdate",
+    "name" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
     "parameters" : [ {
       "description" : null,
       "multi" : false,

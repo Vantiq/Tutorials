@@ -1,10 +1,12 @@
 package com.vantiq.engines
-//Write the engine state to the database
 multi partition PROCEDURE EngineMonitor.writeEngineStatus()
 
-log.debug("Writing DetectMalfunction_UpdateTempAndSpeedState to the database")
+log.debug("Writing Engine State to the database")
 
-var state = DetectMalfunction_UpdateTempAndSpeedState
-for (engineState in state) {
+for (engineState in EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateState) {
+    UPSERT com.vantiq.engines.SystemStatus(engineState.value)
+}
+
+for (engineState in EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateState) {
     UPSERT com.vantiq.engines.SystemStatus(engineState.value)
 }

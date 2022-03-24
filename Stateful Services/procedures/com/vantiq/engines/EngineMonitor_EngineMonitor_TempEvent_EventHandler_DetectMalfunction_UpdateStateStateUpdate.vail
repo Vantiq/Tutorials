@@ -1,0 +1,26 @@
+package com.vantiq.engines
+
+PROCEDURE EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate(partitionKey String, event Object) 
+    WITH ars_dependentResource="/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler", properties = {taskName: "DetectMalfunction_UpdateState", isGenerated: true}, 
+    updateInterface = true
+
+var result = EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateState.compute(partitionKey, (id, current) => {
+    var state = current
+
+    // If there wasn't a previous value for this id, create a new entry with the systemId
+if (!state) {
+    state = {systemId : event.systemId}
+}
+
+// If this event included a sensor reading, update the stored sensor reading
+if (event["temperature"]) {
+    state["temperature"] = event["temperature"]
+}
+
+    return state
+})
+
+// Log and return outcome
+log.debug("Updating state for key: {} new state: {}.", [partitionKey, result])
+
+return result

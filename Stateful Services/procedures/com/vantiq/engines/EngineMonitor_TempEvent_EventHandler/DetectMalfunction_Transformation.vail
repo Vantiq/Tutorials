@@ -1,6 +1,7 @@
 package com.vantiq.engines.EngineMonitor_TempEvent_EventHandler
 
-PROCEDURE DetectMalfunction_Transformation(event) HIDDEN WITH ars_dependentResource="/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler"
+PROCEDURE DetectMalfunction_Transformation(event) HIDDEN WITH ars_dependentResource="/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler", 
+    properties = {taskName: "DetectMalfunction_Transformation", isGenerated: true}
 
 var newEvent = {}
 

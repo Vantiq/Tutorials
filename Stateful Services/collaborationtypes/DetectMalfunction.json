@@ -5,8 +5,8 @@
     "dataVersion" : 5,
     "graph" : {
       "lastZoomRequest" : 0,
-      "scale" : 1.2438984771573605,
-      "translate" : [ 279.0559236992386, 42.21480456852794 ]
+      "scale" : 0.6306313264050434,
+      "translate" : [ 307.77734076927175, 32.373737124658916 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -29,10 +29,11 @@
   "assembly" : {
     "SplitBySystemId" : {
       "configuration" : {
-        "childStreams" : [ "UpdateTempAndSpeed" ],
+        "childStreams" : [ "UpdateState" ],
         "groupBy" : "event.systemId",
         "parentStreams" : [ ]
       },
+      "downstreamReferences" : { },
       "pattern" : "SplitByGroup",
       "patternVersion" : 1
     },
@@ -44,19 +45,24 @@
         "transformation" : "${transformation}",
         "upsert" : false
       },
+      "downstreamReferences" : { },
       "isRoot" : true,
       "pattern" : "Transformation",
       "patternVersion" : 1
     },
-    "UpdateTempAndSpeed" : {
+    "UpdateState" : {
       "configuration" : {
         "childStreams" : [ "generateAlertMessage" ],
+        "imports" : null,
         "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
         "parentStreams" : [ ],
         "procedure" : {
-          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a temperature sensor reading, update the stored temperature\nif (event.temperature) {\n    state.temperature = event.temperature\n}\n\n// If this event included a speed sensor reading, update the speed temperature\nif (event.speed) {\n    state.speed = event.speed\n}"
-        }
+          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a sensor reading, update the stored sensor reading\nif (event[\"${sensorProp}\"]) {\n    state[\"${sensorProp}\"] = event[\"${sensorProp}\"]\n}"
+        },
+        "schema" : null
       },
+      "downstreamReferences" : { },
       "pattern" : "AccumulateState",
       "patternVersion" : 1
     },
@@ -68,6 +74,7 @@
         "procedure" : "com.vantiq.engines.EngineMonitor.generateAlertMessage",
         "returnBehavior" : "Use Return Value as Outbound event"
       },
+      "downstreamReferences" : { },
       "pattern" : "Procedure",
       "patternVersion" : 1
     },
@@ -78,6 +85,7 @@
         "parentStreams" : [ ],
         "upsert" : false
       },
+      "downstreamReferences" : { },
       "pattern" : "Filter",
       "patternVersion" : 1
     }
@@ -101,6 +109,12 @@
         "default" : "210",
         "order" : 1,
         "type" : "Integer"
+      },
+      "sensorProp" : {
+        "default" : null,
+        "order" : 3,
+        "required" : true,
+        "type" : "String"
       },
       "transformation" : {
         "default" : {
