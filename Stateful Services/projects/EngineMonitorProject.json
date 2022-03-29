@@ -67,30 +67,6 @@
     "source" : "app/DetectMalfunction",
     "target" : "procedure/DetectMalfunction.generate"
   }, {
-    "source" : "app/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate"
-  }, {
-    "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet"
-  }, {
-    "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate"
-  }, {
-    "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateReset"
-  }, {
-    "source" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate",
-    "target" : "services/com.vantiq.engines.EngineMonitor"
-  }, {
-    "source" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet",
-    "target" : "services/com.vantiq.engines.EngineMonitor"
-  }, {
-    "source" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateReset",
-    "target" : "services/com.vantiq.engines.EngineMonitor"
-  }, {
-    "source" : "app/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate"
-  }, {
     "source" : "services/com.vantiq.engines.EngineMonitor",
     "target" : "procedure/com.vantiq.engines.EngineMonitor.writeEngineStatus"
   }, {
@@ -103,22 +79,64 @@
     "source" : "services/com.vantiq.engines.EngineMonitor",
     "target" : "type/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState"
   }, {
+    "source" : "topic//com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "topic//outbound/engine/temp",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "topic//outbound/engine/speed",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
     "source" : "services/com.vantiq.engines.EngineMonitor",
     "target" : "document/com.vantiq.engines.EngineMonitor.js"
   }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet"
+  }, {
+    "source" : "app/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate"
+  }, {
     "source" : "app/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
     "target" : "app/DetectMalfunction"
+  }, {
+    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
   }, {
     "source" : "app/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
     "target" : "app/DetectMalfunction"
   }, {
-    "source" : "app/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_Transformation"
+    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset"
+  }, {
+    "source" : "services/com.vantiq.engines.EngineMonitor",
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet"
+  }, {
+    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
   }, {
     "source" : "app/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation"
+    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate"
   }, {
-    "source" : "test/EngineMonitorTest",
+    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "target" : "services/com.vantiq.engines.EngineMonitor"
+  }, {
+    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
     "target" : "services/com.vantiq.engines.EngineMonitor"
   } ],
   "name" : "EngineMonitorProject",
@@ -144,14 +162,14 @@
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "tile",
-    "openFolders" : [ "client", "VIEWROOT/com.vantiq.engines", "VIEWROOT/com.vantiq.engines/services", "document", "VIEWROOT/com.vantiq.engines/type" ],
+    "openFolders" : [ "client", "document" ],
     "rootViewFlavor" : 5,
     "service" : "EngineMonitor",
     "showGrid" : true,
     "tileColumns" : 2,
     "tileRows" : 2,
     "type" : "dev",
-    "v" : 4,
+    "v" : 5,
     "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
@@ -188,13 +206,13 @@
     "label" : "DetectMalfunction",
     "name" : "DetectMalfunction",
     "resourceReference" : "/collaborationtypes/DetectMalfunction",
-    "timestamp" : "2021-11-20T00:23:26.629Z",
+    "timestamp" : "2022-03-24T21:52:43.045Z",
     "type" : 12
   }, {
     "label" : "DetectMalfunction",
     "name" : "DetectMalfunction",
     "resourceReference" : "/system.services/DetectMalfunction",
-    "timestamp" : "2021-11-20T00:21:40.860Z",
+    "timestamp" : "2022-03-24T17:32:00.690Z",
     "type" : 63
   }, {
     "label" : "DetectMalfunction.generate",
@@ -202,52 +220,73 @@
     "procedureName" : "generate",
     "resourceReference" : "/procedures/DetectMalfunction.generate",
     "serviceName" : "DetectMalfunction",
-    "timestamp" : "2021-11-20T00:23:24.585Z",
+    "timestamp" : "2022-03-24T21:52:07.094Z",
     "type" : 3
   }, {
     "label" : "EngineMonitorTest",
     "name" : "EngineMonitorTest",
     "resourceReference" : "/system.tests/EngineMonitorTest",
-    "timestamp" : "2021-11-20T00:00:35.463Z",
+    "timestamp" : "2022-03-24T21:50:56.479Z",
     "type" : 56
   }, {
     "label" : "EngineSimulation",
     "name" : "EngineSimulation",
     "resourceReference" : "/system.clients/EngineSimulation",
-    "timestamp" : "2021-11-20T00:21:40.816Z",
+    "timestamp" : "2022-03-24T21:50:44.845Z",
     "type" : 15
   }, {
     "label" : "com.vantiq.engines.EngineMonitor",
     "name" : "com.vantiq.engines.EngineMonitor",
     "resourceReference" : "/system.services/com.vantiq.engines.EngineMonitor",
-    "timestamp" : "2021-11-20T00:24:18.516Z",
+    "timestamp" : "2022-03-24T21:54:38.808Z",
     "type" : 63
   }, {
-    "label" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet",
-    "name" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet",
+    "name" : "com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
     "packageName" : "com.vantiq.engines",
-    "procedureName" : "DetectMalfunction_UpdateTempAndSpeedStateGet",
-    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateGet",
+    "procedureName" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
     "serviceName" : "EngineMonitor",
-    "timestamp" : "2021-11-20T00:21:54.213Z",
+    "timestamp" : "2022-03-24T21:53:09.514Z",
     "type" : 3
   }, {
-    "label" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateReset",
-    "name" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateReset",
+    "name" : "com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
     "packageName" : "com.vantiq.engines",
-    "procedureName" : "DetectMalfunction_UpdateTempAndSpeedStateReset",
-    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateReset",
+    "procedureName" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
     "serviceName" : "EngineMonitor",
-    "timestamp" : "2021-11-20T00:21:54.565Z",
+    "timestamp" : "2022-03-24T21:53:10.175Z",
     "type" : 3
   }, {
-    "label" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate",
-    "name" : "com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate",
+    "name" : "com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
     "packageName" : "com.vantiq.engines",
-    "procedureName" : "DetectMalfunction_UpdateTempAndSpeedStateUpdate",
-    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.DetectMalfunction_UpdateTempAndSpeedStateUpdate",
+    "procedureName" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
+    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
     "serviceName" : "EngineMonitor",
-    "timestamp" : "2021-11-20T00:21:54.437Z",
+    "timestamp" : "2022-03-24T21:53:09.832Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "packageName" : "com.vantiq.engines",
+    "procedureName" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
+    "serviceName" : "EngineMonitor",
+    "timestamp" : "2022-03-24T21:53:38.108Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "packageName" : "com.vantiq.engines",
+    "procedureName" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
+    "serviceName" : "EngineMonitor",
+    "timestamp" : "2022-03-24T21:53:42.964Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
+    "packageName" : "com.vantiq.engines",
+    "procedureName" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
+    "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
+    "serviceName" : "EngineMonitor",
+    "timestamp" : "2022-03-24T21:53:41.125Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.engines.EngineMonitor.generateAlertMessage",
@@ -256,11 +295,12 @@
     "procedureName" : "generateAlertMessage",
     "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.generateAlertMessage",
     "serviceName" : "EngineMonitor",
-    "timestamp" : "2021-11-20T00:23:40.236Z",
+    "timestamp" : "2022-03-24T21:50:46.014Z",
     "type" : 3
   }, {
     "name" : "com.vantiq.engines.EngineMonitor.js",
     "resourceReference" : "/documents/com.vantiq.engines.EngineMonitor.js",
+    "timestamp" : "2022-03-24T21:50:58.080Z",
     "type" : 19
   }, {
     "label" : "com.vantiq.engines.EngineMonitor.writeEngineStatus",
@@ -269,69 +309,77 @@
     "procedureName" : "writeEngineStatus",
     "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor.writeEngineStatus",
     "serviceName" : "EngineMonitor",
-    "timestamp" : "2021-11-20T00:08:56.409Z",
+    "timestamp" : "2022-03-24T21:53:58.345Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
     "name" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
     "resourceReference" : "/types/com.vantiq.engines.EngineMonitor_EngineMalfunction",
-    "timestamp" : "2021-11-20T00:00:28.491Z",
+    "timestamp" : "2022-03-24T17:32:00.182Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
     "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
     "resourceReference" : "/types/com.vantiq.engines.EngineMonitor_SpeedEvent",
-    "timestamp" : "2021-11-20T00:00:28.491Z",
+    "timestamp" : "2022-03-24T17:32:00.182Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
     "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
     "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
+    "timestamp" : "2022-03-24T21:53:08.058Z",
     "type" : 12
   }, {
+    "label" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_Transformation",
     "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_Transformation",
     "packageName" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler",
     "procedureName" : "DetectMalfunction_Transformation",
     "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.DetectMalfunction_Transformation",
-    "timestamp" : "2021-11-20T00:24:13.252Z",
+    "timestamp" : "2022-03-24T21:50:50.931Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
     "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
     "resourceReference" : "/types/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
-    "timestamp" : "2021-11-20T00:21:44.300Z",
+    "timestamp" : "2022-03-24T21:50:51.676Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineMonitor_TempEvent",
     "name" : "com.vantiq.engines.EngineMonitor_TempEvent",
     "resourceReference" : "/types/com.vantiq.engines.EngineMonitor_TempEvent",
-    "timestamp" : "2021-11-20T00:00:28.491Z",
+    "timestamp" : "2022-03-24T17:32:00.183Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
     "name" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
     "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
-    "timestamp" : "2021-11-20T00:24:15.508Z",
+    "timestamp" : "2022-03-24T21:53:32.049Z",
     "type" : 12
   }, {
+    "label" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation",
     "name" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation",
     "packageName" : "com.vantiq.engines.EngineMonitor_TempEvent_EventHandler",
     "procedureName" : "DetectMalfunction_Transformation",
     "resourceReference" : "/procedures/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler.DetectMalfunction_Transformation",
-    "timestamp" : "2021-11-20T00:24:16.011Z",
+    "timestamp" : "2022-03-24T21:50:50.903Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.engines.EngineSimulation",
     "name" : "com.vantiq.engines.EngineSimulation",
     "resourceReference" : "/system.eventgenerators/com.vantiq.engines.EngineSimulation",
-    "timestamp" : "2021-11-20T00:00:35.009Z",
+    "timestamp" : "2022-03-24T21:50:56.129Z",
     "type" : 65
   }, {
     "label" : "com.vantiq.engines.SystemStatus",
     "name" : "com.vantiq.engines.SystemStatus",
     "resourceReference" : "/types/com.vantiq.engines.SystemStatus",
-    "timestamp" : "2021-11-20T00:21:40.698Z",
+    "timestamp" : "2022-03-24T21:50:44.455Z",
     "type" : 1
+  }, {
+    "name" : "localhost_8080_sc_CatalogNamespace1",
+    "resourceReference" : "/system.catalogs/localhost_8080_sc_CatalogNamespace1",
+    "timestamp" : "2022-02-09T19:34:35.469Z",
+    "type" : 67
   } ],
   "tools" : [ {
     "isPinned" : false,

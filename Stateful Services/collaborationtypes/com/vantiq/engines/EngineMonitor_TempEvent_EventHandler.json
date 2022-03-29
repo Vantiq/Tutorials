@@ -4,9 +4,9 @@
   "ars_properties" : {
     "dataVersion" : 5,
     "graph" : {
-      "lastZoomRequest" : 0,
-      "scale" : 1.942931883110178,
-      "translate" : [ 381.482531924414, 107.11990155921936 ]
+      "lastZoomRequest" : 3,
+      "scale" : 0.8106741531488469,
+      "translate" : [ 159.1708032573189, 57.21910162213837 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -33,6 +33,7 @@
         "maxSpeed" : 45,
         "maxTemperature" : 100,
         "parentStreams" : [ ],
+        "sensorProp" : "temperature",
         "transformation" : {
           "speed" : {
             "expression" : "event.speed",
@@ -48,6 +49,7 @@
           }
         }
       },
+      "downstreamReferences" : { },
       "downstreamUUIDS" : {
         "MalfunctionDetected" : "30f7bae3-d15d-4fea-923d-88275464de31",
         "TransformedEvent" : "f7a7191d-8ae6-4e33-8a30-3d7b28379785"
@@ -60,11 +62,12 @@
     "DetectMalfunction_SplitBySystemId" : {
       "componentReference" : "DetectMalfunction",
       "configuration" : {
-        "childStreams" : [ "DetectMalfunction_UpdateTempAndSpeed" ],
+        "childStreams" : [ "DetectMalfunction_UpdateState" ],
         "enableBadging" : true,
         "groupBy" : "event.systemId",
         "parentStreams" : [ "DetectMalfunction_Transformation" ]
       },
+      "downstreamReferences" : { },
       "name" : "DetectMalfunction_SplitBySystemId",
       "pattern" : "SplitByGroup",
       "patternVersion" : 1
@@ -93,23 +96,28 @@
         "upsert" : false
       },
       "downstreamReference" : "TransformedEvent",
+      "downstreamReferences" : { },
       "isRoot" : true,
       "name" : "DetectMalfunction_Transformation",
       "pattern" : "Transformation",
       "patternVersion" : 1
     },
-    "DetectMalfunction_UpdateTempAndSpeed" : {
+    "DetectMalfunction_UpdateState" : {
       "componentReference" : "DetectMalfunction",
       "configuration" : {
         "childStreams" : [ "DetectMalfunction_generateAlertMessage" ],
         "enableBadging" : true,
+        "imports" : null,
         "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
         "parentStreams" : [ "DetectMalfunction_SplitBySystemId" ],
         "procedure" : {
-          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a temperature sensor reading, update the stored temperature\nif (event.temperature) {\n    state.temperature = event.temperature\n}\n\n// If this event included a speed sensor reading, update the speed temperature\nif (event.speed) {\n    state.speed = event.speed\n}"
-        }
+          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a sensor reading, update the stored sensor reading\nif (event[\"temperature\"]) {\n    state[\"temperature\"] = event[\"temperature\"]\n}"
+        },
+        "schema" : null
       },
-      "name" : "DetectMalfunction_UpdateTempAndSpeed",
+      "downstreamReferences" : { },
+      "name" : "DetectMalfunction_UpdateState",
       "pattern" : "AccumulateState",
       "patternVersion" : 1
     },
@@ -124,10 +132,11 @@
           "sensorEvent" : "event",
           "systemId" : "event.systemId"
         },
-        "parentStreams" : [ "DetectMalfunction_UpdateTempAndSpeed" ],
+        "parentStreams" : [ "DetectMalfunction_UpdateState" ],
         "procedure" : "com.vantiq.engines.EngineMonitor.generateAlertMessage",
         "returnBehavior" : "Use Return Value as Outbound event"
       },
+      "downstreamReferences" : { },
       "name" : "DetectMalfunction_generateAlertMessage",
       "pattern" : "Procedure",
       "patternVersion" : 1
@@ -142,6 +151,7 @@
         "upsert" : false
       },
       "downstreamReference" : "MalfunctionDetected",
+      "downstreamReferences" : { },
       "name" : "DetectMalfunction_isMalfunctionDetected",
       "pattern" : "Filter",
       "patternVersion" : 1
@@ -151,6 +161,7 @@
         "parentStreams" : [ "DetectMalfunction_isMalfunctionDetected" ],
         "topic" : "/com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound"
       },
+      "downstreamReferences" : { },
       "pattern" : "PublishToTopic",
       "patternVersion" : 1,
       "uuid" : "f86ea40c-25a9-4bd2-80b7-6826c1f33342"
@@ -162,6 +173,7 @@
         "inboundResourceId" : "/com.vantiq.engines.EngineMonitor/TempEvent/handler/inbound",
         "parentStreams" : [ ]
       },
+      "downstreamReferences" : { },
       "pattern" : "EventStream",
       "patternVersion" : 1,
       "uuid" : "30793167-bcf1-4d14-89c5-644c28873fbf"
@@ -171,6 +183,7 @@
         "parentStreams" : [ "DetectMalfunction_Transformation" ],
         "topic" : "/outbound/engine/temp"
       },
+      "downstreamReferences" : { },
       "pattern" : "PublishToTopic",
       "patternVersion" : 1,
       "uuid" : "748a0fba-f45b-41c4-9286-bcf3e898e9d2"
