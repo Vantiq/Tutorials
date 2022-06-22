@@ -1,0 +1,76 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "b59c7348-085e-4dee-9346-4c1d1f7629bf", "adeb5b64-24cc-466e-8c9e-67ccea0911d6" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "buttonBackgroundColor" : "#ff0000",
+      "buttonLabel" : "Please Send Help",
+      "buttonLabelColor" : "#ffffff",
+      "buttonLabelSize" : 16,
+      "buttonLabelStyle" : "bold",
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "Button4",
+      "row" : -1,
+      "submitValue" : 1,
+      "type" : "Button",
+      "uuid" : "adeb5b64-24cc-466e-8c9e-67ccea0911d6",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "buttonBackgroundColor" : "platform",
+      "buttonLabel" : "I'm OK",
+      "buttonLabelColor" : "#ffffff",
+      "buttonLabelSize" : 16,
+      "buttonLabelStyle" : "bold",
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "Button3",
+      "row" : -1,
+      "submitValue" : 0,
+      "type" : "Button",
+      "uuid" : "b59c7348-085e-4dee-9346-4c1d1f7629bf",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : {
+    "rootArray" : [ "c38a94de-88d3-4b3c-8661-b1973e32deb2" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "buttonBackgroundColor" : "default",
+      "buttonLabel" : "Submit",
+      "buttonLabelColor" : "default",
+      "buttonLabelSize" : 14,
+      "buttonLabelStyle" : "bold",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "Button1",
+      "submitValue" : 100,
+      "type" : "Button",
+      "uuid" : "c38a94de-88d3-4b3c-8661-b1973e32deb2",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "hasFooter" : true,
+  "layoutType" : "mobile",
+  "responseResource" : "topics",
+  "responseResourceId" : "/vantiq/systemmodel/PatientResponse/submitTopic",
+  "responseTopic" : "/vantiq/systemmodel/PatientResponse/submitTopic"
+}

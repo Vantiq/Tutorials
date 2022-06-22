@@ -1,0 +1,420 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "lastZoomRequest" : 0,
+      "scale" : 0.5120678612504223,
+      "translate" : [ 666.6996379265378, 17.293848489561242 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "collab" : true,
+        "custom" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "mobile" : true,
+        "modifiers" : true,
+        "nlp" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : true,
+      "serviceGroupOpenHash" : {
+        "Chat" : true,
+        "Notification" : true,
+        "Recommend" : true,
+        "Utils" : true
+      }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AssignCollaborator" : {
+      "configuration" : {
+        "childStreams" : [ "TrackResponder" ],
+        "imports" : null,
+        "parentStreams" : [ "NotifyFirstResponder:response" ],
+        "roleName" : "firstResponder",
+        "roleType" : "collaborator"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Assign",
+      "patternVersion" : 1,
+      "uuid" : "3d1ee379-912d-495e-9315-6458be13cd6c"
+    },
+    "AssignPatient" : {
+      "configuration" : {
+        "childStreams" : [ "NotifyPatient" ],
+        "imports" : null,
+        "parentStreams" : [ "isUnusualHeartRate" ],
+        "roleName" : "patient",
+        "roleType" : "entity"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Assign",
+      "patternVersion" : 1,
+      "uuid" : "ad41cf72-bca2-4b06-99af-f6bc8c1468ff"
+    },
+    "AwaitResponse" : {
+      "configuration" : {
+        "childStreams" : [ "GetPayloadId" ],
+        "delay" : "1 minute",
+        "imports" : null,
+        "parentStreams" : [ "NotifyFirstResponder" ]
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Delay",
+      "patternVersion" : 1,
+      "uuid" : "34418a0a-1590-4319-8f14-ca403477d5c3"
+    },
+    "CollabComplete" : {
+      "configuration" : {
+        "parentStreams" : [ "ResponderArrived" ],
+        "status" : "completed"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "CollaborationStatus",
+      "patternVersion" : 1,
+      "uuid" : "5d4d575e-d0f8-47cc-85d6-2b3784652add"
+    },
+    "CollabFailed" : {
+      "configuration" : {
+        "parentStreams" : [ "NoResponder" ],
+        "status" : "failed"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "CollaborationStatus",
+      "patternVersion" : 1,
+      "uuid" : "6ebc102a-1323-4f07-9884-2924697822ce"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "isUnusualHeartRate" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/patient.monitoring.HeartRate/MonitorReading/handler/inbound",
+        "parentStreams" : [ ]
+      },
+      "description" : "w",
+      "downstreamReferences" : { },
+      "pattern" : "EventStream",
+      "patternVersion" : 1,
+      "uuid" : "17dafa82-936d-416f-81c5-f87867003413"
+    },
+    "FindResponders" : {
+      "configuration" : {
+        "candidateType" : "FirstResponder",
+        "childStreams" : [ "LoopWhile" ],
+        "imports" : null,
+        "matchDirectives" : {
+          "excludeProperties" : [ ],
+          "maxDistance" : 20040000,
+          "maxRecommendations" : 10
+        },
+        "matchType" : null,
+        "parentStreams" : [ "GetPatient" ],
+        "recommendationProcedure" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "recommendedResponders"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Recommend",
+      "patternVersion" : 1,
+      "uuid" : "c4a8633b-7079-4dfe-991b-1e8ea415ce86"
+    },
+    "GetFirstResponder" : {
+      "configuration" : {
+        "childStreams" : [ "NoResponder" ],
+        "parentStreams" : [ "LoopWhile:onceFalse" ],
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "firstResponder",
+        "taskName" : "firstResponder"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "GetCollaboration",
+      "patternVersion" : 1,
+      "uuid" : "3ed55662-dba4-4638-a69e-0446a1429485"
+    },
+    "GetPatient" : {
+      "configuration" : {
+        "childStreams" : [ "FindResponders" ],
+        "parentStreams" : [ "HelpNeeded", "NotifyPatient:responseTimeout" ],
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "taskName" : "patient"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "GetCollaboration",
+      "patternVersion" : 1,
+      "uuid" : "9ca8fbd7-e1b2-412d-8e41-bfd1a820e9b3"
+    },
+    "GetPatientLocation" : {
+      "configuration" : {
+        "childStreams" : [ "ResponderArrived" ],
+        "parentStreams" : [ "TrackResponder:update" ],
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "patient",
+        "taskName" : "patient"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "GetCollaboration",
+      "patternVersion" : 1,
+      "uuid" : "f2a07826-feb2-4183-9899-a7f62c6998d3"
+    },
+    "GetPayloadId" : {
+      "configuration" : {
+        "childStreams" : [ "NoResponse" ],
+        "parentStreams" : [ "AwaitResponse" ],
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "taskName" : "NotifyFirstResponder"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "GetCollaboration",
+      "patternVersion" : 1,
+      "uuid" : "478b26e8-e9b5-48f0-b9f3-dab1e64201c2"
+    },
+    "HelpNeeded" : {
+      "configuration" : {
+        "childStreams" : [ "GetPatient" ],
+        "condition" : "event.submitValue == 1",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "NotifyPatient:response" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "95aedb54-73c7-4a4a-b760-c88bf2a44b2d"
+    },
+    "LoopWhile" : {
+      "configuration" : {
+        "condition" : "counter < length(event.recommendedResponders) && (HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet(collaborationId, \"firstResponder\") == null)",
+        "counterProperty" : "counter",
+        "imports" : null,
+        "maxRetryCount" : null,
+        "onceFalseStreams" : [ "GetFirstResponder" ],
+        "parentStreams" : [ "FindResponders" ],
+        "whileTrueStreams" : [ "NotifyFirstResponder" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "onceFalse" : "b516b97b-8591-4691-822b-fc90130e193d",
+        "whileTrue" : "d143d7d5-f362-4edd-809a-fdf66a652d61"
+      },
+      "name" : "LoopWhile",
+      "pattern" : "LoopWhile",
+      "patternVersion" : 1,
+      "uuid" : "aa438041-cccb-485c-8cfa-c4af67ff5bb0"
+    },
+    "NoResponder" : {
+      "configuration" : {
+        "childStreams" : [ "CollabFailed" ],
+        "condition" : "event.firstResponder == null",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "GetFirstResponder" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "b164ba2f-4867-4e1f-aa18-cc1c33dd9f4e"
+    },
+    "NoResponse" : {
+      "configuration" : {
+        "childStreams" : [ "RetractMsg" ],
+        "condition" : "event.responses == null || event.responses.size() == 0",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "GetPayloadId" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "0a8b7bf2-d288-4bae-8429-f5cf2c10f287"
+    },
+    "NotifyFirstResponder" : {
+      "configuration" : {
+        "body" : "event.recommendedResponders[event.counter].name + \": Are you available to assist \" + event.name + \"?\"",
+        "childStreams" : [ "AwaitResponse" ],
+        "clientName" : "FirstResponderResponse",
+        "imports" : null,
+        "maxResponseTime" : "",
+        "parentStreams" : [ "LoopWhile:whileTrue" ],
+        "pushSourceName" : null,
+        "responseStreams" : [ "AssignCollaborator" ],
+        "title" : "event.name + \" Heart Rate Alert (\" + event.heartRate + \")\"",
+        "users" : [ {
+          "type" : "VAIL Expression",
+          "value" : "event.recommendedResponders[event.counter].username"
+        } ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "response" : "27715a60-ecae-452e-8405-975cb159f628"
+      },
+      "pattern" : "Notify",
+      "patternVersion" : 1,
+      "uuid" : "41b0e8ed-6667-4bb3-8bee-24a993a14310"
+    },
+    "NotifyPatient" : {
+      "configuration" : {
+        "body" : "\"An unusual heart rate (\" + event.heartRate + \") has been detected\"",
+        "clientName" : "PatientResponse",
+        "imports" : null,
+        "maxResponseTime" : "90 seconds",
+        "parentStreams" : [ "AssignPatient" ],
+        "pushSourceName" : null,
+        "responseStreams" : [ "OK", "HelpNeeded" ],
+        "responseTimeoutStreams" : [ "GetPatient" ],
+        "title" : "\"Heart Rate Alert\"",
+        "users" : [ {
+          "type" : "VAIL Expression",
+          "value" : "event.patientId"
+        } ]
+      },
+      "description" : "ss",
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "response" : "63a76ed9-15db-42c0-8f37-80953753d6ca",
+        "responseTimeout" : "8898cd9f-3b67-43f2-84be-9224f7f88967"
+      },
+      "pattern" : "Notify",
+      "patternVersion" : 1,
+      "uuid" : "93647c35-788d-4d1f-a6a8-9532a3522871"
+    },
+    "OK" : {
+      "configuration" : {
+        "childStreams" : [ "PatientOK" ],
+        "condition" : "event.submitValue == 0",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "NotifyPatient:response" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "8b3a10b2-6569-44d4-8e6b-57b5ee13014f"
+    },
+    "PatientOK" : {
+      "configuration" : {
+        "parentStreams" : [ "OK" ],
+        "status" : "completed"
+      },
+      "downstreamReferences" : { },
+      "pattern" : "CollaborationStatus",
+      "patternVersion" : 1,
+      "uuid" : "f491fcc0-2ebb-4214-8f31-1bc4b4bf60bd"
+    },
+    "ResponderArrived" : {
+      "configuration" : {
+        "childStreams" : [ "CollabComplete" ],
+        "condition" : "geoDistance(event.location, event.patient.location) < 50",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "GetPatientLocation" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "dd170da3-8334-44cc-8d46-c2343334c419"
+    },
+    "RetractMsg" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "payloadId" : "event.payloadId"
+        },
+        "parentStreams" : [ "NoResponse" ],
+        "partitionKey" : "",
+        "procedure" : "system.Notification.retractPayload",
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Procedure",
+      "patternVersion" : 1,
+      "uuid" : "d0acb5e4-d8b5-48c7-8a12-36e09380c008"
+    },
+    "TrackResponder" : {
+      "configuration" : {
+        "desiredAccuracy" : null,
+        "destination" : null,
+        "destinationRadius" : null,
+        "disclosure" : null,
+        "distanceFilter" : null,
+        "imports" : null,
+        "level" : null,
+        "parentStreams" : [ "AssignCollaborator" ],
+        "pingInterval" : null,
+        "updateStreams" : [ "GetPatientLocation" ],
+        "users" : [ {
+          "type" : "VAIL Expression",
+          "value" : "event.username"
+        } ],
+        "waypoints" : null
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "update" : "4b30259f-bfb7-48dd-9bbf-26f678f12d97"
+      },
+      "pattern" : "Track",
+      "patternVersion" : 1,
+      "uuid" : "8b1ddc19-23c2-41f8-b04d-defbb8b5c435"
+    },
+    "isUnusualHeartRate" : {
+      "configuration" : {
+        "childStreams" : [ "AssignPatient" ],
+        "condition" : "event.heartRate < 40 OR event.heartRate > 200",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "EventStream" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "pattern" : "Filter",
+      "patternVersion" : 1,
+      "uuid" : "bfafe3fc-093d-48d9-920c-e5e376af2edb"
+    }
+  },
+  "boundService" : "patient.monitoring.HeartRate",
+  "collaboratorRoles" : [ "firstResponder" ],
+  "disableBadging" : false,
+  "entityRoles" : [ {
+    "name" : "patient",
+    "type" : "patient.monitoring.HeartRate_MonitorReading"
+  } ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "patient.monitoring.HeartRate_MonitorReading_EventHandler",
+  "writeFrequency" : "5 minutes"
+}

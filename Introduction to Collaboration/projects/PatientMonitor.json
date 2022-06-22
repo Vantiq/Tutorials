@@ -1,0 +1,320 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "document/patient.monitoring.HeartRate.js"
+  }, {
+    "source" : "topic//patient.monitoring.HeartRate/MonitorReading/handler/inbound",
+    "target" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "type/patient.monitoring.HeartRate_MonitorReading"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "topic//patient.monitoring.HeartRate/MonitorReading/handler/inbound"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.generateHeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.generateHeartRate",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "client/PatientResponse",
+    "target" : "topic//vantiq/systemmodel/PatientResponse/submitTopic"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "type/patient.monitoring.HeartRate.PartitionedAppState"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerWrite"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerReset"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGetAll"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "type/patient.monitoring.HeartRate_MonitorReading"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerWrite",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerReset",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGetAll",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "client/FirstResponderResponse",
+    "target" : "topic//vantiq/systemmodel/FirstResponderResponse/submitTopic"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "target" : "procedure/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet"
+  } ],
+  "name" : "PatientMonitor",
+  "options" : {
+    "description" : "Introduction to Collaborations\n\nThis project contains the patient.monitoringHeartRate Service which defines the MonitorReading Event Handler. This event Handler detects when a patient has an unusal and dangerous heart rate. First, the patient is asked whether they are okay or require assistance. If the patient replies that they require assistance or does not reply within 90 seconds, a first responder is notified and dispatched.\n",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "client" ],
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 1,
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
+  },
+  "resources" : [ {
+    "label" : "/patient.monitoring.HeartRate/MonitorReading/handler/inbound",
+    "name" : "/patient.monitoring.HeartRate/MonitorReading/handler/inbound",
+    "resourceReference" : "/topics//patient.monitoring.HeartRate/MonitorReading/handler/inbound",
+    "type" : 10
+  }, {
+    "label" : "/vantiq/systemmodel/FirstResponderResponse/submitTopic",
+    "name" : "/vantiq/systemmodel/FirstResponderResponse/submitTopic",
+    "resourceReference" : "/topics//vantiq/systemmodel/FirstResponderResponse/submitTopic",
+    "type" : 10
+  }, {
+    "label" : "/vantiq/systemmodel/PatientResponse/submitTopic",
+    "name" : "/vantiq/systemmodel/PatientResponse/submitTopic",
+    "resourceReference" : "/topics//vantiq/systemmodel/PatientResponse/submitTopic",
+    "type" : 10
+  }, {
+    "label" : "FirstResponderResponse",
+    "name" : "FirstResponderResponse",
+    "resourceReference" : "/system.clients/FirstResponderResponse",
+    "timestamp" : "2022-06-21T16:20:09.307Z",
+    "type" : 15
+  }, {
+    "label" : "PatientResponse",
+    "name" : "PatientResponse",
+    "resourceReference" : "/system.clients/PatientResponse",
+    "timestamp" : "2022-06-02T23:43:32.854Z",
+    "type" : 15
+  }, {
+    "label" : "patient.monitoring.HeartRate",
+    "name" : "patient.monitoring.HeartRate",
+    "resourceReference" : "/system.services/patient.monitoring.HeartRate",
+    "timestamp" : "2022-06-02T23:46:59.311Z",
+    "type" : 63
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerGet",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:46:58.741Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGetAll",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGetAll",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerGetAll",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerGetAll",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:47:02.039Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerReset",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerReset",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerReset",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerReset",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:47:00.762Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:46:58.795Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:46:58.972Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:46:58.668Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:47:01.229Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerWrite",
+    "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerWrite",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerWrite",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerWrite",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-02T23:47:01.720Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.PartitionedAppState",
+    "name" : "patient.monitoring.HeartRate.PartitionedAppState",
+    "resourceReference" : "/types/patient.monitoring.HeartRate.PartitionedAppState",
+    "timestamp" : "2022-06-02T23:42:10.129Z",
+    "type" : 1
+  }, {
+    "label" : "patient.monitoring.HeartRate.generateHeartRate",
+    "name" : "patient.monitoring.HeartRate.generateHeartRate",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "generateHeartRate",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.generateHeartRate",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2022-06-21T16:15:59.576Z",
+    "type" : 3
+  }, {
+    "label" : "patient.monitoring.HeartRate.js",
+    "name" : "patient.monitoring.HeartRate.js",
+    "resourceReference" : "/documents/patient.monitoring.HeartRate.js",
+    "timestamp" : "2022-06-02T23:47:00.520Z",
+    "type" : 19
+  }, {
+    "label" : "patient.monitoring.HeartRate_MonitorReading",
+    "name" : "patient.monitoring.HeartRate_MonitorReading",
+    "resourceReference" : "/types/patient.monitoring.HeartRate_MonitorReading",
+    "timestamp" : "2022-06-02T23:38:56.259Z",
+    "type" : 1
+  }, {
+    "label" : "patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "name" : "patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "resourceReference" : "/collaborationtypes/patient.monitoring.HeartRate_MonitorReading_EventHandler",
+    "timestamp" : "2022-06-21T16:20:35.075Z",
+    "type" : 12
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "patient.monitoring.HeartRate",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "resourceKey" : "services/patient.monitoring.HeartRate",
+    "state" : 2,
+    "type" : 109
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "services/patient.monitoring.HeartRate" ]
+  } ]
+}

@@ -1,0 +1,17 @@
+package patient.monitoring
+PROCEDURE HeartRate.generateHeartRate(heartRate Integer)
+
+var event = {
+    name: Context.preferredUsername(),
+    patientId: Context.username(),
+    heartRate: heartRate,
+    location: {
+        "type": "Point",
+        "coordinates": [
+            -122.272680,
+            37.810370
+         ]
+    }
+}
+
+PUBLISH event TO SERVICE EVENT "patient.monitoring.HeartRate/MonitorReading"
