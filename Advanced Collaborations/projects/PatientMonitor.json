@@ -200,7 +200,7 @@
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "tile",
-    "openFolders" : [ "client", "patient.monitoring", "patient.monitoring/services", "services/patient.monitoring.HeartRate" ],
+    "openFolders" : [ "VIEWROOT/patient.monitoring", "client", "services/patient.monitoring.HeartRate" ],
     "rootViewFlavor" : 5,
     "showGrid" : true,
     "tileColumns" : 2,
@@ -224,6 +224,11 @@
     "name" : "/vantiq/systemmodel/PatientResponse/submitTopic",
     "resourceReference" : "/topics//vantiq/systemmodel/PatientResponse/submitTopic",
     "type" : 10
+  }, {
+    "name" : "FirstResponder",
+    "resourceReference" : "/types/FirstResponder",
+    "timestamp" : "2022-06-03T18:33:36.034Z",
+    "type" : 1
   }, {
     "label" : "FirstResponderResponse",
     "name" : "FirstResponderResponse",
@@ -270,6 +275,7 @@
     "timestamp" : "2022-06-22T01:03:00.482Z",
     "type" : 3
   }, {
+    "label" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignCollaborator",
     "name" : "patient.monitoring.HeartRate.Active_HeartRate_MonitorReading_EventHandlerUpdateAssignCollaborator",
     "packageName" : "patient.monitoring",
     "procedureName" : "Active_HeartRate_MonitorReading_EventHandlerUpdateAssignCollaborator",
@@ -427,7 +433,7 @@
     "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
-      "c" : 0,
+      "c" : 1,
       "r" : 0
     },
     "state" : 2,
@@ -436,7 +442,7 @@
     "isPinned" : false,
     "name" : "patient.monitoring.HeartRate",
     "pane" : {
-      "c" : 1,
+      "c" : 0,
       "r" : 0
     },
     "resourceKey" : "services/patient.monitoring.HeartRate",

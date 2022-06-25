@@ -1,0 +1,22 @@
+[ {
+  "location" : {
+    "coordinates" : [ -122.4194, 37.7749 ],
+    "type" : "Point"
+  },
+  "name" : "John Smith",
+  "username" : "<YOUR USERNAME>"
+}, {
+  "location" : {
+    "coordinates" : [ -122.27304, 37.8715 ],
+    "type" : "Point"
+  },
+  "name" : "Sarah Brown",
+  "username" : "<YOUR USERNAME>"
+}, {
+  "location" : {
+    "coordinates" : [ -122.2892, 37.8395 ],
+    "type" : "Point"
+  },
+  "name" : "Robert Johnson",
+  "username" : "<YOUR USERNAME>"
+} ]
