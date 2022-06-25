@@ -92,21 +92,6 @@
       "type" : "Object"
     } ]
   }, {
-    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateLoopWhile",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    }, {
-      "description" : null,
-      "multi" : false,
-      "name" : "event",
-      "required" : false,
-      "type" : "Object"
-    } ]
-  }, {
     "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
     "parameters" : [ {
       "default" : null,
