@@ -1,0 +1,220 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "MonitorReading" : {
+      "direction" : "INBOUND",
+      "eventSchema" : "patient.monitoring.HeartRate_MonitorReading",
+      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate_MonitorReading_EventHandler/EventStream"
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerGet",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "taskName",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerGetAll",
+    "parameters" : [ ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerReset",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateAssignCollaborator",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateAssignPatient",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateFindResponders",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyFirstResponder",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateNotifyPatient",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateStatus",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "collaborationId",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "status",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerUpdateTrackResponder",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "Active_HeartRate_MonitorReading_EventHandlerWrite",
+    "parameters" : [ ]
+  }, {
+    "name" : "HeartRate_MonitorReading_EventHandler_LoopWhileStateGet",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "HeartRate_MonitorReading_EventHandler_LoopWhileStateReset",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "HeartRate_MonitorReading_EventHandler_LoopWhileStateUpdate",
+    "parameters" : [ {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "partitionKey",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "default" : null,
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "generateHeartRate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "heartRate",
+      "required" : false,
+      "type" : "Integer"
+    } ]
+  } ],
+  "name" : "patient.monitoring.HeartRate",
+  "partitionedType" : "patient.monitoring.HeartRate.PartitionedAppState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : {
+    "Active_HeartRate_MonitorReading_EventHandlerWrite" : {
+      "interval" : 300000
+    }
+  }
+}

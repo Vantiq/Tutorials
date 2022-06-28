@@ -1,0 +1,56 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "23a76b50-c9d9-4090-8666-e07d4be75625" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "buttonBackgroundColor" : "platform",
+      "buttonLabel" : "On my way to ${patient.name}!",
+      "buttonLabelColor" : "#ffffff",
+      "buttonLabelSize" : 22,
+      "buttonLabelStyle" : "bold",
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "Button7",
+      "row" : -1,
+      "submitValue" : 0,
+      "type" : "Button",
+      "uuid" : "23a76b50-c9d9-4090-8666-e07d4be75625",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : {
+    "rootArray" : [ "8e4aae13-033a-4444-8ddc-6edbb65312b1" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "buttonBackgroundColor" : "default",
+      "buttonLabel" : "Submit",
+      "buttonLabelColor" : "default",
+      "buttonLabelSize" : 14,
+      "buttonLabelStyle" : "bold",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "Button5",
+      "submitValue" : 100,
+      "type" : "Button",
+      "uuid" : "8e4aae13-033a-4444-8ddc-6edbb65312b1",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "hasFooter" : true,
+  "layoutType" : "mobile",
+  "responseResource" : "topics",
+  "responseResourceId" : "/vantiq/systemmodel/FirstResponderResponse/submitTopic",
+  "responseTopic" : "/vantiq/systemmodel/FirstResponderResponse/submitTopic"
+}
