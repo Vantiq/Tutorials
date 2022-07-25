@@ -58,7 +58,7 @@
         "outboundProperty" : null,
         "parentStreams" : [ ],
         "procedure" : {
-          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a sensor reading, update the stored sensor reading\nif (event[\"${sensorProp}\"]) {\n    state[\"${sensorProp}\"] = event[\"${sensorProp}\"]\n}"
+          "vailScript" : "// If there wasn't a previous value for this id, create a new entry with the systemId\nif (!state) {\n    state = {systemId : event.systemId}\n}\n\n// If this event included a sensor reading, update the stored sensor reading\nif (event[\"${sensorProp}\"]) {\n    // Clone the object here to avoid Concurrent Modification Exceptions\n    // from updating and reading the same object at once\n    state = Object.clone(state)\n    state[\"${sensorProp}\"] = event[\"${sensorProp}\"]\n}"
         },
         "schema" : null
       },
