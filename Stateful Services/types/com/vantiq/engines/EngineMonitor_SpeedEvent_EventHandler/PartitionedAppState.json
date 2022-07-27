@@ -9,21 +9,7 @@
       "type" : "Object",
       "unique" : false
     },
-    "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateTempAndSpeedState" : {
-      "encrypted" : false,
-      "multi" : false,
-      "required" : false,
-      "type" : "Object",
-      "unique" : false
-    },
     "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateState" : {
-      "encrypted" : false,
-      "multi" : false,
-      "required" : false,
-      "type" : "Object",
-      "unique" : false
-    },
-    "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateTempAndSpeedState" : {
       "encrypted" : false,
       "multi" : false,
       "required" : false,
