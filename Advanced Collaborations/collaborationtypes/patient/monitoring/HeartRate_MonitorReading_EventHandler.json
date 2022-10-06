@@ -100,8 +100,9 @@
     "EventStream" : {
       "configuration" : {
         "childStreams" : [ "isUnusualHeartRate" ],
-        "inboundResource" : "topics",
-        "inboundResourceId" : "/patient.monitoring.HeartRate/MonitorReading/handler/inbound",
+        "inboundResource" : "services",
+        "inboundResourceId" : "patient.monitoring.HeartRate",
+        "eventTypeName": "MonitorReading",
         "parentStreams" : [ ]
       },
       "description" : "w",

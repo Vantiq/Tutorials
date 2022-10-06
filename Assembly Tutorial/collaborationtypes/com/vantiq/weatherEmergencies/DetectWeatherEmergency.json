@@ -1,6 +1,8 @@
 {
   "active" : true,
   "appType" : true,
+  "isEventHandler": true,
+  "boundService": "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
   "ars_properties" : {
     "dataVersion" : 5,
     "graph" : {

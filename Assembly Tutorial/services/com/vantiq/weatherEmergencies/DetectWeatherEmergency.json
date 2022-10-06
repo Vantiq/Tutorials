@@ -5,23 +5,19 @@
     "EvacuationEvent" : {
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
-      "implementingEventPath" : "/topics//evacuation/event",
       "isReliable" : false
     },
     "WarningEvent" : {
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.weatherEmergencies.weatherMessage",
-      "implementingEventPath" : "/topics//warning/event",
       "isReliable" : false
-    },
-    "WeatherReadings" : {
-      "direction" : "INBOUND",
-      "eventSchema" : "com.vantiq.weatherEmergencies.weatherReading",
-      "implementingEventPath" : "/sources/com.vantiq.weatherEmergencies.weather"
     }
   },
   "globalType" : null,
   "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+  "internalEventHandlers": [
+    "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  ],
   "partitionedType" : null,
   "resourceBinding" : {
     "optionalResources" : [ ],

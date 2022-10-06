@@ -119,19 +119,18 @@
       "patternVersion" : 1
     },
     "EngineMalfunction" : {
-      "configuration" : {
-        "parentStreams" : [ "DetectMalfunction_isMalfunctionDetected" ],
-        "topic" : "/com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound"
-      },
-      "pattern" : "PublishToTopic",
-      "patternVersion" : 1,
-      "uuid" : "f86ea40c-25a9-4bd2-80b7-6826c1f33342"
+     "pattern": "PublishToService",
+        "configuration": {
+           "service": "com.vantiq.engines.EngineMonitor",
+           "eventTypeName": "EngineMalfunction"
+        }
     },
     "EventStream" : {
       "configuration" : {
         "childStreams" : [ "DetectMalfunction" ],
-        "inboundResource" : "topics",
-        "inboundResourceId" : "/com.vantiq.engines.EngineMonitor/TempEvent/handler/inbound",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.engines.EngineMonitor",
+        "eventTypeName": "TempEvent",
         "parentStreams" : [ ]
       },
       "pattern" : "EventStream",
@@ -139,13 +138,11 @@
       "uuid" : "30793167-bcf1-4d14-89c5-644c28873fbf"
     },
     "OutboundTemp" : {
-      "configuration" : {
-        "parentStreams" : [ "DetectMalfunction_Transformation" ],
-        "topic" : "/outbound/engine/temp"
-      },
-      "pattern" : "PublishToTopic",
-      "patternVersion" : 1,
-      "uuid" : "748a0fba-f45b-41c4-9286-bcf3e898e9d2"
+      "pattern": "PublishToService",
+        "configuration": {
+           "service": "com.vantiq.engines.EngineMonitor",
+           "eventTypeName": "OutboundTemp"
+        }
     }
   },
   "boundService" : "com.vantiq.engines.EngineMonitor",
