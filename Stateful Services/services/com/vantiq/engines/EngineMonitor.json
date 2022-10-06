@@ -7,19 +7,16 @@
       "description" : "alerts produced when an engine is malfunctioning",
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
-      "implementingEventPath" : "/topics//com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound",
       "isReliable" : false
     },
     "OutboundSpeed" : {
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
-      "implementingEventPath" : "/topics//outbound/engine/speed",
       "isReliable" : false
     },
     "OutboundTemp" : {
       "direction" : "OUTBOUND",
       "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
-      "implementingEventPath" : "/topics//outbound/engine/temp",
       "isReliable" : false
     },
     "SpeedEvent" : {
