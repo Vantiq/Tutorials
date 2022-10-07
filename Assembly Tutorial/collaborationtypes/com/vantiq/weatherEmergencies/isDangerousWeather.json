@@ -121,14 +121,11 @@
     "runtimeProperties" : [ ],
     "templates" : [ "AppGeneration.generateComponent" ]
   },
-  "currentState" : {
-    "code" : "success"
-  },
   "description" : "test1",
   "disableBadging" : false,
   "entityRoles" : [ ],
   "isComponent" : true,
+  "isEventHandler" : false,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.weatherEmergencies.isDangerousWeather",
-  "resourceBinding" : null
+  "name" : "com.vantiq.weatherEmergencies.isDangerousWeather"
 }
