@@ -23,13 +23,14 @@
   "ars_relationships" : [ ],
   "assembly" : {
     "EngineMalfunction" : {
-      "configuration" : {
-        "parentStreams" : [ "isMalfunctionDetected" ],
-        "topic" : "/com.vantiq.engines.EngineMonitor/EngineMalfunction/outbound"
-      },
-      "pattern" : "PublishToTopic",
-      "patternVersion" : 1,
-      "uuid" : "168a8b1a-1ac5-4c54-8184-344e6536066c"
+       "pattern": "PublishToEventType",
+            "configuration": {
+               "service": "com.vantiq.engines.EngineMonitor",
+               "eventTypeName": "EngineMalfunction",
+               "parentStreams": [
+                  "EventStream"
+               ]
+            }
     },
     "EventStream" : {
       "configuration" : {
@@ -43,13 +44,11 @@
       "uuid" : "bf7d9c5e-fcec-4f35-b84d-6111152828e2"
     },
     "OutboundSpeed" : {
-      "configuration" : {
-        "parentStreams" : [ "EventStream" ],
-        "topic" : "/outbound/engine/speed"
-      },
-      "pattern" : "PublishToTopic",
-      "patternVersion" : 1,
-      "uuid" : "d8b23334-cf3e-4301-952c-71872f850c7d"
+      "pattern": "PublishToEventType",
+        "configuration": {
+           "service": "com.vantiq.engines.EngineMonitor",
+           "eventTypeName": "OutboundSpeed"
+        }
     },
     "generateAlertMessage" : {
       "configuration" : {
