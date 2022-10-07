@@ -1,0 +1,325 @@
+{
+  "ars_relationships" : [ ],
+  "configurationMappings" : {
+    "clientTheme" : [ {
+      "property" : "options.themeName",
+      "resource" : "clients",
+      "resourceId" : "com.vantiq.weatherEmergencies.ResidentNotificationSystem"
+    } ],
+    "detectDangerousWeather" : [ {
+      "property" : "assembly.com_vantiq_weatherEmergencies_isDangerousWeather.pattern",
+      "resource" : "collaborationtypes",
+      "resourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler"
+    } ],
+    "useBuiltInSource" : [ {
+      "property" : "active",
+      "resource" : "sources",
+      "resourceId" : "com.vantiq.weatherEmergencies.weather"
+    } ]
+  },
+  "configurationProperties" : {
+    "clientTheme" : {
+      "default" : "light",
+      "description" : "The theme applied to the com.vantiq.weatherEmergencies.ResidentNotificationSystem Client.",
+      "multi" : false,
+      "required" : false,
+      "type" : "ClientTheme"
+    },
+    "detectDangerousWeather" : {
+      "default" : "com.vantiq.weatherEmergencies.isDangerousWeather",
+      "description" : "Component used to determine whether there is a warning or emergency. The events, WarnResidents and Evacuation Required, must emit a warning message object.",
+      "multi" : false,
+      "required" : false,
+      "type" : "AppComponent"
+    },
+    "useBuiltInSource" : {
+      "default" : true,
+      "description" : "Boolean property used to activate the provided “com.vantiq.weatherEmergencies.weather” source.",
+      "multi" : false,
+      "required" : false,
+      "type" : "Boolean"
+    }
+  },
+  "isAssembly" : true,
+  "links" : [ {
+    "source" : "procedure/com.vantiq.weatherEmergencies.WeatherService.getWeather",
+    "target" : "type/com.vantiq.weatherEmergencies.weatherReading"
+  }, {
+    "source" : "source/com.vantiq.weatherEmergencies.weather",
+    "target" : "app/ForwardSourceEvents"
+  }, {
+    "source" : "app/ForwardSourceEvents",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.WeatherService.getWeather",
+    "target" : "source/com.vantiq.weatherEmergencies.weather"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.WeatherService.convertToFahrenheit",
+    "target" : "services/com.vantiq.weatherEmergencies.WeatherService"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.WeatherService",
+    "target" : "procedure/com.vantiq.weatherEmergencies.WeatherService.convertToFahrenheit"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.WeatherService",
+    "target" : "procedure/com.vantiq.weatherEmergencies.WeatherService.getWeather"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.WeatherService.getWeather",
+    "target" : "services/com.vantiq.weatherEmergencies.WeatherService"
+  }, {
+    "source" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "target" : "type/com.vantiq.weatherEmergencies.weatherMessage"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "target" : "document/com.vantiq.weatherEmergencies.DetectWeatherEmergency.js"
+  }, {
+    "source" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "target" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "target" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.DetectWeatherEmergency.com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "target" : "type/com.vantiq.weatherEmergencies.weatherReading"
+  }, {
+    "source" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "target" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler"
+  }, {
+    "source" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler",
+    "target" : "app/com.vantiq.weatherEmergencies.isDangerousWeather"
+  }, {
+    "source" : "app/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler.com_vantiq_weatherEmergencies_isDangerousWeather_EvacuationMessage",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler.com_vantiq_weatherEmergencies_isDangerousWeather_WarnMessage",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "source" : "procedure/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler.com_vantiq_weatherEmergencies_isDangerousWeather_getTemperatureAndWind",
+    "target" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  } ],
+  "name" : "com.vantiq.weatherEmergencies.WeatherEmergencyProject",
+  "options" : {
+    "description" : "This is the Assembly Tutorial. The weather Source produces temperature and wind speed data which triggers the DetectWeatherEmergencyApp. The App uses the isDangerousWeather App Component to determine whether to issue a warning message or evacuation alert to residents. Each alert type will trigger the start of a CollaborationType which will notify the ResidentNotificationSystem Client.\n\nThe Assembly exposes the App Component used by the DetectWeatherEmergency App, the activation status for the weather Source, and the theme on the ResidentNotificationSystem Client as Configurable Properties.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 812.295, 813.795 ],
+      "left" : 236,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
+    "exclusionList" : [ "app/test2", "services/WeatherService", "services/collaborations.WarnNotification.PublishToTopic", "source/weather", "topic//collaborations.WarnNotification/debug", "topic//com.vantiq.weatherEmergencies.WarnNotification/debug", "topic//com.vantiq.weatherEmergencies.WarnNotification/temperature/warning", "topic//com.vantiq.weatherEmergencies/temperature/warning", "topic//temperature/warning", "topic//test", "topic//vantiq/systemmodel/ResidentNotificationSystem/submitTopic", "topic//weather/reading", "type/com.vantiq.weatherEmergency.weatherReading", "type/transformedWeather", "type/weatherMessage", "type/weatherReading" ],
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "document" ],
+    "rootViewFlavor" : 1,
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
+  },
+  "resources" : [ {
+    "inventory" : { },
+    "label" : "ForwardSourceEvents",
+    "name" : "ForwardSourceEvents",
+    "resourceReference" : "/collaborationtypes/ForwardSourceEvents",
+    "timestamp" : "2022-10-07T21:41:15.493Z",
+    "type" : 12
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "resourceReference" : "/system.services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "timestamp" : "2022-10-07T21:36:35.793Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.js",
+    "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.js",
+    "resourceReference" : "/documents/com.vantiq.weatherEmergencies.DetectWeatherEmergency.js",
+    "timestamp" : "2022-10-07T21:18:34.472Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler",
+    "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler",
+    "resourceReference" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_EvacuateNotification_EventHandler",
+    "timestamp" : "2022-10-07T21:15:58.012Z",
+    "type" : 12
+  }, {
+    "label" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler",
+    "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler",
+    "resourceReference" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification_EventHandler",
+    "timestamp" : "2022-10-07T21:18:29.126Z",
+    "type" : 12
+  }, {
+    "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler",
+    "resourceReference" : "/collaborationtypes/com.vantiq.weatherEmergencies.DetectWeatherEmergency_WeatherEvents_EventHandler",
+    "timestamp" : "2022-10-07T21:38:30.356Z",
+    "type" : 12
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.ResidentNotificationSystem",
+    "name" : "com.vantiq.weatherEmergencies.ResidentNotificationSystem",
+    "resourceReference" : "/system.clients/com.vantiq.weatherEmergencies.ResidentNotificationSystem",
+    "timestamp" : "2022-10-07T20:51:36.099Z",
+    "type" : 15
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.WeatherService",
+    "name" : "com.vantiq.weatherEmergencies.WeatherService",
+    "resourceReference" : "/system.services/com.vantiq.weatherEmergencies.WeatherService",
+    "timestamp" : "2022-10-07T19:53:19.794Z",
+    "type" : 63
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.WeatherService.convertToFahrenheit",
+    "name" : "com.vantiq.weatherEmergencies.WeatherService.convertToFahrenheit",
+    "packageName" : "com.vantiq.weatherEmergencies",
+    "procedureName" : "convertToFahrenheit",
+    "resourceReference" : "/procedures/com.vantiq.weatherEmergencies.WeatherService.convertToFahrenheit",
+    "serviceName" : "WeatherService",
+    "timestamp" : "2022-10-07T19:53:20.022Z",
+    "type" : 3
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.WeatherService.getWeather",
+    "name" : "com.vantiq.weatherEmergencies.WeatherService.getWeather",
+    "packageName" : "com.vantiq.weatherEmergencies",
+    "procedureName" : "getWeather",
+    "resourceReference" : "/procedures/com.vantiq.weatherEmergencies.WeatherService.getWeather",
+    "serviceName" : "WeatherService",
+    "timestamp" : "2022-10-07T19:53:20.027Z",
+    "type" : 3
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.isDangerousWeather",
+    "name" : "com.vantiq.weatherEmergencies.isDangerousWeather",
+    "resourceReference" : "/collaborationtypes/com.vantiq.weatherEmergencies.isDangerousWeather",
+    "timestamp" : "2022-10-07T19:53:20.437Z",
+    "type" : 12
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.weather",
+    "name" : "com.vantiq.weatherEmergencies.weather",
+    "resourceReference" : "/sources/com.vantiq.weatherEmergencies.weather",
+    "timestamp" : "2022-10-07T19:53:19.481Z",
+    "type" : 4
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.weatherMessage",
+    "name" : "com.vantiq.weatherEmergencies.weatherMessage",
+    "resourceReference" : "/types/com.vantiq.weatherEmergencies.weatherMessage",
+    "timestamp" : "2022-10-07T19:53:18.381Z",
+    "type" : 1
+  }, {
+    "inventory" : { },
+    "label" : "com.vantiq.weatherEmergencies.weatherReading",
+    "name" : "com.vantiq.weatherEmergencies.weatherReading",
+    "resourceReference" : "/types/com.vantiq.weatherEmergencies.weatherReading",
+    "timestamp" : "2022-10-07T19:53:18.381Z",
+    "type" : 1
+  } ],
+  "selectData" : { },
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Autopsies",
+    "type" : 100
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "pane" : {
+      "c" : 0,
+      "r" : 1
+    },
+    "resourceKey" : "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency",
+    "state" : 2,
+    "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.weatherEmergencies.ResidentNotificationSystem",
+    "pane" : {
+      "c" : 1,
+      "r" : 1
+    },
+    "resourceKey" : "client/com.vantiq.weatherEmergencies.ResidentNotificationSystem",
+    "state" : 2,
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.weatherEmergencies.WeatherEmergencyProject",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 120
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "autopsyviewer/Autopsies", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "services/com.vantiq.weatherEmergencies.DetectWeatherEmergency", "client/com.vantiq.weatherEmergencies.ResidentNotificationSystem", "assemblies/com.vantiq.weatherEmergencies.WeatherEmergencyProject" ]
+  } ],
+  "visibleResources" : [ {
+    "description" : null,
+    "resourceReference" : "/system.services/com.vantiq.weatherEmergencies.DetectWeatherEmergency"
+  }, {
+    "resourceReference" : "/system.clients/com.vantiq.weatherEmergencies.ResidentNotificationSystem"
+  }, {
+    "resourceReference" : "/system.services/com.vantiq.weatherEmergencies.WeatherService"
+  }, {
+    "description" : "test1",
+    "resourceReference" : "/collaborationtypes/com.vantiq.weatherEmergencies.isDangerousWeather"
+  } ]
+}
