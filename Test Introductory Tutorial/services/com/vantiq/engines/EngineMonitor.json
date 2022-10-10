@@ -37,9 +37,10 @@
   },
   "globalType" : null,
   "interface" : [ {
+    "description" : "given a temperature or speed event, determine the alert message (if any)",
     "name" : "generateAlertMessage",
     "parameters" : [ {
-      "description" : null,
+      "description" : "speed or temperature sensor event",
       "multi" : false,
       "name" : "sensorEvent",
       "required" : false,
