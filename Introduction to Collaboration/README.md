@@ -6,4 +6,4 @@ they are okay or require assistance. If the patient replies that they require as
 a first responder is notified and dispatched.
 
 
-For more information on the Advanced Collaboration Tutorial, check out the documentation [here](/docs/system/tutorials/introcollaboration/index.html).
+For more information on the Introduction to Collaboration Tutorial, check out the documentation [here](/docs/system/tutorials/introcollaboration/index.html).
