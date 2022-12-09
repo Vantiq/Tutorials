@@ -1,7 +1,7 @@
 {
   "ars_relationships" : [ ],
   "cleanup" : null,
-  "description" : "ests The Engine Monitor Tutorial",
+  "description" : "Tests The Engine Monitor Tutorial",
   "inputs" : [ {
     "delay" : "1 second",
     "eventObj" : {
