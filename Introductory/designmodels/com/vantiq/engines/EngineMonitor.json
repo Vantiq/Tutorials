@@ -1,0 +1,239 @@
+{
+  "ars_relationships" : [ ],
+  "contents" : {
+    "connectors" : [ {
+      "key" : "728a62e2-74e8-11ed-a714-acde48001122&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 13
+    }, {
+      "key" : "728a62e2-74e8-11ed-a714-acde48001122&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 8
+    }, {
+      "key" : "728d4911-74e8-11ed-a714-acde48001122&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 13
+    }, {
+      "key" : "728d4911-74e8-11ed-a714-acde48001122&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 8
+    }, {
+      "key" : "728d4910-74e8-11ed-a714-acde48001122&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "728d4910-74e8-11ed-a714-acde48001122",
+      "type" : 15
+    }, {
+      "key" : "728d4910-74e8-11ed-a714-acde48001122&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "728d4910-74e8-11ed-a714-acde48001122",
+      "type" : 14
+    }, {
+      "key" : "728d4911-74e8-11ed-a714-acde48001122&EXTERNALIN2",
+      "name" : "ExternalSensorEvents",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 12
+    }, {
+      "key" : "728e5a81-74e8-11ed-a714-acde48001122&EXTERNAL1",
+      "name" : "DataWarehouse",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 7
+    }, {
+      "key" : "728e5a83-74e8-11ed-a714-acde48001122&EXTERNAL2",
+      "name" : "OutsideWorld",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 7
+    }, {
+      "key" : "728a62e2-74e8-11ed-a714-acde48001122&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 3
+    }, {
+      "key" : "728a62e2-74e8-11ed-a714-acde48001122&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 4
+    }, {
+      "key" : "728a62e3-74e8-11ed-a714-acde48001122&DATASTREAM1",
+      "name" : "NEW-DS",
+      "parent" : "728a62e3-74e8-11ed-a714-acde48001122",
+      "type" : 11
+    }, {
+      "key" : "728d4911-74e8-11ed-a714-acde48001122&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 3
+    }, {
+      "key" : "728d4911-74e8-11ed-a714-acde48001122&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 4
+    }, {
+      "key" : "51&728d4911-74e8-11ed-a714-acde48001122&OUTPUT1",
+      "name" : "SpeedEvent",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 2
+    }, {
+      "key" : "51&728d4911-74e8-11ed-a714-acde48001122&OUTPUT2",
+      "name" : "TemperatureEvent",
+      "parent" : "728d4911-74e8-11ed-a714-acde48001122",
+      "type" : 2
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&INPUT1",
+      "name" : "SpeedEvent",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 1
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&INPUT2",
+      "name" : "TemperatureEvent",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 1
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&OUTPUT1",
+      "name" : "EngineStatus",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 2
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&OUTPUT2",
+      "name" : "EngineSpeed",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 2
+    }, {
+      "key" : "52&728a62e3-74e8-11ed-a714-acde48001122&DATASTREAM1",
+      "name" : "EngineStatus",
+      "parent" : "728a62e3-74e8-11ed-a714-acde48001122",
+      "type" : 10
+    }, {
+      "key" : "52&728a62e3-74e8-11ed-a714-acde48001122&DATASTREAM2",
+      "name" : "EngineSpeed",
+      "parent" : "728a62e3-74e8-11ed-a714-acde48001122",
+      "type" : 10
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&CALLIN1",
+      "name" : "speedGet",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 5
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&CALLIN2",
+      "name" : "speedUpdate",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 5
+    }, {
+      "key" : "51&728a62e2-74e8-11ed-a714-acde48001122&CALLIN3",
+      "name" : "speedReset",
+      "parent" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "type" : 5
+    } ],
+    "links" : [ {
+      "isBidirectional" : false,
+      "source" : "728d4910-74e8-11ed-a714-acde48001122&EXTOUTBOUND1",
+      "target" : "728d4911-74e8-11ed-a714-acde48001122&EXTERNALIN2"
+    }, {
+      "isBidirectional" : false,
+      "source" : "51&728d4911-74e8-11ed-a714-acde48001122&OUTPUT1",
+      "target" : "51&728a62e2-74e8-11ed-a714-acde48001122&INPUT1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "51&728d4911-74e8-11ed-a714-acde48001122&OUTPUT2",
+      "target" : "51&728a62e2-74e8-11ed-a714-acde48001122&INPUT2"
+    }, {
+      "isBidirectional" : false,
+      "source" : "51&728a62e2-74e8-11ed-a714-acde48001122&OUTPUT2",
+      "target" : "52&728a62e3-74e8-11ed-a714-acde48001122&DATASTREAM2"
+    }, {
+      "isBidirectional" : false,
+      "source" : "51&728a62e2-74e8-11ed-a714-acde48001122&OUTPUT1",
+      "target" : "52&728a62e3-74e8-11ed-a714-acde48001122&DATASTREAM1"
+    } ],
+    "objects" : [ {
+      "h" : 100,
+      "label" : "EngineMonitor",
+      "resourceName" : "com.vantiq.engines.EngineMonitor",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "728a62e2-74e8-11ed-a714-acde48001122",
+      "w" : 148,
+      "x" : 0,
+      "y" : 0
+    }, {
+      "h" : 100,
+      "label" : "EngineMonitor",
+      "resourceName" : "com.vantiq.engines.EngineMonitor",
+      "resourceType" : "system.clients",
+      "type" : 52,
+      "uuid" : "728a62e3-74e8-11ed-a714-acde48001122",
+      "w" : 100,
+      "x" : 342.712450311911,
+      "y" : 14.540761642244725
+    }, {
+      "h" : 100,
+      "label" : "IngestExternalSensorEventsService",
+      "resourceName" : "com.vantiq.engines.IngestExternalSensorEventsService",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "728d4911-74e8-11ed-a714-acde48001122",
+      "w" : 300,
+      "x" : -374,
+      "y" : 0
+    }, {
+      "h" : 60,
+      "label" : "ExternalSensorEvents",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "728d4910-74e8-11ed-a714-acde48001122",
+      "w" : 110.234375,
+      "x" : -374,
+      "y" : -200
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.7564940730506245,
+        "translate" : [ 473.3965130143162, 274.01226874690985 ]
+      }
+    },
+    "v" : 1
+  },
+  "description" : "No description given",
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "serviceEventRoutes" : [ {
+    "eventSource" : {
+      "eventTypeName" : "ExternalEvent0",
+      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "SensorReading0",
+      "serviceName" : "com.vantiq.engines.EngineMonitor"
+    }
+  }, {
+    "eventSource" : {
+      "eventTypeName" : "ExternalEvent1",
+      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "SensorReading1",
+      "serviceName" : "com.vantiq.engines.EngineMonitor"
+    }
+  }, {
+    "eventSource" : {
+      "eventTypeName" : "SpeedEvent",
+      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "SpeedEvent",
+      "serviceName" : "com.vantiq.engines.EngineMonitor"
+    }
+  }, {
+    "eventSource" : {
+      "eventTypeName" : "TemperatureEvent",
+      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "TemperatureEvent",
+      "serviceName" : "com.vantiq.engines.EngineMonitor"
+    }
+  } ]
+}

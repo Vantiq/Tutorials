@@ -1,0 +1,30 @@
+{
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "groupBy" : null,
+  "name" : "com.vantiq.engines.StatusEvent",
+  "properties" : {
+    "alertMsg" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "systemId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "temperature" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

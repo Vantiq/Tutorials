@@ -1,0 +1,22 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "SpeedEvent" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "TemperatureEvent" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents0", "/collaborationtypes/com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents1" ],
+  "name" : "com.vantiq.engines.IngestExternalSensorEventsService",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}
