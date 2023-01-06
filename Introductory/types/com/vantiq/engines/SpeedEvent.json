@@ -1,20 +1,21 @@
 {
   "ars_properties" : null,
   "ars_relationships" : [ ],
-  "name" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
+  "groupBy" : null,
+  "name" : "com.vantiq.engines.SpeedEvent",
   "properties" : {
-    "alertMsg" : {
+    "speed" : {
       "encrypted" : false,
       "multi" : false,
       "required" : false,
-      "type" : "String",
+      "type" : "Integer",
       "unique" : false
     },
     "systemId" : {
       "encrypted" : false,
       "multi" : false,
       "required" : false,
-      "type" : "String",
+      "type" : "Integer",
       "unique" : false
     }
   },

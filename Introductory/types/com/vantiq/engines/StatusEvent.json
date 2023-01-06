@@ -1,13 +1,21 @@
 {
   "ars_properties" : null,
   "ars_relationships" : [ ],
-  "name" : "com.vantiq.engines.EngineMonitor_TempEvent",
+  "groupBy" : null,
+  "name" : "com.vantiq.engines.StatusEvent",
   "properties" : {
+    "alertMsg" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    },
     "systemId" : {
       "encrypted" : false,
       "multi" : false,
       "required" : false,
-      "type" : "String",
+      "type" : "Integer",
       "unique" : false
     },
     "temperature" : {
