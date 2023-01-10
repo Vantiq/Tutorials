@@ -1,0 +1,10 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
+  "properties" : {
+    "speed" : {
+      "type" : "Value"
+    }
+  },
+  "role" : "schema"
+}

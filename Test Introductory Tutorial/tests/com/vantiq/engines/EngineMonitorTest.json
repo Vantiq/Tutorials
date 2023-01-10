@@ -5,65 +5,71 @@
   "inputs" : [ {
     "delay" : "1 second",
     "eventObj" : {
-      "systemId" : "123",
-      "temperature" : 300
+      "speed" : 50,
+      "systemId" : "123"
     },
     "inputNum" : 0,
     "op" : null,
     "periodInterval" : null,
     "qual" : null,
-    "rawDelayInterval" : 1000,
-    "rawPeriodInterval" : null,
     "resource" : "services",
-    "resourceId" : "com.vantiq.engines.EngineMonitor/TempEvent"
+    "resourceId" : "com.vantiq.engines.EngineMonitor/SpeedEvent"
   }, {
-    "delay" : "1 second",
+    "delay" : "3 seconds",
     "eventObj" : {
-      "speed" : 60,
-      "systemId" : "456"
+      "systemId" : "123",
+      "temperature" : 220
     },
     "inputNum" : 1,
     "op" : null,
     "periodInterval" : null,
     "qual" : null,
-    "rawDelayInterval" : 1000,
-    "rawPeriodInterval" : null,
     "resource" : "services",
-    "resourceId" : "com.vantiq.engines.EngineMonitor/SpeedEvent"
+    "resourceId" : "com.vantiq.engines.EngineMonitor/TemperatureEvent"
   }, {
-    "delay" : "1 second",
+    "delay" : "3 seconds",
     "eventObj" : {
-      "systemId" : "789",
-      "temperature" : 100
+      "systemId" : "123",
+      "temperature" : 200
     },
     "inputNum" : 2,
     "op" : null,
     "periodInterval" : null,
     "qual" : null,
-    "rawDelayInterval" : 1000,
-    "rawPeriodInterval" : null,
     "resource" : "services",
-    "resourceId" : "com.vantiq.engines.EngineMonitor/TempEvent"
+    "resourceId" : "com.vantiq.engines.EngineMonitor/TemperatureEvent"
   }, {
     "delay" : "1 second",
     "eventObj" : {
-      "speed" : 30,
-      "systemId" : "789"
+      "speed" : 40,
+      "systemId" : "123"
     },
     "inputNum" : 3,
     "op" : null,
     "periodInterval" : null,
     "qual" : null,
-    "rawDelayInterval" : 1000,
-    "rawPeriodInterval" : null,
     "resource" : "services",
     "resourceId" : "com.vantiq.engines.EngineMonitor/SpeedEvent"
+  }, {
+    "delay" : "1 second",
+    "eventObj" : {
+      "systemId" : "123",
+      "temperature" : 230
+    },
+    "inputNum" : 4,
+    "op" : null,
+    "periodInterval" : null,
+    "qual" : null,
+    "resource" : "services",
+    "resourceId" : "com.vantiq.engines.EngineMonitor/TemperatureEvent"
   } ],
-  "name" : "EngineMonitorTest",
+  "name" : "com.vantiq.engines.EngineMonitorTest",
   "outputs" : [ {
     "eventObj" : {
-      "alertMsg" : "Your engine is overheating: check for a malfunctioning fan or a coolant leak.",
-      "systemId" : "123"
+      "alertMsg" : "Your engine is overheating: please reduce your speed.",
+      "speed" : 50,
+      "systemId" : "123",
+      "temperature" : 220
     },
     "missing" : false,
     "op" : null,
@@ -71,31 +77,35 @@
     "prereqEvent" : { },
     "repeat" : { },
     "resource" : "services",
-    "resourceId" : "com.vantiq.engines.EngineMonitor/EngineMalfunction",
+    "resourceId" : "com.vantiq.engines.EngineMonitor/EngineStatus",
     "validationMethod" : "Event Object"
   }, {
     "eventObj" : {
-      "alertMsg" : "Engine speed is above regulation requirements: check engine sensors",
-      "systemId" : "456"
+      "alertMsg" : "",
+      "systemId" : "123",
+      "temperature" : 200
     },
     "missing" : false,
     "op" : null,
     "outputNum" : 1,
     "repeat" : { },
     "resource" : "services",
-    "resourceId" : "com.vantiq.engines.EngineMonitor/EngineMalfunction",
+    "resourceId" : "com.vantiq.engines.EngineMonitor/EngineStatus",
     "validationMethod" : "Event Object",
     "validationProcedure" : null
   }, {
     "eventObj" : {
-      "systemId" : "789"
+      "alertMsg" : "Your engine is overheating: check for a malfunctioning fan or a coolant leak.",
+      "speed" : 40,
+      "systemId" : "123",
+      "temperature" : 230
     },
-    "missing" : true,
+    "missing" : false,
     "op" : null,
     "outputNum" : 2,
     "repeat" : { },
     "resource" : "services",
-    "resourceId" : "com.vantiq.engines.EngineMonitor/EngineMalfunction",
+    "resourceId" : "com.vantiq.engines.EngineMonitor/EngineStatus",
     "validationMethod" : "Event Object",
     "validationProcedure" : null
   } ],
