@@ -1,0 +1,111 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "Ingest" : {
+          "x" : 0,
+          "y" : -5
+        },
+        "IngestTemperature" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "Publish" : {
+          "x" : 0,
+          "y" : 95
+        },
+        "PublishTemperature" : {
+          "x" : 0,
+          "y" : 100
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.4831592087765657,
+      "translate" : [ 254.1682974719124, 121.7944130775825 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "IngestTemperature" : {
+      "configuration" : {
+        "childStreams" : [ "PublishTemperature" ],
+        "condition" : "",
+        "eventTypeName" : null,
+        "inboundResource" : "sources",
+        "inboundResourceId" : "com.vantiq.engines.TemperatureSensor",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "context" : "Ingest",
+      "downstreamReferences" : { },
+      "name" : "IngestTemperature",
+      "pattern" : "EventStream",
+      "patternVersion" : 2,
+      "uuid" : "8d173ead-5c70-469e-979e-52d06f1215d9"
+    },
+    "PublishTemperature" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "TemperatureEvent",
+        "parentStreams" : [ "IngestTemperature" ],
+        "processedByClause" : null,
+        "service" : "com.vantiq.engines.IngestExternalSensorEventsService"
+      },
+      "context" : "Publish",
+      "downstreamReferences" : { },
+      "name" : "PublishTemperature",
+      "pattern" : "PublishToService",
+      "patternVersion" : 1,
+      "uuid" : "bbed43a2-ddd1-4e6d-83bc-a3bb40d9e7eb"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : {
+    "Ingest" : {
+      "children" : [ "Transform" ],
+      "description" : "The events arriving from the external source",
+      "name" : "Ingest",
+      "type" : "Ingest",
+      "uuid" : "86aeb2e0-507e-4452-8524-d931ecd26fe8"
+    },
+    "Publish" : {
+      "children" : [ ],
+      "description" : "Publish the transformed event back to the external source for additional processing",
+      "name" : "Publish",
+      "type" : "React",
+      "uuid" : "b2f5d996-ab19-412d-a17e-541173db42f6"
+    }
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents1"
+}
