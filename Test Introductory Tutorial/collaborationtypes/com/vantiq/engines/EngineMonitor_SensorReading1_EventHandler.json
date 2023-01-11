@@ -19,11 +19,11 @@
         },
         "51ce1357-7ca6-4563-8536-8c1b4459546c" : {
           "x" : -215,
-          "y" : 298.694633711969
+          "y" : 300
         },
         "589360ab-edd2-46f6-b5c8-d7816e67095f" : {
           "x" : -26.193084716796875,
-          "y" : 194.35272320620896
+          "y" : 195
         },
         "74c40a26-a2c9-4aae-89e0-8f22035874aa" : {
           "x" : -107.5,
@@ -47,7 +47,7 @@
         },
         "cbcdc104-880b-42df-9298-af496ff90ec7" : {
           "x" : 107.5,
-          "y" : 98.70544641241793
+          "y" : 100
         },
         "ea2ac370-9201-425a-8da3-82c58bcb2e57" : {
           "x" : 0,
@@ -107,7 +107,7 @@
   },
   "ars_relationships" : [ ],
   "assembly" : {
-    "AddNoSpeedOverheat" : {
+    "AddNonSpeedOverheat" : {
       "configuration" : {
         "childStreams" : [ "PublishStatus" ],
         "imports" : null,
@@ -127,7 +127,7 @@
       },
       "context" : "React",
       "downstreamReferences" : { },
-      "name" : "AddNoSpeedOverheat",
+      "name" : "AddNonSpeedOverheat",
       "pattern" : "Transformation",
       "patternVersion" : 2,
       "uuid" : "f4cc1aeb-f0ae-48c0-912a-21895b7648cd"
@@ -206,7 +206,7 @@
     },
     "NonSpeedOverheat" : {
       "configuration" : {
-        "childStreams" : [ "AddNoSpeedOverheat" ],
+        "childStreams" : [ "AddNonSpeedOverheat" ],
         "condition" : [ {
           "expression" : "null",
           "op" : "!=",
@@ -256,7 +256,7 @@
       "configuration" : {
         "childStreams" : null,
         "eventTypeName" : "EngineStatus",
-        "parentStreams" : [ "AddNoSpeedOverheat", "AddSpeedOverheat", "ClearAlert" ],
+        "parentStreams" : [ "AddNonSpeedOverheat", "AddSpeedOverheat", "ClearAlert" ],
         "processedByClause" : null,
         "service" : "com.vantiq.engines.EngineMonitor"
       },
