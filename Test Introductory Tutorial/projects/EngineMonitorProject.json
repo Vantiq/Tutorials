@@ -91,12 +91,6 @@
     "source" : "services/com.vantiq.engines.EngineMonitor",
     "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SensorReading1_EventHandler_AddSpeedOverheat"
   }, {
-    "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SensorReading1_EventHandler_AddNoSpeedOverheat",
-    "target" : "services/com.vantiq.engines.EngineMonitor"
-  }, {
-    "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SensorReading1_EventHandler_AddNoSpeedOverheat"
-  }, {
     "source" : "procedure/com.vantiq.engines.EngineMonitor.EngineMonitor_SensorReading1_EventHandler_ClearAlert",
     "target" : "services/com.vantiq.engines.EngineMonitor"
   }, {
