@@ -1,0 +1,163 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "25c6e326-52c3-4968-8293-7300d597de74" : {
+          "x" : -0.5833333333333334,
+          "y" : 159.41666666666666
+        },
+        "66980071-cb1c-46a5-983e-1b503e83e6a1" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "cbd5cb24-2ac2-4201-8c7f-61110edfc5a8" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "f6e9fd6b-6aea-4066-a40d-3a0813b91915" : {
+          "x" : 0,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.7142857142857142,
+      "translate" : [ 256.5055716378348, 54.89284842354911 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AddDiagnosis" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : "${transformation}",
+        "upsert" : false
+      },
+      "context" : "React",
+      "downstreamReferences" : { },
+      "name" : "AddDiagnosis",
+      "pattern" : "Transformation",
+      "patternVersion" : 2,
+      "uuid" : "25c6e326-52c3-4968-8293-7300d597de74"
+    },
+    "Diagnose" : {
+      "configuration" : {
+        "childStreams" : [ "AddDiagnosis" ],
+        "condition" : "${condition}",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "upsert" : false
+      },
+      "context" : "DetectSituation",
+      "downstreamReferences" : { },
+      "isRoot" : true,
+      "name" : "Diagnose",
+      "pattern" : "Filter",
+      "patternVersion" : 2,
+      "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "componentInterface" : {
+    "appOnly" : true,
+    "ars_properties" : {
+      "category" : "standard",
+      "deprecated" : false,
+      "description" : "",
+      "patternGroup" : "app.component"
+    },
+    "configurationProperties" : {
+      "condition" : {
+        "description" : "A conditional expression which will restrict which events proceed to the next node in the app.",
+        "name" : "condition",
+        "required" : true,
+        "type" : "Union",
+        "typeChoices" : [ {
+          "description" : "A conditional expression which will restrict which events proceed to the next node in the app.",
+          "multi" : false,
+          "name" : "VAIL Conditional Expression",
+          "required" : true,
+          "type" : "VAIL Expression"
+        }, {
+          "description" : "A series of visual conditional expression ANDED together which will restrict which events proceed to the next node in the app.",
+          "multi" : true,
+          "name" : "Visual Filter",
+          "required" : true,
+          "type" : "ConditionalExpressionObject"
+        } ]
+      },
+      "transformation" : {
+        "description" : "A transformation that will be applied to events streaming from the parent node before producing outbound events for consumption by child nodes.",
+        "multi" : false,
+        "name" : "transformation",
+        "required" : true,
+        "type" : "Union",
+        "typeChoices" : [ {
+          "description" : "A procedure to invoke that will transform the event data.",
+          "name" : "Transformation Procedure",
+          "parameters" : [ {
+            "multi" : false,
+            "required" : true,
+            "type" : "Object"
+          } ],
+          "type" : "ArsComponent"
+        }, {
+          "description" : "Use visual transformations to map inputs to outputs without writing your own transformation procedure.",
+          "name" : "Visual Transformation",
+          "type" : "ExpressionObject"
+        }, {
+          "description" : "The event property (for example: 'event.metadata') that will be projected as the outbound event of this transformation",
+          "name" : "Projection",
+          "type" : "VAIL Expression"
+        } ]
+      }
+    },
+    "events" : {
+      "Diagnosis" : {
+        "configurationProperty" : "childStreams",
+        "name" : "Diagnosis",
+        "schema" : "inherit",
+        "taskName" : "AddDiagnosis"
+      }
+    },
+    "isComponent" : true,
+    "name" : "FilterAndDiagnose",
+    "results" : { },
+    "runtimeProperties" : [ ],
+    "templates" : [ "AppGeneration.generateComponent" ]
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : true,
+  "isEventHandler" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "FilterAndDiagnose"
+}

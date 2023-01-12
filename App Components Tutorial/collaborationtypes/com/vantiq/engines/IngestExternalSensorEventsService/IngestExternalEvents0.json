@@ -1,0 +1,109 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "Ingest" : {
+          "x" : 0,
+          "y" : -5
+        },
+        "IngestSpeed" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "Publish" : {
+          "x" : 0,
+          "y" : 95
+        },
+        "PublishSpeed" : {
+          "x" : 0,
+          "y" : 100
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.4831592087765657,
+      "translate" : [ 269.51446677692593, 121.7944130775825 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "IngestSpeed" : {
+      "configuration" : {
+        "childStreams" : [ "PublishSpeed" ],
+        "condition" : "",
+        "eventTypeName" : null,
+        "inboundResource" : "sources",
+        "inboundResourceId" : "com.vantiq.engines.SpeedSensor",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "context" : "Ingest",
+      "downstreamReferences" : { },
+      "name" : "IngestSpeed",
+      "pattern" : "EventStream",
+      "patternVersion" : 2,
+      "uuid" : "9fd10cee-de39-4788-86b3-7a6bd7512ed0"
+    },
+    "PublishSpeed" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "SpeedEvent",
+        "parentStreams" : [ "IngestSpeed" ],
+        "processedByClause" : null,
+        "service" : "com.vantiq.engines.IngestExternalSensorEventsService"
+      },
+      "context" : "Publish",
+      "downstreamReferences" : { },
+      "name" : "PublishSpeed",
+      "pattern" : "PublishToService",
+      "patternVersion" : 1,
+      "uuid" : "0e064bec-f730-49b4-8ce8-ec6524b76644"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : {
+    "Ingest" : {
+      "children" : [ "Transform" ],
+      "description" : "The events arriving from the external source",
+      "name" : "Ingest",
+      "type" : "Ingest",
+      "uuid" : "c2cb5231-4017-44a5-bcde-f795cc26fefa"
+    },
+    "Publish" : {
+      "children" : [ ],
+      "description" : "Publish the transformed event back to the external source for additional processing",
+      "name" : "Publish",
+      "type" : "React",
+      "uuid" : "89feb5e1-87cf-4132-a448-547224a30ede"
+    }
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents0"
+}
