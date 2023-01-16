@@ -1,0 +1,10 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "isGenerated" : false,
+    "isHidden" : false
+  },
+  "ars_relationships" : [ ],
+  "name" : "apps.services.distributeProductApp",
+  "replicationFactor" : 1
+}

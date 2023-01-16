@@ -22,23 +22,7 @@
     }
   },
   "globalType" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
-  "interface" : [ {
-    "name" : "speedGet",
-    "parameters" : [ ]
-  }, {
-    "name" : "speedReset",
-    "parameters" : [ ]
-  }, {
-    "name" : "speedUpdate",
-    "parameters" : [ {
-      "default" : null,
-      "description" : null,
-      "multi" : false,
-      "name" : "event",
-      "required" : false,
-      "type" : "Object"
-    } ]
-  } ],
+  "interface" : [ ],
   "internalEventHandlers" : [ ],
   "name" : "com.vantiq.engines.EngineMonitor",
   "partitionedType" : null,

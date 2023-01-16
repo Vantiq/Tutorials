@@ -1,11 +1,6 @@
 {
   "ars_relationships" : [ ],
   "name" : "patient.monitoring.HeartRate.PartitionedAppState",
-  "properties" : {
-    "Active_HeartRate_MonitorReading_EventHandler" : {
-      "getterProcedure" : "Active_HeartRate_MonitorReading_EventHandlerGetAll",
-      "type" : "Map"
-    }
-  },
+  "properties" : { },
   "role" : "schema"
 }

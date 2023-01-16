@@ -1,21 +1,6 @@
 {
   "ars_relationships" : [ ],
   "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
-  "properties" : {
-    "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateState" : {
-      "encrypted" : false,
-      "multi" : false,
-      "required" : false,
-      "type" : "Map",
-      "unique" : false
-    },
-    "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateState" : {
-      "encrypted" : false,
-      "multi" : false,
-      "required" : false,
-      "type" : "Map",
-      "unique" : false
-    }
-  },
+  "properties" : { },
   "role" : "schema"
 }
