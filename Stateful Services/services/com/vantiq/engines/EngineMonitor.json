@@ -34,72 +34,6 @@
   },
   "globalType" : null,
   "interface" : [ {
-    "name" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    } ]
-  }, {
-    "name" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    } ]
-  }, {
-    "name" : "EngineMonitor_SpeedEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    }, {
-      "description" : null,
-      "multi" : false,
-      "name" : "event",
-      "required" : false,
-      "type" : "Object"
-    } ]
-  }, {
-    "name" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    } ]
-  }, {
-    "name" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateReset",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    } ]
-  }, {
-    "name" : "EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateUpdate",
-    "parameters" : [ {
-      "description" : null,
-      "multi" : false,
-      "name" : "partitionKey",
-      "required" : false,
-      "type" : "String"
-    }, {
-      "description" : null,
-      "multi" : false,
-      "name" : "event",
-      "required" : false,
-      "type" : "Object"
-    } ]
-  }, {
     "name" : "generateAlertMessage",
     "parameters" : [ {
       "multi" : false,
@@ -135,6 +69,7 @@
   } ],
   "name" : "com.vantiq.engines.EngineMonitor",
   "partitionedType" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
+  "replicationFactor" : 1,
   "scheduledProcedures" : {
     "writeEngineStatus" : {
       "interval" : 60000

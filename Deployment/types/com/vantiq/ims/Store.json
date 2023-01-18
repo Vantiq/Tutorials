@@ -1,5 +1,6 @@
 {
   "adminAccessLevel" : "ars_readWrite",
+  "ars_relationships" : [ ],
   "audited" : false,
   "encapsulated" : false,
   "foreignKeys" : null,
