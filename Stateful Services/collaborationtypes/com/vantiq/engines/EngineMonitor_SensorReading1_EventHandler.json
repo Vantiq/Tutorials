@@ -7,55 +7,55 @@
       "coordinates" : {
         "032a744c-869c-4ce8-9dfd-7c4de3c6ea75" : {
           "x" : 0,
-          "y" : 500
+          "y" : 400
         },
         "060b4ea4-cdc2-4524-8454-d306151d5692" : {
-          "x" : -107.5,
-          "y" : 200
+          "x" : -97.5,
+          "y" : 160
         },
         "16dd3051-0937-45e6-8a18-1051b1ac72ee" : {
           "x" : 0,
           "y" : 0
         },
         "21824b75-ffcf-4f05-968f-77598606d9ca" : {
-          "x" : 215,
-          "y" : 500
-        },
-        "2f030ec9-6dd2-4e33-8ff5-9ae742857d47" : {
-          "x" : 107.5,
-          "y" : 595
-        },
-        "3e47e303-1dde-45d5-b75e-bc0e71cc6ddb" : {
-          "x" : 215,
+          "x" : 195,
           "y" : 400
         },
+        "2f030ec9-6dd2-4e33-8ff5-9ae742857d47" : {
+          "x" : 97.5,
+          "y" : 475
+        },
+        "3e47e303-1dde-45d5-b75e-bc0e71cc6ddb" : {
+          "x" : 195,
+          "y" : 320
+        },
         "589360ab-edd2-46f6-b5c8-d7816e67095f" : {
-          "x" : 134.57354092597961,
-          "y" : 242.725323677063
+          "x" : 124.57354092597961,
+          "y" : 192.725323677063
         },
         "74c40a26-a2c9-4aae-89e0-8f22035874aa" : {
-          "x" : 107.5,
-          "y" : 300
+          "x" : 97.5,
+          "y" : 240
         },
         "7667dcaf-bcee-4817-8932-ae67f3d40350" : {
-          "x" : -107.5,
-          "y" : 300
+          "x" : -97.5,
+          "y" : 240
         },
         "9e2cde60-f6d2-4495-8951-fea583f084c1" : {
-          "x" : 107.5,
-          "y" : 200
+          "x" : 97.5,
+          "y" : 160
         },
         "a251719d-8f22-41c5-8dce-f00a3026f19d" : {
-          "x" : 107.5,
-          "y" : 600
+          "x" : 97.5,
+          "y" : 480
         },
         "b90c72eb-b7ed-4ee1-8945-5623a0c7d57a" : {
           "x" : 0,
-          "y" : 400
+          "y" : 320
         },
         "c1a1f552-6e8a-4444-95fd-a4594395288a" : {
           "x" : 0,
-          "y" : 100
+          "y" : 80
         },
         "ea2ac370-9201-425a-8da3-82c58bcb2e57" : {
           "x" : 0,
@@ -64,7 +64,7 @@
       },
       "lastZoomRequest" : 0,
       "scale" : 0.6508377084195226,
-      "translate" : [ 223.91861946585976, 53.71738671486071 ]
+      "translate" : [ 212.91861946585976, 61.71738671486071 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -190,7 +190,7 @@
         "outboundProperty" : null,
         "parentStreams" : [ "NoAlert_AddDiagnosis" ],
         "procedure" : {
-          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    if (!state) {\n        state = {}\n    } else {\n        // Clone the object here to avoid Concurrent Modification Exceptions\n        // from updating and reading the same object at once\n        state = Object.clone(state)\n    }\n    var systemId = event.systemId\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
         },
         "resetFrequency" : null,
         "schema" : null,
@@ -300,7 +300,7 @@
         "outboundProperty" : null,
         "parentStreams" : [ "NonSpeedOverheat_AddDiagnosis" ],
         "procedure" : {
-          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    if (!state) {\n        state = {}\n    } else {\n        // Clone the object here to avoid Concurrent Modification Exceptions\n        // from updating and reading the same object at once\n        state = Object.clone(state)\n    }\n    var systemId = event.systemId\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
         },
         "resetFrequency" : null,
         "schema" : null,
@@ -494,7 +494,7 @@
         "outboundProperty" : null,
         "parentStreams" : [ "SpeedOverheat_AddDiagnosis" ],
         "procedure" : {
-          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    if (!state) {\n        state = {}\n    } else {\n        // Clone the object here to avoid Concurrent Modification Exceptions\n        // from updating and reading the same object at once\n        state = Object.clone(state)\n    }\n    var systemId = event.systemId\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
         },
         "resetFrequency" : null,
         "schema" : null,

@@ -9,17 +9,17 @@
           "x" : 0,
           "y" : 240
         },
+        "15c148d5-faa0-4819-96cd-adac2fadbece" : {
+          "x" : 0,
+          "y" : 320
+        },
         "25c6e326-52c3-4968-8293-7300d597de74" : {
           "x" : 0,
           "y" : 160
         },
-        "3394125b-4019-44ef-8a88-d63e0697f88d" : {
+        "c9675857-6bc4-41d8-9804-d6811e5b73db" : {
           "x" : 0,
           "y" : 0
-        },
-        "89914065-4b9c-434f-824d-531ae9fe6088" : {
-          "x" : 0,
-          "y" : 320
         },
         "f6e9fd6b-6aea-4066-a40d-3a0813b91915" : {
           "x" : 0,
@@ -96,7 +96,7 @@
         "outboundProperty" : null,
         "parentStreams" : [ ],
         "procedure" : {
-          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    if (!state) {\n        state = {}\n    } else {\n        // Clone the object here to avoid Concurrent Modification Exceptions\n        // from updating and reading the same object at once\n        state = Object.clone(state)\n    }\n    var systemId = event.systemId\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
         },
         "resetFrequency" : null,
         "schema" : null,
