@@ -1,0 +1,9 @@
+package com.vantiq.engines
+multi partition PROCEDURE EngineMonitor.writeLastAlert()
+
+var alertStates = lastAlert
+if (alertStates) {
+    for (alertState in alertStates) {
+        UPSERT com.vantiq.engines.EngineLastAlert(alertState.value)
+    }
+}

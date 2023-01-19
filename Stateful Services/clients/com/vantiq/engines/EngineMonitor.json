@@ -1,0 +1,113 @@
+{
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "EngineSpeed" : { },
+      "EngineStatus" : { }
+    },
+    "page" : { }
+  },
+  "isComponent" : false,
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "EngineStatus",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "EngineStatus",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "8d69c4a0-7d78-11ed-b416-ce99d91ceb09",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "EngineSpeed",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "service" : "com.vantiq.engines.EngineMonitor",
+      "serviceEventName" : "EngineSpeed",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "8d69c4a1-7d78-11ed-b416-ce99d91ceb09",
+      "v" : 1
+    } ]
+  },
+  "name" : "com.vantiq.engines.EngineMonitor",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "add",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.10",
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showGridWhileEditing" : false,
+    "tabPaneCollapsed" : true,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "dropShadowColor" : "#566076",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17",
+      "v" : 3
+    },
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "services",
+      "resourceId" : "com.vantiq.engines.EngineMonitor"
+    } ]
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

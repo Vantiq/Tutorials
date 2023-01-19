@@ -1,0 +1,13 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.engines.EngineMonitor.PartitionedAppState",
+  "properties" : {
+    "lastAlert" : {
+      "type" : "Map"
+    },
+    "speed" : {
+      "type" : "Map"
+    }
+  },
+  "role" : "schema"
+}
