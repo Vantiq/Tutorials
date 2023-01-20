@@ -1,77 +1,37 @@
 {
   "active" : true,
   "ars_relationships" : [ ],
-  "description" : "Determine if there is an engine malfunction.",
+  "description" : null,
   "eventTypes" : {
-    "EngineMalfunction" : {
-      "description" : "alerts produced when an engine is malfunctioning",
+    "EngineSpeed" : {
       "direction" : "OUTBOUND",
-      "eventSchema" : "com.vantiq.engines.EngineMonitor_EngineMalfunction",
+      "eventSchema" : "com.vantiq.engines.SpeedEvent",
       "isReliable" : false
     },
-    "OutboundSpeed" : {
+    "EngineStatus" : {
       "direction" : "OUTBOUND",
-      "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
-      "isReliable" : false
-    },
-    "OutboundTemp" : {
-      "direction" : "OUTBOUND",
-      "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
       "isReliable" : false
     },
     "SpeedEvent" : {
-      "description" : "events produced by the engine speed sensors",
       "direction" : "INBOUND",
-      "eventSchema" : "com.vantiq.engines.EngineMonitor_SpeedEvent",
-      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler"
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading0_EventHandler/SensorReading"
     },
-    "TempEvent" : {
-      "description" : "events produced by the engine temperature sensors",
+    "TemperatureEvent" : {
       "direction" : "INBOUND",
-      "eventSchema" : "com.vantiq.engines.EngineMonitor_TempEvent",
-      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler"
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading1_EventHandler/SensorReading"
     }
   },
   "globalType" : null,
   "interface" : [ {
-    "name" : "generateAlertMessage",
-    "parameters" : [ {
-      "multi" : false,
-      "name" : "systemId",
-      "required" : false,
-      "type" : "String"
-    }, {
-      "description" : null,
-      "multi" : false,
-      "name" : "sensorEvent",
-      "required" : false,
-      "type" : "Object"
-    }, {
-      "description" : null,
-      "multi" : false,
-      "name" : "maxSpeed",
-      "required" : false,
-      "type" : "Integer"
-    }, {
-      "description" : null,
-      "multi" : false,
-      "name" : "maxTemp",
-      "required" : false,
-      "type" : "Integer"
-    } ],
-    "returnType" : {
-      "multi" : false,
-      "type" : "com.vantiq.engines.EngineMonitor_EngineMalfunction"
-    }
-  }, {
-    "name" : "writeEngineStatus",
+    "name" : "writeLastAlert",
     "parameters" : [ ]
   } ],
+  "internalEventHandlers" : [ ],
   "name" : "com.vantiq.engines.EngineMonitor",
-  "partitionedType" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
+  "partitionedType" : "com.vantiq.engines.EngineMonitor.PartitionedAppState",
   "replicationFactor" : 1,
   "scheduledProcedures" : {
-    "writeEngineStatus" : {
+    "writeLastAlert" : {
       "interval" : 60000
     }
   }

@@ -1,0 +1,189 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "129d8467-1729-4841-9cd4-7488b4ee79a0" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "15c148d5-faa0-4819-96cd-adac2fadbece" : {
+          "x" : 0,
+          "y" : 320
+        },
+        "25c6e326-52c3-4968-8293-7300d597de74" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "c9675857-6bc4-41d8-9804-d6811e5b73db" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "f6e9fd6b-6aea-4066-a40d-3a0813b91915" : {
+          "x" : 0,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.6061310534936581,
+      "translate" : [ 388.1190966342775, -12.806429685547755 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AddDiagnosis" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAlertMessage" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : "${transformation}",
+        "upsert" : false
+      },
+      "context" : "React",
+      "downstreamReferences" : { },
+      "name" : "AddDiagnosis",
+      "pattern" : "Transformation",
+      "patternVersion" : 2,
+      "uuid" : "25c6e326-52c3-4968-8293-7300d597de74"
+    },
+    "Diagnose" : {
+      "configuration" : {
+        "childStreams" : [ "AddDiagnosis" ],
+        "condition" : "${condition}",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "upsert" : false
+      },
+      "context" : "DetectSituation",
+      "downstreamReferences" : { },
+      "isRoot" : true,
+      "name" : "Diagnose",
+      "pattern" : "Filter",
+      "patternVersion" : 2,
+      "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
+    },
+    "SaveAlertMessage" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
+        "parentStreams" : [ ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+        },
+        "resetFrequency" : null,
+        "schema" : null,
+        "stateProperty" : "lastAlert"
+      },
+      "downstreamReferences" : { },
+      "name" : "SaveAlertMessage",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 2,
+      "uuid" : "129d8467-1729-4841-9cd4-7488b4ee79a0"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "componentInterface" : {
+    "appOnly" : true,
+    "ars_properties" : {
+      "category" : "standard",
+      "deprecated" : false,
+      "description" : "",
+      "patternGroup" : "app.component"
+    },
+    "configurationProperties" : {
+      "condition" : {
+        "description" : "A conditional expression which will restrict which events proceed to the next node in the app.",
+        "name" : "condition",
+        "required" : true,
+        "type" : "Union",
+        "typeChoices" : [ {
+          "description" : "A conditional expression which will restrict which events proceed to the next node in the app.",
+          "multi" : false,
+          "name" : "VAIL Conditional Expression",
+          "required" : true,
+          "type" : "VAIL Expression"
+        }, {
+          "description" : "A series of visual conditional expression ANDED together which will restrict which events proceed to the next node in the app.",
+          "multi" : true,
+          "name" : "Visual Filter",
+          "required" : true,
+          "type" : "ConditionalExpressionObject"
+        } ]
+      },
+      "transformation" : {
+        "description" : "A transformation that will be applied to events streaming from the parent node before producing outbound events for consumption by child nodes.",
+        "multi" : false,
+        "name" : "transformation",
+        "required" : true,
+        "type" : "Union",
+        "typeChoices" : [ {
+          "description" : "A procedure to invoke that will transform the event data.",
+          "name" : "Transformation Procedure",
+          "parameters" : [ {
+            "multi" : false,
+            "required" : true,
+            "type" : "Object"
+          } ],
+          "type" : "ArsComponent"
+        }, {
+          "description" : "Use visual transformations to map inputs to outputs without writing your own transformation procedure.",
+          "name" : "Visual Transformation",
+          "type" : "ExpressionObject"
+        }, {
+          "description" : "The event property (for example: 'event.metadata') that will be projected as the outbound event of this transformation",
+          "name" : "Projection",
+          "type" : "VAIL Expression"
+        } ]
+      }
+    },
+    "events" : {
+      "Diagnosis" : {
+        "configurationProperty" : "childStreams",
+        "eventName" : "event",
+        "name" : "Diagnosis",
+        "schema" : "inherit",
+        "taskName" : "SaveAlertMessage"
+      }
+    },
+    "isComponent" : true,
+    "name" : "FilterAndDiagnose",
+    "results" : { },
+    "runtimeProperties" : [ ],
+    "templates" : [ "AppGeneration.generateComponent" ]
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : true,
+  "isEventHandler" : false,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "FilterAndDiagnose"
+}

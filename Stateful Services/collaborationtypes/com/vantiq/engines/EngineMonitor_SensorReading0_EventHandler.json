@@ -1,0 +1,181 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "06e11a0b-19ac-444f-94b5-98896213eb7a" : {
+          "x" : 0,
+          "y" : 245
+        },
+        "16dd3051-0937-45e6-8a18-1051b1ac72ee" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "71fcbed8-a9a3-4382-ad29-294278eb5ad7" : {
+          "x" : 0,
+          "y" : -5
+        },
+        "9af122bc-dd18-4db2-8062-462a57e1879b" : {
+          "x" : 0,
+          "y" : 100
+        },
+        "a251719d-8f22-41c5-8dce-f00a3026f19d" : {
+          "x" : 0,
+          "y" : 300
+        },
+        "d25335ff-ed73-4a3a-90ed-b7cae95f0615" : {
+          "x" : 0,
+          "y" : 200
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.0973103316828767,
+      "translate" : [ 271.8825434573859, 90.45481969485857 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "collab" : true,
+        "component" : true,
+        "custom" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "mobile" : true,
+        "modifiers" : true,
+        "nlp" : true,
+        "serviceevents" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : true,
+      "serviceGroupOpenHash" : {
+        "Chat" : true,
+        "NLCustomTest" : true,
+        "NLTest" : true,
+        "NatLangTutorial" : true,
+        "Notification" : true,
+        "Recommend" : true,
+        "Utils" : true,
+        "a-b-c-daphne" : true,
+        "apps-services-ChatApp" : true,
+        "apps-services-TestApp" : true,
+        "apps-services-TestNotifyClose" : true,
+        "com-vantiq-aService" : true,
+        "com-vantiq-engines-EngineMonitor" : true,
+        "io-fred-test2-Recommender" : true,
+        "io-fred-test2-Utils" : true,
+        "patient-monitoring-HeartRate" : true
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "PublishSpeed" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "EngineSpeed",
+        "parentStreams" : [ "SaveSpeed" ],
+        "processedByClause" : null,
+        "service" : "com.vantiq.engines.EngineMonitor"
+      },
+      "context" : "React",
+      "downstreamReferences" : { },
+      "name" : "PublishSpeed",
+      "pattern" : "PublishToService",
+      "patternVersion" : 1,
+      "uuid" : "a251719d-8f22-41c5-8dce-f00a3026f19d"
+    },
+    "SaveSpeed" : {
+      "configuration" : {
+        "childStreams" : [ "PublishSpeed" ],
+        "imports" : null,
+        "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
+        "parentStreams" : [ "SplitBySystemId" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\nvar curSpeed = event.speed\nstate = curSpeed"
+        },
+        "resetFrequency" : null,
+        "schema" : null,
+        "stateProperty" : "speed"
+      },
+      "context" : "React",
+      "downstreamReferences" : { },
+      "name" : "SaveSpeed",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 2,
+      "uuid" : "d25335ff-ed73-4a3a-90ed-b7cae95f0615"
+    },
+    "SensorReading" : {
+      "configuration" : {
+        "childStreams" : [ "SplitBySystemId" ],
+        "condition" : "",
+        "eventTypeName" : "SpeedEvent",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.engines.EngineMonitor",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "context" : "Ingest",
+      "downstreamReferences" : { },
+      "name" : "SensorReading",
+      "pattern" : "EventStream",
+      "patternVersion" : 2,
+      "uuid" : "16dd3051-0937-45e6-8a18-1051b1ac72ee"
+    },
+    "SplitBySystemId" : {
+      "configuration" : {
+        "childStreams" : [ "SaveSpeed" ],
+        "groupBy" : "event.systemId",
+        "groupByWindow" : null,
+        "imports" : null,
+        "maxOpenGroups" : null,
+        "parentStreams" : [ "SensorReading" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "SplitBySystemId",
+      "pattern" : "SplitByGroup",
+      "patternVersion" : 2,
+      "uuid" : "9af122bc-dd18-4db2-8062-462a57e1879b"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : {
+    "Ingest" : {
+      "children" : [ "Analyze" ],
+      "description" : "The events arriving from the configured event path",
+      "name" : "Ingest",
+      "type" : "Ingest",
+      "uuid" : "71fcbed8-a9a3-4382-ad29-294278eb5ad7"
+    },
+    "React" : {
+      "children" : [ ],
+      "description" : "React to the situation detected by taking the appropriate action",
+      "name" : "React",
+      "type" : "React",
+      "uuid" : "06e11a0b-19ac-444f-94b5-98896213eb7a"
+    }
+  },
+  "description" : null,
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.engines.EngineMonitor_SensorReading0_EventHandler",
+  "writeFrequency" : null
+}

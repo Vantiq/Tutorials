@@ -1,6 +1,0 @@
-{
-  "ars_relationships" : [ ],
-  "name" : "com.vantiq.engines.EngineMonitor_SpeedEvent_EventHandler.PartitionedAppState",
-  "properties" : { },
-  "role" : "schema"
-}

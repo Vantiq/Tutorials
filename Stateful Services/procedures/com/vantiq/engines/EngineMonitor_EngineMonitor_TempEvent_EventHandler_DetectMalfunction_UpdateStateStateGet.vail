@@ -1,8 +1,0 @@
-package com.vantiq.engines
-PROCEDURE EngineMonitor.EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateStateGet(partitionKey String) 
-    WITH ars_dependentResource="/collaborationtypes/com.vantiq.engines.EngineMonitor_TempEvent_EventHandler", properties = {taskName: "DetectMalfunction_UpdateState", isGenerated: true}, 
-    updateInterface = true
-
-var result = EngineMonitor_TempEvent_EventHandler_DetectMalfunction_UpdateStateState.get(partitionKey)
-
-return result
