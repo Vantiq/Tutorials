@@ -23,7 +23,7 @@
     "target" : "topic//vantiq/systemmodel/PatientResponse/submitTopic"
   }, {
     "source" : "services/patient.monitoring.HeartRate",
-    "target" : "type/patient.monitoring.HeartRate.PartitionedAppState"
+    "target" : "type/patient.monitoring.HeartRate.PartitionedState"
   }, {
     "source" : "app/patient.monitoring.HeartRate_MonitorReading_EventHandler",
     "target" : "type/patient.monitoring.HeartRate_MonitorReading"
@@ -386,9 +386,9 @@
     "timestamp" : "2023-01-24T18:42:44.909Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.PartitionedAppState",
-    "name" : "patient.monitoring.HeartRate.PartitionedAppState",
-    "resourceReference" : "/types/patient.monitoring.HeartRate.PartitionedAppState",
+    "label" : "patient.monitoring.HeartRate.PartitionedState",
+    "name" : "patient.monitoring.HeartRate.PartitionedState",
+    "resourceReference" : "/types/patient.monitoring.HeartRate.PartitionedState",
     "timestamp" : "2023-01-24T18:42:39.881Z",
     "type" : 1
   }, {

@@ -1,6 +1,6 @@
 {
   "ars_relationships" : [ ],
-  "name" : "com.vantiq.engines.EngineMonitor.PartitionedAppState",
+  "name" : "com.vantiq.engines.EngineMonitor.PartitionedState",
   "properties" : { },
   "role" : "schema"
 }

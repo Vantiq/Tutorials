@@ -21,7 +21,7 @@
     } ]
   } ],
   "name" : "patient.monitoring.HeartRate",
-  "partitionedType" : "patient.monitoring.HeartRate.PartitionedAppState",
+  "partitionedType" : "patient.monitoring.HeartRate.PartitionedState",
   "replicationFactor" : 1,
   "scheduledProcedures" : {
     "ActiveCollabsWriteAll_MonitorReading" : {

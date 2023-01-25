@@ -21,7 +21,7 @@
       "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading1_EventHandler/SensorReading"
     }
   },
-  "globalType" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
+  "globalType" : "com.vantiq.engines.EngineMonitor.GlobalState",
   "interface" : [ ],
   "internalEventHandlers" : [ ],
   "name" : "com.vantiq.engines.EngineMonitor",

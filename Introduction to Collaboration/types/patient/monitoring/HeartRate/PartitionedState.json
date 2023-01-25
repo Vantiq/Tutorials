@@ -1,6 +1,6 @@
 {
   "ars_relationships" : [ ],
-  "name" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
+  "name" : "patient.monitoring.HeartRate.PartitionedState",
   "properties" : { },
   "role" : "schema"
 }

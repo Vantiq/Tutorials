@@ -38,7 +38,7 @@
     "target" : "procedure/com.vantiq.engines.EngineMonitor.speedUpdate"
   }, {
     "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "type/com.vantiq.engines.EngineMonitor.GlobalAppState"
+    "target" : "type/com.vantiq.engines.EngineMonitor.GlobalState"
   }, {
     "source" : "procedure/com.vantiq.engines.EngineMonitor.speedReset",
     "target" : "services/com.vantiq.engines.EngineMonitor"
@@ -159,9 +159,9 @@
     "timestamp" : "2023-01-10T17:05:14.787Z",
     "type" : 15
   }, {
-    "label" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
-    "name" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
-    "resourceReference" : "/types/com.vantiq.engines.EngineMonitor.GlobalAppState",
+    "label" : "com.vantiq.engines.EngineMonitor.GlobalState",
+    "name" : "com.vantiq.engines.EngineMonitor.GlobalState",
+    "resourceReference" : "/types/com.vantiq.engines.EngineMonitor.GlobalState",
     "timestamp" : "2023-01-10T17:05:14.507Z",
     "type" : 1
   }, {

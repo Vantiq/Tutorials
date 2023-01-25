@@ -28,7 +28,7 @@
   } ],
   "internalEventHandlers" : [ ],
   "name" : "com.vantiq.engines.EngineMonitor",
-  "partitionedType" : "com.vantiq.engines.EngineMonitor.PartitionedAppState",
+  "partitionedType" : "com.vantiq.engines.EngineMonitor.PartitionedState",
   "replicationFactor" : 1,
   "scheduledProcedures" : {
     "writeLastAlert" : {
