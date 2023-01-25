@@ -202,7 +202,7 @@
     },
     "LoopWhile" : {
       "configuration" : {
-        "condition" : "counter < length(event.recommendedResponders) && (HeartRate.Active_HeartRate_MonitorReading_EventHandlerGet(collaborationId, \"firstResponder\") == null)",
+        "condition" : "counter < length(event.recommendedResponders) && (HeartRate.ActiveCollabsGetById_MonitorReading(collaborationId, \"firstResponder\") == null)",
         "counterProperty" : "counter",
         "imports" : null,
         "maxRetryCount" : null,

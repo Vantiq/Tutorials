@@ -25,7 +25,7 @@
   "partitionedType" : "patient.monitoring.HeartRate.PartitionedAppState",
   "replicationFactor" : 1,
   "scheduledProcedures" : {
-    "Active_HeartRate_MonitorReading_EventHandlerWrite" : {
+    "ActiveCollabsWriteAll_MonitorReading" : {
       "interval" : 300000
     }
   }
