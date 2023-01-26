@@ -411,11 +411,11 @@
   "disableBadging" : false,
   "entityRoles" : [ {
     "name" : "patient",
-    "type" : "patient.monitoring.HeartRate_MonitorReading"
+    "type" : "patient.monitoring.HeartRate.MonitorReading"
   } ],
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "patient.monitoring.HeartRate_MonitorReading",
+  "name" : "patient.monitoring.HeartRate.MonitorReading",
   "writeFrequency" : "5 minutes"
 }
