@@ -194,6 +194,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "patient.monitoring.HeartRate_MonitorReading_EventHandler",
+  "name" : "patient.monitoring.HeartRate_MonitorReading",
   "writeFrequency" : "5 minutes"
 }

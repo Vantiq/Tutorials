@@ -157,6 +157,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.EngineMonitor_SensorReading0_EventHandler",
+  "name" : "com.vantiq.engines.EngineMonitor_SensorReading0",
   "writeFrequency" : null
 }

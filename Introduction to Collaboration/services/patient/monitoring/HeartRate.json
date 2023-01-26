@@ -6,7 +6,7 @@
     "MonitorReading" : {
       "direction" : "INBOUND",
       "eventSchema" : "patient.monitoring.HeartRate_MonitorReading",
-      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate_MonitorReading_EventHandler/EventStream"
+      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate_MonitorReading/EventStream"
     }
   },
   "globalType" : null,
