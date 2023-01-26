@@ -1,0 +1,72 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "isHidden" : false
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Ingest" : {
+      "configuration" : {
+        "childStreams" : [ "Transform" ],
+        "condition" : "",
+        "eventTypeName" : null,
+        "inboundResource" : null,
+        "inboundResourceId" : null,
+        "parentStreams" : [ ]
+      },
+      "context" : "Ingest",
+      "name" : "Ingest",
+      "pattern" : "EventStream",
+      "patternVersion" : 2
+    },
+    "PublishEvent" : {
+      "configuration" : {
+        "eventTypeName" : "ExternalEvent0",
+        "parentStreams" : [ "Transform" ],
+        "service" : "com.vantiq.pothole.IngestSensorService"
+      },
+      "context" : "Publish",
+      "name" : "PublishEvent",
+      "pattern" : "PublishToService",
+      "patternVersion" : 1
+    },
+    "Transform" : {
+      "configuration" : {
+        "childStreams" : [ "PublishEvent" ],
+        "parentStreams" : [ "Ingest" ],
+        "transformation" : null
+      },
+      "context" : "Transform",
+      "name" : "Transform",
+      "pattern" : "Transformation",
+      "patternVersion" : 2
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : {
+    "Ingest" : {
+      "children" : [ "Transform" ],
+      "description" : "The events arriving from the external source",
+      "name" : "Ingest",
+      "type" : "Ingest"
+    },
+    "Publish" : {
+      "children" : [ ],
+      "description" : "Publish the transformed event back to the external source for additional processing",
+      "name" : "Publish",
+      "type" : "React"
+    },
+    "Transform" : {
+      "children" : [ "Publish" ],
+      "description" : "Transform the event schema to conform to the internal representation",
+      "name" : "Transform",
+      "type" : "Transform"
+    }
+  },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.pothole.IngestSensorService.IngestExternalEvents0"
+}

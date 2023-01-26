@@ -1,0 +1,253 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "Analysis" : {
+          "x" : 107.5,
+          "y" : 395
+        },
+        "DetectSituation" : {
+          "x" : 22.89081573486328,
+          "y" : 243.42843532562256
+        },
+        "Ingest" : {
+          "x" : 0,
+          "y" : -5
+        },
+        "React" : {
+          "x" : 107.5,
+          "y" : 495
+        },
+        "SendToControlSystem" : {
+          "x" : 107.5,
+          "y" : 500
+        },
+        "StoreState" : {
+          "x" : 107.5,
+          "y" : 300
+        },
+        "Transform" : {
+          "x" : 0,
+          "y" : 100
+        },
+        "Update" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "actionNeeded" : {
+          "x" : 107.5,
+          "y" : 200
+        },
+        "computeRequiredChange" : {
+          "x" : 107.5,
+          "y" : 400
+        },
+        "stateEqualTarget" : {
+          "x" : -107.5,
+          "y" : 200
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.014520732257339,
+      "translate" : [ 568.9564766496293, 183.44242059695193 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "collab" : true,
+        "custom" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "mobile" : true,
+        "modifiers" : true,
+        "nlp" : true,
+        "serviceevents" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : {
+        "events" : true,
+        "procedures" : true
+      },
+      "serviceGroupOpenHash" : {
+        "Chat" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Notification" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Recommend" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "com-vantiq-Integration" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "com-vantiq-ObjectRecognition" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "com-vantiq-TestService" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "SendToControlSystem" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "SendToControlSystem0",
+        "parentStreams" : [ "computeRequiredChange" ],
+        "service" : "com.vantiq.pothole.Pothole"
+      },
+      "context" : "React",
+      "downstreamReferences" : { },
+      "name" : "SendToControlSystem",
+      "pattern" : "PublishToService",
+      "patternVersion" : 1,
+      "uuid" : "bacdee5e-f022-4b10-bf82-285269242044"
+    },
+    "StoreState" : {
+      "configuration" : {
+        "childStreams" : [ "computeRequiredChange" ],
+        "imports" : null,
+        "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
+        "parentStreams" : [ "actionNeeded" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\nstate = event"
+        },
+        "resetFrequency" : null,
+        "schema" : null,
+        "stateProperty" : null
+      },
+      "context" : "DetectSituation",
+      "downstreamReferences" : { },
+      "name" : "StoreState",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 2,
+      "uuid" : "c663f7b2-e60e-43a8-a7bf-d31c804de7ac"
+    },
+    "Update" : {
+      "configuration" : {
+        "childStreams" : [ "stateEqualTarget", "actionNeeded" ],
+        "condition" : "",
+        "eventTypeName" : "UpdateState0",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.pothole.Pothole",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "context" : "Ingest",
+      "downstreamReferences" : { },
+      "name" : "Update",
+      "pattern" : "EventStream",
+      "patternVersion" : 2,
+      "uuid" : "fa7bcc5f-5672-490d-855f-a45df8e038f9"
+    },
+    "actionNeeded" : {
+      "configuration" : {
+        "childStreams" : [ "StoreState" ],
+        "condition" : "event.value != com.vantiq.pothole.Pothole.getTargetValue()",
+        "imports" : null,
+        "parentStreams" : [ "Update" ]
+      },
+      "context" : "DetectSituation",
+      "downstreamReferences" : { },
+      "name" : "actionNeeded",
+      "pattern" : "Filter",
+      "patternVersion" : 2
+    },
+    "computeRequiredChange" : {
+      "configuration" : {
+        "childStreams" : [ "SendToControlSystem" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "StoreState" ],
+        "partitionKey" : null,
+        "procedure" : "com.vantiq.pothole.Pothole.computeRequiredChange",
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "context" : "Analysis",
+      "downstreamReferences" : { },
+      "name" : "computeRequiredChange",
+      "pattern" : "Procedure",
+      "patternVersion" : 1,
+      "uuid" : "a7d946fe-9452-418a-8f69-e35615828f39"
+    },
+    "stateEqualTarget" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "condition" : "event.value == com.vantiq.pothole.Pothole.getTargetValue()",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Update" ],
+        "upsert" : false
+      },
+      "context" : "DetectSituation",
+      "downstreamReferences" : { },
+      "name" : "stateEqualTarget",
+      "pattern" : "Filter",
+      "patternVersion" : 2
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : {
+    "Analysis" : {
+      "children" : [ "React" ],
+      "description" : "Compute statistics and analysis on the incoming event",
+      "name" : "Analysis",
+      "type" : "Analyze"
+    },
+    "DetectSituation" : {
+      "children" : [ "Analysis" ],
+      "description" : "Determine if there is a significant situation which must be reported",
+      "name" : "DetectSituation",
+      "type" : "Detect"
+    },
+    "Ingest" : {
+      "children" : [ "DetectSituation" ],
+      "description" : "The events arriving from the configured event path",
+      "name" : "Ingest",
+      "type" : "Ingest"
+    },
+    "React" : {
+      "children" : [ ],
+      "description" : "React to the situation detected by taking the appropriate action",
+      "name" : "React",
+      "type" : "React"
+    }
+  },
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.pothole.Pothole_UpdateState0_EventHandler"
+}

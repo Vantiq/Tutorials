@@ -1,0 +1,13 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "ExternalEvent0" : {
+      "direction" : "OUTBOUND"
+    }
+  },
+  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.pothole.IngestSensorService.IngestExternalEvents0" ],
+  "name" : "com.vantiq.pothole.IngestSensorService",
+  "replicationFactor" : 1
+}

@@ -1,0 +1,10 @@
+package com.vantiq.pothole
+PROCEDURE Pothole.setTarget(target)
+
+targetValue.updateAndGet(value => {
+    // 
+    // State Updating Code ...
+    //
+    
+    return target
+})

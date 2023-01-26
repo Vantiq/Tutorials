@@ -1,0 +1,41 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "eventTypes" : {
+    "SendToControlSystem0" : {
+      "direction" : "OUTBOUND"
+    },
+    "UpdateState0" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.pothole.Pothole_UpdateState0_EventHandler/Update"
+    }
+  },
+  "globalType" : "com.vantiq.pothole.Pothole_Global",
+  "interface" : [ {
+    "name" : "computeRequiredChange",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "getTargetValue",
+    "parameters" : [ ]
+  }, {
+    "name" : "setTarget",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "target",
+      "required" : false,
+      "type" : null
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.pothole.Pothole",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

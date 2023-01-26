@@ -1,0 +1,3 @@
+package com.vantiq.pothole
+PROCEDURE Pothole.getTargetValue()
+return Object.clone(targetValue.getValue())

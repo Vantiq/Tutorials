@@ -1,0 +1,262 @@
+{
+  "ars_relationships" : [ ],
+  "contents" : {
+    "checklist" : [ {
+      "label" : "PotholeReporter"
+    }, {
+      "label" : "Report Received"
+    }, {
+      "label" : "Store Report"
+    }, {
+      "label" : "Fix Order Issued"
+    }, {
+      "label" : "Notify Team"
+    }, {
+      "label" : "Update Status"
+    }, {
+      "label" : "Status Updated"
+    }, {
+      "label" : "Notify Reporter"
+    } ],
+    "connectors" : [ {
+      "key" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 13
+    }, {
+      "key" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 8
+    }, {
+      "key" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 13
+    }, {
+      "key" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 8
+    }, {
+      "key" : "1e83bdd0-9d9d-11ed-9a8a-a6dd05f0be77&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "1e83bdd0-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 15
+    }, {
+      "key" : "1e83bdd0-9d9d-11ed-9a8a-a6dd05f0be77&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "1e83bdd0-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 14
+    }, {
+      "key" : "1e840bf0-9d9d-11ed-9a8a-a6dd05f0be77&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "1e840bf0-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 15
+    }, {
+      "key" : "1e840bf0-9d9d-11ed-9a8a-a6dd05f0be77&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "1e840bf0-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 14
+    }, {
+      "key" : "1e840bf2-9d9d-11ed-9a8a-a6dd05f0be77&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "1e840bf2-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 15
+    }, {
+      "key" : "1e840bf2-9d9d-11ed-9a8a-a6dd05f0be77&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "1e840bf2-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 14
+    }, {
+      "key" : "1e82fa80-9d9d-11ed-9a8a-a6dd05f0be77&INPUT1",
+      "name" : "UpdateState0",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 1
+    }, {
+      "key" : "1e82fa81-9d9d-11ed-9a8a-a6dd05f0be77&OUTPUT2",
+      "name" : "SendToControlSystem0",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 2
+    }, {
+      "key" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNALIN2",
+      "name" : "Sensor",
+      "parent" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 12
+    }, {
+      "key" : "1e840bf1-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNAL1",
+      "name" : "ControlSystem",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 7
+    }, {
+      "key" : "1e840bf3-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNAL2",
+      "name" : "DataWarehouse",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 7
+    }, {
+      "key" : "1e8bad10-9d9d-11ed-9a8a-a6dd05f0be77&OUTPUT2",
+      "name" : "ExternalEvent0",
+      "parent" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 2
+    }, {
+      "key" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 3
+    }, {
+      "key" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 4
+    }, {
+      "key" : "51&1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&CALLIN1",
+      "name" : "computeRequiredChange",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 5
+    }, {
+      "key" : "51&1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&CALLIN2",
+      "name" : "getTargetValue",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 5
+    }, {
+      "key" : "51&1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&CALLIN3",
+      "name" : "setTarget",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 5
+    }, {
+      "key" : "51&1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&CALLIN4",
+      "name" : "Pothole_UpdateState0_EventHandler_StoreStateStateGet",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 5
+    }, {
+      "key" : "51&1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&CALLIN5",
+      "name" : "Pothole_UpdateState0_EventHandler_StoreStateStateUpdate",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 5
+    }, {
+      "key" : "51&1e82d371-9d9d-11ed-9a8a-a6dd05f0be77&CALLIN6",
+      "name" : "Pothole_UpdateState0_EventHandler_StoreStateStateReset",
+      "parent" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 5
+    }, {
+      "key" : "1e82d372-9d9d-11ed-9a8a-a6dd05f0be77&DATASTREAM1",
+      "name" : "NEW-DS",
+      "parent" : "1e82d372-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 11
+    }, {
+      "key" : "52&1e82d372-9d9d-11ed-9a8a-a6dd05f0be77&DATASTREAM1",
+      "name" : "SendToControlSystem0",
+      "parent" : "1e82d372-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 10
+    }, {
+      "key" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 3
+    }, {
+      "key" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "type" : 4
+    } ],
+    "links" : [ {
+      "isBidirectional" : false,
+      "source" : "1e83bdd0-9d9d-11ed-9a8a-a6dd05f0be77&EXTOUTBOUND1",
+      "target" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNALIN2"
+    }, {
+      "isBidirectional" : false,
+      "source" : "1e840bf1-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNAL1",
+      "target" : "1e840bf0-9d9d-11ed-9a8a-a6dd05f0be77&EXTINBOUND1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "1e840bf3-9d9d-11ed-9a8a-a6dd05f0be77&EXTERNAL2",
+      "target" : "1e840bf2-9d9d-11ed-9a8a-a6dd05f0be77&EXTINBOUND1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "1e82fa81-9d9d-11ed-9a8a-a6dd05f0be77&OUTPUT2",
+      "target" : "52&1e82d372-9d9d-11ed-9a8a-a6dd05f0be77&DATASTREAM1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "1e8bad10-9d9d-11ed-9a8a-a6dd05f0be77&OUTPUT2",
+      "target" : "1e82fa80-9d9d-11ed-9a8a-a6dd05f0be77&INPUT1"
+    } ],
+    "objects" : [ {
+      "h" : 100,
+      "label" : "Pothole",
+      "resourceName" : "com.vantiq.pothole.Pothole",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "1e82d371-9d9d-11ed-9a8a-a6dd05f0be77",
+      "w" : 124,
+      "x" : 0,
+      "y" : 0
+    }, {
+      "h" : 100,
+      "label" : "Pothole",
+      "resourceName" : "com.vantiq.pothole.Pothole",
+      "resourceType" : "system.clients",
+      "type" : 52,
+      "uuid" : "1e82d372-9d9d-11ed-9a8a-a6dd05f0be77",
+      "w" : 100,
+      "x" : 324,
+      "y" : 0
+    }, {
+      "h" : 100,
+      "label" : "IngestSensorService",
+      "resourceName" : "com.vantiq.pothole.IngestSensorService",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "1e83bdd1-9d9d-11ed-9a8a-a6dd05f0be77",
+      "w" : 300,
+      "x" : -362,
+      "y" : 0
+    }, {
+      "h" : 60,
+      "label" : "Sensor",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "1e83bdd0-9d9d-11ed-9a8a-a6dd05f0be77",
+      "w" : 110.234375,
+      "x" : -362,
+      "y" : -200
+    }, {
+      "h" : 60,
+      "label" : "ControlSystem",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "1e840bf0-9d9d-11ed-9a8a-a6dd05f0be77",
+      "w" : 110.234375,
+      "x" : 0,
+      "y" : 200
+    }, {
+      "h" : 60,
+      "label" : "DataWarehouse",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "1e840bf2-9d9d-11ed-9a8a-a6dd05f0be77",
+      "w" : 110.234375,
+      "x" : 200,
+      "y" : 200
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.5944105451235546,
+        "translate" : [ 316.22641000573105, 210.79720527256177 ]
+      }
+    },
+    "v" : 1
+  },
+  "description" : "Generated from System Model 'Pothole'.",
+  "name" : "com.vantiq.pothole.Pothole",
+  "serviceEventRoutes" : [ {
+    "eventSource" : {
+      "eventTypeName" : "ExternalEvent0",
+      "serviceName" : "com.vantiq.pothole.IngestSensorService"
+    },
+    "eventTarget" : {
+      "eventTypeName" : "UpdateState0",
+      "serviceName" : "com.vantiq.pothole.Pothole"
+    }
+  } ]
+}
