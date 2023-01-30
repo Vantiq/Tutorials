@@ -5,56 +5,55 @@
     "dataVersion" : 5,
     "graph" : {
       "coordinates" : {
-        "Chat" : {
-          "x" : 97.5,
+        "EvacuationEvent" : {
+          "x" : 0,
           "y" : 80
         },
         "EventStream" : {
           "x" : 0,
           "y" : 0
-        },
-        "WarningEvent" : {
-          "x" : -97.5,
-          "y" : 80
         }
       },
       "lastZoomRequest" : 0,
-      "scale" : 2.9333366386577038,
-      "translate" : [ 563.6214602917838, 226.6588776006875 ]
+      "scale" : 0.9087781164485198,
+      "translate" : [ 167.72563028342586, 146.89034850929698 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
-        "filters" : true,
-        "mobile" : true
+        "collab" : true
       },
       "ctGroupOpenHash" : {
         "actions" : true,
         "mobile" : true
       },
       "ctServiceOpen" : true,
-      "serviceGroupOpenHash" : { }
+      "serviceGroupOpenHash" : {
+        "Recommend" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
     },
-    "paletteWidth" : 180.98,
+    "paletteWidth" : 170,
     "propertyWidth" : 280
   },
   "ars_relationships" : [ ],
   "assembly" : {
-    "Chat" : {
+    "EvacuationEvent" : {
       "configuration" : {
-        "chatbotSourceName" : null,
-        "imports" : null,
-        "parentStreams" : [ ],
-        "users" : null
+        "eventTypeName" : "EvacuationEvent",
+        "parentStreams" : [ "EventStream" ],
+        "service" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency"
       },
       "downstreamReferences" : { },
-      "pattern" : "Chat",
+      "pattern" : "PublishToEventType",
       "patternVersion" : 1,
-      "uuid" : "f372ce12-0226-46f2-931a-84c87a6c7ca3"
+      "uuid" : "27488bcb-f3c5-4197-9631-c49f82161e12"
     },
     "EventStream" : {
       "configuration" : {
-        "childStreams" : [ "WarningEvent" ],
-        "eventTypeName" : "WarnNotification",
+        "childStreams" : [ "EvacuationEvent" ],
+        "eventTypeName" : "EvacuateNotification",
         "inboundResource" : "services",
         "inboundResourceId" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency",
         "parentStreams" : [ ]
@@ -62,18 +61,7 @@
       "downstreamReferences" : { },
       "pattern" : "EventStream",
       "patternVersion" : 1,
-      "uuid" : "8ef2c5bb-ef3b-449c-bbb5-1de48c5bc2e1"
-    },
-    "WarningEvent" : {
-      "configuration" : {
-        "eventTypeName" : "WarningEvent",
-        "parentStreams" : [ "EventStream" ],
-        "service" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency"
-      },
-      "downstreamReferences" : { },
-      "pattern" : "PublishToEventType",
-      "patternVersion" : 1,
-      "uuid" : "217258e3-6e1b-4c7a-86b3-3fecb8094240"
+      "uuid" : "205cae75-88d8-4e52-8e12-5e9b27671afc"
     }
   },
   "collaboratorRoles" : [ ],
@@ -83,6 +71,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency_WarnNotification",
+  "name" : "com.vantiq.weatherEmergencies.DetectWeatherEmergency.EvacuateNotification",
   "writeFrequency" : "5 minutes"
 }

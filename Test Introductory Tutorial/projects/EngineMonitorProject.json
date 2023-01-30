@@ -56,19 +56,19 @@
     "target" : "services/com.vantiq.engines.EngineMonitor"
   }, {
     "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "app/com.vantiq.engines.EngineMonitor_SensorReading1"
+    "target" : "app/com.vantiq.engines.EngineMonitor.SensorReading1"
   }, {
-    "source" : "app/com.vantiq.engines.EngineMonitor_SensorReading1",
+    "source" : "app/com.vantiq.engines.EngineMonitor.SensorReading1",
     "target" : "services/com.vantiq.engines.EngineMonitor"
   }, {
-    "source" : "app/com.vantiq.engines.EngineMonitor_SensorReading0",
+    "source" : "app/com.vantiq.engines.EngineMonitor.SensorReading0",
     "target" : "services/com.vantiq.engines.EngineMonitor"
   }, {
-    "source" : "app/com.vantiq.engines.EngineMonitor_SensorReading0",
+    "source" : "app/com.vantiq.engines.EngineMonitor.SensorReading0",
     "target" : "procedure/com.vantiq.engines.EngineMonitor.speedUpdate"
   }, {
     "source" : "services/com.vantiq.engines.EngineMonitor",
-    "target" : "app/com.vantiq.engines.EngineMonitor_SensorReading0"
+    "target" : "app/com.vantiq.engines.EngineMonitor.SensorReading0"
   }, {
     "source" : "app/com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents1",
     "target" : "source/com.vantiq.engines.TemperatureSensor"
@@ -202,13 +202,13 @@
     "timestamp" : "2023-01-26T02:17:19.249Z",
     "type" : 56
   }, {
-    "name" : "com.vantiq.engines.EngineMonitor_SensorReading0",
-    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading0",
+    "name" : "com.vantiq.engines.EngineMonitor.SensorReading0",
+    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor.SensorReading0",
     "timestamp" : "2023-01-26T02:17:10.410Z",
     "type" : 12
   }, {
-    "name" : "com.vantiq.engines.EngineMonitor_SensorReading1",
-    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading1",
+    "name" : "com.vantiq.engines.EngineMonitor.SensorReading1",
+    "resourceReference" : "/collaborationtypes/com.vantiq.engines.EngineMonitor.SensorReading1",
     "timestamp" : "2023-01-26T02:17:10.423Z",
     "type" : 12
   }, {
