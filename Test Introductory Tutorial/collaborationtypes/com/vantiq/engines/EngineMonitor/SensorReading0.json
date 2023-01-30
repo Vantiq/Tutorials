@@ -5,34 +5,30 @@
     "dataVersion" : 5,
     "graph" : {
       "coordinates" : {
-        "06e11a0b-19ac-444f-94b5-98896213eb7a" : {
-          "x" : 0,
-          "y" : 245
-        },
-        "16dd3051-0937-45e6-8a18-1051b1ac72ee" : {
-          "x" : 0,
-          "y" : 0
-        },
-        "71fcbed8-a9a3-4382-ad29-294278eb5ad7" : {
+        "Ingest" : {
           "x" : 0,
           "y" : -5
         },
-        "9af122bc-dd18-4db2-8062-462a57e1879b" : {
+        "PublishSpeed" : {
           "x" : 0,
-          "y" : 100
+          "y" : 275.39810363247864
         },
-        "a251719d-8f22-41c5-8dce-f00a3026f19d" : {
+        "React" : {
           "x" : 0,
-          "y" : 300
+          "y" : 233.51081730769232
         },
-        "d25335ff-ed73-4a3a-90ed-b7cae95f0615" : {
+        "SaveSpeed" : {
+          "x" : 1.6390892094017095,
+          "y" : 201.623530982906
+        },
+        "SensorReading" : {
           "x" : 0,
-          "y" : 200
+          "y" : 0
         }
       },
       "lastZoomRequest" : 0,
-      "scale" : 1.0973103316828767,
-      "translate" : [ 271.8825434573859, 90.45481969485857 ]
+      "scale" : 0.6100949199494846,
+      "translate" : [ 149.99608133758707, 122.24819502828757 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -100,7 +96,7 @@
         "imports" : null,
         "outboundBehavior" : "Emit original event",
         "outboundProperty" : null,
-        "parentStreams" : [ "SplitBySystemId" ],
+        "parentStreams" : [ "SensorReading" ],
         "procedure" : {
           "vailScript" : "// Update the value of state using event.\nvar curSpeed = event.speed\nstate = curSpeed"
         },
@@ -117,7 +113,7 @@
     },
     "SensorReading" : {
       "configuration" : {
-        "childStreams" : [ "SplitBySystemId" ],
+        "childStreams" : [ "SaveSpeed" ],
         "condition" : "",
         "eventTypeName" : "SpeedEvent",
         "inboundResource" : "services",
@@ -136,21 +132,6 @@
       "pattern" : "EventStream",
       "patternVersion" : 2,
       "uuid" : "16dd3051-0937-45e6-8a18-1051b1ac72ee"
-    },
-    "SplitBySystemId" : {
-      "configuration" : {
-        "childStreams" : [ "SaveSpeed" ],
-        "groupBy" : "event.systemId",
-        "groupByWindow" : null,
-        "imports" : null,
-        "maxOpenGroups" : null,
-        "parentStreams" : [ "SensorReading" ]
-      },
-      "downstreamReferences" : { },
-      "name" : "SplitBySystemId",
-      "pattern" : "SplitByGroup",
-      "patternVersion" : 2,
-      "uuid" : "9af122bc-dd18-4db2-8062-462a57e1879b"
     }
   },
   "collaboratorRoles" : [ ],
@@ -176,6 +157,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.EngineMonitor_SensorReading0",
+  "name" : "com.vantiq.engines.EngineMonitor.SensorReading0",
   "writeFrequency" : null
 }

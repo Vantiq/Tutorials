@@ -6,52 +6,56 @@
     "graph" : {
       "coordinates" : {
         "032a744c-869c-4ce8-9dfd-7c4de3c6ea75" : {
-          "x" : -215,
+          "x" : 0,
           "y" : 400
         },
         "060b4ea4-cdc2-4524-8454-d306151d5692" : {
-          "x" : 107.5,
-          "y" : 100
+          "x" : -97.5,
+          "y" : 160
         },
         "16dd3051-0937-45e6-8a18-1051b1ac72ee" : {
           "x" : 0,
           "y" : 0
         },
         "21824b75-ffcf-4f05-968f-77598606d9ca" : {
-          "x" : 0,
+          "x" : 195,
           "y" : 400
         },
         "2f030ec9-6dd2-4e33-8ff5-9ae742857d47" : {
-          "x" : -107.5,
-          "y" : 495
+          "x" : 97.5,
+          "y" : 475
         },
         "3e47e303-1dde-45d5-b75e-bc0e71cc6ddb" : {
-          "x" : 0,
-          "y" : 300
+          "x" : 195,
+          "y" : 320
         },
         "589360ab-edd2-46f6-b5c8-d7816e67095f" : {
-          "x" : -80.4280686378479,
-          "y" : 142.7257432937622
+          "x" : 124.57354092597961,
+          "y" : 192.725323677063
         },
         "74c40a26-a2c9-4aae-89e0-8f22035874aa" : {
-          "x" : -107.5,
-          "y" : 200
+          "x" : 97.5,
+          "y" : 240
         },
         "7667dcaf-bcee-4817-8932-ae67f3d40350" : {
-          "x" : 107.5,
-          "y" : 200
+          "x" : -97.5,
+          "y" : 240
         },
         "9e2cde60-f6d2-4495-8951-fea583f084c1" : {
-          "x" : -107.5,
-          "y" : 100
+          "x" : 97.5,
+          "y" : 160
         },
         "a251719d-8f22-41c5-8dce-f00a3026f19d" : {
-          "x" : -107.5,
-          "y" : 500
+          "x" : 97.5,
+          "y" : 480
         },
         "b90c72eb-b7ed-4ee1-8945-5623a0c7d57a" : {
-          "x" : -215,
-          "y" : 300
+          "x" : 0,
+          "y" : 320
+        },
+        "c1a1f552-6e8a-4444-95fd-a4594395288a" : {
+          "x" : 0,
+          "y" : 80
         },
         "ea2ac370-9201-425a-8da3-82c58bcb2e57" : {
           "x" : 0,
@@ -59,13 +63,14 @@
         }
       },
       "lastZoomRequest" : 0,
-      "scale" : 1.9523192775561686,
-      "translate" : [ 597.8672439728368, 91.32375273744981 ]
+      "scale" : 0.6508377084195226,
+      "translate" : [ 212.91861946585976, 61.71738671486071 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
         "component" : true,
-        "custom" : true
+        "custom" : true,
+        "flowControl" : true
       },
       "ctGroupOpenHash" : {
         "actions" : true,
@@ -126,7 +131,7 @@
     "NoAlert_AddDiagnosis" : {
       "componentReference" : "NoAlert",
       "configuration" : {
-        "childStreams" : [ "PublishStatus" ],
+        "childStreams" : [ "NoAlert_SaveAlertMessage" ],
         "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
@@ -144,9 +149,7 @@
         "upsert" : false
       },
       "context" : "React",
-      "downstreamReferences" : {
-        "event" : "Diagnosis"
-      },
+      "downstreamReferences" : { },
       "name" : "NoAlert_AddDiagnosis",
       "pattern" : "Transformation",
       "patternVersion" : 2,
@@ -166,7 +169,7 @@
         "outboundResource" : null,
         "outboundResourceConfig" : null,
         "outboundResourceId" : null,
-        "parentStreams" : [ "SensorReading" ],
+        "parentStreams" : [ "SplitBySystemId" ],
         "upsert" : false
       },
       "context" : "DetectSituation",
@@ -176,6 +179,30 @@
       "pattern" : "Filter",
       "patternVersion" : 2,
       "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
+    },
+    "NoAlert_SaveAlertMessage" : {
+      "componentReference" : "NoAlert",
+      "configuration" : {
+        "childStreams" : [ "PublishStatus" ],
+        "enableBadging" : true,
+        "imports" : null,
+        "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
+        "parentStreams" : [ "NoAlert_AddDiagnosis" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+        },
+        "resetFrequency" : null,
+        "schema" : null,
+        "stateProperty" : "lastAlert"
+      },
+      "downstreamReferences" : {
+        "event" : "Diagnosis"
+      },
+      "name" : "NoAlert_SaveAlertMessage",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 2,
+      "uuid" : "129d8467-1729-4841-9cd4-7488b4ee79a0"
     },
     "NonSpeedOverheat" : {
       "configuration" : {
@@ -210,7 +237,7 @@
     "NonSpeedOverheat_AddDiagnosis" : {
       "componentReference" : "NonSpeedOverheat",
       "configuration" : {
-        "childStreams" : [ "PublishStatus" ],
+        "childStreams" : [ "NonSpeedOverheat_SaveAlertMessage" ],
         "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
@@ -228,9 +255,7 @@
         "upsert" : false
       },
       "context" : "React",
-      "downstreamReferences" : {
-        "event" : "Diagnosis"
-      },
+      "downstreamReferences" : { },
       "name" : "NonSpeedOverheat_AddDiagnosis",
       "pattern" : "Transformation",
       "patternVersion" : 2,
@@ -265,6 +290,30 @@
       "patternVersion" : 2,
       "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
     },
+    "NonSpeedOverheat_SaveAlertMessage" : {
+      "componentReference" : "NonSpeedOverheat",
+      "configuration" : {
+        "childStreams" : [ "PublishStatus" ],
+        "enableBadging" : true,
+        "imports" : null,
+        "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
+        "parentStreams" : [ "NonSpeedOverheat_AddDiagnosis" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+        },
+        "resetFrequency" : null,
+        "schema" : null,
+        "stateProperty" : "lastAlert"
+      },
+      "downstreamReferences" : {
+        "event" : "Diagnosis"
+      },
+      "name" : "NonSpeedOverheat_SaveAlertMessage",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 2,
+      "uuid" : "129d8467-1729-4841-9cd4-7488b4ee79a0"
+    },
     "OverheatCheck" : {
       "configuration" : {
         "childStreams" : [ "RetrieveSpeed" ],
@@ -277,7 +326,7 @@
         "outboundResource" : null,
         "outboundResourceConfig" : null,
         "outboundResourceId" : null,
-        "parentStreams" : [ "SensorReading" ],
+        "parentStreams" : [ "SplitBySystemId" ],
         "upsert" : false
       },
       "context" : "DetectSituation",
@@ -291,7 +340,7 @@
       "configuration" : {
         "childStreams" : null,
         "eventTypeName" : "EngineStatus",
-        "parentStreams" : [ "SpeedOverheat_AddDiagnosis", "NonSpeedOverheat_AddDiagnosis", "NoAlert_AddDiagnosis" ],
+        "parentStreams" : [ "SpeedOverheat_SaveAlertMessage", "NonSpeedOverheat_SaveAlertMessage", "NoAlert_SaveAlertMessage" ],
         "processedByClause" : null,
         "service" : "com.vantiq.engines.EngineMonitor"
       },
@@ -314,7 +363,7 @@
         "transformInPlace" : true,
         "transformation" : {
           "speed" : {
-            "expression" : "com.vantiq.engines.EngineMonitor.speedGet()",
+            "expression" : "com.vantiq.engines.EngineMonitor.speedGet(event.systemId)",
             "type" : "expression"
           }
         },
@@ -329,7 +378,7 @@
     },
     "SensorReading" : {
       "configuration" : {
-        "childStreams" : [ "OverheatCheck", "NoAlert" ],
+        "childStreams" : [ "SplitBySystemId" ],
         "condition" : "",
         "eventTypeName" : "TemperatureEvent",
         "inboundResource" : "services",
@@ -382,7 +431,7 @@
     "SpeedOverheat_AddDiagnosis" : {
       "componentReference" : "SpeedOverheat",
       "configuration" : {
-        "childStreams" : [ "PublishStatus" ],
+        "childStreams" : [ "SpeedOverheat_SaveAlertMessage" ],
         "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
@@ -400,9 +449,7 @@
         "upsert" : false
       },
       "context" : "React",
-      "downstreamReferences" : {
-        "event" : "Diagnosis"
-      },
+      "downstreamReferences" : { },
       "name" : "SpeedOverheat_AddDiagnosis",
       "pattern" : "Transformation",
       "patternVersion" : 2,
@@ -436,6 +483,45 @@
       "pattern" : "Filter",
       "patternVersion" : 2,
       "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
+    },
+    "SpeedOverheat_SaveAlertMessage" : {
+      "componentReference" : "SpeedOverheat",
+      "configuration" : {
+        "childStreams" : [ "PublishStatus" ],
+        "enableBadging" : true,
+        "imports" : null,
+        "outboundBehavior" : "Emit original event",
+        "outboundProperty" : null,
+        "parentStreams" : [ "SpeedOverheat_AddDiagnosis" ],
+        "procedure" : {
+          "vailScript" : "// Update the value of state using event.\nvar msg = event.alertMsg\nif (msg != \"\") {\n    var newState = {systemId: event.systemId, lastAlert: msg, temperature: event.temperature, speed: event.speed}\n    state = newState\n}"
+        },
+        "resetFrequency" : null,
+        "schema" : null,
+        "stateProperty" : "lastAlert"
+      },
+      "downstreamReferences" : {
+        "event" : "Diagnosis"
+      },
+      "name" : "SpeedOverheat_SaveAlertMessage",
+      "pattern" : "AccumulateState",
+      "patternVersion" : 2,
+      "uuid" : "129d8467-1729-4841-9cd4-7488b4ee79a0"
+    },
+    "SplitBySystemId" : {
+      "configuration" : {
+        "childStreams" : [ "OverheatCheck", "NoAlert" ],
+        "groupBy" : "event.systemId",
+        "groupByWindow" : null,
+        "imports" : null,
+        "maxOpenGroups" : null,
+        "parentStreams" : [ "SensorReading" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "SplitBySystemId",
+      "pattern" : "SplitByGroup",
+      "patternVersion" : 2,
+      "uuid" : "c1a1f552-6e8a-4444-95fd-a4594395288a"
     }
   },
   "collaboratorRoles" : [ ],
@@ -468,6 +554,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.EngineMonitor_SensorReading1",
+  "name" : "com.vantiq.engines.EngineMonitor.SensorReading1",
   "writeFrequency" : null
 }
