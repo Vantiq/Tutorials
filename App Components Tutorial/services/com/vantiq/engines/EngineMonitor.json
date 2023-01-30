@@ -14,14 +14,14 @@
     },
     "SpeedEvent" : {
       "direction" : "INBOUND",
-      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading0_EventHandler/SensorReading"
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading0/SensorReading"
     },
     "TemperatureEvent" : {
       "direction" : "INBOUND",
-      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading1_EventHandler/SensorReading"
+      "implementingResource" : "/collaborationtypes/com.vantiq.engines.EngineMonitor_SensorReading1/SensorReading"
     }
   },
-  "globalType" : "com.vantiq.engines.EngineMonitor.GlobalAppState",
+  "globalType" : "com.vantiq.engines.EngineMonitor.GlobalState",
   "interface" : [ ],
   "internalEventHandlers" : [ ],
   "name" : "com.vantiq.engines.EngineMonitor",

@@ -1,6 +1,6 @@
 {
   "ars_relationships" : [ ],
-  "name" : "patient.monitoring.HeartRate_MonitorReading",
+  "name" : "patient.monitoring.HeartRate.MonitorReading",
   "properties" : {
     "heartRate" : {
       "encrypted" : false,

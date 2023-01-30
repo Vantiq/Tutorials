@@ -5,8 +5,8 @@
   "eventTypes" : {
     "MonitorReading" : {
       "direction" : "INBOUND",
-      "eventSchema" : "patient.monitoring.HeartRate_MonitorReading",
-      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate_MonitorReading_EventHandler/EventStream"
+      "eventSchema" : "patient.monitoring.HeartRate.MonitorReading",
+      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate.MonitorReading/EventStream"
     }
   },
   "globalType" : null,
@@ -21,10 +21,10 @@
     } ]
   } ],
   "name" : "patient.monitoring.HeartRate",
-  "partitionedType" : "patient.monitoring.HeartRate.PartitionedAppState",
+  "partitionedType" : "patient.monitoring.HeartRate.PartitionedState",
   "replicationFactor" : 1,
   "scheduledProcedures" : {
-    "Active_HeartRate_MonitorReading_EventHandlerWrite" : {
+    "ActiveCollabsWriteAll_MonitorReading" : {
       "interval" : 300000
     }
   }
