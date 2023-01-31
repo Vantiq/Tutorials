@@ -1,110 +1,210 @@
 {
+  "ars_relationships" : [ ],
   "links" : [ {
-    "source" : "client/PotholeReporter",
-    "target" : "topic//vantiq/appmodel/PotholeReporter/submitTopic"
+    "source" : "procedure/com.vantiq.pothole.Pothole.getTargetValue",
+    "target" : "services/com.vantiq.pothole.Pothole"
   }, {
-    "source" : "type/Pothole",
-    "target" : "appmodel/Pothole"
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.getTargetValue"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.setTarget"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.computeRequiredChange"
+  }, {
+    "source" : "app/com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
+    "target" : "services/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "document/com.vantiq.pothole.Pothole.js"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "type/com.vantiq.pothole.Pothole_Global"
+  }, {
+    "source" : "procedure/com.vantiq.pothole.Pothole.computeRequiredChange",
+    "target" : "services/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "designmodel/com.vantiq.pothole.Pothole",
+    "target" : "services/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "designmodel/com.vantiq.pothole.Pothole",
+    "target" : "services/com.vantiq.pothole.IngestSensorService"
+  }, {
+    "source" : "procedure/com.vantiq.pothole.Pothole.setTarget",
+    "target" : "services/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "app/com.vantiq.pothole.Pothole_UpdateState0_EventHandler"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "client/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "designmodel/com.vantiq.pothole.Pothole",
+    "target" : "client/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "app/com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
+    "target" : "services/com.vantiq.pothole.IngestSensorService"
   } ],
   "name" : "Pothole",
   "options" : {
-    "description" : "This project was demonstrates the 'Pothole' project found in the 'System Modeler Tutorial'. It shows a complete example of using the VANTIQ System Modeler to build the 'Pothole' model.\n\nSystem Models can generate the skeleton for a working application. In this case, the Pothole System Model was used to generate the basis for the PotholeReporter project, which was then fleshed out in the System Modeler Tutorial. Go to the Projects dropdown above and select PotholeReporter to see the final results of the tutorial.",
+    "description" : "The System Modeler Tutorial Project contains a complete System Model that describes the requirements for a pothole reporting and tracking system. It also contains a Design Model generated from the System Model as a starting point for the implementation of the pothole reporting system. \n\nFor more information on the System Modeler Tutorial, please see the documentation [here](/docs/system/tutorials/systemmod/index.html).",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "com.vantiq.pothole/designmodel", "systemmodel" ],
+    "rootViewFlavor" : 5,
     "showGrid" : true,
-    "v" : 2
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
   },
   "resources" : [ {
-    "label" : "/vantiq/appmodel/PotholeReporter/submitTopic",
-    "name" : "/vantiq/appmodel/PotholeReporter/submitTopic",
-    "node" : {
-      "x" : 351.29545686495516,
-      "y" : 192.85080786886846
-    },
-    "type" : 10
-  }, {
     "label" : "Pothole",
     "name" : "Pothole",
-    "node" : {
-      "x" : 676.4744645501389,
-      "y" : 89.53363196464251
-    },
-    "timestamp" : "2018-08-02T00:31:32.871Z",
-    "type" : 1
-  }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ "in" ],
-      "pagesets" : [ "PotholeReporter" ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ "in" ],
-      "types" : [ "Pothole" ]
-    },
-    "label" : "Pothole",
-    "name" : "Pothole",
-    "node" : {
-      "x" : 677.0842881504718,
-      "y" : 194.73058233334726
-    },
-    "timestamp" : "2018-08-02T00:31:33.374Z",
+    "resourceReference" : "/system.systemmodels/Pothole",
+    "timestamp" : "2023-01-31T17:10:51.569Z",
     "type" : 45
   }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "topicHash" : [ "out" ],
-      "topics" : [ "/vantiq/appmodel/PotholeReporter/submitTopic" ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "PotholeReporter",
-    "name" : "PotholeReporter",
-    "node" : {
-      "x" : 420.5262420385036,
-      "y" : 90.05107457381138
-    },
-    "timestamp" : "2018-08-02T00:31:33.350Z",
+    "label" : "com.vantiq.pothole.IngestSensorService",
+    "name" : "com.vantiq.pothole.IngestSensorService",
+    "resourceReference" : "/system.services/com.vantiq.pothole.IngestSensorService",
+    "timestamp" : "2023-01-31T17:10:52.189Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
+    "name" : "com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
+    "resourceReference" : "/collaborationtypes/com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
+    "timestamp" : "2023-01-31T17:10:53.289Z",
+    "type" : 12
+  }, {
+    "label" : "com.vantiq.pothole.Pothole",
+    "name" : "com.vantiq.pothole.Pothole",
+    "resourceReference" : "/system.designmodels/com.vantiq.pothole.Pothole",
+    "timestamp" : "2023-01-31T17:10:50.694Z",
+    "type" : 75
+  }, {
+    "label" : "com.vantiq.pothole.Pothole",
+    "name" : "com.vantiq.pothole.Pothole",
+    "resourceReference" : "/system.services/com.vantiq.pothole.Pothole",
+    "timestamp" : "2023-01-31T17:10:52.067Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.pothole.Pothole",
+    "name" : "com.vantiq.pothole.Pothole",
+    "resourceReference" : "/system.clients/com.vantiq.pothole.Pothole",
+    "timestamp" : "2023-01-31T17:10:51.067Z",
     "type" : 15
+  }, {
+    "label" : "com.vantiq.pothole.Pothole.computeRequiredChange",
+    "name" : "com.vantiq.pothole.Pothole.computeRequiredChange",
+    "packageName" : "com.vantiq.pothole",
+    "procedureName" : "computeRequiredChange",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.computeRequiredChange",
+    "serviceName" : "Pothole",
+    "timestamp" : "2023-01-31T17:10:52.663Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pothole.Pothole.getTargetValue",
+    "name" : "com.vantiq.pothole.Pothole.getTargetValue",
+    "packageName" : "com.vantiq.pothole",
+    "procedureName" : "getTargetValue",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.getTargetValue",
+    "serviceName" : "Pothole",
+    "timestamp" : "2023-01-31T17:10:52.663Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pothole.Pothole.js",
+    "name" : "com.vantiq.pothole.Pothole.js",
+    "resourceReference" : "/documents/com.vantiq.pothole.Pothole.js",
+    "timestamp" : "2023-01-31T17:10:52.511Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.pothole.Pothole.setTarget",
+    "name" : "com.vantiq.pothole.Pothole.setTarget",
+    "packageName" : "com.vantiq.pothole",
+    "procedureName" : "setTarget",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.setTarget",
+    "serviceName" : "Pothole",
+    "timestamp" : "2023-01-31T17:10:52.664Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.pothole.Pothole_Global",
+    "name" : "com.vantiq.pothole.Pothole_Global",
+    "resourceReference" : "/types/com.vantiq.pothole.Pothole_Global",
+    "timestamp" : "2023-01-31T17:10:50.285Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
+    "name" : "com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
+    "resourceReference" : "/collaborationtypes/com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
+    "timestamp" : "2023-01-31T17:10:53.290Z",
+    "type" : 12
   } ],
   "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
     "name" : "Pothole",
     "pane" : {
-      "h" : 622.5,
-      "w" : 695.5,
-      "x" : 640,
-      "y" : 10
+      "c" : 1,
+      "r" : 0
     },
-    "resourceKey" : "appmodel/Pothole",
+    "resourceKey" : "systemmodel/Pothole",
+    "state" : 2,
     "type" : 71
   }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
-      "h" : 400,
-      "w" : 580,
-      "x" : 20,
-      "y" : 20
+      "c" : 0,
+      "r" : 0
     },
+    "state" : 2,
     "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.pothole.Pothole",
+    "pane" : {
+      "c" : 0,
+      "r" : 1
+    },
+    "resourceKey" : "designmodel/com.vantiq.pothole.Pothole",
+    "state" : 2,
+    "type" : 121
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "appmodel/Pothole", "projectdescription/Project Description" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "systemmodel/Pothole", "list/Project Contents", "projectdescription/Project Description", "designmodel/com.vantiq.pothole.Pothole" ]
   } ]
 }

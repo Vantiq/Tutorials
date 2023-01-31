@@ -1,6 +1,4 @@
 ### System Modeler Tutorial
-The System Modeler Tutorial contains two projects: Pothole, which contains the System Model described in the Tutorial,
-and PotholeReporter, which contains a finished application generated from the System Model in Pothole and modified
-based on the instructions in the Tutorial.
+The System Modeler Tutorial Project contains a complete System Model that describes the requirements for a pothole reporting and tracking system. It also contains a Design Model generated from the System Model as a starting point for the implementation of the pothole reporting system. 
 
 For more information on the System Modeler Tutorial, please see the documentation [here](/docs/system/tutorials/systemmod/index.html).

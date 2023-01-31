@@ -1,0 +1,14 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.pothole.Pothole_Global",
+  "properties" : {
+    "targetValue" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Value",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}
