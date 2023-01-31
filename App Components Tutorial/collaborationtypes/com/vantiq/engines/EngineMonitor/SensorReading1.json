@@ -5,33 +5,41 @@
     "dataVersion" : 5,
     "graph" : {
       "coordinates" : {
-        "14ce9624-7785-4074-85ea-0b7bc8b86f3e" : {
+        "032a744c-869c-4ce8-9dfd-7c4de3c6ea75" : {
+          "x" : -215,
+          "y" : 400
+        },
+        "060b4ea4-cdc2-4524-8454-d306151d5692" : {
           "x" : 107.5,
-          "y" : 200
+          "y" : 100
         },
         "16dd3051-0937-45e6-8a18-1051b1ac72ee" : {
           "x" : 0,
           "y" : 0
         },
-        "2f030ec9-6dd2-4e33-8ff5-9ae742857d47" : {
-          "x" : -69.83203125,
-          "y" : 345
+        "21824b75-ffcf-4f05-968f-77598606d9ca" : {
+          "x" : 0,
+          "y" : 400
         },
-        "51ce1357-7ca6-4563-8536-8c1b4459546c" : {
-          "x" : -215,
+        "2f030ec9-6dd2-4e33-8ff5-9ae742857d47" : {
+          "x" : -107.5,
+          "y" : 495
+        },
+        "3e47e303-1dde-45d5-b75e-bc0e71cc6ddb" : {
+          "x" : 0,
           "y" : 300
         },
         "589360ab-edd2-46f6-b5c8-d7816e67095f" : {
-          "x" : -26.193084716796875,
-          "y" : 195
+          "x" : -80.4280686378479,
+          "y" : 142.7257432937622
         },
         "74c40a26-a2c9-4aae-89e0-8f22035874aa" : {
           "x" : -107.5,
           "y" : 200
         },
-        "768bc4af-d0e2-433d-9559-7e4a962e3de1" : {
-          "x" : -215,
-          "y" : 400
+        "7667dcaf-bcee-4817-8932-ae67f3d40350" : {
+          "x" : 107.5,
+          "y" : 200
         },
         "9e2cde60-f6d2-4495-8951-fea583f084c1" : {
           "x" : -107.5,
@@ -41,41 +49,23 @@
           "x" : -107.5,
           "y" : 500
         },
-        "ba97bf9f-7a35-41ef-8f99-c971b1a1e24d" : {
-          "x" : 0,
+        "b90c72eb-b7ed-4ee1-8945-5623a0c7d57a" : {
+          "x" : -215,
           "y" : 300
-        },
-        "cbcdc104-880b-42df-9298-af496ff90ec7" : {
-          "x" : 107.5,
-          "y" : 100
         },
         "ea2ac370-9201-425a-8da3-82c58bcb2e57" : {
           "x" : 0,
           "y" : -5
-        },
-        "f4cc1aeb-f0ae-48c0-912a-21895b7648cd" : {
-          "x" : 0,
-          "y" : 400
         }
       },
       "lastZoomRequest" : 0,
-      "scale" : 0.7660685044259875,
-      "translate" : [ 433.8993354343657, 75.0176417961448 ]
+      "scale" : 1.9523192775561686,
+      "translate" : [ 597.8672439728368, 91.32375273744981 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
-        "actions" : true,
-        "collab" : true,
         "component" : true,
-        "custom" : true,
-        "filters" : true,
-        "flowControl" : true,
-        "math" : true,
-        "mobile" : true,
-        "modifiers" : true,
-        "nlp" : true,
-        "serviceevents" : true,
-        "vision" : true
+        "custom" : true
       },
       "ctGroupOpenHash" : {
         "actions" : true,
@@ -107,64 +97,42 @@
   },
   "ars_relationships" : [ ],
   "assembly" : {
-    "AddNonSpeedOverheat" : {
+    "NoAlert" : {
       "configuration" : {
-        "childStreams" : [ "PublishStatus" ],
-        "imports" : null,
-        "outboundResource" : null,
-        "outboundResourceConfig" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "NonSpeedOverheat" ],
-        "schema" : null,
-        "transformInPlace" : true,
+        "Diagnosis" : [ "PublishStatus" ],
+        "condition" : [ {
+          "expression" : "210",
+          "op" : "<",
+          "prop" : "temperature"
+        } ],
+        "parentStreams" : [ ],
         "transformation" : {
           "alertMsg" : {
-            "expression" : "\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\"",
+            "expression" : "\"\"",
             "type" : "expression"
           }
-        },
-        "upsert" : false
+        }
       },
-      "context" : "React",
       "downstreamReferences" : { },
-      "name" : "AddNonSpeedOverheat",
-      "pattern" : "Transformation",
-      "patternVersion" : 2,
-      "uuid" : "f4cc1aeb-f0ae-48c0-912a-21895b7648cd"
+      "downstreamUUIDS" : {
+        "Diagnosis" : "7667dcaf-bcee-4817-8932-ae67f3d40350"
+      },
+      "isComponent" : true,
+      "name" : "NoAlert",
+      "pattern" : "FilterAndDiagnose",
+      "rootTasks" : [ "NoAlert_Diagnose" ],
+      "uuid" : "060b4ea4-cdc2-4524-8454-d306151d5692"
     },
-    "AddSpeedOverheat" : {
+    "NoAlert_AddDiagnosis" : {
+      "componentReference" : "NoAlert",
       "configuration" : {
         "childStreams" : [ "PublishStatus" ],
+        "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
         "outboundResourceConfig" : null,
         "outboundResourceId" : null,
-        "parentStreams" : [ "SpeedOverheat" ],
-        "schema" : null,
-        "transformInPlace" : true,
-        "transformation" : {
-          "alertMsg" : {
-            "expression" : "\"Your engine is overheating: please reduce your speed.\"",
-            "type" : "expression"
-          }
-        },
-        "upsert" : false
-      },
-      "context" : "React",
-      "downstreamReferences" : { },
-      "name" : "AddSpeedOverheat",
-      "pattern" : "Transformation",
-      "patternVersion" : 2,
-      "uuid" : "768bc4af-d0e2-433d-9559-7e4a962e3de1"
-    },
-    "ClearAlert" : {
-      "configuration" : {
-        "childStreams" : [ "PublishStatus" ],
-        "imports" : null,
-        "outboundResource" : null,
-        "outboundResourceConfig" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "NoAlert" ],
+        "parentStreams" : [ "NoAlert_Diagnose" ],
         "schema" : null,
         "transformInPlace" : true,
         "transformation" : {
@@ -176,20 +144,24 @@
         "upsert" : false
       },
       "context" : "React",
-      "downstreamReferences" : { },
-      "name" : "ClearAlert",
+      "downstreamReferences" : {
+        "event" : "Diagnosis"
+      },
+      "name" : "NoAlert_AddDiagnosis",
       "pattern" : "Transformation",
       "patternVersion" : 2,
-      "uuid" : "14ce9624-7785-4074-85ea-0b7bc8b86f3e"
+      "uuid" : "25c6e326-52c3-4968-8293-7300d597de74"
     },
-    "NoAlert" : {
+    "NoAlert_Diagnose" : {
+      "componentReference" : "NoAlert",
       "configuration" : {
-        "childStreams" : [ "ClearAlert" ],
+        "childStreams" : [ "NoAlert_AddDiagnosis" ],
         "condition" : [ {
           "expression" : "210",
           "op" : "<",
           "prop" : "temperature"
         } ],
+        "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
         "outboundResourceConfig" : null,
@@ -199,14 +171,15 @@
       },
       "context" : "DetectSituation",
       "downstreamReferences" : { },
-      "name" : "NoAlert",
+      "isRoot" : true,
+      "name" : "NoAlert_Diagnose",
       "pattern" : "Filter",
       "patternVersion" : 2,
-      "uuid" : "cbcdc104-880b-42df-9298-af496ff90ec7"
+      "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
     },
     "NonSpeedOverheat" : {
       "configuration" : {
-        "childStreams" : [ "AddNonSpeedOverheat" ],
+        "Diagnosis" : [ "PublishStatus" ],
         "condition" : [ {
           "expression" : "null",
           "op" : "!=",
@@ -216,6 +189,67 @@
           "op" : "<",
           "prop" : "speed"
         } ],
+        "parentStreams" : [ ],
+        "transformation" : {
+          "alertMsg" : {
+            "expression" : "\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\"",
+            "type" : "expression"
+          }
+        }
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "Diagnosis" : "032a744c-869c-4ce8-9dfd-7c4de3c6ea75"
+      },
+      "isComponent" : true,
+      "name" : "NonSpeedOverheat",
+      "pattern" : "FilterAndDiagnose",
+      "rootTasks" : [ "NonSpeedOverheat_Diagnose" ],
+      "uuid" : "b90c72eb-b7ed-4ee1-8945-5623a0c7d57a"
+    },
+    "NonSpeedOverheat_AddDiagnosis" : {
+      "componentReference" : "NonSpeedOverheat",
+      "configuration" : {
+        "childStreams" : [ "PublishStatus" ],
+        "enableBadging" : true,
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "NonSpeedOverheat_Diagnose" ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : {
+          "alertMsg" : {
+            "expression" : "\"Your engine is overheating: check for a malfunctioning fan or a coolant leak.\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "context" : "React",
+      "downstreamReferences" : {
+        "event" : "Diagnosis"
+      },
+      "name" : "NonSpeedOverheat_AddDiagnosis",
+      "pattern" : "Transformation",
+      "patternVersion" : 2,
+      "uuid" : "25c6e326-52c3-4968-8293-7300d597de74"
+    },
+    "NonSpeedOverheat_Diagnose" : {
+      "componentReference" : "NonSpeedOverheat",
+      "configuration" : {
+        "childStreams" : [ "NonSpeedOverheat_AddDiagnosis" ],
+        "condition" : [ {
+          "expression" : "null",
+          "op" : "!=",
+          "prop" : "speed"
+        }, {
+          "expression" : "45",
+          "op" : "<",
+          "prop" : "speed"
+        } ],
+        "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
         "outboundResourceConfig" : null,
@@ -225,10 +259,11 @@
       },
       "context" : "DetectSituation",
       "downstreamReferences" : { },
-      "name" : "NonSpeedOverheat",
+      "isRoot" : true,
+      "name" : "NonSpeedOverheat_Diagnose",
       "pattern" : "Filter",
       "patternVersion" : 2,
-      "uuid" : "ba97bf9f-7a35-41ef-8f99-c971b1a1e24d"
+      "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
     },
     "OverheatCheck" : {
       "configuration" : {
@@ -256,7 +291,7 @@
       "configuration" : {
         "childStreams" : null,
         "eventTypeName" : "EngineStatus",
-        "parentStreams" : [ "AddNonSpeedOverheat", "AddSpeedOverheat", "ClearAlert" ],
+        "parentStreams" : [ "SpeedOverheat_AddDiagnosis", "NonSpeedOverheat_AddDiagnosis", "NoAlert_AddDiagnosis" ],
         "processedByClause" : null,
         "service" : "com.vantiq.engines.EngineMonitor"
       },
@@ -269,7 +304,7 @@
     },
     "RetrieveSpeed" : {
       "configuration" : {
-        "childStreams" : [ "SpeedOverheat", "NonSpeedOverheat" ],
+        "childStreams" : [ "NonSpeedOverheat", "SpeedOverheat" ],
         "imports" : null,
         "outboundResource" : null,
         "outboundResourceConfig" : null,
@@ -316,7 +351,7 @@
     },
     "SpeedOverheat" : {
       "configuration" : {
-        "childStreams" : [ "AddSpeedOverheat" ],
+        "Diagnosis" : [ "PublishStatus" ],
         "condition" : [ {
           "expression" : "null",
           "op" : "!=",
@@ -326,6 +361,67 @@
           "op" : ">=",
           "prop" : "speed"
         } ],
+        "parentStreams" : [ ],
+        "transformation" : {
+          "alertMsg" : {
+            "expression" : "\"Your engine is overheating: please reduce your speed.\"",
+            "type" : "expression"
+          }
+        }
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "Diagnosis" : "21824b75-ffcf-4f05-968f-77598606d9ca"
+      },
+      "isComponent" : true,
+      "name" : "SpeedOverheat",
+      "pattern" : "FilterAndDiagnose",
+      "rootTasks" : [ "SpeedOverheat_Diagnose" ],
+      "uuid" : "3e47e303-1dde-45d5-b75e-bc0e71cc6ddb"
+    },
+    "SpeedOverheat_AddDiagnosis" : {
+      "componentReference" : "SpeedOverheat",
+      "configuration" : {
+        "childStreams" : [ "PublishStatus" ],
+        "enableBadging" : true,
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "SpeedOverheat_Diagnose" ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : {
+          "alertMsg" : {
+            "expression" : "\"Your engine is overheating: please reduce your speed.\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "context" : "React",
+      "downstreamReferences" : {
+        "event" : "Diagnosis"
+      },
+      "name" : "SpeedOverheat_AddDiagnosis",
+      "pattern" : "Transformation",
+      "patternVersion" : 2,
+      "uuid" : "25c6e326-52c3-4968-8293-7300d597de74"
+    },
+    "SpeedOverheat_Diagnose" : {
+      "componentReference" : "SpeedOverheat",
+      "configuration" : {
+        "childStreams" : [ "SpeedOverheat_AddDiagnosis" ],
+        "condition" : [ {
+          "expression" : "null",
+          "op" : "!=",
+          "prop" : "speed"
+        }, {
+          "expression" : "45",
+          "op" : ">=",
+          "prop" : "speed"
+        } ],
+        "enableBadging" : true,
         "imports" : null,
         "outboundResource" : null,
         "outboundResourceConfig" : null,
@@ -335,10 +431,11 @@
       },
       "context" : "DetectSituation",
       "downstreamReferences" : { },
-      "name" : "SpeedOverheat",
+      "isRoot" : true,
+      "name" : "SpeedOverheat_Diagnose",
       "pattern" : "Filter",
       "patternVersion" : 2,
-      "uuid" : "51ce1357-7ca6-4563-8536-8c1b4459546c"
+      "uuid" : "f6e9fd6b-6aea-4066-a40d-3a0813b91915"
     }
   },
   "collaboratorRoles" : [ ],
@@ -371,6 +468,6 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.EngineMonitor_SensorReading1",
+  "name" : "com.vantiq.engines.EngineMonitor.SensorReading1",
   "writeFrequency" : null
 }
