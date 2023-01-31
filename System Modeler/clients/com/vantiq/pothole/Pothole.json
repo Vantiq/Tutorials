@@ -26,6 +26,13 @@
   },
   "name" : "com.vantiq.pothole.Pothole",
   "options" : { },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "services",
+      "resourceId" : "com.vantiq.pothole.Pothole",
+      "type" : "subscribes_to"
+    } ]
+  },
   "targetDevice" : "browser",
   "views" : {
     "Start" : { }

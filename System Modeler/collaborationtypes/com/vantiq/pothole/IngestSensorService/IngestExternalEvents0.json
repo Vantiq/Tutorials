@@ -40,9 +40,10 @@
       "context" : "Transform",
       "name" : "Transform",
       "pattern" : "Transformation",
-      "patternVersion" : 2
+      "patternVersion" : 3
     }
   },
+  "boundEventType" : null,
   "collaboratorRoles" : [ ],
   "contextualizedAssembly" : {
     "Ingest" : {

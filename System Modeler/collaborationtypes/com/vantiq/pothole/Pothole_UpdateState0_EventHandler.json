@@ -142,7 +142,7 @@
       "downstreamReferences" : { },
       "name" : "StoreState",
       "pattern" : "AccumulateState",
-      "patternVersion" : 2,
+      "patternVersion" : 3,
       "uuid" : "c663f7b2-e60e-43a8-a7bf-d31c804de7ac"
     },
     "Update" : {
@@ -178,7 +178,7 @@
       "downstreamReferences" : { },
       "name" : "actionNeeded",
       "pattern" : "Filter",
-      "patternVersion" : 2
+      "patternVersion" : 3
     },
     "computeRequiredChange" : {
       "configuration" : {
@@ -214,9 +214,10 @@
       "downstreamReferences" : { },
       "name" : "stateEqualTarget",
       "pattern" : "Filter",
-      "patternVersion" : 2
+      "patternVersion" : 3
     }
   },
+  "boundEventType" : "UpdateState0",
   "collaboratorRoles" : [ ],
   "contextualizedAssembly" : {
     "Analysis" : {
