@@ -20,19 +20,12 @@
       "sortDescending" : false,
       "type" : 8,
       "updateInterval" : 60,
-      "uuid" : "1e82d370-9d9d-11ed-9a8a-a6dd05f0be77",
+      "uuid" : "1be4a040-a3f0-11ed-9869-98fa9bd0b455",
       "v" : 1
     } ]
   },
   "name" : "com.vantiq.pothole.Pothole",
   "options" : { },
-  "resourceBinding" : {
-    "requiredResources" : [ {
-      "resource" : "services",
-      "resourceId" : "com.vantiq.pothole.Pothole",
-      "type" : "subscribes_to"
-    } ]
-  },
   "targetDevice" : "browser",
   "views" : {
     "Start" : { }

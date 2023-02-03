@@ -1,0 +1,13 @@
+{
+  "active" : true,
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "Sensor0" : {
+      "direction" : "OUTBOUND"
+    }
+  },
+  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.pothole.PotholeSensors.IngestSensor0" ],
+  "name" : "com.vantiq.pothole.PotholeSensors",
+  "replicationFactor" : 1
+}

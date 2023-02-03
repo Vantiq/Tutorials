@@ -14,8 +14,8 @@
   },
   "globalType" : null,
   "interface" : [ ],
-  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents0", "/collaborationtypes/com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents1" ],
-  "name" : "com.vantiq.engines.IngestExternalSensorEventsService",
+  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.engines.EngineMonitorSensors.IngestSensor0", "/collaborationtypes/com.vantiq.engines.EngineMonitorSensors.IngestSensor1" ],
+  "name" : "com.vantiq.engines.EngineMonitorSensors",
   "partitionedType" : null,
   "replicationFactor" : 1,
   "scheduledProcedures" : { }

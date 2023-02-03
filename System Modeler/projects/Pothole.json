@@ -1,50 +1,74 @@
 {
   "ars_relationships" : [ ],
   "links" : [ {
-    "source" : "procedure/com.vantiq.pothole.Pothole.getTargetValue",
+    "source" : "designmodel/com.vantiq.pothole.Pothole",
+    "target" : "client/com.vantiq.pothole.Pothole"
+  }, {
+    "source" : "designmodel/com.vantiq.pothole.Pothole",
+    "target" : "services/com.vantiq.pothole.PotholeSensors"
+  }, {
+    "source" : "designmodel/com.vantiq.pothole.Pothole",
     "target" : "services/com.vantiq.pothole.Pothole"
   }, {
-    "source" : "services/com.vantiq.pothole.Pothole",
-    "target" : "procedure/com.vantiq.pothole.Pothole.getTargetValue"
-  }, {
-    "source" : "services/com.vantiq.pothole.Pothole",
-    "target" : "procedure/com.vantiq.pothole.Pothole.setTarget"
+    "source" : "procedure/com.vantiq.pothole.Pothole.computeRequiredChange",
+    "target" : "services/com.vantiq.pothole.Pothole"
   }, {
     "source" : "services/com.vantiq.pothole.Pothole",
     "target" : "procedure/com.vantiq.pothole.Pothole.computeRequiredChange"
   }, {
-    "source" : "app/com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "app/com.vantiq.pothole.Pothole.UpdateState0"
+  }, {
+    "source" : "app/com.vantiq.pothole.Pothole.UpdateState0",
+    "target" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateUpdate_UpdateState0"
+  }, {
+    "source" : "app/com.vantiq.pothole.Pothole.UpdateState0",
+    "target" : "procedure/com.vantiq.pothole.Pothole.getTargetValue"
+  }, {
+    "source" : "app/com.vantiq.pothole.Pothole.UpdateState0",
+    "target" : "procedure/com.vantiq.pothole.Pothole.computeRequiredChange"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateUpdate_UpdateState0"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateGet_UpdateState0"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.setTargetValue"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateReset_UpdateState0"
+  }, {
+    "source" : "services/com.vantiq.pothole.Pothole",
+    "target" : "procedure/com.vantiq.pothole.Pothole.getTargetValue"
+  }, {
+    "source" : "app/com.vantiq.pothole.Pothole.UpdateState0",
     "target" : "services/com.vantiq.pothole.Pothole"
   }, {
     "source" : "services/com.vantiq.pothole.Pothole",
     "target" : "document/com.vantiq.pothole.Pothole.js"
   }, {
     "source" : "services/com.vantiq.pothole.Pothole",
-    "target" : "type/com.vantiq.pothole.Pothole_Global"
+    "target" : "type/com.vantiq.pothole.Pothole.GlobalState"
   }, {
-    "source" : "procedure/com.vantiq.pothole.Pothole.computeRequiredChange",
+    "source" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateUpdate_UpdateState0",
     "target" : "services/com.vantiq.pothole.Pothole"
   }, {
-    "source" : "designmodel/com.vantiq.pothole.Pothole",
+    "source" : "app/com.vantiq.pothole.PotholeSensors.IngestSensor0",
+    "target" : "services/com.vantiq.pothole.PotholeSensors"
+  }, {
+    "source" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateGet_UpdateState0",
     "target" : "services/com.vantiq.pothole.Pothole"
   }, {
-    "source" : "designmodel/com.vantiq.pothole.Pothole",
-    "target" : "services/com.vantiq.pothole.IngestSensorService"
-  }, {
-    "source" : "procedure/com.vantiq.pothole.Pothole.setTarget",
+    "source" : "procedure/com.vantiq.pothole.Pothole.StoreUpdateStateReset_UpdateState0",
     "target" : "services/com.vantiq.pothole.Pothole"
   }, {
-    "source" : "services/com.vantiq.pothole.Pothole",
-    "target" : "app/com.vantiq.pothole.Pothole_UpdateState0_EventHandler"
+    "source" : "procedure/com.vantiq.pothole.Pothole.getTargetValue",
+    "target" : "services/com.vantiq.pothole.Pothole"
   }, {
-    "source" : "services/com.vantiq.pothole.Pothole",
-    "target" : "client/com.vantiq.pothole.Pothole"
-  }, {
-    "source" : "designmodel/com.vantiq.pothole.Pothole",
-    "target" : "client/com.vantiq.pothole.Pothole"
-  }, {
-    "source" : "app/com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
-    "target" : "services/com.vantiq.pothole.IngestSensorService"
+    "source" : "procedure/com.vantiq.pothole.Pothole.setTargetValue",
+    "target" : "services/com.vantiq.pothole.Pothole"
   } ],
   "name" : "Pothole",
   "options" : {
@@ -81,82 +105,95 @@
     "label" : "Pothole",
     "name" : "Pothole",
     "resourceReference" : "/system.systemmodels/Pothole",
-    "timestamp" : "2023-01-31T17:10:51.569Z",
+    "timestamp" : "2023-02-03T18:24:05.742Z",
     "type" : 45
   }, {
-    "label" : "com.vantiq.pothole.IngestSensorService",
-    "name" : "com.vantiq.pothole.IngestSensorService",
-    "resourceReference" : "/system.services/com.vantiq.pothole.IngestSensorService",
-    "timestamp" : "2023-01-31T17:10:52.189Z",
-    "type" : 63
-  }, {
-    "label" : "com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
-    "name" : "com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
-    "resourceReference" : "/collaborationtypes/com.vantiq.pothole.IngestSensorService.IngestExternalEvents0",
-    "timestamp" : "2023-01-31T17:10:53.289Z",
-    "type" : 12
-  }, {
-    "label" : "com.vantiq.pothole.Pothole",
     "name" : "com.vantiq.pothole.Pothole",
     "resourceReference" : "/system.designmodels/com.vantiq.pothole.Pothole",
-    "timestamp" : "2023-01-31T17:10:50.694Z",
+    "timestamp" : "2023-02-03T18:25:37.279Z",
     "type" : 75
   }, {
-    "label" : "com.vantiq.pothole.Pothole",
-    "name" : "com.vantiq.pothole.Pothole",
-    "resourceReference" : "/system.services/com.vantiq.pothole.Pothole",
-    "timestamp" : "2023-01-31T17:10:52.067Z",
-    "type" : 63
-  }, {
-    "label" : "com.vantiq.pothole.Pothole",
     "name" : "com.vantiq.pothole.Pothole",
     "resourceReference" : "/system.clients/com.vantiq.pothole.Pothole",
-    "timestamp" : "2023-01-31T17:10:51.067Z",
+    "timestamp" : "2023-02-03T18:25:27.786Z",
     "type" : 15
   }, {
-    "label" : "com.vantiq.pothole.Pothole.computeRequiredChange",
+    "name" : "com.vantiq.pothole.Pothole",
+    "resourceReference" : "/system.services/com.vantiq.pothole.Pothole",
+    "timestamp" : "2023-02-03T18:25:21.240Z",
+    "type" : 63
+  }, {
+    "name" : "com.vantiq.pothole.Pothole.GlobalState",
+    "resourceReference" : "/types/com.vantiq.pothole.Pothole.GlobalState",
+    "timestamp" : "2023-02-03T18:25:18.868Z",
+    "type" : 1
+  }, {
+    "name" : "com.vantiq.pothole.Pothole.StoreUpdateStateGet_UpdateState0",
+    "packageName" : "com.vantiq.pothole",
+    "procedureName" : "StoreUpdateStateGet_UpdateState0",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.StoreUpdateStateGet_UpdateState0",
+    "serviceName" : "Pothole",
+    "timestamp" : "2023-02-03T18:25:26.568Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.pothole.Pothole.StoreUpdateStateReset_UpdateState0",
+    "packageName" : "com.vantiq.pothole",
+    "procedureName" : "StoreUpdateStateReset_UpdateState0",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.StoreUpdateStateReset_UpdateState0",
+    "serviceName" : "Pothole",
+    "timestamp" : "2023-02-03T18:25:27.087Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.pothole.Pothole.StoreUpdateStateUpdate_UpdateState0",
+    "packageName" : "com.vantiq.pothole",
+    "procedureName" : "StoreUpdateStateUpdate_UpdateState0",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.StoreUpdateStateUpdate_UpdateState0",
+    "serviceName" : "Pothole",
+    "timestamp" : "2023-02-03T18:25:26.833Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.pothole.Pothole.UpdateState0",
+    "resourceReference" : "/collaborationtypes/com.vantiq.pothole.Pothole.UpdateState0",
+    "timestamp" : "2023-02-03T18:25:18.074Z",
+    "type" : 12
+  }, {
     "name" : "com.vantiq.pothole.Pothole.computeRequiredChange",
     "packageName" : "com.vantiq.pothole",
     "procedureName" : "computeRequiredChange",
     "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.computeRequiredChange",
     "serviceName" : "Pothole",
-    "timestamp" : "2023-01-31T17:10:52.663Z",
+    "timestamp" : "2023-02-03T18:25:25.490Z",
     "type" : 3
   }, {
-    "label" : "com.vantiq.pothole.Pothole.getTargetValue",
     "name" : "com.vantiq.pothole.Pothole.getTargetValue",
     "packageName" : "com.vantiq.pothole",
     "procedureName" : "getTargetValue",
     "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.getTargetValue",
     "serviceName" : "Pothole",
-    "timestamp" : "2023-01-31T17:10:52.663Z",
+    "timestamp" : "2023-02-03T18:25:23.289Z",
     "type" : 3
   }, {
-    "label" : "com.vantiq.pothole.Pothole.js",
     "name" : "com.vantiq.pothole.Pothole.js",
     "resourceReference" : "/documents/com.vantiq.pothole.Pothole.js",
-    "timestamp" : "2023-01-31T17:10:52.511Z",
+    "timestamp" : "2023-02-03T18:25:21.779Z",
     "type" : 19
   }, {
-    "label" : "com.vantiq.pothole.Pothole.setTarget",
-    "name" : "com.vantiq.pothole.Pothole.setTarget",
+    "name" : "com.vantiq.pothole.Pothole.setTargetValue",
     "packageName" : "com.vantiq.pothole",
-    "procedureName" : "setTarget",
-    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.setTarget",
+    "procedureName" : "setTargetValue",
+    "resourceReference" : "/procedures/com.vantiq.pothole.Pothole.setTargetValue",
     "serviceName" : "Pothole",
-    "timestamp" : "2023-01-31T17:10:52.664Z",
+    "timestamp" : "2023-02-03T18:25:23.131Z",
     "type" : 3
   }, {
-    "label" : "com.vantiq.pothole.Pothole_Global",
-    "name" : "com.vantiq.pothole.Pothole_Global",
-    "resourceReference" : "/types/com.vantiq.pothole.Pothole_Global",
-    "timestamp" : "2023-01-31T17:10:50.285Z",
-    "type" : 1
+    "name" : "com.vantiq.pothole.PotholeSensors",
+    "resourceReference" : "/system.services/com.vantiq.pothole.PotholeSensors",
+    "timestamp" : "2023-02-03T18:25:17.915Z",
+    "type" : 63
   }, {
-    "label" : "com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
-    "name" : "com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
-    "resourceReference" : "/collaborationtypes/com.vantiq.pothole.Pothole_UpdateState0_EventHandler",
-    "timestamp" : "2023-01-31T17:10:53.290Z",
+    "name" : "com.vantiq.pothole.PotholeSensors.IngestSensor0",
+    "resourceReference" : "/collaborationtypes/com.vantiq.pothole.PotholeSensors.IngestSensor0",
+    "timestamp" : "2023-02-03T18:25:22.454Z",
     "type" : 12
   } ],
   "tools" : [ {
