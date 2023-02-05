@@ -73,7 +73,7 @@
         "eventTypeName" : "SpeedEvent",
         "parentStreams" : [ "IngestSpeed" ],
         "processedByClause" : null,
-        "service" : "com.vantiq.engines.IngestExternalSensorEventsService"
+        "service" : "com.vantiq.engines.EngineMonitorSensors"
       },
       "context" : "Publish",
       "downstreamReferences" : { },
@@ -105,5 +105,5 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.engines.IngestExternalSensorEventsService.IngestExternalEvents0"
+  "name" : "com.vantiq.engines.EngineMonitorSensors.IngestSensor0"
 }

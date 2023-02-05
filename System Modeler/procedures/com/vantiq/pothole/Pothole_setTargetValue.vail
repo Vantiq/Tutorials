@@ -1,5 +1,5 @@
 package com.vantiq.pothole
-PROCEDURE Pothole.setTarget(target)
+PROCEDURE Pothole.setTargetValue(target)
 
 targetValue.updateAndGet(value => {
     // 

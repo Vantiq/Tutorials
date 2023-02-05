@@ -190,8 +190,8 @@
       "y" : 35.69096039460069
     }, {
       "h" : 100,
-      "label" : "IngestExternalSensorEventsService",
-      "resourceName" : "com.vantiq.engines.IngestExternalSensorEventsService",
+      "label" : "EngineMonitorSensors",
+      "resourceName" : "com.vantiq.engines.EngineMonitorSensors",
       "resourceType" : "system.services",
       "type" : 51,
       "uuid" : "728d4911-74e8-11ed-a714-acde48001122",
@@ -221,8 +221,8 @@
   "name" : "com.vantiq.engines.EngineMonitor",
   "serviceEventRoutes" : [ {
     "eventSource" : {
-      "eventTypeName" : "ExternalEvent0",
-      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+      "eventTypeName" : "Sensor0",
+      "serviceName" : "com.vantiq.engines.EngineMonitorSensors"
     },
     "eventTarget" : {
       "eventTypeName" : "SensorReading0",
@@ -230,8 +230,8 @@
     }
   }, {
     "eventSource" : {
-      "eventTypeName" : "ExternalEvent1",
-      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+      "eventTypeName" : "Sensor1",
+      "serviceName" : "com.vantiq.engines.EngineMonitorSensors"
     },
     "eventTarget" : {
       "eventTypeName" : "SensorReading1",
@@ -240,7 +240,7 @@
   }, {
     "eventSource" : {
       "eventTypeName" : "SpeedEvent",
-      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+      "serviceName" : "com.vantiq.engines.EngineMonitorSensors"
     },
     "eventTarget" : {
       "eventTypeName" : "SpeedEvent",
@@ -249,7 +249,7 @@
   }, {
     "eventSource" : {
       "eventTypeName" : "TemperatureEvent",
-      "serviceName" : "com.vantiq.engines.IngestExternalSensorEventsService"
+      "serviceName" : "com.vantiq.engines.EngineMonitorSensors"
     },
     "eventTarget" : {
       "eventTypeName" : "TemperatureEvent",

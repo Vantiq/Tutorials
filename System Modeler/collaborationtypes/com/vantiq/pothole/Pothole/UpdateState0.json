@@ -110,27 +110,70 @@
   },
   "ars_relationships" : [ ],
   "assembly" : {
+    "ActionNeeded" : {
+      "configuration" : {
+        "childStreams" : [ "StoreUpdate" ],
+        "condition" : "event.value != com.vantiq.pothole.Pothole.getTargetValue()",
+        "imports" : null,
+        "parentStreams" : [ "Update" ]
+      },
+      "context" : "DetectSituation",
+      "name" : "ActionNeeded",
+      "pattern" : "Filter",
+      "patternVersion" : 3
+    },
+    "ComputeRequiredChange" : {
+      "configuration" : {
+        "childStreams" : [ "SendToControlSystem" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "StoreUpdate" ],
+        "partitionKey" : null,
+        "procedure" : "com.vantiq.pothole.Pothole.computeRequiredChange",
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "context" : "Analysis",
+      "name" : "ComputeRequiredChange",
+      "pattern" : "Procedure",
+      "patternVersion" : 1
+    },
     "SendToControlSystem" : {
       "configuration" : {
         "childStreams" : null,
         "eventTypeName" : "SendToControlSystem0",
-        "parentStreams" : [ "computeRequiredChange" ],
+        "parentStreams" : [ "ComputeRequiredChange" ],
         "service" : "com.vantiq.pothole.Pothole"
       },
       "context" : "React",
-      "downstreamReferences" : { },
       "name" : "SendToControlSystem",
       "pattern" : "PublishToService",
-      "patternVersion" : 1,
-      "uuid" : "bacdee5e-f022-4b10-bf82-285269242044"
+      "patternVersion" : 1
     },
-    "StoreState" : {
+    "StateEqualTarget" : {
       "configuration" : {
-        "childStreams" : [ "computeRequiredChange" ],
+        "childStreams" : [ ],
+        "condition" : "event.value == com.vantiq.pothole.Pothole.getTargetValue()",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Update" ],
+        "upsert" : false
+      },
+      "context" : "DetectSituation",
+      "name" : "StateEqualTarget",
+      "pattern" : "Filter",
+      "patternVersion" : 3
+    },
+    "StoreUpdate" : {
+      "configuration" : {
+        "childStreams" : [ "ComputeRequiredChange" ],
         "imports" : null,
         "outboundBehavior" : "Emit original event",
         "outboundProperty" : null,
-        "parentStreams" : [ "actionNeeded" ],
+        "parentStreams" : [ "ActionNeeded" ],
         "procedure" : {
           "vailScript" : "// Update the value of state using event.\nstate = event"
         },
@@ -139,15 +182,13 @@
         "stateProperty" : null
       },
       "context" : "DetectSituation",
-      "downstreamReferences" : { },
-      "name" : "StoreState",
+      "name" : "StoreUpdate",
       "pattern" : "AccumulateState",
-      "patternVersion" : 3,
-      "uuid" : "c663f7b2-e60e-43a8-a7bf-d31c804de7ac"
+      "patternVersion" : 3
     },
     "Update" : {
       "configuration" : {
-        "childStreams" : [ "stateEqualTarget", "actionNeeded" ],
+        "childStreams" : [ "StateEqualTarget", "ActionNeeded" ],
         "condition" : "",
         "eventTypeName" : "UpdateState0",
         "inboundResource" : "services",
@@ -161,60 +202,9 @@
         "upsert" : false
       },
       "context" : "Ingest",
-      "downstreamReferences" : { },
       "name" : "Update",
       "pattern" : "EventStream",
-      "patternVersion" : 2,
-      "uuid" : "fa7bcc5f-5672-490d-855f-a45df8e038f9"
-    },
-    "actionNeeded" : {
-      "configuration" : {
-        "childStreams" : [ "StoreState" ],
-        "condition" : "event.value != com.vantiq.pothole.Pothole.getTargetValue()",
-        "imports" : null,
-        "parentStreams" : [ "Update" ]
-      },
-      "context" : "DetectSituation",
-      "downstreamReferences" : { },
-      "name" : "actionNeeded",
-      "pattern" : "Filter",
-      "patternVersion" : 3
-    },
-    "computeRequiredChange" : {
-      "configuration" : {
-        "childStreams" : [ "SendToControlSystem" ],
-        "imports" : null,
-        "parameters" : null,
-        "parentStreams" : [ "StoreState" ],
-        "partitionKey" : null,
-        "procedure" : "com.vantiq.pothole.Pothole.computeRequiredChange",
-        "returnBehavior" : null,
-        "returnProperty" : null,
-        "schema" : null
-      },
-      "context" : "Analysis",
-      "downstreamReferences" : { },
-      "name" : "computeRequiredChange",
-      "pattern" : "Procedure",
-      "patternVersion" : 1,
-      "uuid" : "a7d946fe-9452-418a-8f69-e35615828f39"
-    },
-    "stateEqualTarget" : {
-      "configuration" : {
-        "childStreams" : [ ],
-        "condition" : "event.value == com.vantiq.pothole.Pothole.getTargetValue()",
-        "imports" : null,
-        "outboundResource" : null,
-        "outboundResourceConfig" : null,
-        "outboundResourceId" : null,
-        "parentStreams" : [ "Update" ],
-        "upsert" : false
-      },
-      "context" : "DetectSituation",
-      "downstreamReferences" : { },
-      "name" : "stateEqualTarget",
-      "pattern" : "Filter",
-      "patternVersion" : 3
+      "patternVersion" : 2
     }
   },
   "boundEventType" : "UpdateState0",
@@ -250,5 +240,5 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.pothole.Pothole_UpdateState0_EventHandler"
+  "name" : "com.vantiq.pothole.Pothole.UpdateState0"
 }

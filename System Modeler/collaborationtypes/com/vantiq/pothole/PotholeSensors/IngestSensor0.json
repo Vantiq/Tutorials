@@ -22,9 +22,9 @@
     },
     "PublishEvent" : {
       "configuration" : {
-        "eventTypeName" : "ExternalEvent0",
+        "eventTypeName" : "Sensor0",
         "parentStreams" : [ "Transform" ],
-        "service" : "com.vantiq.pothole.IngestSensorService"
+        "service" : "com.vantiq.pothole.PotholeSensors"
       },
       "context" : "Publish",
       "name" : "PublishEvent",
@@ -69,5 +69,5 @@
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "com.vantiq.pothole.IngestSensorService.IngestExternalEvents0"
+  "name" : "com.vantiq.pothole.PotholeSensors.IngestSensor0"
 }

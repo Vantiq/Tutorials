@@ -1,16 +1,17 @@
 {
   "active" : true,
   "ars_relationships" : [ ],
+  "description" : null,
   "eventTypes" : {
     "SendToControlSystem0" : {
       "direction" : "OUTBOUND"
     },
     "UpdateState0" : {
       "direction" : "INBOUND",
-      "implementingResource" : "/collaborationtypes/com.vantiq.pothole.Pothole_UpdateState0_EventHandler/Update"
+      "implementingResource" : "/collaborationtypes/com.vantiq.pothole.Pothole.UpdateState0/Update"
     }
   },
-  "globalType" : "com.vantiq.pothole.Pothole_Global",
+  "globalType" : "com.vantiq.pothole.Pothole.GlobalState",
   "interface" : [ {
     "name" : "computeRequiredChange",
     "parameters" : [ {
@@ -24,7 +25,7 @@
     "name" : "getTargetValue",
     "parameters" : [ ]
   }, {
-    "name" : "setTarget",
+    "name" : "setTargetValue",
     "parameters" : [ {
       "description" : null,
       "multi" : false,
