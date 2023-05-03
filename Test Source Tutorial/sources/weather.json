@@ -7,9 +7,8 @@
       "contentType" : "application/json"
     },
     "requestDefaults" : { },
-    "uri" : "http://api.openweathermap.org/data/2.5/weather?id=5364226&APPID=34461d7c16116d23cace405507146ebe"
+    "uri" : "http://api.openweathermap.org/data/2.5/weather?lat=37.91&lon=-122.07&APPID=CHANGEMETOYOURAPPID"
   },
-  "direction" : "BOTH",
   "mockMode" : false,
   "mockProcedures" : {
     "query" : "queryProcedureOverride"

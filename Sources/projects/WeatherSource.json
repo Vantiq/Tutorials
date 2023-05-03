@@ -1,4 +1,5 @@
 {
+  "ars_relationships" : [ ],
   "links" : [ {
     "source" : "rule/weatherReading",
     "target" : "type/weatherReading"
@@ -8,64 +9,98 @@
   } ],
   "name" : "WeatherSource",
   "options" : {
-    "description" : "To enable the weather source, you will need to register for an API key from http://api.openweathermap.org\n\nOnce you have registered for the API key, copy the value and replace \"CHANGEMETOYOURAPPID\" at the end of Server URI field in the source definition below.\n\nCheck the active checkbox in the titlebar (empty square with rounded corners) and save the source. The Current State should flip from a red down arrow to a green up arrow. \n\nOnce the source is active, click the play button on the source title bar to view the raw weather readings received from the source, or go to show -> find records -> select the weatherReading type, and query for all of the recorded values.\n",
+    "description" : "To enable the weather source, you will need to register for an API key from http://api.openweathermap.org\n\nOnce you have registered for the API key, copy the value and replace \"CHANGEMETOYOURAPPID\" at the end of Server URI field in the source definition below.\n\nCheck the active checkbox in the titlebar (empty square with rounded corners) and save the source. The Current State should flip from a gray circled-check to a green circled-check. \n\nOnce the source is active, click the play button on the source title bar to view the raw weather readings received from the source, or go to Show -> Find Records -> select the weatherReading type, and query for all of the recorded values.\n",
+    "dockCollapsed" : {
+      "bottom" : false,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
     "filterBitArray" : "000000ffffffffffffffffff00ffffff",
     "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "rule", "source", "type" ],
+    "rootViewFlavor" : 5,
     "showGrid" : true,
-    "v" : 2
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
   },
+  "partitions" : [ ],
   "resources" : [ {
     "label" : "weather",
     "name" : "weather",
     "node" : {
-      "x" : 187.13102582137026,
-      "y" : 185.47916326596444
+      "x" : 187.1,
+      "y" : 185.5
     },
-    "timestamp" : "2018-07-17T21:58:13.585Z",
+    "resourceReference" : "/sources/weather",
+    "timestamp" : "2023-05-02T23:21:48.943Z",
     "type" : 4
   }, {
-    "inventory" : {
-      "appmodelHash" : [ ],
-      "appmodels" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "pagesetHash" : [ ],
-      "pagesets" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ "in" ],
-      "sources" : [ "weather" ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ "out" ],
-      "types" : [ "weatherReading" ]
-    },
+    "inventory" : { },
     "label" : "weatherReading",
     "name" : "weatherReading",
     "node" : {
-      "x" : 280.76247665003746,
-      "y" : 309.79696215135294
+      "x" : 280.8,
+      "y" : 309.8
     },
-    "timestamp" : "2018-07-17T21:58:12.714Z",
+    "resourceReference" : "/rules/weatherReading",
+    "timestamp" : "2023-05-02T23:17:41.002Z",
     "type" : 2
   }, {
     "label" : "weatherReading",
     "name" : "weatherReading",
     "node" : {
-      "x" : 404.3452163672068,
-      "y" : 189.64570083954237
+      "x" : 404.3,
+      "y" : 189.6
     },
-    "timestamp" : "2018-07-17T21:58:12.739Z",
+    "resourceReference" : "/types/weatherReading",
+    "timestamp" : "2023-05-02T22:21:06.790Z",
     "type" : 1
   } ],
   "tools" : [ {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
     "name" : "Project Resource Graph",
     "pane" : {
-      "h" : 400,
-      "w" : 600,
-      "x" : 20,
-      "y" : 20
+      "c" : -1,
+      "r" : -1
     },
+    "state" : 4,
     "toolOptions" : {
       "scaleAndTranslationState" : {
         "lastZoomRequest" : 0,
@@ -75,38 +110,39 @@
     },
     "type" : 1
   }, {
+    "isPinned" : false,
     "name" : "weather",
     "pane" : {
-      "h" : 400,
-      "w" : 600,
-      "x" : 640,
-      "y" : 440
+      "c" : 0,
+      "r" : 1
     },
     "resourceKey" : "source/weather",
+    "state" : 2,
     "type" : 5
   }, {
-    "name" : "Project Description",
-    "pane" : {
-      "h" : 400,
-      "w" : 600,
-      "x" : 640,
-      "y" : 20
-    },
-    "type" : 82
-  }, {
+    "isPinned" : false,
     "name" : "weatherReading",
     "pane" : {
-      "h" : 400,
-      "w" : 600,
-      "x" : 20,
-      "y" : 440
+      "c" : 1,
+      "r" : 1
     },
     "resourceKey" : "rule/weatherReading",
+    "state" : 2,
     "type" : 3
+  }, {
+    "isPinned" : false,
+    "name" : "weatherReading",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "resourceKey" : "type/weatherReading",
+    "state" : 2,
+    "type" : 6
   } ],
   "type" : "dev",
   "views" : [ {
-    "name" : "Main",
-    "projectToolKeys" : [ "graph/Project Resource Graph", "subsourceeditor/weather", "projectdescription/Project Description", "cmeditorrule/weatherReading" ]
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "subsourceeditor/weather", "cmeditorrule/weatherReading", "subtypeeditor/weatherReading" ]
   } ]
 }
