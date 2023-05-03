@@ -8,7 +8,6 @@
     },
     "uri" : "http://api.openweathermap.org/data/2.5/weather?lat=37.91&lon=-122.07&APPID=CHANGEMETOYOURAPPID"
   },
-  "direction" : "BOTH",
   "name" : "weather",
   "type" : "REMOTE"
 }
