@@ -1,15 +1,14 @@
 {
+  "ars_public" : false,
+  "ars_relationships" : [ ],
   "controllers" : {
     "client" : { },
     "dataStream" : {
       "Resident" : { }
     },
-    "page" : {
-      "Start" : {
-        "widgets" : { }
-      }
-    }
+    "page" : { }
   },
+  "isComponent" : false,
   "isLaunchable" : false,
   "models" : {
     "dataObjects" : {
@@ -24,176 +23,76 @@
       "advancedWhereClause" : null,
       "dataObjectName" : null,
       "dataTypeList" : [ {
-        "isSeries" : false,
         "label" : null,
         "type" : "Resident"
       } ],
       "isDeleteOp" : false,
       "isInsertOp" : true,
       "isUpdateOp" : false,
-      "maxRecords" : 0,
+      "maxRecords" : 100,
       "name" : "Resident",
+      "pauseAtStartup" : false,
       "property" : "name",
       "sortByProperty" : null,
       "sortDescending" : false,
       "type" : 1,
       "updateInterval" : 60,
-      "uuid" : "460e293f-53f5-4c75-a79f-e6fc815b6f8e",
+      "uuid" : "6d86d7b7-6819-44d5-98e0-df0d13a97db1",
       "v" : 1
     } ]
   },
   "name" : "Resident",
   "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
     "description" : "",
-    "isLaunchable" : false,
-    "showGridWhileEditing" : true,
+    "docAssets" : [ ],
+    "productV" : "7.11",
+    "showCategoryButtons" : false,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : false,
+    "showCategoryLayout" : false,
+    "showGridWhileEditing" : false,
     "theme" : {
-      "accentColor1" : "#040fdb",
-      "backgroundColor" : "#f0f2f5",
-      "borderColor" : "#000000",
-      "foregroundColor" : "#000000",
+      "backgroundColor" : "#ffffff",
+      "bgImgPosition" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgSize" : "auto",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "foregroundColor" : "#566076",
       "label" : "Light",
       "name" : "light",
-      "v" : 2
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17"
     },
-    "v" : 2
+    "themeName" : "light",
+    "v" : 5
   },
-  "targetDevice" : "browser",
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "types",
+      "resourceId" : "Resident",
+      "type" : "subscribes_to"
+    } ]
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
   "views" : {
-    "Start" : {
-      "bodyChildren" : [ {
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderWidth" : 0,
-        "h" : 42,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "horzMargin" : 10,
-        "innerMargin" : 0,
-        "isDraggable" : true,
-        "isSelectable" : true,
-        "label" : "First Floor",
-        "labelAlign" : "center",
-        "labelColor" : "#000000",
-        "labelFontSize" : 20,
-        "labelStyle" : "plain",
-        "name" : "text1",
-        "type" : "PIText",
-        "v" : 11,
-        "vertGravity" : 4,
-        "vertMargin" : 10,
-        "w" : 110,
-        "widthPolicy" : 2,
-        "x" : 170,
-        "y" : 40
-      }, {
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderWidth" : 0,
-        "h" : 42,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "horzMargin" : 10,
-        "innerMargin" : 0,
-        "isDraggable" : true,
-        "isSelectable" : true,
-        "label" : "Second Floor",
-        "labelAlign" : "center",
-        "labelColor" : "#000000",
-        "labelFontSize" : 20,
-        "labelStyle" : "plain",
-        "name" : "text3",
-        "type" : "PIText",
-        "v" : 11,
-        "vertGravity" : 4,
-        "vertMargin" : 10,
-        "w" : 139,
-        "widthPolicy" : 2,
-        "x" : 540,
-        "y" : 40
-      }, {
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderWidth" : 0,
-        "dataStreamGroupedByFiltersString" : "",
-        "dataStreamPropertyList" : [ ],
-        "dataStreamUUID" : "460e293f-53f5-4c75-a79f-e6fc815b6f8e",
-        "dataType" : null,
-        "filterObject" : "{\"floor\":\"one\"}",
-        "flheight" : 25,
-        "flwidth" : 30,
-        "h" : 244,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "isDraggable" : true,
-        "isScaleable" : false,
-        "isSelectable" : true,
-        "labelName" : "name",
-        "name" : "floorPlan1",
-        "naturalKey" : null,
-        "operation" : "insert",
-        "propertyName" : "location",
-        "scale" : 1,
-        "type" : "FloorPlanWidget",
-        "url" : "../cmn/img/floorplan.png",
-        "v" : 11,
-        "vertGravity" : 4,
-        "w" : 300,
-        "widthPolicy" : 0,
-        "x" : 70,
-        "y" : 80
-      }, {
-        "actionMenuLabel" : null,
-        "actionMenuTopic" : null,
-        "borderColor" : "Default",
-        "borderWidth" : 0,
-        "dataStreamGroupedByFiltersString" : "",
-        "dataStreamPropertyList" : [ ],
-        "dataStreamUUID" : "460e293f-53f5-4c75-a79f-e6fc815b6f8e",
-        "dataType" : null,
-        "filterObject" : "{\"floor\":\"two\"}",
-        "flheight" : 25,
-        "flwidth" : 30,
-        "h" : 244,
-        "heightPolicy" : 0,
-        "horzGravity" : 4,
-        "isDraggable" : true,
-        "isScaleable" : false,
-        "isSelectable" : true,
-        "labelName" : "name",
-        "name" : "floorPlan4",
-        "naturalKey" : null,
-        "operation" : "insert",
-        "propertyName" : "location",
-        "scale" : 1,
-        "type" : "FloorPlanWidget",
-        "url" : "../cmn/img/floorplan.png",
-        "v" : 11,
-        "vertGravity" : 4,
-        "w" : 300,
-        "widthPolicy" : 0,
-        "x" : 460,
-        "y" : 80
-      } ],
-      "data" : {
-        "properties" : { }
-      },
-      "fields" : [ {
-        "id" : "text1",
-        "label" : "First Floor",
-        "size" : 20,
-        "type" : "text"
-      }, {
-        "id" : "text3",
-        "label" : "Second Floor",
-        "size" : 20,
-        "type" : "text"
-      } ],
-      "footerChildren" : [ ],
-      "responseTopic" : "/my/response/topic"
-    }
+    "Start" : "RELOCATED to views/Start.json"
   }
 }

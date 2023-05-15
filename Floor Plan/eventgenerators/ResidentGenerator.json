@@ -1,6 +1,6 @@
 {
+  "ars_relationships" : [ ],
   "events" : [ {
-    "startAfter" : 0,
     "duration" : null,
     "interval" : 1000,
     "iterations" : 20,
@@ -14,10 +14,13 @@
     }, {
       "name" : "location",
       "rule" : {
-        "value" : {
-          "coordinates" : [ 10, 10 ],
+        "randomRange" : [ {
+          "coordinates" : [ 5, 5 ],
           "type" : "Point"
-        }
+        }, {
+          "coordinates" : [ 25, 20 ],
+          "type" : "Point"
+        } ]
       }
     }, {
       "name" : "name",
