@@ -1,17 +1,16 @@
 {
-  "ars_relationships" : [ ],
   "links" : [ {
-    "source" : "eventgenerator/ResidentGenerator",
-    "target" : "type/Resident"
-  }, {
     "source" : "type/Resident",
     "target" : "client/Resident"
+  }, {
+    "source" : "client/Resident",
+    "target" : "topic//my/response/topic"
   } ],
   "name" : "FloorPlan",
   "options" : {
-    "description" : "",
+    "description" : "The FloorPlan tutorial demonstrates how to drop pins in coordinates on a 2D map or image. \n\nTo generated test data to power the client, click the play button next to the Resident Data Generator below and to the right.\n\nWith the client and data generator both running, you should see pins show up on both the first and second floor.\n\nTo see how the client was implemented, pause the client using the rounded square button on the Resident title bar and click around on the various widgets. Also take a look at the Resident Data Stream to see how data makes its way into the Client.",
     "dockCollapsed" : {
-      "bottom" : false,
+      "bottom" : true,
       "left" : false,
       "right" : false,
       "top" : false,
@@ -25,38 +24,66 @@
       "top" : 0,
       "viewtabs" : 0
     },
-    "dockSort" : 1,
-    "exclusionList" : [ "document/star_blue.png", "document/star_green.png" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
-    "layoutStyle" : "tile",
-    "openFolders" : [ "client" ],
-    "rootViewFlavor" : 5,
+    "layoutStyle" : "custom",
+    "rootViewFlavor" : 1,
     "showGrid" : true,
-    "tileColumns" : 2,
-    "tileRows" : 2,
     "type" : "dev",
-    "v" : 5,
+    "v" : 3,
     "viewUUID" : "MAINVIEW"
   },
-  "partitions" : [ ],
   "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : -38.6,
+      "y" : 97
+    },
+    "resourceReference" : "/topics//my/response/topic",
+    "type" : 10
+  }, {
     "label" : "Resident",
     "name" : "Resident",
+    "node" : {
+      "x" : 156.6,
+      "y" : 20.8
+    },
     "resourceReference" : "/types/Resident",
-    "timestamp" : "2023-05-10T21:24:12.403Z",
+    "timestamp" : "2020-10-20T17:34:34.408Z",
     "type" : 1
   }, {
+    "inventory" : {
+      "clientHash" : [ ],
+      "clients" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "eventstreamHash" : [ ],
+      "eventstreams" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "systemmodelHash" : [ ],
+      "systemmodels" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "Resident" ]
+    },
     "label" : "Resident",
     "name" : "Resident",
+    "node" : {
+      "x" : 145.6,
+      "y" : 168.2
+    },
     "resourceReference" : "/system.clients/Resident",
-    "timestamp" : "2023-05-10T23:34:37.292Z",
+    "timestamp" : "2020-10-20T17:34:35.148Z",
     "type" : 15
   }, {
-    "label" : "ResidentGenerator",
     "name" : "ResidentGenerator",
     "resourceReference" : "/system.eventgenerators/ResidentGenerator",
-    "timestamp" : "2023-05-11T22:52:56.534Z",
+    "timestamp" : "2020-10-20T17:41:18.060Z",
     "type" : 65
   } ],
   "tools" : [ {
@@ -74,41 +101,64 @@
     "type" : 2
   }, {
     "isPinned" : false,
-    "name" : "Resident",
+    "name" : "Project Description",
     "pane" : {
-      "c" : 0,
-      "r" : 0
+      "h" : 460,
+      "w" : 650,
+      "x" : 20,
+      "y" : 20
     },
-    "resourceKey" : "type/Resident",
-    "state" : 2,
-    "type" : 6
+    "state" : 3,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 220,
+      "w" : 520,
+      "x" : 690,
+      "y" : 20
+    },
+    "state" : 3,
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.8125976441413515,
+        "translate" : [ 225.85756974581525, 10.690792389956599 ]
+      }
+    },
+    "type" : 1
   }, {
     "isPinned" : false,
     "name" : "Resident",
     "pane" : {
-      "c" : 0,
-      "r" : 1
+      "h" : 700,
+      "w" : 1190,
+      "x" : 20,
+      "y" : 500
     },
     "resourceKey" : "client/Resident",
-    "state" : 2,
+    "state" : 3,
     "toolOptions" : {
-      "isRunning" : false
+      "isRunning" : true
     },
     "type" : 63
   }, {
     "isPinned" : false,
     "name" : "ResidentGenerator",
     "pane" : {
-      "c" : 1,
-      "r" : 0
+      "h" : 240,
+      "w" : 590,
+      "x" : 690,
+      "y" : 250
     },
     "resourceKey" : "eventgenerator/ResidentGenerator",
-    "state" : 2,
+    "state" : 3,
     "type" : 111
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "subtypeeditor/Resident", "client/Resident", "eventgenerator/ResidentGenerator" ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph", "client/Resident", "eventgenerator/ResidentGenerator" ]
   } ]
 }
