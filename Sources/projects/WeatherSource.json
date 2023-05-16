@@ -9,7 +9,7 @@
   } ],
   "name" : "WeatherSource",
   "options" : {
-    "description" : "To enable the weather source, you will need to register for an API key from http://api.openweathermap.org\n\nOnce you have registered for the API key, copy the value and replace \"CHANGEMETOYOURAPPID\" at the end of Server URI field in the source definition below.\n\nCheck the active checkbox in the titlebar (empty square with rounded corners) and save the source. The Current State should flip from a gray circled-check to a green circled-check. \n\nOnce the source is active, click the play button on the source title bar to view the raw weather readings received from the source, or go to Show -> Find Records -> select the weatherReading type, and query for all of the recorded values.\n",
+    "description" : "To enable the weather source, you will need to register for an API key from http://api.openweathermap.org\n\nOnce you have registered for the API key, copy the value and replace \"<YOUR_APP_ID>\" in the Query Parameters in the source definition below.\n\nCheck the active checkbox in the titlebar (empty square with rounded corners) and save the source. The Current State should flip from an empty grey square to a grey square with a check in it. \n\nOnce the source is active, click the Test Data Receipt button to view the raw weather readings received from the source, or go to Show -> Find Records -> select the weatherReading type, and query for all of the recorded values.\n",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
