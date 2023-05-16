@@ -1,26 +1,20 @@
 {
   "activationConstraint" : "",
-  "active" : true,
-  "ars_relationships" : [ ],
-  "autoUnwind" : false,
+  "active" : false,
   "config" : {
-    "oauthContentType" : "application/x-www-form-urlencoded",
-    "oauthGrantType" : "client_credentials",
-    "oauthUseBasicAuth" : false,
     "pollingInterval" : 30,
     "query" : {
       "contentType" : "application/json"
     },
     "requestDefaults" : {
       "query" : {
-        "APPID" : "1592066893b836b920e203435b9312d5",
+        "APPID" : "<YOUR_APP_ID>",
         "lat" : "37.91",
         "lon" : "-122.07"
       }
     },
     "uri" : "http://api.openweathermap.org/data/2.5/weather"
   },
-  "mockProcedures" : { },
   "name" : "weather",
   "type" : "REMOTE"
 }
