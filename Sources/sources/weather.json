@@ -6,7 +6,14 @@
     "query" : {
       "contentType" : "application/json"
     },
-    "uri" : "http://api.openweathermap.org/data/2.5/weather?lat=37.91&lon=-122.07&APPID=CHANGEMETOYOURAPPID"
+    "requestDefaults" : {
+      "query" : {
+        "APPID" : "<YOUR_APP_ID>",
+        "lat" : "37.91",
+        "lon" : "-122.07"
+      }
+    },
+    "uri" : "http://api.openweathermap.org/data/2.5/weather"
   },
   "name" : "weather",
   "type" : "REMOTE"
