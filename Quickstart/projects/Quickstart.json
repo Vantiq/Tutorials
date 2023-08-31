@@ -1,0 +1,301 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "type/com.vantiq.quickstart.TempMQTT.GlobalState"
+  }, {
+    "source" : "app/com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "document/com.vantiq.quickstart.TempMQTT.js"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ThresholdNodeStateThresholdCrossed_TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ThresholdNodeStateThresholdCrossed_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetAll_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateStatus_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsReset_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsCloseAll_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsWriteAll_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.quickstart.TempMQTT",
+    "target" : "type/com.vantiq.quickstart.TempMQTT.PartitionedState"
+  }, {
+    "source" : "app/com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT"
+  }, {
+    "source" : "app/com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ThresholdNodeStateThresholdCrossed_TempMQTT"
+  }, {
+    "source" : "app/com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsReset_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsWriteAll_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsCloseAll_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsCloseAll_TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsWriteAll_TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateStatus_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT",
+    "target" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetAll_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "source/com.vantiq.quickstart.TempMQTT",
+    "target" : "app/com.vantiq.quickstart.TempMQTT.TempMQTT"
+  }, {
+    "source" : "designmodel/com.vantiq.quickstart.TemperatureAlert",
+    "target" : "client/com.vantiq.quickstart.Maintenance"
+  }, {
+    "source" : "app/com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "target" : "source/com.vantiq.quickstart.TempMQTT"
+  }, {
+    "source" : "designmodel/com.vantiq.quickstart.TemperatureAlert",
+    "target" : "services/com.vantiq.quickstart.TempMQTT"
+  } ],
+  "name" : "Quickstart",
+  "options" : {
+    "description" : "The Quickstart Tutorial demonstrates the Design Modeler, a visual IDE tool for building Vantiq systems. It uses the Design Modeler’s AI Design Assistant, a UI that allows the user to enter a text description of the system to be built then uses Generative AI to turn that description into the beginnings of the running application.\n\n**Please note**: the temperature sensor data is read from a public MQTT Source that is disabled by default in this Project. Use the Active Resource Control Center (seen below) to activate the *com.vantiq.quickstart* Source by clicking its **Active** slider.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "openFolders" : [ "com.vantiq.quickstart", "com.vantiq.quickstart/designmodel" ],
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "type" : "dev",
+    "v" : 5,
+    "viewUUID" : "MAINVIEW"
+  },
+  "partitions" : [ ],
+  "resources" : [ {
+    "label" : "com.vantiq.quickstart.Maintenance",
+    "name" : "com.vantiq.quickstart.Maintenance",
+    "resourceReference" : "/system.clients/com.vantiq.quickstart.Maintenance",
+    "timestamp" : "2023-08-24T18:49:35.493Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT",
+    "resourceReference" : "/system.services/com.vantiq.quickstart.TempMQTT",
+    "timestamp" : "2023-08-31T21:27:12.655Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT",
+    "resourceReference" : "/sources/com.vantiq.quickstart.TempMQTT",
+    "timestamp" : "2023-08-24T18:49:35.992Z",
+    "type" : 4
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsCloseAll_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsCloseAll_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsCloseAll_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsCloseAll_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:40.361Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsGetAll_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsGetAll_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsGetAll_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetAll_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:38.703Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsGetById_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsGetById_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:37.985Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsReset_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsReset_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsReset_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsReset_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:39.163Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsUpdateNotifyNode_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateNotifyNode_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:41.390Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateStatus_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateStatus_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsUpdateStatus_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsUpdateStatus_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:39.734Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsWriteAll_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ActiveCollabsWriteAll_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ActiveCollabsWriteAll_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ActiveCollabsWriteAll_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:40.865Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.GlobalState",
+    "name" : "com.vantiq.quickstart.TempMQTT.GlobalState",
+    "resourceReference" : "/types/com.vantiq.quickstart.TempMQTT.GlobalState",
+    "timestamp" : "2023-08-24T18:49:37.596Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.PartitionedState",
+    "name" : "com.vantiq.quickstart.TempMQTT.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.quickstart.TempMQTT.PartitionedState",
+    "timestamp" : "2023-08-24T18:49:37.596Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "resourceReference" : "/collaborationtypes/com.vantiq.quickstart.TempMQTT.TempMQTT",
+    "timestamp" : "2023-08-24T18:54:04.185Z",
+    "type" : 12
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.ThresholdNodeStateThresholdCrossed_TempMQTT",
+    "name" : "com.vantiq.quickstart.TempMQTT.ThresholdNodeStateThresholdCrossed_TempMQTT",
+    "packageName" : "com.vantiq.quickstart",
+    "procedureName" : "ThresholdNodeStateThresholdCrossed_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.quickstart.TempMQTT.ThresholdNodeStateThresholdCrossed_TempMQTT",
+    "serviceName" : "TempMQTT",
+    "timestamp" : "2023-08-24T18:49:37.841Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.quickstart.TempMQTT.js",
+    "name" : "com.vantiq.quickstart.TempMQTT.js",
+    "resourceReference" : "/documents/com.vantiq.quickstart.TempMQTT.js",
+    "timestamp" : "2023-08-24T18:54:05.395Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.quickstart.TemperatureAlert",
+    "name" : "com.vantiq.quickstart.TemperatureAlert",
+    "resourceReference" : "/system.designmodels/com.vantiq.quickstart.TemperatureAlert",
+    "timestamp" : "2023-08-31T21:34:50.239Z",
+    "type" : 75
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Active Resource Control Center",
+    "pane" : {
+      "c" : 0,
+      "r" : 1
+    },
+    "state" : 2,
+    "type" : 122
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "c" : 0,
+      "r" : 0
+    },
+    "state" : 2,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.quickstart.TempMQTT",
+    "pane" : {
+      "c" : 1,
+      "r" : 0
+    },
+    "resourceKey" : "services/com.vantiq.quickstart.TempMQTT",
+    "state" : 2,
+    "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.quickstart.TemperatureAlert",
+    "pane" : {
+      "c" : 1,
+      "r" : 1
+    },
+    "resourceKey" : "designmodel/com.vantiq.quickstart.TemperatureAlert",
+    "state" : 2,
+    "type" : 121
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "activeResources/Active Resource Control Center", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "services/com.vantiq.quickstart.TempMQTT", "designmodel/com.vantiq.quickstart.TemperatureAlert" ]
+  } ]
+}

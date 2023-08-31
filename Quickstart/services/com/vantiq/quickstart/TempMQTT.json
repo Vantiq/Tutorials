@@ -1,0 +1,25 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "description" : "This Service was created by the Design Modeler 'com.vantiq.quickstart.TemperatureAlert'.",
+  "eventTypes" : {
+    "Maintenance" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    }
+  },
+  "globalType" : "com.vantiq.quickstart.TempMQTT.GlobalState",
+  "interface" : [ ],
+  "internalEventHandlers" : [ "/collaborationtypes/com.vantiq.quickstart.TempMQTT.TempMQTT" ],
+  "name" : "com.vantiq.quickstart.TempMQTT",
+  "partitionedType" : "com.vantiq.quickstart.TempMQTT.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : {
+    "ActiveCollabsWriteAll_TempMQTT" : {
+      "interval" : 300000
+    }
+  }
+}

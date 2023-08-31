@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.quickstart.TempMQTT.PartitionedState",
+  "properties" : { },
+  "role" : "schema"
+}

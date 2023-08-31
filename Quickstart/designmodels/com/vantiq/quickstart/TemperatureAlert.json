@@ -1,0 +1,141 @@
+{
+  "ars_properties" : {
+    "lpPct" : 15,
+    "rpPct" : 30
+  },
+  "ars_relationships" : [ ],
+  "contents" : {
+    "connectors" : [ {
+      "key" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 13
+    }, {
+      "key" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 8
+    }, {
+      "key" : "0b332cc1-a288-43c9-b386-f0b9e64b6528&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "0b332cc1-a288-43c9-b386-f0b9e64b6528",
+      "type" : 15
+    }, {
+      "key" : "0b332cc1-a288-43c9-b386-f0b9e64b6528&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "0b332cc1-a288-43c9-b386-f0b9e64b6528",
+      "type" : 14
+    }, {
+      "key" : "b3419108-08f2-4ef9-ac4b-0587e68d0241&DATASTREAM1",
+      "name" : "NEW-DS",
+      "parent" : "b3419108-08f2-4ef9-ac4b-0587e68d0241",
+      "type" : 11
+    }, {
+      "key" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 3
+    }, {
+      "key" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 4
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&EXTERNALIN1",
+      "name" : "TempMQTTExternalIn",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 12
+    }, {
+      "key" : "52&b3419108-08f2-4ef9-ac4b-0587e68d0241&DATASTREAM1",
+      "name" : "PublishFromNotifyNode",
+      "parent" : "b3419108-08f2-4ef9-ac4b-0587e68d0241",
+      "type" : 10
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&OUTPUT1",
+      "name" : "Maintenance",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 2
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&CALLIN1",
+      "name" : "ActiveCollabsGetById_TempMQTT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 5
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&CALLIN2",
+      "name" : "ActiveCollabsGetAll_TempMQTT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 5
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&CALLIN3",
+      "name" : "ActiveCollabsReset_TempMQTT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 5
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&CALLIN4",
+      "name" : "ActiveCollabsUpdateStatus_TempMQTT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 5
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&CALLIN5",
+      "name" : "ActiveCollabsCloseAll_TempMQTT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 5
+    }, {
+      "key" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&CALLIN6",
+      "name" : "ActiveCollabsWriteAll_TempMQTT",
+      "parent" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "type" : 5
+    } ],
+    "generateCallback" : false,
+    "links" : [ {
+      "isBidirectional" : false,
+      "source" : "0b332cc1-a288-43c9-b386-f0b9e64b6528&EXTOUTBOUND1",
+      "target" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&EXTERNALIN1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "51&eb7c36fb-b3c4-4e0c-82ec-1592193a6515&OUTPUT1",
+      "target" : "52&b3419108-08f2-4ef9-ac4b-0587e68d0241&DATASTREAM1"
+    } ],
+    "objects" : [ {
+      "h" : 50,
+      "label" : "Maintenance",
+      "resourceName" : "com.vantiq.quickstart.Maintenance",
+      "resourceType" : "system.clients",
+      "type" : 52,
+      "uuid" : "b3419108-08f2-4ef9-ac4b-0587e68d0241",
+      "w" : 200,
+      "x" : 662.2415090789797,
+      "y" : -3.5124177600949187
+    }, {
+      "h" : 59,
+      "label" : "TempMQTT",
+      "resourceName" : "com.vantiq.quickstart.TempMQTT",
+      "resourceType" : "system.services",
+      "type" : 51,
+      "uuid" : "eb7c36fb-b3c4-4e0c-82ec-1592193a6515",
+      "w" : 200,
+      "x" : 350,
+      "y" : 0
+    }, {
+      "h" : 50,
+      "label" : "TempMQTT",
+      "resourceName" : null,
+      "type" : 56,
+      "uuid" : "0b332cc1-a288-43c9-b386-f0b9e64b6528",
+      "w" : 200,
+      "x" : 452.3069323496833,
+      "y" : -187.69146123666587
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1.1388166992675453,
+        "translate" : [ -208.12019179625986, 275.680426166878 ]
+      }
+    },
+    "v" : 1
+  },
+  "description" : "Receive temperature events from MQTT source 'TempMQTT'.\nIf the temperature crosses a threshold of 200 degrees,\nnotify user 'maintenance' via the 'Maintenance' Client.",
+  "name" : "com.vantiq.quickstart.TemperatureAlert",
+  "serviceEventRoutes" : [ ]
+}
