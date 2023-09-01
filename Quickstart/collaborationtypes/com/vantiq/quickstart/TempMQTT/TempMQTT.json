@@ -1,0 +1,137 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "1df725cd-f70f-45e0-9872-d15bab0c441e" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "1efcbdc7-30a2-46fc-86f8-6978c0226664" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "38d24f0e-0486-45f9-8b98-e910e8863758" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "a05a3719-b36c-4b8f-90b8-cb435e45ed3d" : {
+          "x" : 0,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 3,
+      "scale" : 1.3527038436733765,
+      "translate" : [ 318.55507619115866, 55.3882025990049 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "NotifyNode" : {
+      "configuration" : {
+        "body" : "\"Temperature has crossed the threshold of 200 degrees: \" + event.temperature",
+        "childStreams" : [ "PublishFromNotifyNode" ],
+        "clientName" : "com.vantiq.quickstart.Maintenance",
+        "firstResponseFilter" : "",
+        "imports" : null,
+        "maxResponseTime" : "",
+        "parentStreams" : [ "ThresholdNode" ],
+        "pushSourceName" : null,
+        "title" : "\"Temperature Threshold Crossed \"",
+        "users" : "[Context.username()]"
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyNode",
+      "pattern" : "Notify",
+      "patternVersion" : 4,
+      "uuid" : "1df725cd-f70f-45e0-9872-d15bab0c441e"
+    },
+    "PublishFromNotifyNode" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "eventTypeName" : "Maintenance",
+        "parentStreams" : [ "NotifyNode" ],
+        "service" : "com.vantiq.quickstart.TempMQTT"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishFromNotifyNode",
+      "pattern" : "PublishToService",
+      "patternVersion" : 2,
+      "uuid" : "38d24f0e-0486-45f9-8b98-e910e8863758"
+    },
+    "TempMQTT" : {
+      "configuration" : {
+        "childStreams" : [ "ThresholdNode" ],
+        "condition" : "",
+        "eventTypeName" : null,
+        "inboundResource" : "sources",
+        "inboundResourceId" : "com.vantiq.quickstart.TempMQTT",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ ],
+        "schema" : null,
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TempMQTT",
+      "pattern" : "EventStream",
+      "patternVersion" : 4,
+      "uuid" : "1efcbdc7-30a2-46fc-86f8-6978c0226664"
+    },
+    "ThresholdNode" : {
+      "configuration" : {
+        "childStreams" : [ "NotifyNode" ],
+        "condition" : "event.temperature > 200",
+        "direction" : "true",
+        "groupByProperty" : "",
+        "groupByWindow" : null,
+        "imports" : null,
+        "initialStateIsFirstEvent" : false,
+        "initializeCondition" : "false",
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "overConsecutiveReadings" : 2,
+        "parentStreams" : [ "TempMQTT" ],
+        "upsert" : false,
+        "withinDuration" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "ThresholdNode",
+      "pattern" : "Threshold",
+      "patternVersion" : 4,
+      "uuid" : "a05a3719-b36c-4b8f-90b8-cb435e45ed3d"
+    }
+  },
+  "boundEventType" : null,
+  "collaboratorRoles" : [ ],
+  "contextualizedAssembly" : { },
+  "description" : null,
+  "disableBadging" : false,
+  "entityRoles" : [ ],
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.quickstart.TempMQTT.TempMQTT",
+  "writeFrequency" : "5 minutes"
+}
