@@ -23,6 +23,7 @@
       "ctServiceOpen" : false,
       "serviceGroupOpenHash" : { }
     },
+    "isHidden" : false,
     "paletteWidth" : 170,
     "propertyWidth" : 280
   },
@@ -37,8 +38,9 @@
         "roleType" : "entity"
       },
       "downstreamReferences" : { },
+      "name" : "AssignPatient",
       "pattern" : "Assign",
-      "patternVersion" : 1,
+      "patternVersion" : 7,
       "uuid" : "ad41cf72-bca2-4b06-99af-f6bc8c1468ff"
     },
     "CollabComplete" : {
@@ -47,21 +49,23 @@
         "status" : "completed"
       },
       "downstreamReferences" : { },
+      "name" : "CollabComplete",
       "pattern" : "CollaborationStatus",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "5d4d575e-d0f8-47cc-85d6-2b3784652add"
     },
     "EventStream" : {
       "configuration" : {
         "childStreams" : [ "isUnusualHeartRate" ],
+        "eventTypeName" : "MonitorReading",
         "inboundResource" : "services",
         "inboundResourceId" : "patient.monitoring.HeartRate",
-        "eventTypeName": "MonitorReading",
         "parentStreams" : [ ]
       },
       "downstreamReferences" : { },
+      "name" : "EventStream",
       "pattern" : "EventStream",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "17dafa82-936d-416f-81c5-f87867003413"
     },
     "GetPatient" : {
@@ -73,8 +77,9 @@
         "taskName" : "patient"
       },
       "downstreamReferences" : { },
+      "name" : "GetPatient",
       "pattern" : "GetCollaboration",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "6d5df205-2a62-45a4-a482-ec8cc674f94a"
     },
     "HelpNeeded" : {
@@ -89,8 +94,9 @@
         "upsert" : false
       },
       "downstreamReferences" : { },
+      "name" : "HelpNeeded",
       "pattern" : "Filter",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "95aedb54-73c7-4a4a-b760-c88bf2a44b2d"
     },
     "NotifyFirstResponder" : {
@@ -112,8 +118,9 @@
       "downstreamUUIDS" : {
         "response" : "27715a60-ecae-452e-8405-975cb159f628"
       },
+      "name" : "NotifyFirstResponder",
       "pattern" : "Notify",
-      "patternVersion" : 1,
+      "patternVersion" : 6,
       "uuid" : "41b0e8ed-6667-4bb3-8bee-24a993a14310"
     },
     "NotifyPatient" : {
@@ -137,8 +144,9 @@
         "response" : "63a76ed9-15db-42c0-8f37-80953753d6ca",
         "responseTimeout" : "8898cd9f-3b67-43f2-84be-9224f7f88967"
       },
+      "name" : "NotifyPatient",
       "pattern" : "Notify",
-      "patternVersion" : 1,
+      "patternVersion" : 6,
       "uuid" : "93647c35-788d-4d1f-a6a8-9532a3522871"
     },
     "OK" : {
@@ -153,8 +161,9 @@
         "upsert" : false
       },
       "downstreamReferences" : { },
+      "name" : "OK",
       "pattern" : "Filter",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "8b3a10b2-6569-44d4-8e6b-57b5ee13014f"
     },
     "PatientOK" : {
@@ -163,8 +172,9 @@
         "status" : "completed"
       },
       "downstreamReferences" : { },
+      "name" : "PatientOK",
       "pattern" : "CollaborationStatus",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "f491fcc0-2ebb-4214-8f31-1bc4b4bf60bd"
     },
     "isUnusualHeartRate" : {
@@ -179,21 +189,15 @@
         "upsert" : false
       },
       "downstreamReferences" : { },
+      "name" : "isUnusualHeartRate",
       "pattern" : "Filter",
-      "patternVersion" : 1,
+      "patternVersion" : 4,
       "uuid" : "bfafe3fc-093d-48d9-920c-e5e376af2edb"
     }
   },
-  "boundService" : "patient.monitoring.HeartRate",
-  "collaboratorRoles" : [ ],
   "disableBadging" : false,
-  "entityRoles" : [ {
-    "name" : "patient",
-    "type" : "patient.monitoring.HeartRate.MonitorReading"
-  } ],
   "isComponent" : false,
   "isEventHandler" : true,
   "keyTypes" : [ "system.collaborations" ],
-  "name" : "patient.monitoring.HeartRate.MonitorReading",
-  "writeFrequency" : "5 minutes"
+  "name" : "patient.monitoring.HeartRate.MonitorReading"
 }

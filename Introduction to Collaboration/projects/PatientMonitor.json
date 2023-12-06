@@ -5,9 +5,6 @@
     "target" : "document/patient.monitoring.HeartRate.js"
   }, {
     "source" : "services/patient.monitoring.HeartRate",
-    "target" : "topic//patient.monitoring.HeartRate/MonitorReading/handler/inbound"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
     "target" : "procedure/patient.monitoring.HeartRate.generateHeartRate"
   }, {
     "source" : "procedure/patient.monitoring.HeartRate.generateHeartRate",
@@ -23,106 +20,130 @@
     "target" : "topic//vantiq/systemmodel/FirstResponderResponse/submitTopic"
   }, {
     "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetAll_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.CollabIdsByEntityStoreId_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus_MonitorReading"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsReset_MonitorReading"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll_MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll_MonitorReading"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.CollabIdsByEntityStoreId_MonitorReading"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetAll_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.CollabIdsByEntityStoreId_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsReset_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading",
-    "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "services/patient.monitoring.HeartRate",
     "target" : "type/patient.monitoring.HeartRate.MonitorReading"
   }, {
     "source" : "app/patient.monitoring.HeartRate.MonitorReading",
     "target" : "services/patient.monitoring.HeartRate"
-  }, {
-    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading"
-  }, {
-    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading"
-  }, {
-    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus_MonitorReading"
-  }, {
-    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading"
-  }, {
-    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
-    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading"
   }, {
     "source" : "services/patient.monitoring.HeartRate",
     "target" : "app/patient.monitoring.HeartRate.MonitorReading"
   }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsReset"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus"
+  }, {
     "source" : "app/patient.monitoring.HeartRate.MonitorReading",
-    "target" : "type/patient.monitoring.HeartRate.MonitorReading"
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetAll",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnLoad",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsCloseAll",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsWriteAll",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.CollabIdsByEntityStoreId",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnStore",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsOnClose",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsReset",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading"
+  }, {
+    "source" : "services/patient.monitoring.HeartRate",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading"
+  }, {
+    "source" : "app/patient.monitoring.HeartRate.MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
+    "target" : "services/patient.monitoring.HeartRate"
+  }, {
+    "source" : "procedure/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
+    "target" : "procedure/patient.monitoring.HeartRate.ActiveCollabsGetById"
   } ],
   "name" : "PatientMonitor",
   "options" : {
@@ -155,6 +176,7 @@
     "v" : 5,
     "viewUUID" : "MAINVIEW"
   },
+  "partitions" : [ ],
   "resources" : [ {
     "label" : "/patient.monitoring.HeartRate/MonitorReading/handler/inbound",
     "name" : "/patient.monitoring.HeartRate/MonitorReading/handler/inbound",
@@ -174,125 +196,141 @@
     "label" : "FirstResponderResponse",
     "name" : "FirstResponderResponse",
     "resourceReference" : "/system.clients/FirstResponderResponse",
-    "timestamp" : "2023-01-26T16:17:07.108Z",
+    "timestamp" : "2023-12-06T17:53:55.499Z",
     "type" : 15
   }, {
     "label" : "PatientResponse",
     "name" : "PatientResponse",
     "resourceReference" : "/system.clients/PatientResponse",
-    "timestamp" : "2023-01-26T16:17:07.108Z",
+    "timestamp" : "2023-12-06T17:53:55.499Z",
     "type" : 15
   }, {
     "label" : "patient.monitoring.HeartRate",
     "name" : "patient.monitoring.HeartRate",
     "resourceReference" : "/system.services/patient.monitoring.HeartRate",
-    "timestamp" : "2023-01-26T16:17:18.071Z",
+    "timestamp" : "2023-12-06T18:03:00.369Z",
     "type" : 63
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsCloseAll_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.ActiveCollabsCloseAll_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsCloseAll",
     "packageName" : "patient.monitoring",
-    "procedureName" : "ActiveCollabsCloseAll_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsCloseAll_MonitorReading",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsCloseAll",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:12.696Z",
+    "timestamp" : "2023-12-06T17:54:08.170Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsGetAll_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.ActiveCollabsGetAll_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsGetAll",
     "packageName" : "patient.monitoring",
-    "procedureName" : "ActiveCollabsGetAll_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsGetAll_MonitorReading",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsGetAll",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:10.506Z",
+    "timestamp" : "2023-12-06T17:54:07.020Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsGetById",
     "packageName" : "patient.monitoring",
-    "procedureName" : "ActiveCollabsGetById_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsGetById_MonitorReading",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsGetById",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:09.529Z",
+    "timestamp" : "2023-12-06T17:54:07.032Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsReset_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.ActiveCollabsReset_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsOnClose",
     "packageName" : "patient.monitoring",
-    "procedureName" : "ActiveCollabsReset_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsReset_MonitorReading",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsOnClose",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:11.061Z",
+    "timestamp" : "2023-12-06T17:54:07.020Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsOnLoad",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsOnLoad",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2023-12-06T17:54:07.037Z",
+    "type" : 3
+  }, {
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsOnStore",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsOnStore",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2023-12-06T17:54:07.020Z",
+    "type" : 3
+  }, {
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsReset",
+    "packageName" : "patient.monitoring",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsReset",
+    "serviceName" : "HeartRate",
+    "timestamp" : "2023-12-06T17:54:07.681Z",
+    "type" : 3
+  }, {
     "name" : "patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
     "packageName" : "patient.monitoring",
     "procedureName" : "ActiveCollabsUpdateAssignPatient_MonitorReading",
     "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsUpdateAssignPatient_MonitorReading",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:14.755Z",
+    "timestamp" : "2023-12-06T18:03:05.087Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
     "name" : "patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
     "packageName" : "patient.monitoring",
     "procedureName" : "ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
     "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyFirstResponder_MonitorReading",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:13.888Z",
+    "timestamp" : "2023-12-06T18:03:04.382Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
     "name" : "patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
     "packageName" : "patient.monitoring",
     "procedureName" : "ActiveCollabsUpdateNotifyPatient_MonitorReading",
     "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsUpdateNotifyPatient_MonitorReading",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:13.659Z",
+    "timestamp" : "2023-12-06T18:03:04.991Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsUpdateStatus_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.ActiveCollabsUpdateStatus_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsUpdateStatus",
     "packageName" : "patient.monitoring",
-    "procedureName" : "ActiveCollabsUpdateStatus_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus_MonitorReading",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsUpdateStatus",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:11.738Z",
+    "timestamp" : "2023-12-06T17:54:07.953Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.ActiveCollabsWriteAll_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.ActiveCollabsWriteAll_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.ActiveCollabsWriteAll",
     "packageName" : "patient.monitoring",
-    "procedureName" : "ActiveCollabsWriteAll_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsWriteAll_MonitorReading",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.ActiveCollabsWriteAll",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:13.411Z",
+    "timestamp" : "2023-12-06T17:54:08.361Z",
     "type" : 3
   }, {
-    "label" : "patient.monitoring.HeartRate.CollabIdsByEntityStoreId_MonitorReading",
-    "name" : "patient.monitoring.HeartRate.CollabIdsByEntityStoreId_MonitorReading",
+    "name" : "patient.monitoring.HeartRate.CollabIdsByEntityStoreId",
     "packageName" : "patient.monitoring",
-    "procedureName" : "CollabIdsByEntityStoreId_MonitorReading",
-    "resourceReference" : "/procedures/patient.monitoring.HeartRate.CollabIdsByEntityStoreId_MonitorReading",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/patient.monitoring.HeartRate.CollabIdsByEntityStoreId",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:17.434Z",
+    "timestamp" : "2023-12-06T17:54:08.725Z",
     "type" : 3
   }, {
+    "label" : "patient.monitoring.HeartRate.MonitorReading",
     "name" : "patient.monitoring.HeartRate.MonitorReading",
     "resourceReference" : "/types/patient.monitoring.HeartRate.MonitorReading",
-    "timestamp" : "2023-01-26T16:17:07.039Z",
+    "timestamp" : "2023-12-06T17:53:53.416Z",
     "type" : 1
   }, {
+    "label" : "patient.monitoring.HeartRate.MonitorReading",
     "name" : "patient.monitoring.HeartRate.MonitorReading",
     "resourceReference" : "/collaborationtypes/patient.monitoring.HeartRate.MonitorReading",
-    "timestamp" : "2023-01-26T16:17:07.684Z",
+    "timestamp" : "2023-12-06T17:54:02.707Z",
     "type" : 12
   }, {
     "label" : "patient.monitoring.HeartRate.PartitionedState",
     "name" : "patient.monitoring.HeartRate.PartitionedState",
     "resourceReference" : "/types/patient.monitoring.HeartRate.PartitionedState",
-    "timestamp" : "2023-01-26T16:17:08.672Z",
+    "timestamp" : "2023-12-06T17:54:05.328Z",
     "type" : 1
   }, {
     "label" : "patient.monitoring.HeartRate.generateHeartRate",
@@ -301,13 +339,13 @@
     "procedureName" : "generateHeartRate",
     "resourceReference" : "/procedures/patient.monitoring.HeartRate.generateHeartRate",
     "serviceName" : "HeartRate",
-    "timestamp" : "2023-01-26T16:17:07.412Z",
+    "timestamp" : "2023-12-06T17:53:59.961Z",
     "type" : 3
   }, {
     "label" : "patient.monitoring.HeartRate.js",
     "name" : "patient.monitoring.HeartRate.js",
     "resourceReference" : "/documents/patient.monitoring.HeartRate.js",
-    "timestamp" : "2023-01-26T16:17:18.934Z",
+    "timestamp" : "2023-12-06T17:54:26.811Z",
     "type" : 19
   } ],
   "tools" : [ {
