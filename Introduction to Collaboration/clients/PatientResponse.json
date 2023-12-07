@@ -61,8 +61,7 @@
   "resourceBinding" : {
     "requiredResources" : [ {
       "resource" : "topics",
-      "resourceId" : "/vantiq/systemmodel/PatientResponse/submitTopic",
-      "type" : "publishes"
+      "resourceId" : "/vantiq/systemmodel/PatientResponse/submitTopic"
     } ]
   },
   "targetDevice" : "mobile",

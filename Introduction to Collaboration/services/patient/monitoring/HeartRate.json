@@ -1,19 +1,29 @@
 {
   "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
   "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "entityRoles" : [ {
+      "name" : "patient",
+      "type" : "patient.monitoring.HeartRate.MonitorReading"
+    } ],
+    "writeFrequency" : "5 minutes"
+  },
   "description" : null,
   "eventTypes" : {
     "MonitorReading" : {
       "direction" : "INBOUND",
       "eventSchema" : "patient.monitoring.HeartRate.MonitorReading",
-      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate.MonitorReading/EventStream"
+      "implementingResource" : "/collaborationtypes/patient.monitoring.HeartRate.MonitorReading/EventStream",
+      "isReliable" : false
     }
   },
   "globalType" : null,
   "interface" : [ {
     "name" : "generateHeartRate",
     "parameters" : [ {
-      "default" : null,
       "description" : null,
       "multi" : false,
       "name" : "heartRate",
@@ -21,11 +31,12 @@
       "type" : "Integer"
     } ]
   } ],
+  "internalEventHandlers" : [ ],
   "name" : "patient.monitoring.HeartRate",
   "partitionedType" : "patient.monitoring.HeartRate.PartitionedState",
   "replicationFactor" : 1,
   "scheduledProcedures" : {
-    "ActiveCollabsWriteAll_MonitorReading" : {
+    "ActiveCollabsWriteAll" : {
       "interval" : 300000
     }
   }
