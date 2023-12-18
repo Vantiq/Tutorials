@@ -1,0 +1,36 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "acf75ab8-0ac8-403b-8c9b-55aabe2743d8" ],
+    "widgets" : [ {
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 0,
+      "fontFamily" : "inherit",
+      "fontSize" : 20,
+      "fontStyle" : "normal",
+      "fontWeight" : "normal",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "StaticText209",
+      "text" : "page2",
+      "type" : "StaticText",
+      "uuid" : "acf75ab8-0ac8-403b-8c9b-55aabe2743d8",
+      "v" : 17,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize",
+      "x" : 135,
+      "y" : 39
+    } ]
+  },
+  "data" : {
+    "properties" : {
+      "page2Prop" : {
+        "defaultLabel" : "abc",
+        "type" : "String"
+      }
+    }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "browser"
+}

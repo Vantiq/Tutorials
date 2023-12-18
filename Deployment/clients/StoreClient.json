@@ -1,0 +1,121 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "storeChanged" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/storeChanged/onDataArrived.js"
+      }
+    },
+    "page" : {
+      "Start" : {
+        "onClientStart" : "RELOCATED to controllers/page/Start/onClientStart.js",
+        "widgets" : {
+          "Button34" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button34/onClick.js"
+          },
+          "Button69" : {
+            "onClick" : "RELOCATED to controllers/page/Start/widgets/Button69/onClick.js"
+          }
+        }
+      }
+    }
+  },
+  "isComponent" : false,
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "productCount" : {
+            "defaultLabel" : "Product Count",
+            "type" : "Integer"
+          },
+          "storeId" : {
+            "defaultLabel" : "Store Id",
+            "type" : "String"
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "com.vantiq.ims.Store"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : true,
+      "maxRecords" : 0,
+      "name" : "storeChanged",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 1,
+      "updateInterval" : 60,
+      "uuid" : "c459b0d5-5d62-4f1b-80f2-e5cce9ff8b9e",
+      "v" : 1
+    } ]
+  },
+  "name" : "StoreClient",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "productV" : "7.13",
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#f0f2f5",
+      "borderColor" : "#000000",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "dataDisplayColor" : "#ffffff",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#ffffff",
+      "dropShadowColor" : "#566076",
+      "foregroundColor" : "#000000",
+      "label" : "Custom",
+      "name" : "custom",
+      "titleBarColor" : "#dddddd",
+      "titleForegroundColor" : "#1f1d17",
+      "v" : 3
+    },
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "topics",
+      "resourceId" : "/my/response/topic"
+    }, {
+      "resource" : "types",
+      "resourceId" : "com.vantiq.ims.Store"
+    } ]
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
+  "views" : {
+    "Start" : "RELOCATED to views/Start.json",
+    "page2" : "RELOCATED to views/page2.json"
+  }
+}

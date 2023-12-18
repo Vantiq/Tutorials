@@ -1,0 +1,17 @@
+package com.vantiq.ims.StoreService
+/* input event for ordering products from the DeplymentClient UI. */
+RULE orderProduct
+WHEN EVENT OCCURS ON "/services/com.vantiq.ims.StoreService/orderProduct" 
+
+var orderEvent = event.value
+
+select ONE storeId, productCount from com.vantiq.ims.Store as theStore where storeId == orderEvent.storeId
+theStore.productCount = theStore.productCount - orderEvent.orderAmount
+
+upsert com.vantiq.ims.Store({storeId: theStore.storeId, productCount: theStore.productCount})
+
+if (theStore.productCount < 50) {
+	// ask Factory to deliver more products
+	var msg = {storeId: orderEvent.storeId, orderAmount: 100-theStore.productCount} 
+	PUBLISH msg TO SERVICE EVENT "com.vantiq.ims.FactoryService/requestMoreProducts" //PROCESSED BY {"ars_properties.type":"factory"}
+}

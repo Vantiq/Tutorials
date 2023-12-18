@@ -1,0 +1,11 @@
+package com.vantiq.ims.StoreService
+RULE productReceived
+WHEN EVENT OCCURS ON "/services/com.vantiq.ims.StoreService/shipToStore"
+var productEvent = event.value
+
+select ONE from com.vantiq.ims.Store as theStore where storeId == productEvent.storeId
+
+theStore.productCount = theStore.productCount  + productEvent.orderAmount
+
+upsert com.vantiq.ims.Store({storeId: theStore.storeId, productCount: theStore.productCount})
+log.info("{} more products received.", [productEvent.orderAmount])
