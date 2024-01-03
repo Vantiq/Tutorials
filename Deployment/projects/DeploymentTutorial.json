@@ -1,23 +1,57 @@
 {
+  "ars_relationships" : [ ],
   "links" : [ {
-    "source" : "client/DeploymentClient",
+    "source" : "client/StoreClient",
     "target" : "topic//my/response/topic"
   }, {
-    "source" : "type/com.vantiq.ims.Store",
-    "target" : "client/DeploymentClient"
+    "source" : "services/com.vantiq.ims.StoreService",
+    "target" : "rule/com.vantiq.ims.StoreService.orderProduct"
   }, {
-    "source" : "type/com.vantiq.ims.Store",
-    "target" : "rule/com.vantiq.ims.checkInventory"
+    "source" : "rule/com.vantiq.ims.StoreService.orderProduct",
+    "target" : "type/com.vantiq.ims.Store"
   }, {
-    "source" : "topic//com.vantiq.ims/NewOrder",
-    "target" : "app/distributeProductApp"
+    "source" : "services/com.vantiq.ims.StoreService",
+    "target" : "type/com.vantiq.ims.Order"
   }, {
-    "source" : "app/distributeProductApp",
-    "target" : "procedure/com.vantiq.ims.shipToStore"
+    "source" : "rule/com.vantiq.ims.StoreService.productReceived",
+    "target" : "services/com.vantiq.ims.StoreService"
+  }, {
+    "source" : "rule/com.vantiq.ims.StoreService.orderProduct",
+    "target" : "services/com.vantiq.ims.StoreService"
+  }, {
+    "source" : "services/com.vantiq.ims.StoreService",
+    "target" : "document/com.vantiq.ims.StoreService.js"
+  }, {
+    "source" : "rule/com.vantiq.ims.StoreService.productReceived",
+    "target" : "type/com.vantiq.ims.Store"
+  }, {
+    "source" : "services/com.vantiq.ims.StoreService",
+    "target" : "rule/com.vantiq.ims.StoreService.productReceived"
+  }, {
+    "source" : "client/StoreClient",
+    "target" : "type/com.vantiq.ims.Store"
+  }, {
+    "source" : "services/com.vantiq.ims.FactoryService",
+    "target" : "document/com.vantiq.ims.FactoryService.js"
+  }, {
+    "source" : "rule/com.vantiq.ims.StoreService.orderProduct",
+    "target" : "services/com.vantiq.ims.FactoryService"
+  }, {
+    "source" : "rule/com.vantiq.ims.FactoryService.requestMoreProducts",
+    "target" : "services/com.vantiq.ims.FactoryService"
+  }, {
+    "source" : "rule/com.vantiq.ims.FactoryService.requestMoreProducts",
+    "target" : "services/com.vantiq.ims.StoreService"
+  }, {
+    "source" : "services/com.vantiq.ims.FactoryService",
+    "target" : "rule/com.vantiq.ims.FactoryService.requestMoreProducts"
+  }, {
+    "source" : "services/com.vantiq.ims.FactoryService",
+    "target" : "type/com.vantiq.ims.Order"
   } ],
   "name" : "DeploymentTutorial",
   "options" : {
-    "description" : "This project is used by the Deployment Tutorial to demo the capability of Deployment Tool.\n\nThis sample application simulates inventory checking on a store and asks the factory for more products when inventory is low. The factory will also notify the store when more products are shipped.",
+    "description" : "This project is used in the Deployment Tutorial to demonstrate the capability of Deployment Tool.\n\nThis sample application simulates inventory checking on a store and asks the factory for more products when inventory is low. The factory will also notify the store when more products are shipped.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
@@ -27,192 +61,134 @@
     },
     "dockDimensions" : {
       "bottom" : 200,
-      "debug" : [ 0, 0, 0 ],
+      "debug" : [ 465.9261073504231, 824.4038926495767 ],
       "left" : 210,
       "right" : 220,
       "top" : 0,
       "viewtabs" : 0
     },
-    "dockSort" : 1,
+    "exclusionList" : [ "rule/com.vantiq.ims.FactoryService.requestProducts" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
-    "layoutStyle" : "tile",
-    "rootViewFlavor" : 1,
+    "layoutStyle" : "flex",
+    "openFolders" : [ "client", "com.vantiq.ims", "com.vantiq.ims/services", "com.vantiq.ims/type", "services/com.vantiq.ims.FactoryService", "services/com.vantiq.ims.StoreService" ],
+    "rootViewFlavor" : 5,
     "showGrid" : true,
-    "tileColumns" : 2,
-    "tileRows" : 2,
+    "structure" : {
+      "fraction" : 1,
+      "type" : "R[1]"
+    },
     "type" : "dev",
-    "v" : 4,
+    "v" : 5,
     "viewUUID" : "MAINVIEW"
   },
-  "resources" : [ {
-    "name" : "/com.vantiq.ims/NewOrder",
-    "node" : {
-      "x" : 390,
-      "y" : 61
+  "partitions" : [ {
+    "constraint" : "default",
+    "dynamicNodeNames" : [ ],
+    "introNode" : {
+      "x" : 761.4305306282833,
+      "y" : 51.55221264229749
     },
-    "resourceReference" : "/topics//com.vantiq.ims/NewOrder",
-    "type" : 10
-  }, {
+    "isDynamic" : false,
+    "members" : [ ],
+    "parameters" : [ ],
+    "partitionId" : "62f79cf5-7133-4dd0-93f8-a10632fc91e3",
+    "targetNodeConstraints" : [ ],
+    "targetNodeNames" : [ ]
+  } ],
+  "resources" : [ {
     "label" : "/my/response/topic",
     "name" : "/my/response/topic",
     "node" : {
-      "x" : 114.4,
-      "y" : 356.5
+      "x" : 1401.9,
+      "y" : 510.6
     },
     "resourceReference" : "/topics//my/response/topic",
     "type" : 10
   }, {
-    "inventory" : {
-      "clientHash" : [ ],
-      "clients" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "eventstreamHash" : [ ],
-      "eventstreams" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "systemmodelHash" : [ ],
-      "systemmodels" : [ ],
-      "topicHash" : [ "out" ],
-      "topics" : [ "/my/response/topic" ],
-      "typeHash" : [ "in" ],
-      "types" : [ "com.vantiq.ims.Store" ]
-    },
-    "label" : "DeploymentClient",
-    "name" : "DeploymentClient",
+    "label" : "StoreClient",
+    "name" : "StoreClient",
     "node" : {
-      "x" : 109,
-      "y" : 296.6
+      "x" : 1404,
+      "y" : 464.5
     },
-    "resourceReference" : "/system.clients/DeploymentClient",
-    "timestamp" : "2021-03-29T22:39:30.108Z",
+    "resourceReference" : "/system.clients/StoreClient",
+    "timestamp" : "2023-12-18T16:51:10.509Z",
     "type" : 15
   }, {
-    "name" : "com.vantiq.ims.Store",
-    "node" : {
-      "x" : 135.7,
-      "y" : 204.7
-    },
-    "resourceReference" : "/types/com.vantiq.ims.Store",
-    "timestamp" : "2021-03-29T22:39:29.976Z",
-    "type" : 1
+    "label" : "com.vantiq.ims.FactoryService",
+    "name" : "com.vantiq.ims.FactoryService",
+    "resourceReference" : "/system.services/com.vantiq.ims.FactoryService",
+    "timestamp" : "2023-12-18T16:51:10.687Z",
+    "type" : 63
   }, {
-    "inventory" : {
-      "clientHash" : [ ],
-      "clients" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "eventstreamHash" : [ ],
-      "eventstreams" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "systemmodelHash" : [ ],
-      "systemmodels" : [ ],
-      "topicHash" : [ "out" ],
-      "topics" : [ "/NewOrder" ],
-      "typeHash" : [ "in" ],
-      "types" : [ "com.vantiq.ims.Store" ]
-    },
-    "name" : "com.vantiq.ims.checkInventory",
-    "node" : {
-      "x" : 203.5,
-      "y" : 117.2
-    },
-    "resourceReference" : "/rules/com.vantiq.ims.checkInventory",
-    "timestamp" : "2021-03-29T22:39:30.679Z",
+    "label" : "com.vantiq.ims.FactoryService.js",
+    "name" : "com.vantiq.ims.FactoryService.js",
+    "resourceReference" : "/documents/com.vantiq.ims.FactoryService.js",
+    "timestamp" : "2023-12-18T16:51:11.198Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.ims.FactoryService.requestMoreProducts",
+    "name" : "com.vantiq.ims.FactoryService.requestMoreProducts",
+    "resourceReference" : "/rules/com.vantiq.ims.FactoryService.requestMoreProducts",
+    "timestamp" : "2023-12-18T16:51:11.485Z",
     "type" : 2
   }, {
-    "inventory" : {
-      "clientHash" : [ ],
-      "clients" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "eventstreamHash" : [ ],
-      "eventstreams" : [ ],
-      "procedureHash" : [ ],
-      "procedures" : [ ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "systemmodelHash" : [ ],
-      "systemmodels" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ "both" ],
-      "types" : [ "Store" ]
-    },
-    "label" : "com.vantiq.ims.pickupProducts",
-    "name" : "com.vantiq.ims.pickupProducts",
+    "label" : "com.vantiq.ims.Order",
+    "name" : "com.vantiq.ims.Order",
     "node" : {
-      "x" : 423,
-      "y" : 340.4
+      "x" : 930.1,
+      "y" : 62.2
     },
-    "packageName" : "com.vantiq.ims",
-    "procedureName" : "pickupProducts",
-    "resourceReference" : "/procedures/com.vantiq.ims.pickupProducts",
-    "timestamp" : "2021-03-29T22:39:30.674Z",
-    "type" : 3
+    "resourceReference" : "/types/com.vantiq.ims.Order",
+    "timestamp" : "2023-12-18T16:51:10.206Z",
+    "type" : 1
   }, {
-    "inventory" : {
-      "clientHash" : [ ],
-      "clients" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "eventstreamHash" : [ ],
-      "eventstreams" : [ ],
-      "procedureHash" : [ "out" ],
-      "procedures" : [ "pickupProducts" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "systemmodelHash" : [ ],
-      "systemmodels" : [ ],
-      "topicHash" : [ ],
-      "topics" : [ ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "label" : "com.vantiq.ims.shipToStore",
-    "name" : "com.vantiq.ims.shipToStore",
+    "label" : "com.vantiq.ims.Store",
+    "name" : "com.vantiq.ims.Store",
     "node" : {
-      "x" : 407.1,
-      "y" : 254.2
+      "x" : 1415.9,
+      "y" : 398.6
     },
-    "packageName" : "com.vantiq.ims",
-    "procedureName" : "shipToStore",
-    "resourceReference" : "/procedures/com.vantiq.ims.shipToStore",
-    "timestamp" : "2021-03-29T22:39:30.682Z",
-    "type" : 3
+    "resourceReference" : "/types/com.vantiq.ims.Store",
+    "timestamp" : "2023-12-18T16:51:10.318Z",
+    "type" : 1
   }, {
-    "inventory" : {
-      "clientHash" : [ ],
-      "clients" : [ ],
-      "collaborationHash" : [ ],
-      "collaborations" : [ ],
-      "eventstreamHash" : [ ],
-      "eventstreams" : [ ],
-      "procedureHash" : [ "out" ],
-      "procedures" : [ "com.vantiq.ims.shipToStore" ],
-      "sourceHash" : [ ],
-      "sources" : [ ],
-      "systemmodelHash" : [ ],
-      "systemmodels" : [ ],
-      "topicHash" : [ "in" ],
-      "topics" : [ "/com.vantiq.ims/NewOrder" ],
-      "typeHash" : [ ],
-      "types" : [ ]
-    },
-    "name" : "distributeProductApp",
+    "label" : "com.vantiq.ims.StoreService",
+    "name" : "com.vantiq.ims.StoreService",
     "node" : {
-      "x" : 505.3,
-      "y" : 140
+      "x" : 1423.6,
+      "y" : 176
     },
-    "resourceReference" : "/collaborationtypes/distributeProductApp",
-    "timestamp" : "2021-03-29T22:39:31.492Z",
-    "type" : 12
+    "resourceReference" : "/system.services/com.vantiq.ims.StoreService",
+    "timestamp" : "2023-12-18T16:51:10.686Z",
+    "type" : 63
+  }, {
+    "label" : "com.vantiq.ims.StoreService.js",
+    "name" : "com.vantiq.ims.StoreService.js",
+    "resourceReference" : "/documents/com.vantiq.ims.StoreService.js",
+    "timestamp" : "2023-12-18T16:51:11.279Z",
+    "type" : 19
+  }, {
+    "label" : "com.vantiq.ims.StoreService.orderProduct",
+    "name" : "com.vantiq.ims.StoreService.orderProduct",
+    "node" : {
+      "x" : 1097.2,
+      "y" : 308.9
+    },
+    "resourceReference" : "/rules/com.vantiq.ims.StoreService.orderProduct",
+    "timestamp" : "2023-12-18T16:51:11.486Z",
+    "type" : 2
+  }, {
+    "label" : "com.vantiq.ims.StoreService.productReceived",
+    "name" : "com.vantiq.ims.StoreService.productReceived",
+    "node" : {
+      "x" : 1624.3,
+      "y" : 315.7
+    },
+    "resourceReference" : "/rules/com.vantiq.ims.StoreService.productReceived",
+    "timestamp" : "2023-12-18T16:51:11.450Z",
+    "type" : 2
   } ],
   "tools" : [ {
     "isPinned" : false,
@@ -225,37 +201,26 @@
     "type" : 99
   }, {
     "isPinned" : false,
+    "name" : "Log Messages",
+    "type" : 12
+  }, {
+    "isPinned" : false,
     "name" : "Project Contents",
     "type" : 2
   }, {
     "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
-      "c" : 1,
-      "r" : 0
+      "address" : "R[0]",
+      "isActive" : true,
+      "isActiveTool" : true
     },
-    "state" : 2,
+    "state" : 8,
     "type" : 82
-  }, {
-    "isPinned" : false,
-    "name" : "Project Resource Graph",
-    "pane" : {
-      "c" : 0,
-      "r" : 0
-    },
-    "state" : 2,
-    "toolOptions" : {
-      "scaleAndTranslationState" : {
-        "lastZoomRequest" : 0,
-        "scale" : 0.820175075127377,
-        "translate" : [ 54.02847616192423, 14.912933910290633 ]
-      }
-    },
-    "type" : 1
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "graph/Project Resource Graph" ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "list/Project Contents", "projectdescription/Project Description" ]
   } ]
 }

@@ -1,0 +1,33 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : {
+    "orderProduct" : {
+      "description" : "input event for ordering products from the DeplymentClient UI.",
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.ims.Order",
+      "implementingResource" : "/rules/com.vantiq.ims.StoreService.orderProduct",
+      "isReliable" : false
+    },
+    "shipToStore" : {
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.ims.Order",
+      "implementingResource" : "/rules/com.vantiq.ims.StoreService.productReceived",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.ims.StoreService",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

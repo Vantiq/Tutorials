@@ -1,0 +1,26 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "writeFrequency" : "5 minutes"
+  },
+  "description" : null,
+  "eventTypes" : {
+    "requestMoreProducts" : {
+      "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.ims.Order",
+      "implementingResource" : "/rules/com.vantiq.ims.FactoryService.requestMoreProducts",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.ims.FactoryService",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}
