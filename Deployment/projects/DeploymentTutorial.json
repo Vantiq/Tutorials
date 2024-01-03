@@ -51,7 +51,7 @@
   } ],
   "name" : "DeploymentTutorial",
   "options" : {
-    "description" : "This project is used by Deployment Tutotial to demo the capability of Deployment Tool.\n\nThis sample application simulates inventory checking on a store and asks the factory for more products when inventory is low. The factory will also notify the store when more products are shipped.",
+    "description" : "This project is used in the Deployment Tutorial to demonstrate the capability of Deployment Tool.\n\nThis sample application simulates inventory checking on a store and asks the factory for more products when inventory is low. The factory will also notify the store when more products are shipped.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
