@@ -1,0 +1,6 @@
+Answer the question based only on the following context:
+{context}
+
+Question: {question}
+
+Format the response as a JSON document with an `answer` key containing the answer and a `question` key containing the question.

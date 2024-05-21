@@ -1,0 +1,169 @@
+{
+  "ars_properties" : {
+    "graph" : {
+      "coordinates" : {
+        "LLM" : {
+          "x" : 50,
+          "y" : 480
+        },
+        "aboutPlay" : {
+          "x" : 49.07162729899088,
+          "y" : 320
+        },
+        "aboutWork" : {
+          "x" : -96.82343800862631,
+          "y" : 320
+        },
+        "choosePrompt" : {
+          "x" : 50,
+          "y" : 160
+        },
+        "choosePrompt$END" : {
+          "x" : 50,
+          "y" : 400
+        },
+        "general" : {
+          "x" : 153.75254503885904,
+          "y" : 320
+        },
+        "hobbies" : {
+          "x" : 48.60744094848633,
+          "y" : 240
+        },
+        "other" : {
+          "x" : 137.61194801330566,
+          "y" : 240
+        },
+        "question" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "topic" : {
+          "x" : -50,
+          "y" : 80
+        },
+        "work" : {
+          "x" : -39.004507064819336,
+          "y" : 240
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.543520734808024,
+      "translate" : [ 463.125249812156, 50.0637129570041 ]
+    },
+    "groups" : {
+      "aicomponents.aipatterns" : true,
+      "aicomponents.primitives" : true,
+      "aicomponents.resources" : true
+    }
+  },
+  "assembly" : {
+    "LLM" : {
+      "children" : [ ],
+      "component" : "io.vantiq.ai.components.LLM",
+      "configuration" : {
+        "llm" : "GPT3",
+        "outputType" : "String"
+      }
+    },
+    "choosePrompt" : {
+      "children" : [ "LLM" ],
+      "component" : "io.vantiq.ai.components.Branch",
+      "configuration" : {
+        "branches" : [ {
+          "code" : "input.topic.category.size() == 1 && input.topic.category[0] == \"Work\"",
+          "label" : "work",
+          "language" : "VAIL"
+        }, {
+          "code" : "input.topic.category.size() == 1 && input.topic.category[0] == \"Hobbies\"",
+          "label" : "hobbies",
+          "language" : "VAIL"
+        }, {
+          "code" : "",
+          "label" : "other",
+          "language" : "VAIL"
+        } ]
+      },
+      "subassemblies" : [ {
+        "aboutWork" : {
+          "children" : [ ],
+          "component" : "io.vantiq.ai.components.PromptFromTemplate",
+          "configuration" : {
+            "defaultValues" : null,
+            "promptTemplate" : {
+              "type" : "String",
+              "value" : "You are an expert on workplace matters.  Please answer this work-related question: ${question}.  Preface your answer with \"Work Hard\"."
+            }
+          }
+        },
+        "work" : {
+          "children" : [ "aboutWork" ],
+          "component" : "io.vantiq.ai.components.InitialInput",
+          "configuration" : { }
+        }
+      }, {
+        "aboutPlay" : {
+          "children" : [ ],
+          "component" : "io.vantiq.ai.components.PromptFromTemplate",
+          "configuration" : {
+            "defaultValues" : null,
+            "promptTemplate" : {
+              "type" : "String",
+              "value" : "You are an expert on hobbies.  Please answer this question: ${question}.  Preface you answer with \"Play Hard\"."
+            }
+          }
+        },
+        "hobbies" : {
+          "children" : [ "aboutPlay" ],
+          "component" : "io.vantiq.ai.components.InitialInput",
+          "configuration" : { }
+        }
+      }, {
+        "general" : {
+          "children" : [ ],
+          "component" : "io.vantiq.ai.components.PromptFromTemplate",
+          "configuration" : {
+            "defaultValues" : null,
+            "promptTemplate" : {
+              "type" : "String",
+              "value" : "${question}"
+            }
+          }
+        },
+        "other" : {
+          "children" : [ "general" ],
+          "component" : "io.vantiq.ai.components.InitialInput",
+          "configuration" : { }
+        }
+      } ]
+    },
+    "question" : {
+      "children" : [ "topic", "choosePrompt" ],
+      "component" : "io.vantiq.ai.components.InitialInput",
+      "configuration" : { }
+    },
+    "topic" : {
+      "children" : [ "choosePrompt" ],
+      "component" : "io.vantiq.ai.components.Categorize",
+      "configuration" : {
+        "categories" : [ {
+          "type" : "String",
+          "value" : "Work"
+        }, {
+          "type" : "String",
+          "value" : "Hobbies"
+        }, {
+          "type" : "String",
+          "value" : "Other"
+        } ],
+        "categorizerLLM" : "GPT3"
+      }
+    }
+  },
+  "isComponent" : false,
+  "isPrivate" : false,
+  "name" : "choosePrompt",
+  "returnType" : null,
+  "runtimeVersion" : 14,
+  "serviceName" : "com.vantiq.genai.TutorialService"
+}

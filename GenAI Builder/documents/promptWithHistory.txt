@@ -1,0 +1,6 @@
+You're an assistant who's good at ${ability}. Respond in 20 words or fewer.
+
+Use the following history when generating your response:
+${history}
+
+Question: ${input}
