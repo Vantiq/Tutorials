@@ -99,7 +99,7 @@
   } ],
   "name" : "genAITutorial",
   "options" : {
-    "description" : "",
+    "description" : "This project contains the service and supporting resources created during the [GenAI Builder Tutorial](/docs/system/tutorials/genaibuilder.md).  It demonstrates how to use the [Gen AI Builder](/docs/system/genaibuilder.md) to construct custom GenAI functionality for your applications.  \n\nTo use the examples provided by the service you will need to:\n\n1. Create the secret `OPENAI_KEY` containing a valid OpenAI API key.\n1. Load the semantic index with the content as described in the tutorial.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
@@ -124,7 +124,14 @@
     "showGrid" : true,
     "structure" : {
       "fraction" : 1,
-      "type" : "R[5]"
+      "groups" : [ {
+        "fraction" : 0.5,
+        "type" : "L[5]"
+      }, {
+        "fraction" : 0.5,
+        "type" : "L[1]"
+      } ],
+      "type" : "RH"
     },
     "type" : "dev",
     "v" : 5,
@@ -153,7 +160,7 @@
     "label" : "com.vantiq.genai.TutorialService",
     "name" : "com.vantiq.genai.TutorialService",
     "resourceReference" : "/system.services/com.vantiq.genai.TutorialService",
-    "timestamp" : "2024-05-21T01:30:30.714Z",
+    "timestamp" : "2024-05-21T15:46:07.350Z",
     "type" : 63
   }, {
     "name" : "com.vantiq.genai.TutorialService.choosePrompt",
@@ -326,7 +333,7 @@
     "isPinned" : false,
     "name" : "Documents",
     "pane" : {
-      "address" : "R[3]"
+      "address" : "RH[0]/L[3]"
     },
     "state" : 8,
     "type" : 26
@@ -338,7 +345,7 @@
     "isPinned" : false,
     "name" : "GPT3",
     "pane" : {
-      "address" : "R[4]"
+      "address" : "RH[0]/L[4]"
     },
     "resourceKey" : "llm/GPT3",
     "state" : 8,
@@ -354,9 +361,18 @@
     "type" : 2
   }, {
     "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "address" : "RH[1]/L[0]",
+      "isActive" : true
+    },
+    "state" : 8,
+    "type" : 82
+  }, {
+    "isPinned" : false,
     "name" : "Secrets",
     "pane" : {
-      "address" : "R[2]"
+      "address" : "RH[0]/L[2]"
     },
     "state" : 8,
     "type" : 83
@@ -364,7 +380,7 @@
     "isPinned" : false,
     "name" : "SentenceTransformer",
     "pane" : {
-      "address" : "R[1]"
+      "address" : "RH[0]/L[1]"
     },
     "resourceKey" : "llm/SentenceTransformer",
     "state" : 8,
@@ -373,7 +389,7 @@
     "isPinned" : false,
     "name" : "com.vantiq.genai.TutorialService",
     "pane" : {
-      "address" : "R[0]",
+      "address" : "RH[0]/L[0]",
       "isActive" : true,
       "isActiveTool" : true
     },
@@ -384,6 +400,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "documents/Documents", "errorviewer/Errors", "llmeeditor/GPT3", "tiledock/Inactive Panes", "list/Project Contents", "secretlist/Secrets", "llmeeditor/SentenceTransformer", "services/com.vantiq.genai.TutorialService" ]
+    "projectToolKeys" : [ "documents/Documents", "errorviewer/Errors", "llmeeditor/GPT3", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "secretlist/Secrets", "llmeeditor/SentenceTransformer", "services/com.vantiq.genai.TutorialService" ]
   } ]
 }
