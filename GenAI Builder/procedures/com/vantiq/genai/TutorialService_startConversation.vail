@@ -1,0 +1,6 @@
+package com.vantiq.genai
+import service io.vantiq.ai.ConversationMemory
+
+stateless PROCEDURE TutorialService.startConversation(conversationId String): String
+
+return ConversationMemory.startConversation(conversationId=conversationId)

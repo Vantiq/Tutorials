@@ -1,0 +1,65 @@
+{
+  "ars_properties" : {
+    "graph" : {
+      "coordinates" : {
+        "Conversation" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "Conversation$END" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "Input" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "LLM" : {
+          "x" : 0,
+          "y" : 160
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.206503507334646,
+      "translate" : [ 570, 71.71136398837598 ]
+    },
+    "groups" : {
+      "aicomponents.resources" : true
+    }
+  },
+  "assembly" : {
+    "Conversation" : {
+      "children" : [ ],
+      "component" : "io.vantiq.ai.components.Conversation",
+      "configuration" : {
+        "optional" : false
+      },
+      "subassemblies" : [ {
+        "Init" : {
+          "children" : [ "LLM" ],
+          "component" : "io.vantiq.ai.components.InitialInput",
+          "configuration" : { }
+        },
+        "LLM" : {
+          "children" : [ ],
+          "component" : "io.vantiq.ai.components.LLM",
+          "configuration" : {
+            "llm" : "GPT3",
+            "outputType" : "String"
+          }
+        }
+      } ]
+    },
+    "Input" : {
+      "children" : [ "Conversation" ],
+      "component" : "io.vantiq.ai.components.InitialInput",
+      "configuration" : { }
+    }
+  },
+  "isComponent" : false,
+  "isPrivate" : false,
+  "name" : "simpleConversation",
+  "returnType" : null,
+  "runtimeVersion" : 2,
+  "serviceName" : "com.vantiq.genai.TutorialService"
+}

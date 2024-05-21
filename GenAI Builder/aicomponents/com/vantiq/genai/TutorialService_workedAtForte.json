@@ -1,0 +1,102 @@
+{
+  "ars_properties" : {
+    "graph" : {
+      "coordinates" : {
+        "Input" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "LLM" : {
+          "x" : 50,
+          "y" : 400
+        },
+        "context" : {
+          "x" : -50,
+          "y" : 240
+        },
+        "generateQuestion" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "prompt" : {
+          "x" : 50,
+          "y" : 320
+        },
+        "question" : {
+          "x" : 0,
+          "y" : 160
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.4229336009262514,
+      "translate" : [ 427.88944770762583, 57.628810837513186 ]
+    },
+    "groups" : {
+      "aicomponents.primitives" : true,
+      "aicomponents.resources" : true
+    }
+  },
+  "assembly" : {
+    "Input" : {
+      "children" : [ "generateQuestion" ],
+      "component" : "io.vantiq.ai.components.InitialInput",
+      "configuration" : { }
+    },
+    "LLM" : {
+      "children" : [ ],
+      "component" : "io.vantiq.ai.components.LLM",
+      "configuration" : {
+        "llm" : "GPT3",
+        "outputType" : "String"
+      }
+    },
+    "context" : {
+      "children" : [ "prompt" ],
+      "component" : "io.vantiq.ai.components.SemanticIndex",
+      "configuration" : {
+        "contentOnly" : true,
+        "semanticIndex" : "com.vantiq.genai.TutorialIndex"
+      }
+    },
+    "generateQuestion" : {
+      "children" : [ "question" ],
+      "component" : "io.vantiq.ai.components.PromptFromTemplate",
+      "configuration" : {
+        "defaultValues" : null,
+        "promptTemplate" : {
+          "type" : "String",
+          "value" : "Did ${subject} work at Forte?"
+        }
+      }
+    },
+    "prompt" : {
+      "children" : [ "LLM" ],
+      "component" : "io.vantiq.ai.components.PromptFromTemplate",
+      "configuration" : {
+        "defaultValues" : null,
+        "promptTemplate" : {
+          "type" : "documents",
+          "value" : "ragPromptBoolean.txt"
+        }
+      }
+    },
+    "question" : {
+      "children" : [ "context", "prompt" ],
+      "component" : "io.vantiq.ai.components.CodeBlock",
+      "configuration" : {
+        "codeBlock" : {
+          "code" : "return input.toString()",
+          "language" : "VAIL"
+        }
+      }
+    }
+  },
+  "isComponent" : false,
+  "isPrivate" : false,
+  "name" : "workedAtForte",
+  "returnType" : {
+    "type" : "Boolean"
+  },
+  "runtimeVersion" : 11,
+  "serviceName" : "com.vantiq.genai.TutorialService"
+}

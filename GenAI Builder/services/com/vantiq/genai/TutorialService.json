@@ -1,0 +1,69 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "startConversation",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "conversationId",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "String"
+    }
+  }, {
+    "name" : "getConversation",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "conversationId",
+      "required" : true,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : true,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "resetConversation",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "conversationId",
+      "required" : true,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : true,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "endConversation",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "conversationId",
+      "required" : true,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : true,
+      "type" : "Object"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.genai.TutorialService",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

@@ -1,0 +1,6 @@
+Answer the question based only on the following context:
+{context}
+
+Question: {question}
+
+Format the response as either "true" or "false".  If you do not know the answer, the response must be "false".

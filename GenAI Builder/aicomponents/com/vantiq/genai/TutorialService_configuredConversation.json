@@ -1,0 +1,83 @@
+{
+  "ars_properties" : {
+    "graph" : {
+      "coordinates" : {
+        "Conversation" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "Conversation$END" : {
+          "x" : 0,
+          "y" : 320
+        },
+        "Input" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "LLM" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "prompt" : {
+          "x" : 0,
+          "y" : 160
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.748018278171165,
+      "translate" : [ 420, 56.810594040562876 ]
+    },
+    "groups" : {
+      "aicomponents.resources" : true
+    }
+  },
+  "assembly" : {
+    "Conversation" : {
+      "children" : [ ],
+      "component" : "io.vantiq.ai.components.Conversation",
+      "configuration" : {
+        "historyMessagesKey" : "history",
+        "inputMessagesKey" : "input",
+        "optional" : false,
+        "outputMessagesKey" : null
+      },
+      "subassemblies" : [ {
+        "Init" : {
+          "children" : [ "prompt" ],
+          "component" : "io.vantiq.ai.components.InitialInput",
+          "configuration" : { }
+        },
+        "LLM" : {
+          "children" : [ ],
+          "component" : "io.vantiq.ai.components.LLM",
+          "configuration" : {
+            "llm" : "GPT3",
+            "outputType" : "String"
+          }
+        },
+        "prompt" : {
+          "children" : [ "LLM" ],
+          "component" : "io.vantiq.ai.components.PromptFromTemplate",
+          "configuration" : {
+            "defaultValues" : null,
+            "promptTemplate" : {
+              "type" : "documents",
+              "value" : "promptWithHistory.txt"
+            }
+          }
+        }
+      } ]
+    },
+    "Input" : {
+      "children" : [ "Conversation" ],
+      "component" : "io.vantiq.ai.components.InitialInput",
+      "configuration" : { }
+    }
+  },
+  "isComponent" : false,
+  "isPrivate" : false,
+  "name" : "configuredConversation",
+  "returnType" : null,
+  "runtimeVersion" : 2,
+  "serviceName" : "com.vantiq.genai.TutorialService"
+}
