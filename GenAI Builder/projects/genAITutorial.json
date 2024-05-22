@@ -99,7 +99,7 @@
   } ],
   "name" : "genAITutorial",
   "options" : {
-    "description" : "This project contains the service and supporting resources created during the [GenAI Builder Tutorial](/docs/system/tutorials/genaibuilder.md).  It demonstrates how to use the [Gen AI Builder](/docs/system/genaibuilder.md) to construct custom GenAI functionality for your applications.  \n\nTo use the examples provided by the service you will need to:\n\n1. Create the secret `OPENAI_KEY` containing a valid OpenAI API key.\n1. Load the semantic index with the content as described in the tutorial.",
+    "description" : "This project contains the service and supporting resources created during the [GenAI Builder Tutorial](/docs/system/tutorials/genaibuilder/index.html).  It demonstrates how to use the [Gen AI Builder](/docs/system/genaibuilder/index.html) to construct custom GenAI functionality for your applications.  \n\nTo use the examples provided by the service you will need to:\n\n1. Create the secret `OPENAI_KEY` containing a valid OpenAI API key.\n1. Load the semantic index with the content as described in the tutorial.",
     "dockCollapsed" : {
       "bottom" : false,
       "left" : false,
