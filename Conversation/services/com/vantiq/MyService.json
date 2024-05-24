@@ -1,0 +1,36 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : true
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "Launch" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.MyService.Launch/EventStream",
+      "isReliable" : false
+    },
+    "Prompt" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/com.vantiq.MyService.Prompt/EventStream",
+      "isReliable" : false
+    },
+    "Response" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ ],
+  "name" : "com.vantiq.MyService",
+  "partitionedType" : "com.vantiq.MyService.PartitionedState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : {
+    "ActiveCollabsWriteAll" : {
+      "interval" : 300000
+    }
+  }
+}

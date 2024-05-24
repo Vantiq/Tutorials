@@ -1,0 +1,33 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "75048d72-ff07-4941-82b2-3dcab3521d0c" ],
+    "widgets" : [ {
+      "CSSClass" : "vantiqChat",
+      "borderColor" : "Default",
+      "borderRadius" : 4,
+      "borderThickness" : 1,
+      "column" : 0,
+      "dataStreamUUID" : "fc77343d-1673-4dd9-b2f1-8369523e14c9",
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "inboundServiceEventName" : "Prompt",
+      "name" : "Conversation1",
+      "row" : 0,
+      "serviceName" : "com.vantiq.MyService",
+      "title" : "Test Conversation Widget",
+      "type" : "Conversation",
+      "uuid" : "75048d72-ff07-4941-82b2-3dcab3521d0c",
+      "v" : 18,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

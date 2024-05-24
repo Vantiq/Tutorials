@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.MyService.PartitionedState",
+  "properties" : { },
+  "role" : "schema"
+}

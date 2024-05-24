@@ -1,0 +1,9 @@
+{
+  "config" : {
+    "apiKeySecret" : "OpenAI"
+  },
+  "distanceFunction" : "Cosine",
+  "modelName" : "gpt-3.5-turbo",
+  "name" : "MyLLM",
+  "type" : "generative"
+}

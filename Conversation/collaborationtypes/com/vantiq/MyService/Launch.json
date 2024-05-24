@@ -1,0 +1,96 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "7f8a1e8f-7cd7-4e7b-9762-b4ffdc22deac" : {
+          "x" : 68.47928810119629,
+          "y" : 80
+        },
+        "a36dd8ea-2a4b-46b9-8acb-2b0e3d890206" : {
+          "x" : -52.573814392089844,
+          "y" : 80
+        },
+        "e5ebd158-fa67-4d4e-8b73-d2e971de7b8f" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.5648235634730225,
+      "translate" : [ 341.91041519325296, 249.43525630507816 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "mobile" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "LogStream", "Notify" ],
+        "eventTypeName" : "Launch",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.MyService",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "e5ebd158-fa67-4d4e-8b73-d2e971de7b8f"
+    },
+    "LogStream" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "EventStream" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "LogStream",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "a36dd8ea-2a4b-46b9-8acb-2b0e3d890206"
+    },
+    "Notify" : {
+      "configuration" : {
+        "body" : "\"Support sending questions to an LLM\"",
+        "clientName" : "MyClient",
+        "disableTemplateSubstitution" : false,
+        "firstResponseFilter" : null,
+        "imports" : null,
+        "maxResponseTime" : null,
+        "parentStreams" : [ "EventStream" ],
+        "pushSourceName" : null,
+        "title" : "\"Test Conversation Widget\"",
+        "users" : "[Context.username()]"
+      },
+      "downstreamReferences" : { },
+      "name" : "Notify",
+      "pattern" : "Notify",
+      "patternVersion" : 7,
+      "uuid" : "7f8a1e8f-7cd7-4e7b-9762-b4ffdc22deac"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.MyService.Launch"
+}
