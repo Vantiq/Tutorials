@@ -1,0 +1,121 @@
+{
+  "active" : true,
+  "appType" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "34d78ef0-45f5-4200-869f-d36900e0c120" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "40d8a13f-907e-40e2-8aee-b547792e9970" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "66ae8a96-5244-48f5-81bb-975f7d2369b4" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "8b00f8f6-149f-4108-80cf-335530171374" : {
+          "x" : 0,
+          "y" : 240
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.4419288714602236,
+      "translate" : [ 333.95979417247963, 138.86059507389257 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "ai" : true,
+        "collab" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EstablishCollaboration" : {
+      "configuration" : {
+        "behavior" : "Establish existing collaboration",
+        "childStreams" : [ "SubmitPrompt" ],
+        "collaborationId" : "event.collaborationId",
+        "entityId" : null,
+        "parentStreams" : [ "EventStream" ],
+        "roleName" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "EstablishCollaboration",
+      "pattern" : "EstablishCollaboration",
+      "patternVersion" : 9,
+      "uuid" : "34d78ef0-45f5-4200-869f-d36900e0c120"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "EstablishCollaboration" ],
+        "eventTypeName" : "Prompt",
+        "inboundResource" : "services",
+        "inboundResourceId" : "com.vantiq.MyService",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "66ae8a96-5244-48f5-81bb-975f7d2369b4"
+    },
+    "PublishToService" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "Response",
+        "parentStreams" : [ "SubmitPrompt" ],
+        "processedByClause" : null,
+        "service" : "com.vantiq.MyService"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishToService",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "8b00f8f6-149f-4108-80cf-335530171374"
+    },
+    "SubmitPrompt" : {
+      "configuration" : {
+        "childStreams" : [ "PublishToService" ],
+        "conversationName" : null,
+        "functionAuthorizer" : null,
+        "functions" : null,
+        "imports" : null,
+        "llm" : "MyLLM",
+        "parentStreams" : [ "EstablishCollaboration" ],
+        "prompt" : "event.prompt",
+        "responseProperties" : null,
+        "returnProperty" : null,
+        "runtimeConfig" : null,
+        "useConversation" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "SubmitPrompt",
+      "pattern" : "SubmitPrompt",
+      "patternVersion" : 5,
+      "uuid" : "40d8a13f-907e-40e2-8aee-b547792e9970"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "com.vantiq.MyService.Prompt"
+}
