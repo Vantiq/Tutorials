@@ -103,7 +103,7 @@
         "responseProperties" : null,
         "returnProperty" : null,
         "runtimeConfig" : null,
-        "useConversation" : false
+        "useConversation" : true
       },
       "downstreamReferences" : { },
       "name" : "SubmitPrompt",
