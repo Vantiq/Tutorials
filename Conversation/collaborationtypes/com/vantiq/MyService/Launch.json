@@ -22,9 +22,9 @@
           "y" : 80
         }
       },
-      "lastZoomRequest" : 0,
-      "scale" : 1.9323614679141004,
-      "translate" : [ 454.4012334328163, 201.3846249214593 ]
+      "lastZoomRequest" : 3,
+      "scale" : 1.4551410747395215,
+      "translate" : [ 269.0120344003679, 318.08871402083827 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -39,6 +39,7 @@
       "ctServiceOpen" : false,
       "serviceGroupOpenHash" : { }
     },
+    "isHidden" : false,
     "paletteWidth" : 170,
     "propertyWidth" : 280
   },

@@ -2,46 +2,19 @@
   "ars_relationships" : [ ],
   "links" : [ {
     "source" : "services/com.vantiq.MyService",
-    "target" : "document/com.vantiq.MyService.js"
+    "target" : "type/com.vantiq.MyType"
   }, {
     "source" : "services/com.vantiq.MyService",
-    "target" : "type/com.vantiq.MyService.PartitionedState"
+    "target" : "document/com.vantiq.MyService.js"
   }, {
     "source" : "services/com.vantiq.MyService",
     "target" : "app/com.vantiq.MyService.Launch"
   }, {
     "source" : "services/com.vantiq.MyService",
-    "target" : "app/com.vantiq.MyService.Prompt"
-  }, {
-    "source" : "services/com.vantiq.MyService",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateStatus"
   }, {
     "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.CollabIdsByEntityStoreId"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnStore"
-  }, {
-    "source" : "services/com.vantiq.MyService",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnLoad"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetAll"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
   }, {
     "source" : "services/com.vantiq.MyService",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsReset"
@@ -50,34 +23,40 @@
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll"
   }, {
     "source" : "services/com.vantiq.MyService",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt"
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
-    "target" : "services/com.vantiq.MyService"
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetAll"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
+    "source" : "services/com.vantiq.MyService",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch",
-    "target" : "services/com.vantiq.MyService"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll",
-    "target" : "services/com.vantiq.MyService"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll",
-    "target" : "services/com.vantiq.MyService"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll",
+    "source" : "services/com.vantiq.MyService",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll"
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Launch"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "type/com.vantiq.MyService.PartitionedState"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose"
   }, {
     "source" : "app/com.vantiq.MyService.Launch",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
@@ -85,57 +64,120 @@
     "source" : "app/com.vantiq.MyService.Launch",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsReset",
+    "source" : "app/com.vantiq.MyService.Launch",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll",
     "target" : "services/com.vantiq.MyService"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose",
-    "target" : "services/com.vantiq.MyService"
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll"
   }, {
-    "source" : "app/com.vantiq.MyService.Prompt",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
-  }, {
-    "source" : "app/com.vantiq.MyService.Prompt",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetById",
-    "target" : "services/com.vantiq.MyService"
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose"
   }, {
     "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetById",
     "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnLoad"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt",
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetById",
     "target" : "services/com.vantiq.MyService"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateStatus",
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch",
     "target" : "services/com.vantiq.MyService"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetAll",
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Launch",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Launch"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch",
     "target" : "services/com.vantiq.MyService"
   }, {
     "source" : "procedure/com.vantiq.MyService.CollabIdsByEntityStoreId",
     "target" : "services/com.vantiq.MyService"
   }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsReset",
+    "target" : "services/com.vantiq.MyService"
+  }, {
     "source" : "procedure/com.vantiq.MyService.ActiveCollabsOnLoad",
     "target" : "services/com.vantiq.MyService"
   }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsOnStore",
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "app/com.vantiq.MyService.Prompt"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "app/com.vantiq.MyService.Prompt",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt"
+  }, {
+    "source" : "app/com.vantiq.MyService.Prompt",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsGetById"
+  }, {
+    "source" : "app/com.vantiq.MyService.Prompt",
+    "target" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.Transformation_Prompt",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "services/com.vantiq.MyService",
+    "target" : "procedure/com.vantiq.MyService.Transformation_Prompt"
+  }, {
+    "source" : "procedure/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt",
+    "target" : "services/com.vantiq.MyService"
+  }, {
+    "source" : "app/com.vantiq.MyService.Prompt",
     "target" : "services/com.vantiq.MyService"
   }, {
     "source" : "app/com.vantiq.MyService.Launch",
     "target" : "services/com.vantiq.MyService"
-  }, {
-    "source" : "services/com.vantiq.MyService",
-    "target" : "client/MyClient"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsUpdateStatus",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnClose"
-  }, {
-    "source" : "procedure/com.vantiq.MyService.ActiveCollabsWriteAll",
-    "target" : "procedure/com.vantiq.MyService.ActiveCollabsOnStore"
   } ],
   "name" : "Conversation",
   "options" : {
-    "description" : "The [Conversation Tutorial](/docs/system/tutorials/conversation/index.html) demonstrates how to use a Client Conversation Widget. The Conversation Widget adds chat-like generative AI features to Vantiq Clients.\n\nThis tutorial uses an [OpenAI LLM](https://openai.com/), gpt-3.5-turbo, which requires an API Key. To add the API Key secret, select the _Add a New Secret_ menu item from the **API Key Secret** menu in the _MyLLM_ pane below. Call the secret \"OpenAI\" and enter your OpenAI Key in the **API Key Secret** property. Save the LLM.\n\nTo send the Client to the Vantiq iOS or Android app, click the **Interface** tab in the com.vantiq.MyService pane to the right, open the **Inbound** section, then click the _Launch_ entry. Open the **Publish** section and click the **Publish** button. This will add an Inbox item to the mobile app. Click the Inbox item to launch the Client that contains the sample Conversation Widget.",
+    "description" : "The [Conversation Tutorial](/docs/system/tutorials/conversationtutorial/index.html) demonstrates how to use a Client Conversation Widget. The Conversation Widget adds chat-like generative AI features to Vantiq Clients.\n\nThis tutorial uses an [OpenAI LLM](https://openai.com/), gpt-3.5-turbo, which requires an API Key. To add the API Key secret, select the _Add a New Secret_ menu item from the **API Key Secret** menu in the _MyLLM_ pane below. Call the secret \"OpenAI\" and enter your OpenAI Key in the **API Key Secret** property. Save the LLM.\n\nTo send the Client to the Vantiq iOS or Android app, click the **Interface** tab in the com.vantiq.MyService pane to the left, open the **Inbound** section, then click the _Launch_ entry. Open the **Publish** section and click the **Publish** button. This will add an Inbox item to the mobile app. Click the Inbox item to launch the Client that contains the sample Conversation Widget.",
     "dockCollapsed" : {
       "bottom" : true,
       "left" : false,
@@ -151,19 +193,26 @@
       "top" : 0,
       "viewtabs" : 0
     },
-    "dockSort" : 1,
-    "exclusionList" : [ "llm/com.vantiq.michael.MyLLM" ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
-    "layoutStyle" : "tile",
-    "openFolders" : [ "client", "com.vantiq", "com.vantiq/services", "llm" ],
+    "layoutStyle" : "flex",
+    "openFolders" : [ "com.vantiq", "com.vantiq.MyService", "com.vantiq/type" ],
     "partitionsSettings" : { },
     "rootViewFlavor" : 5,
     "showGrid" : true,
-    "tileColumns" : 2,
-    "tileRows" : 2,
+    "structure" : {
+      "fraction" : 1,
+      "groups" : [ {
+        "fraction" : 0.7220496894409938,
+        "type" : "L[4]"
+      }, {
+        "fraction" : 0.2779503105590062,
+        "type" : "L[1]"
+      } ],
+      "type" : "RH"
+    },
     "type" : "dev",
-    "v" : 5,
+    "v" : 6,
     "viewUUID" : "MAINVIEW"
   },
   "partitions" : [ ],
@@ -171,19 +220,19 @@
     "label" : "MyClient",
     "name" : "MyClient",
     "resourceReference" : "/system.clients/MyClient",
-    "timestamp" : "2024-05-24T17:33:13.509Z",
+    "timestamp" : "2024-07-26T22:56:39.913Z",
     "type" : 15
   }, {
     "label" : "MyLLM",
     "name" : "MyLLM",
     "resourceReference" : "/system.llms/MyLLM",
-    "timestamp" : "2024-05-24T17:33:13.008Z",
+    "timestamp" : "2024-07-26T22:56:40.407Z",
     "type" : 80
   }, {
     "label" : "com.vantiq.MyService",
     "name" : "com.vantiq.MyService",
-    "resourceReference" : "/system.services/com.vantiq.MyService",
-    "timestamp" : "2024-05-24T17:52:19.085Z",
+    "resourceReference" : "/services/com.vantiq.MyService",
+    "timestamp" : "2024-07-26T23:10:20.343Z",
     "type" : 63
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsCloseAll",
@@ -192,7 +241,7 @@
     "procedureName" : "ActiveCollabsCloseAll",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsCloseAll",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:15.515Z",
+    "timestamp" : "2024-07-26T22:56:44.370Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsGetAll",
@@ -201,7 +250,16 @@
     "procedureName" : "ActiveCollabsGetAll",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsGetAll",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:14.617Z",
+    "timestamp" : "2024-07-26T22:56:42.643Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch",
+    "name" : "com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch",
+    "packageName" : "com.vantiq",
+    "procedureName" : "ActiveCollabsGetByEntityId_Launch",
+    "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsGetByEntityId_Launch",
+    "serviceName" : "MyService",
+    "timestamp" : "2024-07-26T22:56:55.576Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
@@ -210,7 +268,7 @@
     "procedureName" : "ActiveCollabsGetByEntityId_Prompt",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsGetByEntityId_Prompt",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:16.740Z",
+    "timestamp" : "2024-07-26T22:56:55.544Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsGetById",
@@ -219,7 +277,7 @@
     "procedureName" : "ActiveCollabsGetById",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsGetById",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:14.620Z",
+    "timestamp" : "2024-07-26T22:56:42.653Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsOnClose",
@@ -228,7 +286,7 @@
     "procedureName" : "ActiveCollabsOnClose",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsOnClose",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:14.630Z",
+    "timestamp" : "2024-07-26T22:56:42.597Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsOnLoad",
@@ -237,7 +295,7 @@
     "procedureName" : "ActiveCollabsOnLoad",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsOnLoad",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:14.622Z",
+    "timestamp" : "2024-07-26T22:56:42.604Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsOnStore",
@@ -246,7 +304,7 @@
     "procedureName" : "ActiveCollabsOnStore",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsOnStore",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:14.617Z",
+    "timestamp" : "2024-07-26T22:56:42.648Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsReset",
@@ -255,7 +313,16 @@
     "procedureName" : "ActiveCollabsReset",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsReset",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:15.105Z",
+    "timestamp" : "2024-07-26T22:56:43.779Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.MyService.ActiveCollabsSetEntity_Launch",
+    "name" : "com.vantiq.MyService.ActiveCollabsSetEntity_Launch",
+    "packageName" : "com.vantiq",
+    "procedureName" : "ActiveCollabsSetEntity_Launch",
+    "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsSetEntity_Launch",
+    "serviceName" : "MyService",
+    "timestamp" : "2024-07-26T22:56:57.491Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsSetEntity_Prompt",
@@ -264,7 +331,7 @@
     "procedureName" : "ActiveCollabsSetEntity_Prompt",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsSetEntity_Prompt",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:18.173Z",
+    "timestamp" : "2024-07-26T22:56:58.743Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch",
@@ -273,7 +340,7 @@
     "procedureName" : "ActiveCollabsUpdateNotify_Launch",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsUpdateNotify_Launch",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:17.382Z",
+    "timestamp" : "2024-07-26T22:56:55.570Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsUpdateStatus",
@@ -282,7 +349,16 @@
     "procedureName" : "ActiveCollabsUpdateStatus",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsUpdateStatus",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:15.159Z",
+    "timestamp" : "2024-07-26T22:56:43.954Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt",
+    "name" : "com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt",
+    "packageName" : "com.vantiq",
+    "procedureName" : "ActiveCollabsUpdateSubmitPrompt_Prompt",
+    "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsUpdateSubmitPrompt_Prompt",
+    "serviceName" : "MyService",
+    "timestamp" : "2024-07-26T22:56:55.577Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.ActiveCollabsWriteAll",
@@ -291,7 +367,7 @@
     "procedureName" : "ActiveCollabsWriteAll",
     "resourceReference" : "/procedures/com.vantiq.MyService.ActiveCollabsWriteAll",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:16.140Z",
+    "timestamp" : "2024-07-26T22:56:45.105Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.CollabIdsByEntityStoreId",
@@ -300,32 +376,47 @@
     "procedureName" : "CollabIdsByEntityStoreId",
     "resourceReference" : "/procedures/com.vantiq.MyService.CollabIdsByEntityStoreId",
     "serviceName" : "MyService",
-    "timestamp" : "2024-05-24T17:33:15.616Z",
+    "timestamp" : "2024-07-26T22:56:44.973Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.MyService.Launch",
     "name" : "com.vantiq.MyService.Launch",
     "resourceReference" : "/collaborationtypes/com.vantiq.MyService.Launch",
-    "timestamp" : "2024-05-24T17:33:14.088Z",
+    "timestamp" : "2024-07-26T23:10:19.797Z",
     "type" : 12
   }, {
     "label" : "com.vantiq.MyService.PartitionedState",
     "name" : "com.vantiq.MyService.PartitionedState",
     "resourceReference" : "/types/com.vantiq.MyService.PartitionedState",
-    "timestamp" : "2024-05-24T17:33:14.257Z",
+    "timestamp" : "2024-07-26T22:56:42.092Z",
     "type" : 1
   }, {
     "label" : "com.vantiq.MyService.Prompt",
     "name" : "com.vantiq.MyService.Prompt",
     "resourceReference" : "/collaborationtypes/com.vantiq.MyService.Prompt",
-    "timestamp" : "2024-05-24T17:52:18.595Z",
+    "timestamp" : "2024-07-26T22:56:41.598Z",
     "type" : 12
+  }, {
+    "label" : "com.vantiq.MyService.Transformation_Prompt",
+    "name" : "com.vantiq.MyService.Transformation_Prompt",
+    "packageName" : "com.vantiq",
+    "procedureName" : "Transformation_Prompt",
+    "resourceReference" : "/procedures/com.vantiq.MyService.Transformation_Prompt",
+    "serviceName" : "MyService",
+    "timestamp" : "2024-07-26T22:56:55.381Z",
+    "type" : 3
   }, {
     "label" : "com.vantiq.MyService.js",
     "name" : "com.vantiq.MyService.js",
     "resourceReference" : "/documents/com.vantiq.MyService.js",
-    "timestamp" : "2024-05-24T17:52:20.011Z",
+    "timestamp" : "2024-07-26T22:57:02.141Z",
     "type" : 19
+  }, {
+    "label" : "com.vantiq.MyType",
+    "name" : "com.vantiq.MyType",
+    "resourceReference" : "/types/com.vantiq.MyType",
+    "timestamp" : "2024-07-26T22:56:39.538Z",
+    "type" : 1
   } ],
   "tools" : [ {
     "isPinned" : false,
@@ -340,21 +431,22 @@
     "isPinned" : false,
     "name" : "MyClient",
     "pane" : {
-      "c" : 1,
-      "r" : 1
+      "address" : "RH[0]/L[1]"
     },
     "resourceKey" : "client/MyClient",
-    "state" : 2,
+    "state" : 8,
+    "toolOptions" : {
+      "isRunning" : false
+    },
     "type" : 63
   }, {
     "isPinned" : false,
     "name" : "MyLLM",
     "pane" : {
-      "c" : 0,
-      "r" : 1
+      "address" : "RH[0]/L[3]"
     },
     "resourceKey" : "llm/MyLLM",
-    "state" : 2,
+    "state" : 8,
     "type" : 9
   }, {
     "isPinned" : false,
@@ -364,25 +456,35 @@
     "isPinned" : false,
     "name" : "Project Description",
     "pane" : {
-      "c" : 0,
-      "r" : 0
+      "address" : "RH[1]/L[0]",
+      "isActive" : true
     },
-    "state" : 2,
+    "state" : 8,
     "type" : 82
   }, {
     "isPinned" : false,
     "name" : "com.vantiq.MyService",
     "pane" : {
-      "c" : 1,
-      "r" : 0
+      "address" : "RH[0]/L[0]",
+      "isActive" : true,
+      "isActiveTool" : true
     },
     "resourceKey" : "services/com.vantiq.MyService",
-    "state" : 2,
+    "state" : 8,
     "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.MyType",
+    "pane" : {
+      "address" : "RH[0]/L[2]"
+    },
+    "resourceKey" : "type/com.vantiq.MyType",
+    "state" : 8,
+    "type" : 6
   } ],
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "client/MyClient", "llmeeditor/MyLLM", "list/Project Contents", "projectdescription/Project Description", "services/com.vantiq.MyService" ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "client/MyClient", "llmeeditor/MyLLM", "list/Project Contents", "projectdescription/Project Description", "services/com.vantiq.MyService", "subtypeeditor/com.vantiq.MyType" ]
   } ]
 }
