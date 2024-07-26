@@ -5,28 +5,31 @@
     "dataVersion" : 5,
     "graph" : {
       "coordinates" : {
-        "7f8a1e8f-7cd7-4e7b-9762-b4ffdc22deac" : {
-          "x" : 68.47928810119629,
-          "y" : 80
-        },
-        "a36dd8ea-2a4b-46b9-8acb-2b0e3d890206" : {
-          "x" : -52.573814392089844,
-          "y" : 80
-        },
-        "e5ebd158-fa67-4d4e-8b73-d2e971de7b8f" : {
+        "a13d7cff-7d99-4967-89c6-543cb9a7814e" : {
           "x" : 0,
           "y" : 0
+        },
+        "bf85b4bf-b08f-4370-8ab9-753b626c0d77" : {
+          "x" : 68.48686742782593,
+          "y" : 160
+        },
+        "e572eba8-96ea-4d3f-9f52-5d15c23cfd3f" : {
+          "x" : 68.48686742782593,
+          "y" : 80
+        },
+        "f1fb67c9-4b71-4ebc-810d-a303803e5b90" : {
+          "x" : -106.38673543930054,
+          "y" : 80
         }
       },
       "lastZoomRequest" : 0,
-      "scale" : 1.5648235634730225,
-      "translate" : [ 341.91041519325296, 249.43525630507816 ]
+      "scale" : 1.9323614679141004,
+      "translate" : [ 454.4012334328163, 201.3846249214593 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
         "actions" : true,
-        "filters" : true,
-        "flowControl" : true,
+        "collab" : true,
         "mobile" : true
       },
       "ctGroupOpenHash" : {
@@ -36,15 +39,29 @@
       "ctServiceOpen" : false,
       "serviceGroupOpenHash" : { }
     },
-    "isHidden" : false,
     "paletteWidth" : 170,
     "propertyWidth" : 280
   },
   "ars_relationships" : [ ],
   "assembly" : {
+    "EstablishCollaboration" : {
+      "configuration" : {
+        "behavior" : "Establish existing collaboration or create new collaboration",
+        "childStreams" : [ "Notify" ],
+        "collaborationId" : null,
+        "entityId" : "event.myEntityId",
+        "parentStreams" : [ "EventStream" ],
+        "roleName" : "myEntityId"
+      },
+      "downstreamReferences" : { },
+      "name" : "EstablishCollaboration",
+      "pattern" : "EstablishCollaboration",
+      "patternVersion" : 9,
+      "uuid" : "e572eba8-96ea-4d3f-9f52-5d15c23cfd3f"
+    },
     "EventStream" : {
       "configuration" : {
-        "childStreams" : [ "LogStream", "Notify" ],
+        "childStreams" : [ "LogStream", "EstablishCollaboration" ],
         "eventTypeName" : "Launch",
         "inboundResource" : "services",
         "inboundResourceId" : "com.vantiq.MyService",
@@ -54,7 +71,7 @@
       "name" : "EventStream",
       "pattern" : "EventStream",
       "patternVersion" : 5,
-      "uuid" : "e5ebd158-fa67-4d4e-8b73-d2e971de7b8f"
+      "uuid" : "a13d7cff-7d99-4967-89c6-543cb9a7814e"
     },
     "LogStream" : {
       "configuration" : {
@@ -65,7 +82,7 @@
       "name" : "LogStream",
       "pattern" : "LogStream",
       "patternVersion" : 2,
-      "uuid" : "a36dd8ea-2a4b-46b9-8acb-2b0e3d890206"
+      "uuid" : "f1fb67c9-4b71-4ebc-810d-a303803e5b90"
     },
     "Notify" : {
       "configuration" : {
@@ -75,7 +92,7 @@
         "firstResponseFilter" : null,
         "imports" : null,
         "maxResponseTime" : null,
-        "parentStreams" : [ "EventStream" ],
+        "parentStreams" : [ "EstablishCollaboration" ],
         "pushSourceName" : null,
         "title" : "\"Test Conversation Widget\"",
         "users" : "[Context.username()]"
@@ -84,7 +101,7 @@
       "name" : "Notify",
       "pattern" : "Notify",
       "patternVersion" : 7,
-      "uuid" : "7f8a1e8f-7cd7-4e7b-9762-b4ffdc22deac"
+      "uuid" : "bf85b4bf-b08f-4370-8ab9-753b626c0d77"
     }
   },
   "contextualizedAssembly" : { },

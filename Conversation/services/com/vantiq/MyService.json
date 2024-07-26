@@ -2,13 +2,21 @@
   "active" : true,
   "ars_properties" : {
     "filterPrivateGenerated" : false,
-    "filterPublicGenerated" : true
+    "filterPublicGenerated" : false
   },
   "ars_relationships" : [ ],
+  "collaborationStateConfig" : {
+    "entityRoles" : [ {
+      "name" : "myEntityId",
+      "type" : "com.vantiq.MyType"
+    } ],
+    "writeFrequency" : "5 minutes"
+  },
   "description" : null,
   "eventTypes" : {
     "Launch" : {
       "direction" : "INBOUND",
+      "eventSchema" : "com.vantiq.MyType",
       "implementingResource" : "/collaborationtypes/com.vantiq.MyService.Launch/EventStream",
       "isReliable" : false
     },
