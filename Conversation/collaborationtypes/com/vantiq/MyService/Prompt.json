@@ -5,26 +5,30 @@
     "dataVersion" : 5,
     "graph" : {
       "coordinates" : {
-        "34d78ef0-45f5-4200-869f-d36900e0c120" : {
+        "1529e6a9-3a88-4c59-a3f0-d7c01b8d180a" : {
           "x" : 0,
           "y" : 80
         },
-        "40d8a13f-907e-40e2-8aee-b547792e9970" : {
+        "26d582f5-8753-4161-b9a1-eaf485fd1921" : {
+          "x" : 0,
+          "y" : 320
+        },
+        "413be781-706f-43de-8b18-6e2d63a95b38" : {
           "x" : 0,
           "y" : 160
         },
-        "66ae8a96-5244-48f5-81bb-975f7d2369b4" : {
-          "x" : 0,
-          "y" : 0
-        },
-        "8b00f8f6-149f-4108-80cf-335530171374" : {
+        "ba3489c9-edcf-407f-8857-ba7c2269c9c8" : {
           "x" : 0,
           "y" : 240
+        },
+        "f585b764-5c20-4183-96bb-7e71b6b255ce" : {
+          "x" : 0,
+          "y" : 0
         }
       },
-      "lastZoomRequest" : 0,
-      "scale" : 1.4419288714602236,
-      "translate" : [ 333.95979417247963, 138.86059507389257 ]
+      "lastZoomRequest" : 3,
+      "scale" : 2.257142857142857,
+      "translate" : [ 269, 73.35714285714289 ]
     },
     "groupSettings" : {
       "appGroupOpenHash" : {
@@ -32,7 +36,8 @@
         "ai" : true,
         "collab" : true,
         "filters" : true,
-        "flowControl" : true
+        "flowControl" : true,
+        "modifiers" : true
       },
       "ctGroupOpenHash" : {
         "actions" : true,
@@ -49,18 +54,18 @@
   "assembly" : {
     "EstablishCollaboration" : {
       "configuration" : {
-        "behavior" : "Establish existing collaboration",
+        "behavior" : "Establish existing collaboration or create new collaboration",
         "childStreams" : [ "SubmitPrompt" ],
-        "collaborationId" : "event.collaborationId",
-        "entityId" : null,
+        "collaborationId" : null,
+        "entityId" : "event.myEntityId",
         "parentStreams" : [ "EventStream" ],
-        "roleName" : null
+        "roleName" : "myEntityId"
       },
       "downstreamReferences" : { },
       "name" : "EstablishCollaboration",
       "pattern" : "EstablishCollaboration",
       "patternVersion" : 9,
-      "uuid" : "34d78ef0-45f5-4200-869f-d36900e0c120"
+      "uuid" : "1529e6a9-3a88-4c59-a3f0-d7c01b8d180a"
     },
     "EventStream" : {
       "configuration" : {
@@ -74,13 +79,13 @@
       "name" : "EventStream",
       "pattern" : "EventStream",
       "patternVersion" : 5,
-      "uuid" : "66ae8a96-5244-48f5-81bb-975f7d2369b4"
+      "uuid" : "f585b764-5c20-4183-96bb-7e71b6b255ce"
     },
     "PublishToService" : {
       "configuration" : {
         "childStreams" : null,
         "eventTypeName" : "Response",
-        "parentStreams" : [ "SubmitPrompt" ],
+        "parentStreams" : [ "Transformation" ],
         "processedByClause" : null,
         "service" : "com.vantiq.MyService"
       },
@@ -88,11 +93,11 @@
       "name" : "PublishToService",
       "pattern" : "PublishToService",
       "patternVersion" : 3,
-      "uuid" : "8b00f8f6-149f-4108-80cf-335530171374"
+      "uuid" : "26d582f5-8753-4161-b9a1-eaf485fd1921"
     },
     "SubmitPrompt" : {
       "configuration" : {
-        "childStreams" : [ "PublishToService" ],
+        "childStreams" : [ "Transformation" ],
         "conversationName" : null,
         "functionAuthorizer" : null,
         "functions" : null,
@@ -109,7 +114,31 @@
       "name" : "SubmitPrompt",
       "pattern" : "SubmitPrompt",
       "patternVersion" : 5,
-      "uuid" : "40d8a13f-907e-40e2-8aee-b547792e9970"
+      "uuid" : "413be781-706f-43de-8b18-6e2d63a95b38"
+    },
+    "Transformation" : {
+      "configuration" : {
+        "childStreams" : [ "PublishToService" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "SubmitPrompt" ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : {
+          "collaborationId" : {
+            "expression" : "event.collaborationId",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "Transformation",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "ba3489c9-edcf-407f-8857-ba7c2269c9c8"
     }
   },
   "contextualizedAssembly" : { },

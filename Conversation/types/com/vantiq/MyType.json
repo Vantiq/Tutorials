@@ -1,0 +1,16 @@
+{
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "groupBy" : "",
+  "name" : "com.vantiq.MyType",
+  "properties" : {
+    "myEntityId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

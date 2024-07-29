@@ -1,4 +1,7 @@
 {
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
   "ars_public" : false,
   "ars_relationships" : [ ],
   "controllers" : {
@@ -9,7 +12,7 @@
     "page" : { }
   },
   "isComponent" : false,
-  "isLaunchable" : false,
+  "isLaunchable" : true,
   "models" : {
     "dataObjects" : {
       "__GLOBAL__" : {
@@ -56,7 +59,7 @@
     },
     "description" : "",
     "docAssets" : [ ],
-    "productV" : "7.14",
+    "productV" : "7.14f",
     "showCategoryButtons" : false,
     "showCategoryDataDisplay" : true,
     "showCategoryDataInput" : false,
