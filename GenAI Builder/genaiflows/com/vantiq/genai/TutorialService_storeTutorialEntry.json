@@ -1,0 +1,67 @@
+{
+  "name": "storeTutorialEntry",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true,
+      "aicomponents.documentTransformers": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 1.7267044295213554,
+      "translate": [
+        197.5,
+        215.73783671417408
+      ],
+      "lastZoomRequest": 0,
+      "positions": {
+        "Input": {
+          "x": 0,
+          "y": 0
+        },
+        "ConvertToDocuments": {
+          "x": 0,
+          "y": 80
+        },
+        "AddToTutorialIndex": {
+          "x": 0,
+          "y": 160
+        }
+      }
+    }
+  },
+  "isPrivate": true,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "assembly": {
+    "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "ConvertToDocuments"
+      ]
+    },
+    "ConvertToDocuments": {
+      "component": "io.vantiq.ai.components.transformers.ParagraphSplitter",
+      "configuration": {
+        "chunk_size": 4000,
+        "chunk_overlap": 200
+      },
+      "enableAuditing": false,
+      "children": [
+        "AddToTutorialIndex"
+      ]
+    },
+    "AddToTutorialIndex": {
+      "component": "io.vantiq.ai.components.SemanticIndexStore",
+      "configuration": {
+        "semanticIndex": "com.vantiq.genai.TutorialIndex"
+      },
+      "enableAuditing": false,
+      "children": []
+    }
+  }
+}

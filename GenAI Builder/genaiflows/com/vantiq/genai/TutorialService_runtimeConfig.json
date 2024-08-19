@@ -1,0 +1,35 @@
+{
+  "ars_properties": {
+    "graph": {
+      "coordinates": {
+        "Input": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "lastZoomRequest": 0,
+      "scale": 4.642999253268981,
+      "translate": [
+        570,
+        150.89747573124188
+      ]
+    },
+    "groups": {
+      "aicomponents.primitives": true,
+      "aicomponents.resources": true
+    }
+  },
+  "assembly": {
+    "Input": {
+      "children": [],
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {}
+    }
+  },
+  "isComponent": false,
+  "isPrivate": false,
+  "name": "runtimeConfig",
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "disableTracing": false
+}
