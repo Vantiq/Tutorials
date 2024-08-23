@@ -131,10 +131,10 @@
     "structure" : {
       "fraction" : 1,
       "groups" : [ {
-        "fraction" : 0.5,
+        "fraction" : 0.75,
         "type" : "L[6]"
       }, {
-        "fraction" : 0.5,
+        "fraction" : 0.25,
         "type" : "L[1]"
       } ],
       "type" : "RH"
