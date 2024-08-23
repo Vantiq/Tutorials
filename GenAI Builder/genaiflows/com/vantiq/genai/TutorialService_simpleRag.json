@@ -1,0 +1,80 @@
+{
+  "ars_properties": {
+    "graph": {
+      "coordinates": {
+        "LLM": {
+          "x": 50,
+          "y": 240
+        },
+        "context": {
+          "x": -50,
+          "y": 80
+        },
+        "prompt": {
+          "x": 50,
+          "y": 160
+        },
+        "question": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "lastZoomRequest": 0,
+      "scale": 2.207022885606395,
+      "translate": [
+        571.2837985677131,
+        71.61659146228754
+      ]
+    },
+    "groups": {
+      "aicomponents.resources": true
+    }
+  },
+  "assembly": {
+    "LLM": {
+      "children": [],
+      "component": "io.vantiq.ai.components.LLM",
+      "configuration": {
+        "llm": "GPT3",
+        "outputType": "String"
+      }
+    },
+    "context": {
+      "children": [
+        "prompt"
+      ],
+      "component": "io.vantiq.ai.components.SemanticIndex",
+      "configuration": {
+        "contentOnly": true,
+        "semanticIndex": "com.vantiq.genai.TutorialIndex"
+      }
+    },
+    "prompt": {
+      "children": [
+        "LLM"
+      ],
+      "component": "io.vantiq.ai.components.PromptFromTemplate",
+      "configuration": {
+        "defaultValues": null,
+        "promptTemplate": {
+          "type": "documents",
+          "value": "ragPrompt.txt"
+        }
+      }
+    },
+    "question": {
+      "children": [
+        "context",
+        "prompt"
+      ],
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {}
+    }
+  },
+  "isComponent": false,
+  "isPrivate": false,
+  "name": "simpleRag",
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "disableTracing": false
+}

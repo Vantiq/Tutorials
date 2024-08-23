@@ -1,0 +1,84 @@
+{
+  "name": "loadFromUrl",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true,
+      "aicomponents.documentLoaders": true,
+      "aicomponents.documentTransformers": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 1.4603943786936489,
+      "translate": [
+        146.6948058911755,
+        184.76355362018367
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
+        "Input": {
+          "x": 0,
+          "y": 0
+        },
+        "UnstructuredURL": {
+          "x": 0,
+          "y": 80
+        },
+        "ParagraphSplitter": {
+          "x": 0,
+          "y": 160
+        },
+        "storeIndexEntry": {
+          "x": 0,
+          "y": 240
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "assembly": {
+    "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "UnstructuredURL"
+      ]
+    },
+    "UnstructuredURL": {
+      "component": "io.vantiq.ai.components.loaders.UnstructuredURL",
+      "configuration": {
+        "mode": "paged",
+        "encoding": "utf-8",
+        "strategy": "fast"
+      },
+      "enableAuditing": false,
+      "children": [
+        "ParagraphSplitter"
+      ]
+    },
+    "ParagraphSplitter": {
+      "component": "io.vantiq.ai.components.transformers.ParagraphSplitter",
+      "configuration": {
+        "chunk_size": 1000,
+        "chunk_overlap": 50
+      },
+      "enableAuditing": false,
+      "children": [
+        "storeIndexEntry"
+      ]
+    },
+    "storeIndexEntry": {
+      "component": "io.vantiq.ai.components.SemanticIndexStore",
+      "configuration": {
+        "semanticIndex": "com.vantiq.genai.TestLoadingIndex"
+      },
+      "enableAuditing": false,
+      "children": []
+    }
+  }
+}

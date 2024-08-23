@@ -1,0 +1,13 @@
+package com.vantiq.genai
+stateless PROCEDURE TutorialService.loadIndexContent()
+
+var doc = {
+	page_content: "Marty worked at Forte",
+	metadata: {
+		id: "workInfo"
+	}
+}
+TutorialService.storeTutorialEntry(doc)
+doc.page_content = "Bears like honey"
+doc.metadata.id = "natureInfo"
+TutorialService.storeTutorialEntry(doc)

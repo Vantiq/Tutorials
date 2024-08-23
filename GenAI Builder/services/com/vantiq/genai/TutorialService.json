@@ -9,17 +9,17 @@
   "eventTypes" : { },
   "globalType" : null,
   "interface" : [ {
-    "name" : "startConversation",
+    "name" : "endConversation",
     "parameters" : [ {
       "description" : null,
       "multi" : false,
       "name" : "conversationId",
-      "required" : false,
+      "required" : true,
       "type" : "String"
     } ],
     "returnType" : {
-      "multi" : false,
-      "type" : "String"
+      "multi" : true,
+      "type" : "Object"
     }
   }, {
     "name" : "getConversation",
@@ -48,18 +48,21 @@
       "type" : "Object"
     }
   }, {
-    "name" : "endConversation",
+    "name" : "startConversation",
     "parameters" : [ {
       "description" : null,
       "multi" : false,
       "name" : "conversationId",
-      "required" : true,
+      "required" : false,
       "type" : "String"
     } ],
     "returnType" : {
-      "multi" : true,
-      "type" : "Object"
+      "multi" : false,
+      "type" : "String"
     }
+  }, {
+    "name" : "loadIndexContent",
+    "parameters" : [ ]
   } ],
   "internalEventHandlers" : [ ],
   "name" : "com.vantiq.genai.TutorialService",
