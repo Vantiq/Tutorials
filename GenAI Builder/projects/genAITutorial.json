@@ -102,25 +102,65 @@
   }, {
     "source" : "procedure/com.vantiq.genai.TutorialService.loadIndexContent",
     "target" : "procedure/com.vantiq.genai.TutorialService.storeTutorialEntry"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.streamFromLLM"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.streamFromLLM",
+    "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.logLLMStream",
+    "target" : "procedure/com.vantiq.genai.TutorialService.streamFromLLM"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.logLLMStream",
+    "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.logLLMStream"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:streamFromLLM",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:simpleRag",
+    "target" : "semanticindex/com.vantiq.genai.TutorialIndex"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:simpleRag",
+    "target" : "document/ragPrompt.txt"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:workedAtForte",
+    "target" : "semanticindex/com.vantiq.genai.TutorialIndex"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:workedAtForte",
+    "target" : "document/ragPromptBoolean.txt"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:workedAtForte",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:simpleRag",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:tellAJoke",
+    "target" : "llm/GPT_LLM"
   } ],
   "name" : "genAITutorial",
   "options" : {
     "description" : "This project contains the service and supporting resources created during the [GenAI Builder Tutorial](/docs/system/tutorials/genaibuilder/index.html).  It demonstrates how to use the [Gen AI Builder](/docs/system/genaibuilder/index.html) to construct custom GenAI functionality for your applications.  \n\nTo use the examples provided by the service you will need to:\n\n1. Create the secret `OPENAI_KEY` containing a valid OpenAI API key.\n1. Load the semantic index with the content as described in the tutorial.",
     "dockCollapsed" : {
       "bottom" : false,
-      "left" : true,
+      "left" : false,
       "right" : false,
       "top" : false,
       "viewtabs" : false
     },
     "dockDimensions" : {
       "bottom" : 200,
-      "debug" : [ 0, 0, 0 ],
+      "debug" : [ 922.25, 923.75 ],
       "left" : 210,
       "right" : 220,
       "top" : 0,
       "viewtabs" : 0
     },
+    "exclusionList" : [ ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
@@ -132,7 +172,7 @@
       "fraction" : 1,
       "groups" : [ {
         "fraction" : 0.75,
-        "type" : "L[6]"
+        "type" : "L[4]"
       }, {
         "fraction" : 0.25,
         "type" : "L[1]"
@@ -145,33 +185,34 @@
   },
   "partitions" : [ ],
   "resources" : [ {
-    "label" : "GPT3",
-    "name" : "GPT3",
-    "resourceReference" : "/system.llms/GPT3",
-    "timestamp" : "2024-08-19T21:55:07.759Z",
+    "label" : "GPT_LLM",
+    "name" : "GPT_LLM",
+    "resourceReference" : "/system.llms/GPT_LLM",
+    "timestamp" : "2024-09-04T21:03:26.587Z",
     "type" : 80
   }, {
     "label" : "SentenceTransformer",
     "name" : "SentenceTransformer",
     "resourceReference" : "/system.llms/SentenceTransformer",
-    "timestamp" : "2024-08-19T21:55:07.759Z",
+    "timestamp" : "2024-08-30T15:24:43.168Z",
     "type" : 80
   }, {
+    "label" : "com.vantiq.genai.TestLoadingIndex",
     "name" : "com.vantiq.genai.TestLoadingIndex",
     "resourceReference" : "/system.semanticindexes/com.vantiq.genai.TestLoadingIndex",
-    "timestamp" : "2024-08-19T22:08:24.426Z",
+    "timestamp" : "2024-08-30T15:24:43.315Z",
     "type" : 79
   }, {
     "label" : "com.vantiq.genai.TutorialIndex",
     "name" : "com.vantiq.genai.TutorialIndex",
     "resourceReference" : "/system.semanticindexes/com.vantiq.genai.TutorialIndex",
-    "timestamp" : "2024-08-19T21:55:07.799Z",
+    "timestamp" : "2024-08-30T15:24:43.313Z",
     "type" : 79
   }, {
     "label" : "com.vantiq.genai.TutorialService",
     "name" : "com.vantiq.genai.TutorialService",
     "resourceReference" : "/services/com.vantiq.genai.TutorialService",
-    "timestamp" : "2024-08-19T22:19:47.664Z",
+    "timestamp" : "2024-09-04T21:33:45.471Z",
     "type" : 63
   }, {
     "label" : "com.vantiq.genai.TutorialService.choosePrompt",
@@ -180,7 +221,7 @@
     "procedureName" : "choosePrompt",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.choosePrompt",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.341Z",
+    "timestamp" : "2024-08-30T15:24:46.236Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.configuredConversation",
@@ -189,7 +230,7 @@
     "procedureName" : "configuredConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.configuredConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.277Z",
+    "timestamp" : "2024-08-30T15:24:46.114Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.endConversation",
@@ -198,7 +239,7 @@
     "procedureName" : "endConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.endConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.019Z",
+    "timestamp" : "2024-08-30T15:24:45.354Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.getConversation",
@@ -207,29 +248,40 @@
     "procedureName" : "getConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.getConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:09.875Z",
+    "timestamp" : "2024-08-30T15:24:45.367Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.js",
     "name" : "com.vantiq.genai.TutorialService.js",
     "resourceReference" : "/documents/com.vantiq.genai.TutorialService.js",
-    "timestamp" : "2024-08-19T21:55:11.595Z",
+    "timestamp" : "2024-09-04T21:33:45.669Z",
     "type" : 19
   }, {
+    "label" : "com.vantiq.genai.TutorialService.loadFromUrl",
     "name" : "com.vantiq.genai.TutorialService.loadFromUrl",
     "packageName" : "com.vantiq.genai",
     "procedureName" : "loadFromUrl",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.loadFromUrl",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:57:13.132Z",
+    "timestamp" : "2024-08-30T15:24:46.139Z",
     "type" : 3
   }, {
+    "label" : "com.vantiq.genai.TutorialService.loadIndexContent",
     "name" : "com.vantiq.genai.TutorialService.loadIndexContent",
     "packageName" : "com.vantiq.genai",
     "procedureName" : "loadIndexContent",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.loadIndexContent",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T22:19:47.425Z",
+    "timestamp" : "2024-08-30T15:24:45.720Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.genai.TutorialService.logLLMStream",
+    "name" : "com.vantiq.genai.TutorialService.logLLMStream",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "logLLMStream",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.logLLMStream",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2024-09-04T21:33:43.079Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.resetConversation",
@@ -238,7 +290,7 @@
     "procedureName" : "resetConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.resetConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.130Z",
+    "timestamp" : "2024-08-30T15:24:45.357Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.runtimeConfig",
@@ -247,7 +299,7 @@
     "procedureName" : "runtimeConfig",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.runtimeConfig",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.346Z",
+    "timestamp" : "2024-08-30T15:24:45.939Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.simpleConversation",
@@ -256,7 +308,7 @@
     "procedureName" : "simpleConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.simpleConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.331Z",
+    "timestamp" : "2024-08-30T15:24:46.231Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.simpleRag",
@@ -265,7 +317,7 @@
     "procedureName" : "simpleRag",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.simpleRag",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.296Z",
+    "timestamp" : "2024-08-30T15:24:46.158Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.startConversation",
@@ -274,15 +326,25 @@
     "procedureName" : "startConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.startConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.127Z",
+    "timestamp" : "2024-08-30T15:24:45.367Z",
     "type" : 3
   }, {
+    "label" : "com.vantiq.genai.TutorialService.storeTutorialEntry",
     "name" : "com.vantiq.genai.TutorialService.storeTutorialEntry",
     "packageName" : "com.vantiq.genai",
     "procedureName" : "storeTutorialEntry",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.storeTutorialEntry",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T22:17:20.130Z",
+    "timestamp" : "2024-08-30T15:24:45.971Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.genai.TutorialService.streamFromLLM",
+    "name" : "com.vantiq.genai.TutorialService.streamFromLLM",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "streamFromLLM",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.streamFromLLM",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2024-09-04T21:20:33.028Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.tellAJoke",
@@ -291,7 +353,7 @@
     "procedureName" : "tellAJoke",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.tellAJoke",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.371Z",
+    "timestamp" : "2024-08-30T15:24:46.124Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.workedAtForte",
@@ -300,117 +362,128 @@
     "procedureName" : "workedAtForte",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.workedAtForte",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-08-19T21:55:10.227Z",
+    "timestamp" : "2024-08-30T15:24:46.131Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService:choosePrompt",
     "name" : "com.vantiq.genai.TutorialService:choosePrompt",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:choosePrompt",
-    "timestamp" : "2024-08-19T21:55:10.784Z",
+    "timestamp" : "2024-08-30T15:24:47.379Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:configuredConversation",
     "name" : "com.vantiq.genai.TutorialService:configuredConversation",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:configuredConversation",
-    "timestamp" : "2024-08-19T21:55:10.765Z",
+    "timestamp" : "2024-09-04T21:05:40.032Z",
     "type" : 81
   }, {
+    "label" : "com.vantiq.genai.TutorialService:loadFromUrl",
     "name" : "com.vantiq.genai.TutorialService:loadFromUrl",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:loadFromUrl",
-    "timestamp" : "2024-08-19T22:18:20.769Z",
+    "timestamp" : "2024-09-04T21:05:39.825Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:runtimeConfig",
     "name" : "com.vantiq.genai.TutorialService:runtimeConfig",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:runtimeConfig",
-    "timestamp" : "2024-08-19T21:55:10.783Z",
+    "timestamp" : "2024-09-04T21:05:39.594Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:simpleConversation",
     "name" : "com.vantiq.genai.TutorialService:simpleConversation",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:simpleConversation",
-    "timestamp" : "2024-08-19T21:55:10.856Z",
+    "timestamp" : "2024-09-04T21:05:39.358Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:simpleRag",
     "name" : "com.vantiq.genai.TutorialService:simpleRag",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:simpleRag",
-    "timestamp" : "2024-08-19T21:55:10.852Z",
+    "timestamp" : "2024-09-04T21:05:39.134Z",
     "type" : 81
   }, {
+    "label" : "com.vantiq.genai.TutorialService:storeTutorialEntry",
     "name" : "com.vantiq.genai.TutorialService:storeTutorialEntry",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:storeTutorialEntry",
-    "timestamp" : "2024-08-19T22:18:20.604Z",
+    "timestamp" : "2024-08-30T15:24:47.115Z",
+    "type" : 81
+  }, {
+    "label" : "com.vantiq.genai.TutorialService:streamFromLLM",
+    "name" : "com.vantiq.genai.TutorialService:streamFromLLM",
+    "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:streamFromLLM",
+    "timestamp" : "2024-09-04T21:20:32.942Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:tellAJoke",
     "name" : "com.vantiq.genai.TutorialService:tellAJoke",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:tellAJoke",
-    "timestamp" : "2024-08-19T21:55:10.807Z",
+    "timestamp" : "2024-09-04T21:05:40.260Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:workedAtForte",
     "name" : "com.vantiq.genai.TutorialService:workedAtForte",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:workedAtForte",
-    "timestamp" : "2024-08-19T21:55:11.703Z",
+    "timestamp" : "2024-09-04T21:05:38.737Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:workedAtForte",
     "name" : "com.vantiq.genai.TutorialService:workedAtForte",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:workedAtForte",
-    "timestamp" : "2024-08-19T21:55:11.703Z",
+    "timestamp" : "2024-09-04T21:05:38.737Z",
     "type" : 81
   }, {
     "label" : "promptWithHistory.txt",
     "name" : "promptWithHistory.txt",
     "resourceReference" : "/documents/promptWithHistory.txt",
-    "timestamp" : "2024-08-19T21:55:09.276Z",
+    "timestamp" : "2024-08-30T15:24:44.363Z",
     "type" : 19
   }, {
     "label" : "ragPrompt.txt",
     "name" : "ragPrompt.txt",
     "resourceReference" : "/documents/ragPrompt.txt",
-    "timestamp" : "2024-08-19T21:55:09.276Z",
+    "timestamp" : "2024-08-30T15:24:44.365Z",
     "type" : 19
   }, {
     "label" : "ragPromptBoolean.txt",
     "name" : "ragPromptBoolean.txt",
     "resourceReference" : "/documents/ragPromptBoolean.txt",
-    "timestamp" : "2024-08-19T21:55:09.276Z",
+    "timestamp" : "2024-08-30T15:24:44.365Z",
     "type" : 19
   }, {
     "label" : "ragPromptJson.txt",
     "name" : "ragPromptJson.txt",
     "resourceReference" : "/documents/ragPromptJson.txt",
-    "timestamp" : "2024-08-19T21:55:09.276Z",
+    "timestamp" : "2024-08-30T15:24:44.363Z",
     "type" : 19
   } ],
   "tools" : [ {
     "isPinned" : false,
-    "name" : "Documents",
+    "name" : "Audits",
     "pane" : {
-      "address" : "RH[0]/L[4]"
+      "address" : "RH[0]/L[2]"
     },
     "state" : 8,
-    "type" : 26
+    "type" : 58
   }, {
     "isPinned" : false,
     "name" : "Errors",
     "type" : 13
   }, {
-    "isPinned" : false,
-    "name" : "GPT3",
-    "pane" : {
-      "address" : "RH[0]/L[5]"
-    },
-    "resourceKey" : "llm/GPT3",
-    "state" : 8,
-    "type" : 9
-  }, {
     "dockLocation" : "top",
     "isPinned" : false,
     "name" : "Inactive Panes",
     "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Log Messages",
+    "type" : 12
+  }, {
+    "isPinned" : false,
+    "name" : "Log Records Query",
+    "pane" : {
+      "address" : "RH[0]/L[1]"
+    },
+    "state" : 8,
+    "type" : 18
   }, {
     "isPinned" : false,
     "name" : "Project Contents",
@@ -426,26 +499,9 @@
     "type" : 82
   }, {
     "isPinned" : false,
-    "name" : "Secrets",
-    "pane" : {
-      "address" : "RH[0]/L[3]"
-    },
-    "state" : 8,
-    "type" : 83
-  }, {
-    "isPinned" : false,
-    "name" : "SentenceTransformer",
-    "pane" : {
-      "address" : "RH[0]/L[2]"
-    },
-    "resourceKey" : "llm/SentenceTransformer",
-    "state" : 8,
-    "type" : 9
-  }, {
-    "isPinned" : false,
     "name" : "com.vantiq.genai.TutorialIndex",
     "pane" : {
-      "address" : "RH[0]/L[1]"
+      "address" : "RH[0]/L[3]"
     },
     "resourceKey" : "semanticindex/com.vantiq.genai.TutorialIndex",
     "state" : 8,
@@ -465,6 +521,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "documents/Documents", "errorviewer/Errors", "llmeeditor/GPT3", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "secretlist/Secrets", "llmeeditor/SentenceTransformer", "semanticindexeditor/com.vantiq.genai.TutorialIndex", "services/com.vantiq.genai.TutorialService" ]
+    "projectToolKeys" : [ "audits/Audits", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "logquery/Log Records Query", "list/Project Contents", "projectdescription/Project Description", "semanticindexeditor/com.vantiq.genai.TutorialIndex", "services/com.vantiq.genai.TutorialService" ]
   } ]
 }

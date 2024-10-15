@@ -1,7 +1,13 @@
 {
   "ars_properties": {
     "graph": {
-      "coordinates": {
+      "scale": 2.377049180327869,
+      "translate": [
+        382.3835169057377,
+        77.25409836065569
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
         "LLM": {
           "x": 50,
           "y": 240
@@ -18,41 +24,35 @@
           "x": 0,
           "y": 0
         }
-      },
-      "lastZoomRequest": 0,
-      "scale": 2.207022885606395,
-      "translate": [
-        571.2837985677131,
-        71.61659146228754
-      ]
+      }
     },
     "groups": {
       "aicomponents.resources": true
-    }
+    },
+    "v": 1
   },
   "assembly": {
     "LLM": {
-      "children": [],
       "component": "io.vantiq.ai.components.LLM",
       "configuration": {
-        "llm": "GPT3",
+        "llm": "GPT_LLM",
         "outputType": "String"
-      }
+      },
+      "enableAuditing": false,
+      "children": []
     },
     "context": {
-      "children": [
-        "prompt"
-      ],
       "component": "io.vantiq.ai.components.SemanticIndex",
       "configuration": {
         "contentOnly": true,
         "semanticIndex": "com.vantiq.genai.TutorialIndex"
-      }
+      },
+      "enableAuditing": false,
+      "children": [
+        "prompt"
+      ]
     },
     "prompt": {
-      "children": [
-        "LLM"
-      ],
       "component": "io.vantiq.ai.components.PromptFromTemplate",
       "configuration": {
         "defaultValues": null,
@@ -60,15 +60,20 @@
           "type": "documents",
           "value": "ragPrompt.txt"
         }
-      }
+      },
+      "enableAuditing": false,
+      "children": [
+        "LLM"
+      ]
     },
     "question": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
       "children": [
         "context",
         "prompt"
-      ],
-      "component": "io.vantiq.ai.components.InitialInput",
-      "configuration": {}
+      ]
     }
   },
   "isComponent": false,
