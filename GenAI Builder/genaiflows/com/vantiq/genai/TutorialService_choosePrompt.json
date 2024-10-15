@@ -65,7 +65,7 @@
       "children": [],
       "component": "io.vantiq.ai.components.LLM",
       "configuration": {
-        "llm": "GPT3",
+        "llm": "GPT_LLM",
         "outputType": "String"
       }
     },
@@ -184,7 +184,7 @@
             "value": "Other"
           }
         ],
-        "categorizerLLM": "GPT3"
+        "categorizerLLM": "GPT_LLM"
       }
     }
   },

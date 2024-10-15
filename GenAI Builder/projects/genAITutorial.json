@@ -160,7 +160,7 @@
       "top" : 0,
       "viewtabs" : 0
     },
-    "exclusionList" : [ "llm/GPT3" ],
+    "exclusionList" : [ ],
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
