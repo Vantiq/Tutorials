@@ -1,0 +1,6 @@
+package com.vantiq.genai
+stateless PROCEDURE TutorialService.logLLMStream(prompt String)
+
+EXECUTE com.vantiq.genai.TutorialService.streamFromLLM(prompt) as token {
+	log.info("{}", [token])
+}

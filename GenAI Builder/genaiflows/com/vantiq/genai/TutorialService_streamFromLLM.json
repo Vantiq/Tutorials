@@ -1,0 +1,56 @@
+{
+  "name": "streamFromLLM",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 4.738562091503268,
+      "translate": [
+        404.6928104575163,
+        191.91176470588235
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
+        "Input": {
+          "x": 0,
+          "y": 0
+        },
+        "LLM": {
+          "x": 0,
+          "y": 80
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": false,
+  "returnType": {
+    "type": "String",
+    "multi": false,
+    "sequence": true
+  },
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "assembly": {
+    "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "LLM"
+      ]
+    },
+    "LLM": {
+      "component": "io.vantiq.ai.components.LLM",
+      "configuration": {
+        "outputType": "String",
+        "llm": "GPT_LLM"
+      },
+      "enableAuditing": false,
+      "children": []
+    }
+  }
+}

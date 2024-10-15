@@ -1,68 +1,72 @@
 {
   "ars_properties": {
     "graph": {
-      "coordinates": {
+      "scale": 2.377049180327869,
+      "translate": [
+        381,
+        77.25409836065569
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
         "Conversation": {
           "x": 0,
           "y": 80
-        },
-        "Conversation$END": {
-          "x": 0,
-          "y": 240
         },
         "Input": {
           "x": 0,
           "y": 0
         },
-        "LLM": {
+        "Conversation-0-LLM": {
           "x": 0,
           "y": 160
+        },
+        "Conversation-0-Conversation$END": {
+          "x": 0,
+          "y": 240
         }
-      },
-      "lastZoomRequest": 0,
-      "scale": 2.206503507334646,
-      "translate": [
-        570,
-        71.71136398837598
-      ]
+      }
     },
     "groups": {
       "aicomponents.resources": true
-    }
+    },
+    "v": 1
   },
   "assembly": {
     "Conversation": {
-      "children": [],
       "component": "io.vantiq.ai.components.Conversation",
       "configuration": {
         "optional": false
       },
+      "enableAuditing": false,
       "subassemblies": [
         {
           "Init": {
+            "component": "io.vantiq.ai.components.InitialInput",
+            "configuration": {},
             "children": [
               "LLM"
-            ],
-            "component": "io.vantiq.ai.components.InitialInput",
-            "configuration": {}
+            ]
           },
           "LLM": {
-            "children": [],
             "component": "io.vantiq.ai.components.LLM",
             "configuration": {
-              "llm": "GPT3",
+              "llm": "GPT_LLM",
               "outputType": "String"
-            }
+            },
+            "enableAuditing": false,
+            "children": []
           }
         }
-      ]
+      ],
+      "children": []
     },
     "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
       "children": [
         "Conversation"
-      ],
-      "component": "io.vantiq.ai.components.InitialInput",
-      "configuration": {}
+      ]
     }
   },
   "isComponent": false,

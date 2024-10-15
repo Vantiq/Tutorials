@@ -1,29 +1,31 @@
 {
   "ars_properties": {
     "graph": {
-      "coordinates": {
+      "scale": 6.368242360929747,
+      "translate": [
+        381,
+        362.5
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
         "Input": {
           "x": 0,
           "y": 0
         }
-      },
-      "lastZoomRequest": 0,
-      "scale": 4.642999253268981,
-      "translate": [
-        570,
-        150.89747573124188
-      ]
+      }
     },
     "groups": {
-      "aicomponents.primitives": true,
-      "aicomponents.resources": true
-    }
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true
+    },
+    "v": 1
   },
   "assembly": {
     "Input": {
-      "children": [],
       "component": "io.vantiq.ai.components.InitialInput",
-      "configuration": {}
+      "configuration": {},
+      "enableAuditing": false,
+      "children": []
     }
   },
   "isComponent": false,

@@ -35,6 +35,18 @@
       "type" : "Object"
     }
   }, {
+    "name" : "loadIndexContent",
+    "parameters" : [ ]
+  }, {
+    "name" : "logLLMStream",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "prompt",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
     "name" : "resetConversation",
     "parameters" : [ {
       "description" : null,
@@ -60,9 +72,6 @@
       "multi" : false,
       "type" : "String"
     }
-  }, {
-    "name" : "loadIndexContent",
-    "parameters" : [ ]
   } ],
   "internalEventHandlers" : [ ],
   "name" : "com.vantiq.genai.TutorialService",

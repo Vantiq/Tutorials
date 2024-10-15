@@ -1,7 +1,13 @@
 {
   "ars_properties": {
     "graph": {
-      "coordinates": {
+      "scale": 3.111587982832618,
+      "translate": [
+        396.5579399141631,
+        126.01931330472104
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
         "Input": {
           "x": 0,
           "y": 0
@@ -14,38 +20,32 @@
           "x": 0,
           "y": 80
         }
-      },
-      "lastZoomRequest": 0,
-      "scale": 2.8883199004608597,
-      "translate": [
-        420,
-        116.97695596866481
-      ]
+      }
     },
     "groups": {
       "aicomponents.resources": true
-    }
+    },
+    "v": 1
   },
   "assembly": {
     "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
       "children": [
         "jokePrompt"
-      ],
-      "component": "io.vantiq.ai.components.InitialInput",
-      "configuration": {}
+      ]
     },
     "LLM": {
-      "children": [],
       "component": "io.vantiq.ai.components.LLM",
       "configuration": {
-        "llm": "GPT3",
+        "llm": "GPT_LLM",
         "outputType": "String"
-      }
+      },
+      "enableAuditing": false,
+      "children": []
     },
     "jokePrompt": {
-      "children": [
-        "LLM"
-      ],
       "component": "io.vantiq.ai.components.PromptFromTemplate",
       "configuration": {
         "defaultValues": null,
@@ -53,7 +53,11 @@
           "type": "String",
           "value": "Tell a short joke about ${topic}."
         }
-      }
+      },
+      "enableAuditing": false,
+      "children": [
+        "LLM"
+      ]
     }
   },
   "isComponent": false,

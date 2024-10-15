@@ -3,7 +3,7 @@
     "apiKeySecret" : "OPENAI_KEY"
   },
   "distanceFunction" : "Cosine",
-  "modelName" : "gpt-3.5-turbo",
-  "name" : "GPT3",
+  "modelName" : "gpt-4o",
+  "name" : "GPT_LLM",
   "type" : "generative"
 }
