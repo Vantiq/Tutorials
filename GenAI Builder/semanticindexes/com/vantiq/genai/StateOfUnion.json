@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "databaseConfig" : { },
+  "embeddingModel" : "SentenceTransformer",
+  "name" : "com.vantiq.genai.StateOfUnion"
+}
