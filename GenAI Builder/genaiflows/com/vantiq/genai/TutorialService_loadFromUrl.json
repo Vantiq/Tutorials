@@ -52,7 +52,7 @@
     "UnstructuredURL": {
       "component": "io.vantiq.ai.components.loaders.UnstructuredURL",
       "configuration": {
-        "mode": "paged",
+        "chunking_strategy": "by_page",
         "encoding": "utf-8",
         "strategy": "fast"
       },
