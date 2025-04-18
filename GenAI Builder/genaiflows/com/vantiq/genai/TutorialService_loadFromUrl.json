@@ -75,7 +75,10 @@
     "storeIndexEntry": {
       "component": "io.vantiq.ai.components.SemanticIndexStore",
       "configuration": {
-        "semanticIndex": "com.vantiq.genai.TestLoadingIndex"
+        "semanticIndex": {
+          "type": "semanticindexes",
+          "value": "com.vantiq.genai.TestLoadingIndex"
+        }
       },
       "enableAuditing": false,
       "children": []

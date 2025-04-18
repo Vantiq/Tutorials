@@ -1,7 +1,7 @@
 {
   "ars_relationships" : [ ],
   "databaseConfig" : { },
-  "defaultMinSimilarity" : 0.75,
+  "defaultMinSimilarity" : 0.6,
   "embeddingModel" : "SentenceTransformer",
   "name" : "com.vantiq.genai.TutorialIndex"
 }
