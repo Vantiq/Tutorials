@@ -280,11 +280,6 @@
     "timestamp" : "2025-05-09T16:33:15.741Z",
     "type" : 80
   }, {
-    "name" : "TestStorageManager",
-    "resourceReference" : "/system.storagemanagers/TestStorageManager",
-    "timestamp" : "2025-02-24T17:22:45.136Z",
-    "type" : 76
-  }, {
     "label" : "com.vantiq.genai.StateOfUnion",
     "name" : "com.vantiq.genai.StateOfUnion",
     "resourceReference" : "/system.semanticindexes/com.vantiq.genai.StateOfUnion",
