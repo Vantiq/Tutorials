@@ -1,0 +1,145 @@
+{
+  "name": "sportsOnly",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true,
+      "aicomponents.guardrails": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 1.5764485583390577,
+      "translate": [
+        390.3875493884123,
+        52.23457814601937
+      ],
+      "lastZoomRequest": 0,
+      "positions": {
+        "outputCombiner": {
+          "x": 50,
+          "y": 320
+        },
+        "outputChecker": {
+          "x": -106.56865338949238,
+          "y": 250.78373278346055
+        },
+        "llmResponse": {
+          "x": -50,
+          "y": 160
+        },
+        "inputChecker": {
+          "x": 0,
+          "y": 80
+        },
+        "question": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "assembly": {
+    "question": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "inputChecker"
+      ]
+    },
+    "inputChecker": {
+      "component": "io.vantiq.ai.components.GuardrailsAI",
+      "configuration": {
+        "validators": [
+          {
+            "type": "Object",
+            "value": {
+              "name": "DetectPII",
+              "parameters": {
+                "pii_entities": [
+                  "EMAIL_ADDRESS"
+                ],
+                "on_fail": "fix"
+              }
+            }
+          },
+          {
+            "type": "Object",
+            "value": {
+              "name": "RestrictToTopic",
+              "parameters": {
+                "valid_topics": [
+                  "sports"
+                ],
+                "on_fail": "exception"
+              }
+            }
+          }
+        ]
+      },
+      "enableAuditing": false,
+      "children": [
+        "llmResponse",
+        "outputCombiner"
+      ]
+    },
+    "llmResponse": {
+      "component": "io.vantiq.ai.components.LLM",
+      "configuration": {
+        "outputType": "String",
+        "llm": "GPT_LLM",
+        "outputTypeSchema": null
+      },
+      "enableAuditing": false,
+      "children": [
+        "outputChecker",
+        "outputCombiner"
+      ]
+    },
+    "outputChecker": {
+      "component": "io.vantiq.ai.components.GuardrailsAI",
+      "configuration": {
+        "validators": [
+          {
+            "type": "Object",
+            "value": {
+              "name": "DetectPII",
+              "parameters": {
+                "pii_entities": [
+                  "LOCATION"
+                ],
+                "on_fail": "fix"
+              }
+            }
+          }
+        ]
+      },
+      "enableAuditing": false,
+      "children": [
+        "outputCombiner"
+      ]
+    },
+    "outputCombiner": {
+      "component": "io.vantiq.ai.components.CodeBlock",
+      "configuration": {
+        "codeBlock": {
+          "code": "return input",
+          "language": "VAIL"
+        }
+      },
+      "enableAuditing": false,
+      "children": [],
+      "inputType": {
+        "type": "Any"
+      },
+      "outputType": {
+        "type": "Any"
+      }
+    }
+  }
+}
