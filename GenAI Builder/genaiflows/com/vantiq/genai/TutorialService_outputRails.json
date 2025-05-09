@@ -1,0 +1,62 @@
+{
+  "name": "outputRails",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.guardrails": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 3.9620404427326883,
+      "translate": [
+        393.1211140376301,
+        161.36179911696482
+      ],
+      "lastZoomRequest": 3,
+      "positions": {
+        "outputRails": {
+          "x": 0,
+          "y": 80
+        },
+        "question": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "assembly": {
+    "question": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "outputRails"
+      ]
+    },
+    "outputRails": {
+      "component": "io.vantiq.ai.components.NeMoGuardrails",
+      "configuration": {
+        "generativeLlm": "GPT_LLM",
+        "embeddingsLlm": "SentenceTransformer",
+        "colang": "nemo/outputResponse.co",
+        "yamlConfig": "nemo/outputRailPrompt.yml",
+        "inputRails": null,
+        "outputRails": [
+          {
+            "type": "String",
+            "value": "self check output"
+          }
+        ],
+        "customModels": null,
+        "actionsServer": null
+      },
+      "enableAuditing": false,
+      "children": []
+    }
+  }
+}

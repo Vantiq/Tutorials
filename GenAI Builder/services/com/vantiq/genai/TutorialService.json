@@ -2,7 +2,8 @@
   "active" : true,
   "ars_properties" : {
     "filterPrivateGenerated" : false,
-    "filterPublicGenerated" : false
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
   },
   "ars_relationships" : [ ],
   "description" : null,

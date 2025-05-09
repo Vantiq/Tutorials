@@ -1,0 +1,14 @@
+# Reject any prompt longer than 100 characters
+define subflow limit length
+  # Set a variable to the length of the user's prompt.
+  $message_length = len($user_message)
+  # Give a canned response and cancel the LLM call if there are over 100 characters in the message
+  if $message_length > 100
+    bot respond too long
+    # "stop" tells NeMo to stop processing. No dialog flows will be triggered.
+    stop
+
+define bot respond too long
+  $message_length = len($user_message)
+  # Include the message length in the response. NeMo uses Jinja2 to handle string templating
+  "The user message contained {{ message_length }} characters. The maximum is 100."

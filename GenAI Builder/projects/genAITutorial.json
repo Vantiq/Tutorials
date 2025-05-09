@@ -150,6 +150,81 @@
   }, {
     "source" : "procedure/com.vantiq.genai.TutorialService.contextualCompression",
     "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:sportsOnly",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.sportsOnly"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.sportsOnly",
+    "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:dialogRails",
+    "target" : "llm/SentenceTransformer"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:dialogRails",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:dialogRails",
+    "target" : "document/nemo/dialogRails.co"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.dialogRails"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.dialogRails",
+    "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:inputRails",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:inputRails",
+    "target" : "llm/SentenceTransformer"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:inputRails",
+    "target" : "document/nemo/inputRailPrompt.yml"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:inputRails",
+    "target" : "document/nemo/inputRails.co"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.inputRails"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.inputRails",
+    "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:outputRails",
+    "target" : "llm/SentenceTransformer"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:outputRails",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:outputRails",
+    "target" : "document/nemo/outputRailPrompt.yml"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:outputRails",
+    "target" : "document/nemo/outputResponse.co"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.outputRails"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.outputRails",
+    "target" : "services/com.vantiq.genai.TutorialService"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:nemoActions",
+    "target" : "llm/GPT_LLM"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:nemoActions",
+    "target" : "llm/SentenceTransformer"
+  }, {
+    "source" : "genaiflow/com.vantiq.genai.TutorialService:nemoActions",
+    "target" : "document/nemo/actions.co"
+  }, {
+    "source" : "services/com.vantiq.genai.TutorialService",
+    "target" : "procedure/com.vantiq.genai.TutorialService.nemoActions"
+  }, {
+    "source" : "procedure/com.vantiq.genai.TutorialService.nemoActions",
+    "target" : "services/com.vantiq.genai.TutorialService"
   } ],
   "name" : "genAITutorial",
   "options" : {
@@ -163,7 +238,7 @@
     },
     "dockDimensions" : {
       "bottom" : 200,
-      "debug" : [ 920.8191991461058, 925.1808008538942 ],
+      "debug" : [ 955.4817780934578, 961.5182219065423 ],
       "left" : 210,
       "right" : 220,
       "top" : 0,
@@ -172,7 +247,7 @@
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
     "layoutStyle" : "flex",
-    "openFolders" : [ "com.vantiq.genai", "com.vantiq.genai/semanticindex", "document", "llm" ],
+    "openFolders" : [ "com.vantiq.genai", "com.vantiq.genai/semanticindex", "com.vantiq.genai/services", "document", "llm", "services/com.vantiq.genai.TutorialService" ],
     "partitionsSettings" : { },
     "rootViewFlavor" : 5,
     "showGrid" : true,
@@ -180,7 +255,7 @@
       "fraction" : 1,
       "groups" : [ {
         "fraction" : 0.75,
-        "type" : "L[6]"
+        "type" : "L[7]"
       }, {
         "fraction" : 0.25,
         "type" : "L[1]"
@@ -196,37 +271,37 @@
     "label" : "GPT_LLM",
     "name" : "GPT_LLM",
     "resourceReference" : "/system.llms/GPT_LLM",
-    "timestamp" : "2024-10-15T18:32:42.585Z",
+    "timestamp" : "2025-05-09T16:33:15.677Z",
     "type" : 80
   }, {
     "label" : "SentenceTransformer",
     "name" : "SentenceTransformer",
     "resourceReference" : "/system.llms/SentenceTransformer",
-    "timestamp" : "2024-10-15T18:32:42.597Z",
+    "timestamp" : "2025-05-09T16:33:15.741Z",
     "type" : 80
   }, {
     "label" : "com.vantiq.genai.StateOfUnion",
     "name" : "com.vantiq.genai.StateOfUnion",
     "resourceReference" : "/system.semanticindexes/com.vantiq.genai.StateOfUnion",
-    "timestamp" : "2024-10-16T17:18:09.629Z",
+    "timestamp" : "2025-05-09T16:33:17.000Z",
     "type" : 79
   }, {
     "label" : "com.vantiq.genai.TestLoadingIndex",
     "name" : "com.vantiq.genai.TestLoadingIndex",
     "resourceReference" : "/system.semanticindexes/com.vantiq.genai.TestLoadingIndex",
-    "timestamp" : "2024-10-15T18:32:42.701Z",
+    "timestamp" : "2025-05-09T16:33:16.997Z",
     "type" : 79
   }, {
     "label" : "com.vantiq.genai.TutorialIndex",
     "name" : "com.vantiq.genai.TutorialIndex",
     "resourceReference" : "/system.semanticindexes/com.vantiq.genai.TutorialIndex",
-    "timestamp" : "2024-10-15T18:32:42.699Z",
+    "timestamp" : "2025-05-09T16:33:16.999Z",
     "type" : 79
   }, {
     "label" : "com.vantiq.genai.TutorialService",
     "name" : "com.vantiq.genai.TutorialService",
     "resourceReference" : "/services/com.vantiq.genai.TutorialService",
-    "timestamp" : "2024-10-16T22:22:15.801Z",
+    "timestamp" : "2025-05-09T17:27:44.798Z",
     "type" : 63
   }, {
     "label" : "com.vantiq.genai.TutorialService.choosePrompt",
@@ -235,7 +310,7 @@
     "procedureName" : "choosePrompt",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.choosePrompt",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.306Z",
+    "timestamp" : "2025-05-09T16:33:31.307Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.configuredConversation",
@@ -244,15 +319,24 @@
     "procedureName" : "configuredConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.configuredConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.151Z",
+    "timestamp" : "2025-05-09T16:33:30.863Z",
     "type" : 3
   }, {
+    "label" : "com.vantiq.genai.TutorialService.contextualCompression",
     "name" : "com.vantiq.genai.TutorialService.contextualCompression",
     "packageName" : "com.vantiq.genai",
     "procedureName" : "contextualCompression",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.contextualCompression",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-16T22:22:14.671Z",
+    "timestamp" : "2025-05-09T16:33:29.647Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.genai.TutorialService.dialogRails",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "dialogRails",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.dialogRails",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2025-05-09T16:47:09.324Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.endConversation",
@@ -261,7 +345,7 @@
     "procedureName" : "endConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.endConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:43.823Z",
+    "timestamp" : "2025-05-09T16:33:25.757Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.getConversation",
@@ -270,13 +354,21 @@
     "procedureName" : "getConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.getConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:43.745Z",
+    "timestamp" : "2025-05-09T16:33:25.754Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.genai.TutorialService.inputRails",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "inputRails",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.inputRails",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2025-05-09T16:50:30.641Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.js",
     "name" : "com.vantiq.genai.TutorialService.js",
     "resourceReference" : "/documents/com.vantiq.genai.TutorialService.js",
-    "timestamp" : "2024-10-16T20:25:32.111Z",
+    "timestamp" : "2025-05-09T16:33:34.983Z",
     "type" : 19
   }, {
     "label" : "com.vantiq.genai.TutorialService.loadFromUrl",
@@ -285,7 +377,7 @@
     "procedureName" : "loadFromUrl",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.loadFromUrl",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.231Z",
+    "timestamp" : "2025-05-09T16:33:30.854Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.loadIndexContent",
@@ -294,7 +386,7 @@
     "procedureName" : "loadIndexContent",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.loadIndexContent",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:43.715Z",
+    "timestamp" : "2025-05-09T16:33:25.760Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.logLLMStream",
@@ -303,7 +395,23 @@
     "procedureName" : "logLLMStream",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.logLLMStream",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:43.976Z",
+    "timestamp" : "2025-05-09T16:33:25.754Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.genai.TutorialService.nemoActions",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "nemoActions",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.nemoActions",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2025-05-09T17:22:13.162Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.genai.TutorialService.outputRails",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "outputRails",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.outputRails",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2025-05-09T16:53:32.003Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.resetConversation",
@@ -312,7 +420,7 @@
     "procedureName" : "resetConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.resetConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:43.745Z",
+    "timestamp" : "2025-05-09T16:33:25.755Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.runtimeConfig",
@@ -321,7 +429,7 @@
     "procedureName" : "runtimeConfig",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.runtimeConfig",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.164Z",
+    "timestamp" : "2025-05-09T16:33:29.357Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.simpleConversation",
@@ -330,7 +438,7 @@
     "procedureName" : "simpleConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.simpleConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.188Z",
+    "timestamp" : "2025-05-09T16:33:30.568Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.simpleRag",
@@ -339,7 +447,15 @@
     "procedureName" : "simpleRag",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.simpleRag",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.176Z",
+    "timestamp" : "2025-05-09T16:33:30.515Z",
+    "type" : 3
+  }, {
+    "name" : "com.vantiq.genai.TutorialService.sportsOnly",
+    "packageName" : "com.vantiq.genai",
+    "procedureName" : "sportsOnly",
+    "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.sportsOnly",
+    "serviceName" : "TutorialService",
+    "timestamp" : "2025-05-09T16:35:40.695Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.startConversation",
@@ -348,7 +464,7 @@
     "procedureName" : "startConversation",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.startConversation",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:43.714Z",
+    "timestamp" : "2025-05-09T16:33:25.757Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.storeTutorialEntry",
@@ -357,7 +473,7 @@
     "procedureName" : "storeTutorialEntry",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.storeTutorialEntry",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.171Z",
+    "timestamp" : "2025-05-09T16:33:31.082Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.streamFromLLM",
@@ -366,7 +482,7 @@
     "procedureName" : "streamFromLLM",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.streamFromLLM",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.137Z",
+    "timestamp" : "2025-05-09T16:33:29.844Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.tellAJoke",
@@ -375,7 +491,7 @@
     "procedureName" : "tellAJoke",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.tellAJoke",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.130Z",
+    "timestamp" : "2025-05-09T16:33:30.282Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService.workedAtForte",
@@ -384,113 +500,176 @@
     "procedureName" : "workedAtForte",
     "resourceReference" : "/procedures/com.vantiq.genai.TutorialService.workedAtForte",
     "serviceName" : "TutorialService",
-    "timestamp" : "2024-10-15T18:32:44.132Z",
+    "timestamp" : "2025-05-09T16:33:30.219Z",
     "type" : 3
   }, {
     "label" : "com.vantiq.genai.TutorialService:choosePrompt",
     "name" : "com.vantiq.genai.TutorialService:choosePrompt",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:choosePrompt",
-    "timestamp" : "2024-10-15T18:32:44.828Z",
+    "timestamp" : "2025-05-09T16:33:32.424Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:configuredConversation",
     "name" : "com.vantiq.genai.TutorialService:configuredConversation",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:configuredConversation",
-    "timestamp" : "2024-10-15T18:32:45.005Z",
+    "timestamp" : "2025-05-09T16:33:32.410Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:contextualCompression",
     "name" : "com.vantiq.genai.TutorialService:contextualCompression",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:contextualCompression",
-    "timestamp" : "2024-10-16T22:22:15.039Z",
+    "timestamp" : "2025-05-09T16:33:33.776Z",
+    "type" : 81
+  }, {
+    "name" : "com.vantiq.genai.TutorialService:dialogRails",
+    "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:dialogRails",
+    "timestamp" : "2025-05-09T16:59:12.057Z",
+    "type" : 81
+  }, {
+    "name" : "com.vantiq.genai.TutorialService:inputRails",
+    "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:inputRails",
+    "timestamp" : "2025-05-09T16:59:11.804Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:loadFromUrl",
     "name" : "com.vantiq.genai.TutorialService:loadFromUrl",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:loadFromUrl",
-    "timestamp" : "2024-10-15T18:32:45.008Z",
+    "timestamp" : "2025-05-09T16:33:32.327Z",
+    "type" : 81
+  }, {
+    "name" : "com.vantiq.genai.TutorialService:nemoActions",
+    "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:nemoActions",
+    "timestamp" : "2025-05-09T17:27:41.425Z",
+    "type" : 81
+  }, {
+    "name" : "com.vantiq.genai.TutorialService:outputRails",
+    "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:outputRails",
+    "timestamp" : "2025-05-09T17:17:07.623Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:runtimeConfig",
     "name" : "com.vantiq.genai.TutorialService:runtimeConfig",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:runtimeConfig",
-    "timestamp" : "2024-10-15T18:32:44.965Z",
+    "timestamp" : "2025-05-09T16:33:32.115Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:simpleConversation",
     "name" : "com.vantiq.genai.TutorialService:simpleConversation",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:simpleConversation",
-    "timestamp" : "2024-10-15T18:32:44.944Z",
+    "timestamp" : "2025-05-09T16:33:32.419Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:simpleRag",
     "name" : "com.vantiq.genai.TutorialService:simpleRag",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:simpleRag",
-    "timestamp" : "2024-10-15T19:09:48.773Z",
+    "timestamp" : "2025-05-09T16:33:35.052Z",
+    "type" : 81
+  }, {
+    "name" : "com.vantiq.genai.TutorialService:sportsOnly",
+    "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:sportsOnly",
+    "timestamp" : "2025-05-09T16:59:12.249Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:storeTutorialEntry",
     "name" : "com.vantiq.genai.TutorialService:storeTutorialEntry",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:storeTutorialEntry",
-    "timestamp" : "2024-10-15T18:32:44.953Z",
+    "timestamp" : "2025-05-09T16:33:31.579Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:streamFromLLM",
     "name" : "com.vantiq.genai.TutorialService:streamFromLLM",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:streamFromLLM",
-    "timestamp" : "2024-10-15T18:32:44.933Z",
+    "timestamp" : "2025-05-09T16:33:32.019Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:tellAJoke",
     "name" : "com.vantiq.genai.TutorialService:tellAJoke",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:tellAJoke",
-    "timestamp" : "2024-10-15T18:32:45.260Z",
+    "timestamp" : "2025-05-09T16:33:32.276Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:workedAtForte",
     "name" : "com.vantiq.genai.TutorialService:workedAtForte",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:workedAtForte",
-    "timestamp" : "2024-10-15T18:32:44.948Z",
+    "timestamp" : "2025-05-09T16:33:32.426Z",
     "type" : 81
   }, {
     "label" : "com.vantiq.genai.TutorialService:workedAtForte",
     "name" : "com.vantiq.genai.TutorialService:workedAtForte",
     "resourceReference" : "/system.genaiflows/com.vantiq.genai.TutorialService:workedAtForte",
-    "timestamp" : "2024-10-15T18:32:44.948Z",
+    "timestamp" : "2025-05-09T16:33:32.426Z",
     "type" : 81
+  }, {
+    "name" : "nemo/actions.co",
+    "resourceReference" : "/documents/nemo/actions.co",
+    "timestamp" : "2025-05-09T17:27:30.435Z",
+    "type" : 19
+  }, {
+    "name" : "nemo/dialogRails.co",
+    "resourceReference" : "/documents/nemo/dialogRails.co",
+    "timestamp" : "2025-05-09T16:44:03.175Z",
+    "type" : 19
+  }, {
+    "name" : "nemo/inputRailPrompt.yml",
+    "resourceReference" : "/documents/nemo/inputRailPrompt.yml",
+    "timestamp" : "2025-05-09T16:50:16.177Z",
+    "type" : 19
+  }, {
+    "name" : "nemo/inputRails.co",
+    "resourceReference" : "/documents/nemo/inputRails.co",
+    "timestamp" : "2025-05-09T16:49:50.604Z",
+    "type" : 19
+  }, {
+    "name" : "nemo/outputRailPrompt.yml",
+    "resourceReference" : "/documents/nemo/outputRailPrompt.yml",
+    "timestamp" : "2025-05-09T16:53:22.118Z",
+    "type" : 19
+  }, {
+    "name" : "nemo/outputResponse.co",
+    "resourceReference" : "/documents/nemo/outputResponse.co",
+    "timestamp" : "2025-05-09T16:53:04.639Z",
+    "type" : 19
   }, {
     "label" : "promptWithHistory.txt",
     "name" : "promptWithHistory.txt",
     "resourceReference" : "/documents/promptWithHistory.txt",
-    "timestamp" : "2024-10-15T18:32:43.253Z",
+    "timestamp" : "2025-05-09T16:33:19.666Z",
     "type" : 19
   }, {
     "label" : "ragPrompt.txt",
     "name" : "ragPrompt.txt",
     "resourceReference" : "/documents/ragPrompt.txt",
-    "timestamp" : "2024-10-15T18:32:43.251Z",
+    "timestamp" : "2025-05-09T16:33:19.666Z",
     "type" : 19
   }, {
     "label" : "ragPromptBoolean.txt",
     "name" : "ragPromptBoolean.txt",
     "resourceReference" : "/documents/ragPromptBoolean.txt",
-    "timestamp" : "2024-10-15T18:32:43.250Z",
+    "timestamp" : "2025-05-09T16:33:19.667Z",
     "type" : 19
   }, {
     "label" : "ragPromptJson.txt",
     "name" : "ragPromptJson.txt",
     "resourceReference" : "/documents/ragPromptJson.txt",
-    "timestamp" : "2024-10-15T18:32:43.251Z",
+    "timestamp" : "2025-05-09T16:33:19.666Z",
     "type" : 19
   } ],
   "tools" : [ {
     "isPinned" : false,
     "name" : "Audits",
     "pane" : {
-      "address" : "RH[0]/L[4]"
+      "address" : "RH[0]/L[5]"
     },
     "state" : 8,
     "type" : 58
+  }, {
+    "isPinned" : false,
+    "name" : "Documents",
+    "pane" : {
+      "address" : "RH[0]/L[1]"
+    },
+    "state" : 8,
+    "type" : 26
   }, {
     "isPinned" : false,
     "name" : "Errors",
@@ -508,7 +687,7 @@
     "isPinned" : false,
     "name" : "Log Records Query",
     "pane" : {
-      "address" : "RH[0]/L[3]"
+      "address" : "RH[0]/L[4]"
     },
     "state" : 8,
     "type" : 18
@@ -529,7 +708,7 @@
     "isPinned" : false,
     "name" : "com.vantiq.genai.StateOfUnion",
     "pane" : {
-      "address" : "RH[0]/L[1]"
+      "address" : "RH[0]/L[2]"
     },
     "resourceKey" : "semanticindex/com.vantiq.genai.StateOfUnion",
     "state" : 8,
@@ -538,7 +717,7 @@
     "isPinned" : false,
     "name" : "com.vantiq.genai.TestLoadingIndex",
     "pane" : {
-      "address" : "RH[0]/L[2]"
+      "address" : "RH[0]/L[3]"
     },
     "resourceKey" : "semanticindex/com.vantiq.genai.TestLoadingIndex",
     "state" : 8,
@@ -547,7 +726,7 @@
     "isPinned" : false,
     "name" : "com.vantiq.genai.TutorialIndex",
     "pane" : {
-      "address" : "RH[0]/L[5]"
+      "address" : "RH[0]/L[6]"
     },
     "resourceKey" : "semanticindex/com.vantiq.genai.TutorialIndex",
     "state" : 8,
@@ -567,6 +746,6 @@
   "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "audits/Audits", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "logquery/Log Records Query", "list/Project Contents", "projectdescription/Project Description", "semanticindexeditor/com.vantiq.genai.StateOfUnion", "semanticindexeditor/com.vantiq.genai.TestLoadingIndex", "semanticindexeditor/com.vantiq.genai.TutorialIndex", "services/com.vantiq.genai.TutorialService" ]
+    "projectToolKeys" : [ "audits/Audits", "documents/Documents", "errorviewer/Errors", "tiledock/Inactive Panes", "logviewer/Log Messages", "logquery/Log Records Query", "list/Project Contents", "projectdescription/Project Description", "semanticindexeditor/com.vantiq.genai.StateOfUnion", "semanticindexeditor/com.vantiq.genai.TestLoadingIndex", "semanticindexeditor/com.vantiq.genai.TutorialIndex", "services/com.vantiq.genai.TutorialService" ]
   } ]
 }

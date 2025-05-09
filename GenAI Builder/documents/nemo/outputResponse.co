@@ -1,0 +1,3 @@
+# Note that if you use "self check input" this response will also be used there.
+define bot refuse to respond
+  "The bot responded in a rude manner. Please refine your request to avoid uncouth responses."

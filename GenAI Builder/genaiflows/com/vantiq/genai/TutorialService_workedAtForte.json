@@ -62,7 +62,10 @@
       "component": "io.vantiq.ai.components.SemanticIndex",
       "configuration": {
         "contentOnly": true,
-        "semanticIndex": "com.vantiq.genai.TutorialIndex"
+        "semanticIndex": {
+          "type": "semanticindexes",
+          "value": "com.vantiq.genai.TutorialIndex"
+        }
       },
       "enableAuditing": false,
       "children": [

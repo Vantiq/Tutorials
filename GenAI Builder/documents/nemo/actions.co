@@ -1,0 +1,26 @@
+# Respond with the current time when asked for it
+define flow ask time
+  user asks for time
+  # Run the subflow that retrieves the time and includes it in the response
+  do respond with time
+
+# A subflow is a reusable piece of code that can be added to any flow through "do <subflow name>". We don't actually
+# reuse the subflow in this example, but it more clearly connects the "time" variable and the "bot gives time" response
+# that requires that variable.
+define subflow respond with time
+  # If you use an action that requires parameters, you can specify them with:
+  # execute MyAction(param1=$var, param2="constant")
+  # Running an action using an action server is no different than running a local action.
+  #  
+  # Runs the "GetCurrentDateTimeAction" and stores it in the "time" variable. Note that it gets it in the server's
+  # current time zone, which may not be the same as the user.
+  $time = execute GetCurrentDateTimeAction
+  bot gives time
+
+define user asks for time
+  "What time is it?"
+  "What day is it?"
+
+define bot gives time
+  # Since it uses the variable "time", it must be set earlier in the flow
+  "The current time is {{ time }}"

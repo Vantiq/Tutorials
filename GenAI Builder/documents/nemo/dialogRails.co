@@ -1,0 +1,61 @@
+# ------ DIALOG RAILS ------
+# The flows that tell NeMo how to respond based on the user's topic
+
+# The flow that tells NeMo to greet the user back when the user sends a greeting
+define flow greeting
+  # The first line should always be "user <x>". This tells NeMo what to look for when triggering this flow.
+  # You'll need to define what <x> actually means later on.
+  user express greeting
+  # Then, you should specify what the bot does. You can use "define bot <x>" give it pre-defined responses, or let the
+  # LLM figure out a response. We define these two bot actions, so it will be canned responses.
+  bot express greeting
+  bot ask how are you
+
+# The flow that tells NeMo to reject questions about food.
+define flow reject food
+  user asks about food
+  bot refuse to respond about food
+
+# The flow that tells NeMo to act excited when the user asks about sports.
+# There is no definition for "bot answer question about sports", so rather than a canned response NeMo will use
+# the generativeLlm to generate the response.
+define flow sports
+  user asks about sports
+  # Because the following comment is immediately before the "bot <x>", it will be added to the request prompt, thus 
+  # affecting the response.
+  #
+  # Respond in a very excited manner
+  bot answer question about sports
+
+# ------ USER EXAMPLES ------
+# The section to provide examples for different user messages
+
+# Examples for what "user express greeting" looks like. More examples means improved accuracy.
+define user express greeting
+  "Hello"
+  "Hi"
+  "What's up?"
+
+# Example questions about sports
+define user asks about sports
+  "What are the rules of hockey?"
+  "Who won the last Super Bowl?"
+  "Who's the best player on the Yankees?"
+  "What's the best cricket team?"
+
+# Example questions about food
+define user asks about food
+  "What's your favorite meal?"
+  "How do I make a souffle?"
+
+# ------ BOT RESPONSES ------
+# Pre-defined bot responses. If a "bot <x>" action has no definition here, the LLM is used to generate a response.
+
+# Defines what a "bot greeting" looks like. Since it's a set of canned responses, one will be chosen at random
+define bot express greeting
+  "Hello there!"
+  "Nice to meet you!"
+
+# Another canned response for the bot
+define bot ask how are you
+  "How are you doing?"
