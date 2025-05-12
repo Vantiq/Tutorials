@@ -1,0 +1,57 @@
+{
+  "name": "dialogRails",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.guardrails": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 4.18782998739767,
+      "translate": [
+        407.5,
+        136.10447459042427
+      ],
+      "lastZoomRequest": 0,
+      "positions": {
+        "dialogRails": {
+          "x": 0,
+          "y": 80
+        },
+        "question": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "com.vantiq.genai.TutorialService",
+  "assembly": {
+    "question": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "dialogRails"
+      ]
+    },
+    "dialogRails": {
+      "component": "io.vantiq.ai.components.NeMoGuardrails",
+      "configuration": {
+        "generativeLlm": "GPT_LLM",
+        "embeddingsLlm": "SentenceTransformer",
+        "colang": "nemo/dialogRails.co",
+        "yamlConfig": null,
+        "inputRails": null,
+        "outputRails": null,
+        "customModels": null,
+        "actionsServer": null
+      },
+      "enableAuditing": false,
+      "children": []
+    }
+  }
+}

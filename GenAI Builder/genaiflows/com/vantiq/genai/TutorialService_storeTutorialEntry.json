@@ -58,7 +58,10 @@
     "AddToTutorialIndex": {
       "component": "io.vantiq.ai.components.SemanticIndexStore",
       "configuration": {
-        "semanticIndex": "com.vantiq.genai.TutorialIndex"
+        "semanticIndex": {
+          "type": "semanticindexes",
+          "value": "com.vantiq.genai.TutorialIndex"
+        }
       },
       "enableAuditing": false,
       "children": []
