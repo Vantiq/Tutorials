@@ -1,0 +1,24 @@
+package example.oip
+
+stateless PROCEDURE InferService.dotProduct()
+
+var payload = {
+    inputs: [
+        {
+          name: "first_input",
+          shape: [3, 1],             
+          datatype: "FP64",
+          data: [ [1.5], [0.2], [3.0] ]
+        },
+        {
+          name: "second_input",
+          shape: [1, 3],             
+          datatype: "FP64",
+          data: [ [4.0, 2.5, 5.0] ]
+        }
+    ]
+}
+
+var response = select one FROM source TritonServer with path = "/v2/models/dot_product/infer", 
+                                                        method = "POST", body = payload
+return response

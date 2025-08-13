@@ -1,0 +1,47 @@
+package example.oip
+
+stateless PROCEDURE InferService.reverseImage(imageName String)
+
+var content = Utils.packageReference("documents/" + imageName)
+
+var payload = {
+    inputs: [
+        {
+          name: "image",
+          shape: [1],             
+          datatype: "BYTES",
+          data: [ content ]
+        },
+        {
+          name: "title",
+          shape: [1],             
+          datatype: "BYTES",
+          data: [ imageName ],
+          parameters : { vantiq_binary_data : false }
+        }
+    ],
+    outputs: [
+        {
+          name: "output_image",
+          parameters : { binary_data: true }
+        },
+        {
+          name: "output_title",
+          parameters : { binary_data: false }
+        }
+    ]
+}
+
+// Invoke the inference endpoint
+var result = select one FROM source TritonServer with path = "/v2/models/reverse_image/infer", 
+                                                   method = "POST", body = payload
+
+// A reference to the reversed image, as a TempBlob resource
+var outImage = result.outputs[0].data[0]
+// The reversed title string
+var revImageName = result.outputs[1].data[0]
+
+// Save the received reversed image from the model, using the reversed name
+upsert system.documents(name: revImageName, fromTemp: outImage.contentRef, fileType: "image/jpg")
+
+return result

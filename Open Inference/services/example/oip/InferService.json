@@ -1,0 +1,43 @@
+{
+  "name" : "example.oip.InferService",
+  "isAgent" : false,
+  "interface" : [ {
+    "name" : "isServerReady",
+    "parameters" : [ ]
+  }, {
+    "name" : "dotProduct",
+    "parameters" : [ ]
+  }, {
+    "name" : "reverseImage",
+    "parameters" : [ {
+      "name" : "imageName",
+      "type" : "String",
+      "multi" : false,
+      "required" : false,
+      "description" : null
+    } ]
+  }, {
+    "name" : "classifyImage",
+    "parameters" : [ {
+      "name" : "imageName",
+      "type" : "String",
+      "multi" : false,
+      "required" : false,
+      "description" : null
+    } ]
+  } ],
+  "active" : true,
+  "replicationFactor" : 1,
+  "ars_properties" : {
+    "filterPublicGenerated" : false,
+    "filterPrivateGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "internalEventHandlers" : [ ],
+  "partitionedType" : null,
+  "scheduledProcedures" : { },
+  "ars_relationships" : [ ]
+}
