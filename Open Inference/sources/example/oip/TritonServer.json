@@ -1,24 +1,24 @@
 {
-  "name" : "example.oip.TritonServer",
-  "type" : "REMOTE",
-  "active" : true,
   "activationConstraint" : "",
-  "messageType" : null,
+  "active" : true,
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
   "autoUnwind" : false,
   "config" : {
+    "oauthContentType" : "application/x-www-form-urlencoded",
+    "oauthGrantType" : "client_credentials",
+    "oauthUseBasicAuth" : false,
     "passwordType" : "string",
     "pollingInterval" : 0,
-    "uri" : "http://host_IP:18000",
+    "query" : { },
     "requestDefaults" : {
       "openInference" : true
     },
-    "query" : { },
-    "oauthGrantType" : "client_credentials",
-    "oauthContentType" : "application/x-www-form-urlencoded",
-    "oauthUseBasicAuth" : false
+    "uri" : "http://host_IP:18000"
   },
-  "mockProcedures" : { },
-  "ars_properties" : null,
   "isUnavailable" : false,
-  "ars_relationships" : [ ]
+  "messageType" : null,
+  "mockProcedures" : { },
+  "name" : "example.oip.TritonServer",
+  "type" : "REMOTE"
 }

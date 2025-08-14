@@ -1,6 +1,14 @@
 {
-  "name" : "example.oip.InferService",
-  "isAgent" : false,
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
   "interface" : [ {
     "name" : "isServerReady",
     "parameters" : [ ]
@@ -10,34 +18,26 @@
   }, {
     "name" : "reverseImage",
     "parameters" : [ {
-      "name" : "imageName",
-      "type" : "String",
+      "description" : null,
       "multi" : false,
+      "name" : "imageName",
       "required" : false,
-      "description" : null
+      "type" : "String"
     } ]
   }, {
     "name" : "classifyImage",
     "parameters" : [ {
-      "name" : "imageName",
-      "type" : "String",
+      "description" : null,
       "multi" : false,
+      "name" : "imageName",
       "required" : false,
-      "description" : null
+      "type" : "String"
     } ]
   } ],
-  "active" : true,
-  "replicationFactor" : 1,
-  "ars_properties" : {
-    "filterPublicGenerated" : false,
-    "filterPrivateGenerated" : false,
-    "fragmentList" : [ ]
-  },
-  "description" : null,
-  "eventTypes" : { },
-  "globalType" : null,
   "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "example.oip.InferService",
   "partitionedType" : null,
-  "scheduledProcedures" : { },
-  "ars_relationships" : [ ]
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
 }

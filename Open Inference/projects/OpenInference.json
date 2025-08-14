@@ -1,90 +1,5 @@
 {
-  "name" : "OpenInference",
-  "options" : {
-    "v" : 6,
-    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
-    "showGrid" : true,
-    "isModeloProject" : true,
-    "description" : "",
-    "dockDimensions" : {
-      "right" : 220,
-      "bottom" : 200,
-      "left" : 351,
-      "viewtabs" : 0,
-      "top" : 0,
-      "debug" : [ 0, 0, 0 ]
-    },
-    "openFolders" : [ "example.oip" ],
-    "viewUUID" : "MAINVIEW",
-    "rootViewFlavor" : 5,
-    "type" : "dev",
-    "dockCollapsed" : {
-      "right" : false,
-      "bottom" : true,
-      "left" : false,
-      "viewtabs" : false,
-      "top" : false
-    },
-    "layoutStyle" : "flex",
-    "structure" : {
-      "fraction" : 1,
-      "type" : "R[1]"
-    },
-    "partitionsSettings" : { }
-  },
-  "type" : "dev",
-  "resources" : [ {
-    "name" : "example.oip.InferService",
-    "type" : 63,
-    "resourceReference" : "/services/example.oip.InferService",
-    "timestamp" : "2025-08-13T15:42:41.960Z"
-  }, {
-    "name" : "example.oip.InferService.classifyImage",
-    "type" : 3,
-    "resourceReference" : "/procedures/example.oip.InferService.classifyImage",
-    "packageName" : "example.oip",
-    "serviceName" : "InferService",
-    "procedureName" : "classifyImage",
-    "label" : "example.oip.InferService.classifyImage",
-    "timestamp" : "2025-08-13T15:42:37.550Z"
-  }, {
-    "name" : "example.oip.InferService.dotProduct",
-    "type" : 3,
-    "resourceReference" : "/procedures/example.oip.InferService.dotProduct",
-    "packageName" : "example.oip",
-    "serviceName" : "InferService",
-    "procedureName" : "dotProduct",
-    "label" : "example.oip.InferService.dotProduct",
-    "timestamp" : "2025-08-13T14:55:50.885Z"
-  }, {
-    "name" : "example.oip.InferService.isServerReady",
-    "type" : 3,
-    "resourceReference" : "/procedures/example.oip.InferService.isServerReady",
-    "packageName" : "example.oip",
-    "serviceName" : "InferService",
-    "procedureName" : "isServerReady",
-    "label" : "example.oip.InferService.isServerReady",
-    "timestamp" : "2025-08-13T14:34:40.486Z"
-  }, {
-    "name" : "example.oip.InferService.js",
-    "type" : 19,
-    "resourceReference" : "/documents/example.oip.InferService.js",
-    "timestamp" : "2025-08-13T14:34:25.380Z"
-  }, {
-    "name" : "example.oip.InferService.reverseImage",
-    "type" : 3,
-    "resourceReference" : "/procedures/example.oip.InferService.reverseImage",
-    "packageName" : "example.oip",
-    "serviceName" : "InferService",
-    "procedureName" : "reverseImage",
-    "label" : "example.oip.InferService.reverseImage",
-    "timestamp" : "2025-08-13T15:08:22.235Z"
-  }, {
-    "name" : "example.oip.TritonServer",
-    "type" : 4,
-    "resourceReference" : "/sources/example.oip.TritonServer",
-    "timestamp" : "2025-08-13T16:13:33.633Z"
-  } ],
+  "ars_relationships" : [ ],
   "links" : [ {
     "source" : "services/example.oip.InferService",
     "target" : "document/example.oip.InferService.js"
@@ -125,35 +40,158 @@
     "source" : "procedure/example.oip.InferService.classifyImage",
     "target" : "source/example.oip.TritonServer"
   } ],
-  "tools" : [ {
-    "name" : "Errors",
-    "type" : 13,
-    "isPinned" : false
+  "name" : "OpenInference",
+  "options" : {
+    "description" : "This project contains the service, source and supporting resources created during the [Open Inference Tutorial](/docs/system/tutorials/openinference/index.html). It demonstrates how to use a Remote source to connect to AI models hosted on an inference server that supports the [Open Inference Protocol](/docs/system/openinference/index.html).\n\nBefore invoking any `InferService` procedure, you must adjust the `TritonServer` source URI, replacing the URI `host_IP` with the IP address of the machine running the Triton Inference Server.\n\nThe resource document `model_repository.zip` contains the tutorial model definitions. It should be extracted into your *tutorial directory*. Note that the Vision Transformer (ViT) ONNX model is not included in the zip file. You still need to download this model as instructed in the tutorial.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 351,
+      "right" : 220,
+      "top" : 0,
+      "viewtabs" : 0
+    },
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "flex",
+    "openFolders" : [ "document", "example.oip", "example.oip/services", "example.oip/source" ],
+    "partitionsSettings" : { },
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "structure" : {
+      "fraction" : 1,
+      "groups" : [ {
+        "fraction" : 0.5933862047477844,
+        "type" : "L[2]"
+      }, {
+        "fraction" : 0.40661379525221564,
+        "type" : "L[1]"
+      } ],
+      "type" : "RH"
+    },
+    "type" : "dev",
+    "v" : 6,
+    "viewUUID" : "MAINVIEW"
+  },
+  "partitions" : [ ],
+  "resources" : [ {
+    "name" : "cat.jpg",
+    "resourceReference" : "/documents/cat.jpg",
+    "timestamp" : "2025-08-14T03:42:49.736Z",
+    "type" : 19
   }, {
-    "name" : "Inactive Panes",
-    "type" : 99,
-    "isPinned" : false,
-    "dockLocation" : "top"
-  }, {
-    "name" : "Project Contents",
-    "type" : 2,
-    "isPinned" : false
-  }, {
+    "label" : "example.oip.InferService",
     "name" : "example.oip.InferService",
-    "type" : 109,
+    "resourceReference" : "/services/example.oip.InferService",
+    "timestamp" : "2025-08-14T03:42:49.760Z",
+    "type" : 63
+  }, {
+    "label" : "example.oip.InferService.classifyImage",
+    "name" : "example.oip.InferService.classifyImage",
+    "packageName" : "example.oip",
+    "procedureName" : "classifyImage",
+    "resourceReference" : "/procedures/example.oip.InferService.classifyImage",
+    "serviceName" : "InferService",
+    "timestamp" : "2025-08-14T03:42:49.914Z",
+    "type" : 3
+  }, {
+    "label" : "example.oip.InferService.dotProduct",
+    "name" : "example.oip.InferService.dotProduct",
+    "packageName" : "example.oip",
+    "procedureName" : "dotProduct",
+    "resourceReference" : "/procedures/example.oip.InferService.dotProduct",
+    "serviceName" : "InferService",
+    "timestamp" : "2025-08-14T03:42:49.914Z",
+    "type" : 3
+  }, {
+    "label" : "example.oip.InferService.isServerReady",
+    "name" : "example.oip.InferService.isServerReady",
+    "packageName" : "example.oip",
+    "procedureName" : "isServerReady",
+    "resourceReference" : "/procedures/example.oip.InferService.isServerReady",
+    "serviceName" : "InferService",
+    "timestamp" : "2025-08-14T03:42:49.914Z",
+    "type" : 3
+  }, {
+    "label" : "example.oip.InferService.js",
+    "name" : "example.oip.InferService.js",
+    "resourceReference" : "/documents/example.oip.InferService.js",
+    "timestamp" : "2025-08-14T03:42:49.868Z",
+    "type" : 19
+  }, {
+    "label" : "example.oip.InferService.reverseImage",
+    "name" : "example.oip.InferService.reverseImage",
+    "packageName" : "example.oip",
+    "procedureName" : "reverseImage",
+    "resourceReference" : "/procedures/example.oip.InferService.reverseImage",
+    "serviceName" : "InferService",
+    "timestamp" : "2025-08-14T03:42:49.916Z",
+    "type" : 3
+  }, {
+    "label" : "example.oip.TritonServer",
+    "name" : "example.oip.TritonServer",
+    "resourceReference" : "/sources/example.oip.TritonServer",
+    "timestamp" : "2025-08-14T03:42:49.599Z",
+    "type" : 4
+  }, {
+    "name" : "model_repository.zip",
+    "resourceReference" : "/documents/model_repository.zip",
+    "timestamp" : "2025-08-14T03:42:49.736Z",
+    "type" : 19
+  } ],
+  "tools" : [ {
     "isPinned" : false,
-    "resourceKey" : "services/example.oip.InferService",
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
     "pane" : {
-      "address" : "R[0]",
+      "address" : "RH[1]/L[0]",
       "isActive" : true,
       "isActiveTool" : true
     },
-    "state" : 8
+    "state" : 8,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "example.oip.InferService",
+    "pane" : {
+      "address" : "RH[0]/L[0]",
+      "isActive" : true
+    },
+    "resourceKey" : "services/example.oip.InferService",
+    "state" : 8,
+    "type" : 109
+  }, {
+    "isPinned" : false,
+    "name" : "example.oip.TritonServer",
+    "pane" : {
+      "address" : "RH[0]/L[1]"
+    },
+    "resourceKey" : "source/example.oip.TritonServer",
+    "state" : 8,
+    "type" : 5
   } ],
+  "type" : "dev",
   "views" : [ {
     "name" : "Project Contents",
-    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "services/example.oip.InferService" ]
-  } ],
-  "partitions" : [ ],
-  "ars_relationships" : [ ]
+    "projectToolKeys" : [ "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "services/example.oip.InferService", "subsourceeditor/example.oip.TritonServer" ]
+  } ]
 }
