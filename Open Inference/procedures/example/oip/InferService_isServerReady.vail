@@ -1,0 +1,7 @@
+package example.oip
+
+stateless PROCEDURE InferService.isServerReady()
+
+var status = select one FROM source TritonServer with path = "/v2/health/ready", method = "GET", asFullResponse = true
+
+return (status && status.status == 200)

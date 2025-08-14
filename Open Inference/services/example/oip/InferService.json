@@ -1,0 +1,43 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "isServerReady",
+    "parameters" : [ ]
+  }, {
+    "name" : "dotProduct",
+    "parameters" : [ ]
+  }, {
+    "name" : "reverseImage",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "imageName",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "classifyImage",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "imageName",
+      "required" : false,
+      "type" : "String"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "example.oip.InferService",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

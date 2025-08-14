@@ -1,0 +1,22 @@
+package example.oip
+
+stateless PROCEDURE InferService.classifyImage(imageName String)
+
+var content = Utils.packageReference("documents/" + imageName)
+
+var payload = {
+    inputs: [
+    {
+      "name": "RAW_IMAGE",
+      "shape": [1],             
+      "datatype": "BYTES",
+      "data": [ content ]
+    }
+  ]
+}
+
+var result = select one FROM source TritonServer with path = "/v2/models/vit_pipeline/infer", 
+                                                   method = "POST", body = payload
+
+var classifyOutput = result.outputs[0].data[0]
+return parse(classifyOutput)
