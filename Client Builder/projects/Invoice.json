@@ -8,6 +8,7 @@
     "description" : "The Invoice Tutorial demonstrates how to create a simple client for submitting and tracking invoices.\n\nIf you're seeing this, the project has been successfully imported and the client should be running below. Try submitting an invoice by filling out the Amount, Description, First and Last Name fields and clicking Submit.\n\nThis should trigger a popup indicating the invoice was submitted successfully. Wait a few seconds and you should see the invoice show up in the table to the right of the form, and the gauge should be updated to show the amount submitted in the invoice. \n\nTo see how the client was implemented, pause the client using the rounded square button on the Invoice Client title bar.",
     "filterBitArray" : "ffffffffffffffffffffffffffffffff",
     "isModeloProject" : true,
+    "layoutStyle" : "custom",
     "showGrid" : true,
     "v" : 2
   },
