@@ -1,0 +1,6 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.temp.TemperatureMonitorService.PartitionedState",
+  "properties" : { },
+  "role" : "schema"
+}

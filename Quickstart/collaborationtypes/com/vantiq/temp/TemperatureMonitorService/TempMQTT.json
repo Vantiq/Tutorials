@@ -1,0 +1,52 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "isHidden" : false
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "FromTempMQTT" : {
+      "configuration" : {
+        "childStreams" : [ "ThresholdCrossed" ],
+        "inboundResource" : "sources",
+        "inboundResourceId" : "com.vantiq.temp.TempMQTT",
+        "parentStreams" : [ ]
+      },
+      "description" : "Ingest temperature events from the TempMQTT MQTT source.",
+      "name" : "FromTempMQTT",
+      "pattern" : "EventStream",
+      "patternVersion" : 5
+    },
+    "NotifyMaintenance" : {
+      "configuration" : {
+        "body" : "\"Temperature reading of \" + event.temperature + \" degrees has crossed the 200 degree threshold.\"",
+        "clientName" : "com.vantiq.temp.Maintenance",
+        "parentStreams" : [ "ThresholdCrossed" ],
+        "title" : "\"Temperature Alert\"",
+        "users" : "[\"maintenance\"]"
+      },
+      "description" : "Sends a push notification to the 'maintenance' user via the Maintenance client.",
+      "name" : "NotifyMaintenance",
+      "pattern" : "Notify",
+      "patternVersion" : 8
+    },
+    "ThresholdCrossed" : {
+      "configuration" : {
+        "childStreams" : [ "NotifyMaintenance" ],
+        "condition" : "event.temperature > 200",
+        "direction" : "true",
+        "initializeCondition" : "false",
+        "parentStreams" : [ "FromTempMQTT" ]
+      },
+      "description" : "Fires when the temperature reading crosses above the 200 degree threshold between consecutive events.",
+      "name" : "ThresholdCrossed",
+      "pattern" : "Threshold",
+      "patternVersion" : 6
+    }
+  },
+  "description" : "Receives temperature events from the TempMQTT MQTT source, detects when a reading crosses the 200 degree threshold, and notifies the 'maintenance' user via the Maintenance client.",
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "name" : "com.vantiq.temp.TemperatureMonitorService.TempMQTT"
+}
