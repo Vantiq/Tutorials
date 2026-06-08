@@ -9,8 +9,7 @@
     "dataStream" : { },
     "page" : {
       "Start" : {
-        "onClientStart" : "RELOCATED to controllers/page/Start/onClientStart.js",
-        "widgets" : { }
+        "onClientStart" : "RELOCATED to controllers/page/Start/onClientStart.js"
       }
     }
   },

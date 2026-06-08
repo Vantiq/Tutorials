@@ -59,7 +59,7 @@
       "column" : 0,
       "fontSize" : "48px",
       "foregroundColor" : "#ff9800",
-      "glyphIcon" : "warning",
+      "glyphIcon" : "glyphicon-warning-sign",
       "heightPolicy" : "naturalSize",
       "horzGravity" : "center",
       "name" : "alertIcon",
