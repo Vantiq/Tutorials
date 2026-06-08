@@ -1,0 +1,25 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "com.vantiq.temp.Temperature",
+  "properties" : {
+    "sensorId" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String"
+    },
+    "temperature" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Real"
+    },
+    "timestamp" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "DateTime"
+    }
+  },
+  "role" : "schema"
+}

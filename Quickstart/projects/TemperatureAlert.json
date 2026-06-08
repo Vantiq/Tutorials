@@ -1,0 +1,654 @@
+{
+  "ars_relationships" : [ ],
+  "links" : [ {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetCached",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetCached"
+  }, {
+    "source" : "designmodel/com.vantiq.temp.TemperatureAlertApp",
+    "target" : "client/com.vantiq.temp.Maintenance"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsReset"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.CollabIdsByEntityStoreId"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetActive"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetEntity"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGenerateId"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetAll"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnLoad"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetConversation"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetConversation"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "app/com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "document/com.vantiq.temp.TemperatureMonitorService.js"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "type/com.vantiq.temp.TemperatureMonitorService.PartitionedState"
+  }, {
+    "source" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "target" : "type/com.vantiq.temp.TemperatureMonitorService.GlobalState"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetConversation",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetConversation",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetAll",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetEntity",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsMarkAsClosing"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetEntity"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGenerateId"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "app/com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT"
+  }, {
+    "source" : "app/com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT"
+  }, {
+    "source" : "app/com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "source/com.vantiq.temp.TempMQTT",
+    "target" : "app/com.vantiq.temp.TemperatureMonitorService.TempMQTT"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnLoad"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsMarkAsClosing",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "source/com.vantiq.temp.TempMQTT",
+    "target" : "type/com.vantiq.temp.Temperature"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsReset",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT",
+    "target" : "topic//com.vantiq.temp.TemperatureMonitorService.TempMQTT/tasks/ThresholdCrossed/reset"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetActive",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetCached"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetActive",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnLoad",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetConversation",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetConversation",
+    "target" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGenerateId",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  }, {
+    "source" : "procedure/com.vantiq.temp.TemperatureMonitorService.CollabIdsByEntityStoreId",
+    "target" : "services/com.vantiq.temp.TemperatureMonitorService"
+  } ],
+  "name" : "TemperatureAlert",
+  "options" : {
+    "description" : "The Quickstart Tutorial demonstrates the Design Modeler, a visual IDE tool for building Vantiq systems. It uses Claude Code, a Generative AI product that allows the user to enter a text description of the system to be built then turns that description into the beginnings of the running application.\n\n**Please note**: the temperature sensor data is read from a public MQTT Source that is disabled by default in this Project. Use the Active Resource Control Center (seen below) to activate the *com.vantiq.temp.TempMQTT* Source by clicking its **Active** slider. Also, note that the *users* setting in the NotifyMaintenance task has been updated to use *Context.username()* so that it will work with your username in the Vantiq mobile app.",
+    "dockCollapsed" : {
+      "bottom" : true,
+      "left" : false,
+      "right" : false,
+      "top" : false,
+      "via" : true,
+      "viewtabs" : false
+    },
+    "dockDimensions" : {
+      "bottom" : 200,
+      "debug" : [ 0, 0, 0 ],
+      "left" : 210,
+      "right" : 220,
+      "top" : 0,
+      "via" : 450,
+      "viewtabs" : 0
+    },
+    "exclusionList" : [ "topic//com.vantiq.temp.TemperatureEventService.MqttTemperatureReceived/tasks/CheckThreshold/reset" ],
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "flex",
+    "openFolders" : [ "com.vantiq.temp/client", "com.vantiq.temp/designmodel", "com.vantiq.temp/services", "com.vantiq.temp/source" ],
+    "partitionsSettings" : { },
+    "rootViewFlavor" : 5,
+    "showGrid" : true,
+    "structure" : {
+      "fraction" : 1,
+      "groups" : [ {
+        "fraction" : 0.5,
+        "groups" : [ {
+          "fraction" : 0.5,
+          "type" : "L[1]"
+        }, {
+          "fraction" : 0.5,
+          "type" : "L[1]"
+        } ],
+        "type" : "DV"
+      }, {
+        "fraction" : 0.5,
+        "groups" : [ {
+          "fraction" : 0.5,
+          "type" : "L[2]"
+        }, {
+          "fraction" : 0.5,
+          "type" : "L[1]"
+        } ],
+        "type" : "DV"
+      } ],
+      "type" : "RH"
+    },
+    "type" : "dev",
+    "v" : 6,
+    "viewUUID" : "MAINVIEW"
+  },
+  "partitions" : [ ],
+  "resources" : [ {
+    "label" : "/com.vantiq.temp.TemperatureMonitorService.TempMQTT/tasks/ThresholdCrossed/reset",
+    "name" : "/com.vantiq.temp.TemperatureMonitorService.TempMQTT/tasks/ThresholdCrossed/reset",
+    "resourceReference" : "/topics//com.vantiq.temp.TemperatureMonitorService.TempMQTT/tasks/ThresholdCrossed/reset",
+    "type" : 10
+  }, {
+    "label" : "com.vantiq.temp.Maintenance",
+    "name" : "com.vantiq.temp.Maintenance",
+    "resourceReference" : "/system.clients/com.vantiq.temp.Maintenance",
+    "timestamp" : "2026-06-08T22:53:32.361Z",
+    "type" : 15
+  }, {
+    "label" : "com.vantiq.temp.TempMQTT",
+    "name" : "com.vantiq.temp.TempMQTT",
+    "resourceReference" : "/sources/com.vantiq.temp.TempMQTT",
+    "timestamp" : "2026-06-08T22:40:19.132Z",
+    "type" : 4
+  }, {
+    "label" : "com.vantiq.temp.Temperature",
+    "name" : "com.vantiq.temp.Temperature",
+    "resourceReference" : "/types/com.vantiq.temp.Temperature",
+    "timestamp" : "2026-06-08T22:40:18.001Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.temp.TemperatureAlertApp",
+    "name" : "com.vantiq.temp.TemperatureAlertApp",
+    "resourceReference" : "/system.designmodels/com.vantiq.temp.TemperatureAlertApp",
+    "timestamp" : "2026-06-08T22:40:18.114Z",
+    "type" : 75
+  }, {
+    "label" : "com.vantiq.temp.TemperatureMonitorService",
+    "name" : "com.vantiq.temp.TemperatureMonitorService",
+    "resourceReference" : "/services/com.vantiq.temp.TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:23.212Z",
+    "type" : 63
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsCloseAll",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsCloseAll",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:21.687Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGenerateId",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGenerateId",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGenerateId",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGenerateId",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:23.838Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetActive",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetActive",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetActive",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetActive",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:23.148Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetAll",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetAll",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetAll",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetAll",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:20.522Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetByEntityId",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetByEntityId",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:22.298Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetById",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetById",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:20.213Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetCached",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetCached",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetCached",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetCached",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:22.659Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetConversation",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetConversation",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetConversation",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetConversation",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:23.950Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetOrCreate",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreate",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:22.035Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsGetOrCreateForEntity",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsGetOrCreateForEntity",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:22.420Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsMarkAsClosing",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsMarkAsClosing",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsMarkAsClosing",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsMarkAsClosing",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:21.520Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsOnClose",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnClose",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:19.760Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnLoad",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnLoad",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsOnLoad",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnLoad",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:20.089Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsOnStore",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsOnStore",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:19.957Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsReset",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsReset",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsReset",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsReset",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:20.659Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetConversation",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetConversation",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsSetConversation",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetConversation",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:24.049Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetEntity",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetEntity",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsSetEntity",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsSetEntity",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:22.166Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsStartConversation",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsStartConversation",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:23.704Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsUpdateNotifyMaintenance_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateNotifyMaintenance_TempMQTT",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:24.507Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsUpdateStatus",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsUpdateStatus",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:20.757Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ActiveCollabsWriteAll",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ActiveCollabsWriteAll",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:21.146Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.CollabIdsByEntityStoreId",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.CollabIdsByEntityStoreId",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "CollabIdsByEntityStoreId",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.CollabIdsByEntityStoreId",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:22.554Z",
+    "type" : 3
+  }, {
+    "label" : "com.vantiq.temp.TemperatureMonitorService.GlobalState",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.GlobalState",
+    "resourceReference" : "/types/com.vantiq.temp.TemperatureMonitorService.GlobalState",
+    "timestamp" : "2026-06-08T22:40:24.309Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.temp.TemperatureMonitorService.PartitionedState",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.PartitionedState",
+    "resourceReference" : "/types/com.vantiq.temp.TemperatureMonitorService.PartitionedState",
+    "timestamp" : "2026-06-08T22:40:19.633Z",
+    "type" : 1
+  }, {
+    "label" : "com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "resourceReference" : "/collaborationtypes/com.vantiq.temp.TemperatureMonitorService.TempMQTT",
+    "timestamp" : "2026-06-08T22:40:19.547Z",
+    "type" : 12
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT",
+    "packageName" : "com.vantiq.temp",
+    "procedureName" : "ThresholdCrossedStateThresholdCrossed_TempMQTT",
+    "resourceReference" : "/procedures/com.vantiq.temp.TemperatureMonitorService.ThresholdCrossedStateThresholdCrossed_TempMQTT",
+    "serviceName" : "TemperatureMonitorService",
+    "timestamp" : "2026-06-08T22:40:24.532Z",
+    "type" : 3
+  }, {
+    "isGenerated" : true,
+    "label" : "com.vantiq.temp.TemperatureMonitorService.js",
+    "name" : "com.vantiq.temp.TemperatureMonitorService.js",
+    "resourceReference" : "/documents/com.vantiq.temp.TemperatureMonitorService.js",
+    "timestamp" : "2026-06-08T22:40:27.433Z",
+    "type" : 19
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Active Resource Control Center",
+    "pane" : {
+      "address" : "RH[0]/DV[1]/L[0]",
+      "isActive" : true
+    },
+    "state" : 8,
+    "type" : 122
+  }, {
+    "isPinned" : false,
+    "name" : "Errors",
+    "type" : 13
+  }, {
+    "dockLocation" : "top",
+    "isPinned" : false,
+    "name" : "Inactive Panes",
+    "type" : 99
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Project Description",
+    "pane" : {
+      "address" : "RH[0]/DV[0]/L[0]",
+      "isActive" : true
+    },
+    "state" : 8,
+    "type" : 82
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.temp.Maintenance",
+    "pane" : {
+      "address" : "RH[1]/DV[0]/L[1]"
+    },
+    "resourceKey" : "client/com.vantiq.temp.Maintenance",
+    "state" : 8,
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.temp.TemperatureAlertApp",
+    "pane" : {
+      "address" : "RH[1]/DV[0]/L[0]",
+      "isActive" : true,
+      "isActiveTool" : true
+    },
+    "resourceKey" : "designmodel/com.vantiq.temp.TemperatureAlertApp",
+    "state" : 8,
+    "type" : 121
+  }, {
+    "isPinned" : false,
+    "name" : "com.vantiq.temp.TemperatureMonitorService",
+    "pane" : {
+      "address" : "RH[1]/DV[1]/L[0]",
+      "isActive" : true
+    },
+    "resourceKey" : "services/com.vantiq.temp.TemperatureMonitorService",
+    "state" : 8,
+    "type" : 109
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Project Contents",
+    "projectToolKeys" : [ "activeResources/Active Resource Control Center", "errorviewer/Errors", "tiledock/Inactive Panes", "list/Project Contents", "projectdescription/Project Description", "client/com.vantiq.temp.Maintenance", "designmodel/com.vantiq.temp.TemperatureAlertApp", "services/com.vantiq.temp.TemperatureMonitorService" ]
+  } ]
+}

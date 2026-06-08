@@ -1,6 +1,6 @@
 {
   "ars_relationships" : [ ],
-  "name" : "com.vantiq.quickstart.TempMQTT.PartitionedState",
+  "name" : "com.vantiq.temp.TemperatureMonitorService.PartitionedState",
   "properties" : { },
   "role" : "schema"
 }

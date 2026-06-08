@@ -1,0 +1,144 @@
+{
+  "ars_properties" : {
+    "linksVIA" : false,
+    "lpPct" : 15,
+    "rpPct" : 30
+  },
+  "ars_relationships" : [ ],
+  "contents" : {
+    "connectors" : [ {
+      "key" : "ext-1&EXTOUTBOUND1",
+      "name" : "EXTOUTBOUND",
+      "parent" : "ext-1",
+      "type" : 15
+    }, {
+      "key" : "ext-1&EXTINBOUND1",
+      "name" : "EXTINBOUND",
+      "parent" : "ext-1",
+      "type" : 14
+    }, {
+      "key" : "svc-1&EXTERNALIN1",
+      "name" : "NEW-EXT-IN",
+      "parent" : "svc-1",
+      "type" : 13
+    }, {
+      "key" : "svc-1&EXTERNALOUT1",
+      "name" : "NEW-EXT-OUT",
+      "parent" : "svc-1",
+      "type" : 8
+    }, {
+      "key" : "svc-1&INPUT1",
+      "name" : "NEW-IN",
+      "parent" : "svc-1",
+      "type" : 3
+    }, {
+      "key" : "svc-1&OUTPUT1",
+      "name" : "NEW-OUT",
+      "parent" : "svc-1",
+      "type" : 4
+    }, {
+      "key" : "51&svc-1&CALLIN1",
+      "name" : "ActiveCollabsGetById",
+      "parent" : "svc-1",
+      "type" : 5
+    }, {
+      "key" : "51&svc-1&CALLIN2",
+      "name" : "ActiveCollabsUpdateStatus",
+      "parent" : "svc-1",
+      "type" : 5
+    }, {
+      "key" : "51&svc-1&CALLIN3",
+      "name" : "ActiveCollabsWriteAll",
+      "parent" : "svc-1",
+      "type" : 5
+    }, {
+      "key" : "51&svc-1&CALLIN4",
+      "name" : "ActiveCollabsCloseAll",
+      "parent" : "svc-1",
+      "type" : 5
+    }, {
+      "key" : "51&svc-1&CALLIN5",
+      "name" : "ActiveCollabsGetCached",
+      "parent" : "svc-1",
+      "type" : 5
+    }, {
+      "key" : "51&svc-1&CALLIN6",
+      "name" : "ActiveCollabsGetActive",
+      "parent" : "svc-1",
+      "type" : 5
+    }, {
+      "key" : "51&svc-1&NOTIFYOUT1",
+      "name" : "com.vantiq.temp.Maintenance",
+      "parent" : "svc-1",
+      "type" : 17
+    }, {
+      "key" : "52&cli-1&NOTIFYIN1",
+      "name" : "Notification",
+      "parent" : "cli-1",
+      "type" : 16
+    }, {
+      "key" : "cli-1&DATASTREAM1",
+      "name" : "NEW-DS",
+      "parent" : "cli-1",
+      "type" : 11
+    }, {
+      "key" : "51&svc-1&EXTERNALIN1",
+      "name" : "TemperatureMonitorServiceExternalIn",
+      "parent" : "svc-1",
+      "type" : 12
+    } ],
+    "links" : [ {
+      "isBidirectional" : false,
+      "source" : "51&svc-1&NOTIFYOUT1",
+      "target" : "52&cli-1&NOTIFYIN1"
+    }, {
+      "isBidirectional" : false,
+      "source" : "ext-1&EXTOUTBOUND1",
+      "target" : "51&svc-1&EXTERNALIN1"
+    } ],
+    "objects" : [ {
+      "description" : "MQTT source providing real-time temperature events.",
+      "h" : 80,
+      "label" : "TempMQTT",
+      "resourceName" : "com.vantiq.temp.TempMQTT",
+      "type" : 56,
+      "uuid" : "ext-1",
+      "w" : 160,
+      "x" : 259.119728016172,
+      "y" : -241.0416074569042
+    }, {
+      "description" : "Receives temperature events from TempMQTT, detects when a reading crosses the 200 degree threshold, and notifies the 'maintenance' user via the Maintenance client.",
+      "h" : 120,
+      "label" : "TemperatureMonitorService",
+      "resourceName" : "com.vantiq.temp.TemperatureMonitorService",
+      "resourceType" : "services",
+      "type" : 51,
+      "uuid" : "svc-1",
+      "w" : 240,
+      "x" : 251.57467695509746,
+      "y" : -16.069440497126948
+    }, {
+      "description" : "Maintenance notification client. Receives temperature threshold alerts for the 'maintenance' user.",
+      "h" : 120,
+      "label" : "Maintenance",
+      "resourceName" : "com.vantiq.temp.Maintenance",
+      "resourceType" : "system.clients",
+      "type" : 52,
+      "uuid" : "cli-1",
+      "w" : 240,
+      "x" : 260.09906639114985,
+      "y" : 216.93744671121377
+    } ],
+    "prefs" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 3,
+        "scale" : 1.014146792279575,
+        "translate" : [ 10.864833320235931, 309.3569555465728 ]
+      }
+    },
+    "v" : 1
+  },
+  "description" : "Receives temperature events from the MQTT source 'TempMQTT'. If the temperature crosses a threshold of 200 degrees, notifies the user 'maintenance' via the 'Maintenance' Client.",
+  "name" : "com.vantiq.temp.TemperatureAlertApp",
+  "serviceEventRoutes" : [ ]
+}

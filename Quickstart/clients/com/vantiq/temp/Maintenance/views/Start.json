@@ -1,0 +1,80 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "a1b2c3d4-e5f6-7890-abcd-ef1234567890" ],
+    "widgets" : [ {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "d4e5f6a7-b8c9-7890-defa-bc1234567890", "b1c2d3e4-f5a6-7890-bcde-fa1234567890", "c1d2e3f4-a5b6-7890-cdef-ab1234567890" ],
+      "column" : 0,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "MainVerticalLayout",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "backgroundColor" : "transparent",
+      "borderColor" : "Default",
+      "column" : 0,
+      "fontFamily" : "default",
+      "fontSize" : "24px",
+      "fontStyle" : "default",
+      "fontWeight" : "bold",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "titleText",
+      "row" : 1,
+      "text" : "Temperature Alerts",
+      "type" : "StaticText",
+      "uuid" : "b1c2d3e4-f5a6-7890-bcde-fa1234567890",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "backgroundColor" : "transparent",
+      "borderColor" : "Default",
+      "column" : 0,
+      "fontFamily" : "default",
+      "fontSize" : "default",
+      "fontStyle" : "default",
+      "fontWeight" : "default",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "isMultiline" : true,
+      "name" : "descriptionText",
+      "row" : 2,
+      "text" : "You will receive a push notification here whenever a monitored temperature reading crosses the 200 degree threshold.",
+      "type" : "StaticText",
+      "uuid" : "c1d2e3f4-a5b6-7890-cdef-ab1234567890",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "backgroundColor" : "transparent",
+      "borderColor" : "Default",
+      "column" : 0,
+      "fontSize" : "48px",
+      "foregroundColor" : "#ff9800",
+      "glyphIcon" : "glyphicon-warning-sign",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "name" : "alertIcon",
+      "row" : 0,
+      "type" : "StaticIcon",
+      "uuid" : "d4e5f6a7-b8c9-7890-defa-bc1234567890",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

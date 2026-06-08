@@ -1,22 +1,20 @@
 {
   "activationConstraint" : "",
   "active" : false,
-  "ars_properties" : null,
   "ars_relationships" : [ ],
   "autoUnwind" : false,
   "config" : {
-    "cleanSession" : true,
-    "connectionTimeout" : 15,
+    "cleanSession" : false,
     "contentType" : "application/json",
-    "keepAliveInterval" : 15,
+    "firebaseServerKeyType" : "string",
     "maxInflight" : 10,
-    "passwordType" : "string",
     "qos" : "AT_LEAST_ONCE",
     "serverURIs" : [ "tcp://public.vantiq.com:1883" ],
     "topics" : [ "com.vantiq.mqtt.enginetemp" ]
   },
-  "messageType" : null,
+  "isUnavailable" : false,
+  "messageType" : "com.vantiq.temp.Temperature",
   "mockProcedures" : { },
-  "name" : "com.vantiq.quickstart.TempMQTT",
+  "name" : "com.vantiq.temp.TempMQTT",
   "type" : "MQTT"
 }
