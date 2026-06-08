@@ -1,6 +1,16 @@
 {
   "active" : true,
+  "agentExtensionConfig" : {
+    "https://vantiq.com/agents/discussion" : {
+      "creationDisabled" : false
+    }
+  },
   "agentFrameworkVersion" : "1.0",
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
   "ars_relationships" : [ ],
   "description" : "Receives temperature events from the MQTT source 'TempMQTT'. If a temperature reading crosses a threshold of 200 degrees, it notifies the user 'maintenance' via the 'Maintenance' Client. Ingestion, threshold detection, and notification are implemented in the TempMQTT internal event handler (Visual Event Handler).",
   "eventTypes" : { },
